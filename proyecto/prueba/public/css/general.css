@@ -3,22 +3,38 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Estilos header */
+p {
+    color: #000;
+}
 
-.header_principal{
-    background: #000;
+label {
+        color: #000;
+}
+
+h1 {
+    padding: 10px 0px;
+}
+
+input{
+    height: 25px;
+}
+
+/* Estilos header y footer */
+
+.header_principal,.footer_principal{
+    background: #808e9b;
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: right;
 }
 
-.header_principal nav a {
+.header_principal nav a ,.footer_principal nav a{
     color: #fff;
     text-decoration: none;
     margin-right: 20px;
 }
 
-.header_principal nav a:hover{
+.header_principal nav a:hover,.footer_principal nav a:hover{
     color: #3498db;
 }
 
