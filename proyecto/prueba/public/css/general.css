@@ -6,10 +6,10 @@ body{
 /* Estilos header */
 
 .header_principal{
-    background: #000;
+    background: #808e9b;
     padding-top: 15px;
     padding-bottom: 15px;
-    text-align: right;
+    
 }
 
 .header_principal nav a {
@@ -25,7 +25,7 @@ body{
 /* Estilos de la tabla */
 
 .tabla_info thead tr{
-    background: #000;
+    background: #808e9b;
     color: #FFF;
 }
 
