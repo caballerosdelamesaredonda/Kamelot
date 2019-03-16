@@ -1,7 +1,45 @@
 
+/* Estilos generales */
+
 body{
     font-family: 'Montserrat', sans-serif;
 }
+
+/*Estilos h1*/
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 0px 10px 0px;
+    font-weight: bold;
+}
+
+/* Estilos de la tabla */
+
+.tabla_info {
+    background-color: #ffffff;
+    margin: auto;
+}
+
+.tabla_info thead tr{
+    background: #000;
+    color: #FFF;
+}
+
+.tabla_info tbody tr {
+    border-bottom: 1px solid #3498db;
+}
+
+.tabla_info tbody tr:hover {
+    background: rgba(52,152,219 ,0.4);  /* Se utiliza RGBA por que este formato incluye el opacity incluido */
+}
+
+.tabla_info tr td,.tabla_info tr th{
+    padding: 20px 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
 
 /* Estilos header */
 
@@ -20,6 +58,18 @@ body{
 
 .header_principal nav a:hover{
     color: #3498db;
+}
+
+.footer_principal{
+    background: #000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.footer_principal nav a,.footer_principal p {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
 }
 
 /* Estilos de la tabla */
