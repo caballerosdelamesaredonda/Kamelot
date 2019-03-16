@@ -44,7 +44,7 @@ h1 {
 /* Estilos header */
 
 .header_principal{
-    background: #000;
+    background: #808e9b;
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: right;
@@ -61,7 +61,7 @@ h1 {
 }
 
 .footer_principal{
-    background: #000;
+    background: #808e9b;
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: center;
@@ -75,7 +75,7 @@ h1 {
 /* Estilos de la tabla */
 
 .tabla_info thead tr{
-    background: #000;
+    background: #808e9b;
     color: #FFF;
 }
 
