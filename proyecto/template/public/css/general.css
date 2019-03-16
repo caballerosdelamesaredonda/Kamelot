@@ -91,3 +91,10 @@ h1 {
     padding: 20px 10px;
 }
 
+/* Estilos imagen logo */
+
+.img_logo{
+    width: 100px;
+    height: 71px;
+    background-color: #808e9b;
+}
