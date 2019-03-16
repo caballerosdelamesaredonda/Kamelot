@@ -1,0 +1,47 @@
+
+#centrar{
+    text-align: -webkit-center;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   ;
+}
+
+.tabla_informacion tr th, .tabla_informacion tr td{
+    padding: 15px 10px;
+    border: 1px solid #2d3436;
+    float: center; 
+    padding-left: 15px;
+    background-color: #fff;
+    
+}
+
+
+.header_principal div a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+.header_principal input[type=text] {
+    float: right;
+    
+    border: none;
+   
+    margin-right: 16px;
+    font-size: 17px;
+  }
+  #titulo{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 15px;
+    
+}
+
+#segundo_titulo{
+    text-align: center;
+    font-size: 20px;
+    padding-top: 15px;
+    
+}
+
