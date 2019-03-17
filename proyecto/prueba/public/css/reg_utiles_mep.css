@@ -45,3 +45,18 @@
     
 }
 
+.dropzone{
+    width: 75x;
+    height: 75px;
+    border: 2px dashed #ccc;
+    color: #ccc;
+    line-height: 75px;
+    text-align: center;
+    margin: 15px;
+}
+
+.dropzone{
+    border-color: #000;
+    color: #000;
+}
+
