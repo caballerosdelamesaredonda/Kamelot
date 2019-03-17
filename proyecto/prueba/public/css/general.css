@@ -40,6 +40,10 @@ input{
 
 /* Estilos de la tabla */
 
+.tabla_info {
+    margin: 15px 0px;
+}
+
 .tabla_info thead tr{
     background: #808e9b;
     color: #FFF;
