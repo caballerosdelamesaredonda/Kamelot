@@ -1,4 +1,8 @@
 
+#frm_citas {
+    padding: 10px;
+}
+
 #frm_citas button{
     display: block;
     background:  #f1c40f;
@@ -7,6 +11,5 @@
     font-size: 16px;
 }
 #frm_citas button:hover{
-   
     background:  #f39c12;
 }

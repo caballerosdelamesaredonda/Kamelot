@@ -64,8 +64,11 @@ app.use( function(req, res, next) {
 
 const registro_centroe = require('./componentes/usuarios/registro_centroe.route');
 
+const citas = require('./componentes/citas/citas.route');
+
 app.use('/api', registro_centroe);
 
+app.use('/api', citas);
 
 
 
