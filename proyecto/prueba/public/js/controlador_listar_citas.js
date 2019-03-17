@@ -31,11 +31,19 @@ let mostrar_datos = () => {
     let citas = listar_citas();
     for (let i = 0; i < citas.length; i++) {
 
+        let newdate = new Date(citas[i]['fecha']);
+        let month = newdate.getMonth()+1;
+        let day = newdate.getDate();
+        let year = newdate.getFullYear();
+        let dateformated = month+'-'+day+'-'+year;
+        //console.log(month+'-'+day+'-'+year);
+
         let fila = tabla.insertRow(); // Crea tr de la tabla
         fila.insertCell().innerHTML = citas[i]['codigo'];
         fila.insertCell().innerHTML = citas[i]['nombre'];
         fila.insertCell().innerHTML = citas[i]['correo'];
-        fila.insertCell().innerHTML = citas[i]['fecha'];
+        //fila.insertCell().innerHTML = citas[i]['fecha'];
+        fila.insertCell().innerHTML = dateformated;
     }
 };
 

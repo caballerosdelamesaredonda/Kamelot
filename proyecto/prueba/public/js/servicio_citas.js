@@ -4,13 +4,55 @@ const nombre = document.querySelector('#txt_nombre');
 const correo = document.querySelector('#txt_correo');
 const fecha = document.querySelector('#datepicker-13');
 
-$( "#datepicker" ).datepicker();
+
+/** Days to be disabled as an array */
+var disableddates = ["3-20-2019", "3-21-2019"];
+
+function DisableSpecificDates(date) {
+
+    var m = date.getMonth();
+    var d = date.getDate();
+    var y = date.getFullYear();
+
+    // First convert the date in to the mm-dd-yyyy format 
+    // Take note that we will increment the month count by 1 
+    var currentdate = (m + 1) + '-' + d + '-' + y;
+
+    // We will now check if the date belongs to disableddates array 
+    for (var i = 0; i < disableddates.length; i++) {
+
+        // Now check if the current date is in disabled dates array. 
+        if ($.inArray(currentdate, disableddates) != -1) {
+            return [false];
+        }
+    }
+
+    // In case the date is not present in disabled array, we will now check if it is a weekend. 
+    // We will use the noWeekends function
+    var weekenddate = $.datepicker.noWeekends(date);
+    return weekenddate;
+
+}
+
+// Function to show datepicker
 
 $(function () {
-    $("#datepicker-13").datepicker({ maxDate: '+20', minDate: '0', beforeShowDay: $.datepicker.noWeekends });
-    $("#datepicker-13").datepicker("show");
-
+    $("#datepicker").datepicker({
+        beforeShowDay: DisableSpecificDates
+    });
 });
+
+// Function to show limited datepicker dates
+
+$("#datepicker").datepicker();
+
+$(function () {
+    $("#datepicker-13").datepicker({ dateFormat: 'mm-dd-yy',maxDate: '+20', minDate: '0', beforeShowDay: DisableSpecificDates /* $.datepicker.noWeekends */ });
+    $("#datepicker-13").datepicker("show");
+});
+
+
+// Validar informacion de campos de formulario
 
 let validar = () => {
     let error = false;
