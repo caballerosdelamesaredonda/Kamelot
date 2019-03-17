@@ -6,7 +6,9 @@ const fecha = document.querySelector('#datepicker-13');
 
 
 /** Days to be disabled as an array */
-var disableddates = ["3-20-2019", "3-21-2019"];
+//var disableddates = ["3-20-2019", "3-21-2019"];
+var disableddates = citas_programadas();
+
 
 function DisableSpecificDates(date) {
 
@@ -145,3 +147,5 @@ let consultar_citas = () => {
     return consultar_cita;
 
 };
+
+

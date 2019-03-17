@@ -32,10 +32,10 @@ let mostrar_datos = () => {
     for (let i = 0; i < citas.length; i++) {
 
         let newdate = new Date(citas[i]['fecha']);
-        let month = newdate.getMonth()+1;
+        let month = newdate.getMonth() + 1;
         let day = newdate.getDate();
         let year = newdate.getFullYear();
-        let dateformated = month+'-'+day+'-'+year;
+        let dateformated = month + '-' + day + '-' + year;
         //console.log(month+'-'+day+'-'+year);
 
         let fila = tabla.insertRow(); // Crea tr de la tabla
@@ -48,3 +48,20 @@ let mostrar_datos = () => {
 };
 
 mostrar_datos();
+
+let citas_programadas = () => {
+    let citas = listar_citas();
+    let listacitas = [];
+    for (let i = 0; i < citas.length; i++) {
+        let newdate = new Date(citas[i]['fecha']);
+        let month = newdate.getMonth() + 1;
+        let day = newdate.getDate();
+        let year = newdate.getFullYear();
+        let dateformated = month + '-' + day + '-' + year;
+        //console.log(month+'-'+day+'-'+year);
+
+        listacitas.push(dateformated);
+        //console.log(listacitas);
+    }
+    return listacitas;
+};
