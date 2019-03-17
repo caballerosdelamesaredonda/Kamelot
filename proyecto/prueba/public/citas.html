@@ -12,7 +12,6 @@
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-
 </head>
 
 <body>
@@ -35,6 +34,11 @@
         <h1>Solicitar Cita con Centro Educativo</h1>
 
         <div>
+            <label for="txt_codigo">Codigo:</label>
+            <input type="text" id="txt_codigo">
+        </div>
+
+        <div>
             <label for="txt_nombre">Nombre:</label>
             <input type="text" id="txt_nombre">
         </div>
@@ -50,68 +54,24 @@
         </div>
 
         <div>
-            <button type="button">Registrar Cita</button>
+            <button type="button" id="btn_registrar">Registrar Cita</button>
         </div>
 
     </form>
 
-    <table class="tabla_info">
 
+    <table class="tabla_info">
         <thead>
             <tr>
+                <th>Codigo</th>
                 <th>Nombre</th>
-                <th>Correo Electronico</th>
-                <th>Fecha Cita</th>
+                <th>Correo</th>
+                <th>Fecha</th>
             </tr>
-
         </thead>
-
         <tbody>
-            <tr>
-                <td>9789505003495</td>
-                <td>Cocori</td>
-                <td>Nacional</td>
-            </tr>
-
-            <tr>
-                <td>9788420412146</td>
-                <td>Don Quixote</td>
-                <td>Literarura europea</td>
-            </tr>
-
-            <tr>
-                <td>9786073148627</td>
-                <td>Doctor Sueño</td>
-                <td>Libros en español</td>
-            </tr>
-
-            <tr>
-                <td>9786073132411</td>
-                <td>El Mundo de Hielo y Fuego</td>
-                <td>Ciencia ficción y fantasía</td>
-            </tr>
-
-            <tr>
-                <td>9788499082479</td>
-                <td>El Nombre del Viento</td>
-                <td>Literatura</td>
-            </tr>
-
-            <tr>
-                <td>9788445071168</td>
-                <td>Fahrenheit 451</td>
-                <td>Literatura</td>
-            </tr>
-
-            <tr>
-                <td>9789569646454</td>
-                <td>Bellas Durmientes</td>
-                <td>Libros en español</td>
-            </tr>
-
 
         </tbody>
-
     </table>
 
     <footer class="footer_principal">
@@ -124,7 +84,10 @@
         <p>Desarrollado por KAMELOT</p>
     </footer>
 
-    <script src="js/controlador_citas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="js/controlador_listar_citas.js"></script>
+    <script src="js/controlador_registrar_citas.js"></script>
+    <script src="js/servicio_citas.js"></script>
 
 </body>
 
