@@ -45,7 +45,7 @@
     
 }
 
-.dropzone{
+.dropzone {
     width: 75x;
     height: 75px;
     border: 2px dashed #ccc;
@@ -55,7 +55,7 @@
     margin: 15px;
 }
 
-.dropzone{
+.dropzone.dragover {
     border-color: #000;
     color: #000;
 }

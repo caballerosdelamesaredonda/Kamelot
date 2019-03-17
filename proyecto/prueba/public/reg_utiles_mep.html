@@ -244,68 +244,69 @@
                 </tr>
             </tbody>
         </table>
-    
+
         <div id="upload"></div>
-        <div class="dropzone" id="dropzone">Descargue su archivo aqui</div>
+        <div class="dropzone" id="dropzone">Suba su archivo aqui</div>
 
         <script>
-            (function() {
+            (function () {
                 var dropzone = document.getElementById('dropzone');
 
-                var displayUploads = function(data) {
+                var displayUploads = function (data) {
                     var uploads = document.getElementById('uploads'),
-                    anchor,
-                    x;
+                        anchor,
+                        x;
 
-                    for(x = 0; x < data.length; x = x+1){
+                    for (x = 0; x < data.length; x = x + 1) {
                         anchor = document.createElement('a');
-                        anchor.href = data[x].name;
+                        anchor.href = data[x].file;
+                        anchor.innerText = data[x].name;
 
-                        uploads.appendChild (anchor);
+                        uploads.appendChild(anchor);
                     }
                 }
 
-                var upload = function(files) {
+                var upload = function (files) {
                     var formData = new FormData(),
-                    xhr = new XMLHttpRequest(),
-                    x;
-                    for(x = 0; x < files.length; x = x+1){
+                        xhr = new XMLHttpRequest(),
+                        x;
+                    for (x = 0; x < files.length; x = x + 1) {
                         formData.append('file[]', files[x]);
                     }
 
-                    xhr.onload = function(){
-                        var data = JSON.parse (this.responseText);                     
+                    xhr.onload = function () {
+                        var data = JSON.parse(this.responseText);
                         displayUploads(data);
-                        
+
                     }
 
                     xhr.open('post', 'upload.php');
                     xhr.send(formData);
                 }
 
-                dropzone.ondrop = function(e) {
+                dropzone.ondrop = function (e) {
                     e.preventDefault();
                     this.className = 'dropzone';
                     upload(e.dataTransfer.files);
                 }
 
-                dropzone.ondragover = function() {
+                dropzone.ondragover = function () {
                     this.className = 'dropzone dragover';
                     return false;
                 }
 
-                dropzone.ondragleave = function() {
+                dropzone.ondragleave = function () {
                     this.className = 'dropzone';
                     return false;
                 }
             }());
-        
+
         </script>
-    
+
 
     </div>
 
-    
+
 
 </main>
 
@@ -770,9 +771,9 @@
                             <input type="text" id="txt_tipo">
                         </div>
                     </td>
-                    
+
                     <td><i class="fas fa-trash-alt"></i><i class="fas fa-eye"></i></i><i class="fas fa-edit"></i></td>
-                   
+
                 </tr>
             </tbody>
         </table>
