@@ -4,24 +4,24 @@
  * Exportamos todas las dependencias necesarias para establecer la conexión
  */
 const express = require('express'),
-  app = express(),
-  path = require('path'),
-  bodyParser = require('body-parser'),
-  morgan = require('morgan'),
-  mongoose = require('mongoose');
+      app = express(),
+      path = require('path'),
+      bodyParser = require('body-parser'),
+      morgan =  require('morgan'),
+      mongoose = require('mongoose');
 
 /**
  * Se definen las variables necesarias para la conexión con MongoDB
  */
 let db = mongoose.connection,
-  dburl = 'mongodb://admin:admin1234@cluster0-shard-00-00-ixz4s.mongodb.net:27017,cluster0-shard-00-01-ixz4s.mongodb.net:27017,cluster0-shard-00-02-ixz4s.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true', //usando mongoDb Atlas,
-  //dburl = 'mongodb://pabs:1biblioteca9@ds163680.mlab.com:63680/bd_biblioteca' //usando mlab,
-  port = 4000;
+    dburl = 'mongodb://admin_migue:clave@cluster0-shard-00-00-oiy6d.mongodb.net:27017,cluster0-shard-00-01-oiy6d.mongodb.net:27017,cluster0-shard-00-02-oiy6d.mongodb.net:27017/centro_educativo?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true', //usando mongoDb Atlas,
+    //dburl = 'mongodb://pabs:1biblioteca9@ds163680.mlab.com:63680/bd_biblioteca' //usando mlab,
+    port = 4000;
 
 /**
  * Se le indica que cree un servidor extra dentro del puerto 4000 y escuche los cambios que se le hagan a esos archivos
  */
-let server = app.listen(port, _server());
+let server = app.listen(port,_server());
 
 /**
  * Se define la conexión con Mongoose, enviándole como parámetro la url de la base de datos
@@ -49,10 +49,10 @@ app.use(express.static(path.join(__dirname, 'public')));
  * Le indicamos a la aplicación que el formato de los datos va a ser JSON
  */
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(morgan('dev'));
 
-app.use(function (req, res, next) {
+app.use( function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Origin, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, X-Response-Time, X-PINGOTHER, X-CSRF-Token,Authorization');
@@ -60,11 +60,11 @@ app.use(function (req, res, next) {
   next();
 });
 
-///
 
-//const actividades = require('./componentes/actividades/actividades.route');
 
-//app.use('/api', actividades);
+const registro_centroe = require('./componentes/usuarios/registro_centroe.route');
+
+app.use('/api', registro_centroe);
 
 
 
@@ -73,6 +73,6 @@ app.use(function (req, res, next) {
 // Se guarda todo lo que se ha realizado
 module.exports = app;
 
-function _server() {
+function _server(){
   console.log('Back-end corriendo en el puerto ' + port);
 };
