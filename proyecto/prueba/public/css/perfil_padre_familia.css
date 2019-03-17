@@ -18,3 +18,10 @@
 .header_principal div a:hover{
     color: #3498db;
 }
+
+.columna_derecha_padre{
+    width: 45%;
+    float: right;
+    background-color: #808e9b;
+    padding: 20px;
+}

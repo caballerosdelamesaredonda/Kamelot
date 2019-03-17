@@ -5,7 +5,8 @@ let schema_centroe = new mongoose.Schema(
     {
         nombre : {type : String, required : true},
         alias : {type : String, required : true},
-        cedula_juridica : {type : String, required : true},
+        cedula_juridica : {type : String, unique : true, required : true},
+        clave: {type : String, required: true},
         tipo_centro : {type : String, required : true},
         nivel_centro : {type : String, required : true},
         foto : {type : String, required : false},

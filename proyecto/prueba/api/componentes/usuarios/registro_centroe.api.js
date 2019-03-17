@@ -7,6 +7,7 @@ module.exports.registrar = (req, res) =>{
         nombre : req.body.nombre,
         alias : req.body.alias,
         cedula_juridica : req.body.cedula_juridica,
+        clave : req.body.clave,
         tipo_centro : req.body.tipo_centro,
         nivel_centro : req.body.nivel_centro,
         foto : req.body.foto,
