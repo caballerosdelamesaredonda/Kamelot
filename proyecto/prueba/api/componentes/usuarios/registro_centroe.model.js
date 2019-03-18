@@ -13,7 +13,7 @@ let schema_centroe = new mongoose.Schema(
         nombre_comercial : {type : String, required : true},
         provincia : {type : String, required : true},
         canton : {type : String, required : true},
-        distrito: {type : String, required : true},
+        distrito: {type : String, required : false},
         direccion: {type : String, required : true},
         fecha_fundacion : {type : String, required : true},
         referencia_historia : {type : String, required : true},
@@ -32,7 +32,6 @@ let schema_centroe = new mongoose.Schema(
         extension_contacto : {type : String, required : false},
         correo_electronico_contacto : {type : String, required : true},
         foto_contacto : {type : String, required : false},
-        tipo_usuario : {type : String, required : false}
     }
 );
 
