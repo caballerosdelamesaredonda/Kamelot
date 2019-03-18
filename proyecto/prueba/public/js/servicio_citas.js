@@ -5,7 +5,7 @@ const correo = document.querySelector('#txt_correo');
 const fecha = document.querySelector('#datepicker-13');
 
 
-/** Days to be disabled as an array */
+/* Días a deshabilitar en el calendario de citas mediante un arreglo */
 //var disableddates = ["3-20-2019", "3-21-2019"];
 var disableddates = citas_programadas();
 
@@ -25,7 +25,7 @@ function DisableSpecificDates(date) {
 
         // Now check if the current date is in disabled dates array. 
         if ($.inArray(currentdate, disableddates) != -1) {
-            return [false];
+            return [false, 'highlight_citas'];
         }
     }
 
@@ -49,7 +49,7 @@ $(function () {
 $("#datepicker").datepicker();
 
 $(function () {
-    $("#datepicker-13").datepicker({ dateFormat: 'mm-dd-yy',maxDate: '+20', minDate: '0', beforeShowDay: DisableSpecificDates /* $.datepicker.noWeekends */ });
+    $("#datepicker-13").datepicker({ dateFormat: 'mm-dd-yy', maxDate: '+20', minDate: '0', beforeShowDay: DisableSpecificDates /* $.datepicker.noWeekends */ });
     $("#datepicker-13").datepicker("show");
 });
 

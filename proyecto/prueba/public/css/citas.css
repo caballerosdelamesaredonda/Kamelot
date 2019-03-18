@@ -13,3 +13,8 @@
 #frm_citas button:hover{
     background:  #f39c12;
 }
+
+.highlight_citas {
+    background-color: #d63031;
+    color: #d63031;
+}
