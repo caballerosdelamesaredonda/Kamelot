@@ -36,7 +36,25 @@
     font-size: 30px;
     padding-top: 15px;
     
+    
 }
+
+.preescolar{
+    border: 1px solid;
+    margin: 35px;
+}
+
+.primer_ciclo{
+    border: 1px solid;
+    margin: 35px;
+}
+
+.segundo_ciclo{
+    border: 1px solid;
+    margin: 35px;
+}
+
+
 
 #segundo_titulo{
     text-align: center;
@@ -60,3 +78,9 @@
     color: #000;
 }
 
+h1{
+background-color: #808e9b;
+margin-left: 250px;
+margin-right: 250px;
+border: 1px solid;
+}
