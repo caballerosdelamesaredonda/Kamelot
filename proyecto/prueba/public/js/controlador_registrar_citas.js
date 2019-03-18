@@ -15,7 +15,7 @@ let obtener_datos = () => {
         let correo = input_correo.value;
         let fecha = input_fecha.value;
 
-        registrar_mascotas(codigo, nombre, correo, fecha);
+        registrar_citas(codigo, nombre, correo, fecha);
 
     } else {
         swal.fire({

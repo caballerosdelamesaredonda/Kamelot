@@ -5,6 +5,8 @@ const correo = document.querySelector('#txt_correo');
 const fecha = document.querySelector('#datepicker-13');
 
 
+limpiarForm();
+
 /* Días a deshabilitar en el calendario de citas mediante un arreglo */
 //var disableddates = ["3-20-2019", "3-21-2019"];
 var disableddates = citas_programadas();
@@ -91,7 +93,7 @@ let validar = () => {
 };
 
 
-let registrar_mascotas = (pcodigo, pnombre, pcorreo, pfecha) => {
+let registrar_citas = (pcodigo, pnombre, pcorreo, pfecha) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/registrar_citas",
         method: "POST",

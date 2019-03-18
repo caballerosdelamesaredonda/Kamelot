@@ -65,3 +65,8 @@ let citas_programadas = () => {
     }
     return listacitas;
 };
+
+
+let limpiarForm = () => {
+    document.forms['frm_citas'].reset();
+}
