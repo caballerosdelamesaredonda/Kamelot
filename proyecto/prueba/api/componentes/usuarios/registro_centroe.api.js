@@ -33,7 +33,6 @@ module.exports.registrar = (req, res) =>{
         extension_contacto : req.body.extension_contacto,
         correo_electronico_contacto : req.body.correo_electronico_contacto,
         foto_contacto : req.body.foto_contacto,
-        tipo_usuario : req.body.tipo_usuario
         }
     );
     
