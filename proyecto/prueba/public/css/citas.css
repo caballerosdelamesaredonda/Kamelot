@@ -23,3 +23,7 @@
     background-color: #d63031;
     color: #d63031;
 }
+
+.error_input{
+    border: 2px solid #d63031;
+}
