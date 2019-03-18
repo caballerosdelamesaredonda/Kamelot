@@ -73,6 +73,11 @@ app.use('/api', registro_centroe);
 
 app.use('/api', citas);
 
+const comentario = require('/componentes/reg_utiles_mep/reg_utiles.route');
+
+app.use('/api', comentario);
+
+
 
 
 
