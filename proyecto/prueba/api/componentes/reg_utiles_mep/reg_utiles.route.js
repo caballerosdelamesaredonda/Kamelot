@@ -1,16 +1,16 @@
 'use strict';
 const express = require('express');
 const router =  express.Router();
-const comentario_api = require('./reg_utiles.api');
+const registro_api = require('./reg_utiles.api');
 
-router.route('/registrar_comentario')
+router.route('/registro_nuevo')
     .post(
         function(req, res){
-            comentario_api.registrar(req, res);
+            registro_api.registrar(req, res);
         }
     );
 
-router.route('/listar_comentarios')
+router.route('/listar_todos')
         .get(
             function(req, res){
                 comentario_api.listar_todos(req, res);

@@ -69,7 +69,6 @@ const registro_centroe = require('./componentes/usuarios/registro_centroe.route'
 
 const citas = require('./componentes/citas/citas.route');
 
-
 const comentario = require('./componentes/reg_utiles_mep/reg_utiles.route');
 
 app.use('/api', comentario);
