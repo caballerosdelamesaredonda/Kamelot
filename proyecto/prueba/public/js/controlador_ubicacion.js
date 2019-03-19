@@ -19,7 +19,7 @@ let llenar_cantones = () =>{
     for(let i = 0; i < cantones.length; i++){
         if(provincia == cantones[i]['Provincia_idProvincia']){
             let nuevaOpcion = new Option(cantones[i]['nombre']);
-            nuevaOpcion.value = cantones[i]['nombre'];
+            nuevaOpcion.value = cantones[i]['idCanton'];
             select_cantones.appendChild(nuevaOpcion);
         }
         

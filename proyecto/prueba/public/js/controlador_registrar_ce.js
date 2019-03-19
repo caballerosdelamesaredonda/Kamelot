@@ -77,13 +77,6 @@ let validar = () => {
         slt_nivel_centro.classList.remove('error_input');
     }
 
-    if (input_foto.value == '') {
-        error = true;
-        input_foto.classList.add('error_input');
-    } else {
-        input_foto.classList.remove('error_input');
-    }
-
     if (input_nombre_comercial.value == '') {
         error = true;
         input_nombre_comercial.classList.add('error_input');
@@ -103,6 +96,13 @@ let validar = () => {
         slt_cantones.classList.add('error_input');
     } else {
         slt_cantones.classList.remove('error_input');
+    }
+
+    if (slt_distritos.value == '') {
+        error = true;
+        slt_distritos.classList.add('error_input');
+    } else {
+        slt_distritos.classList.remove('error_input');
     }
 
     
@@ -146,20 +146,6 @@ let validar = () => {
         input_fax.classList.add('error_input');
     } else {
         input_fax.classList.remove('error_input');
-    }
-
-    if (input_web.value == '') {
-        error = true;
-        input_web.classList.add('error_input');
-    } else {
-        input_web.classList.remove('error_input');
-    }
-
-    if (input_redes.value == '') {
-        error = true;
-        input_redes.classList.add('error_input');
-    } else {
-        input_redes.classList.remove('error_input');
     }
 
     if (input_correo.value == '') {
@@ -209,13 +195,6 @@ let validar = () => {
         input_contacto_telefono.classList.add('error_input');
     } else {
         input_contacto_telefono.classList.remove('error_input');
-    }
-
-    if (input_contacto_extension.value == '') {
-        error = true;
-        input_contacto_extension.classList.add('error_input');
-    } else {
-        input_contacto_extension.classList.remove('error_input');
     }
 
     if (input_contacto_correo.value == '') {
