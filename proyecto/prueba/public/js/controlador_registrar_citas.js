@@ -16,6 +16,7 @@ let obtener_datos = () => {
         let fecha = input_fecha.value;
 
         registrar_citas(codigo, nombre, correo, fecha);
+        
 
     } else {
         swal.fire({
