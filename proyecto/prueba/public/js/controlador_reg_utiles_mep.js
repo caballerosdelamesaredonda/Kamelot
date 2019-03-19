@@ -25,7 +25,7 @@ let validar = () => {
     }
 
 
-    if (fieldset_cantidad_pre == null) {
+    if (fieldset_cantidad_pre.value == null) {
         error = true;
         fieldset_cantidad_pre.classList.add('error_input');
     } else {
@@ -33,7 +33,7 @@ let validar = () => {
     }
 
 
-    if (input_descripcion_pre == null) {
+    if (input_descripcion_pre.value == null) {
         error = true;
         input_descripcion_pre.classList.add('error_input');
     } else {
@@ -50,7 +50,7 @@ let validar = () => {
     }
 
 
-    if (fieldset_cantidad_pri == null) {
+    if (fieldset_cantidad_pri.value == null) {
         error = true;
         fieldset_cantidad_pri.classList.add('error_input');
     } else {
@@ -58,7 +58,7 @@ let validar = () => {
     }
 
 
-    if (input_descripcion_pri == null) {
+    if (input_descripcion_pri.value == null) {
         error = true;
         input_descripcion_pri.classList.add('error_input');
     } else {
@@ -74,7 +74,7 @@ let validar = () => {
     }
 
 
-    if (fieldset_cantidad_seg == null) {
+    if (fieldset_cantidad_seg.value == null) {
         error = true;
         fieldset_cantidad_seg.classList.add('error_input');
     } else {
@@ -82,7 +82,7 @@ let validar = () => {
     }
 
 
-    if (input_descripcion_seg == null) {
+    if (input_descripcion_seg.value == null) {
         error = true;
         input_descripcion_seg.classList.add('error_input');
     } else {
