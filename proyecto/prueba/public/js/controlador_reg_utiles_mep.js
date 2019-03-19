@@ -1,7 +1,5 @@
 'use strict';
 
-import { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } from "constants";
-
 
 
 const input_descripcion_pre = document.querySelector('#slt_descripcion_pre');
@@ -13,6 +11,7 @@ const input_nombre_pri = document.querySelector('#txt_nombre_pri');
 const input_descripcion_seg = document.querySelector('#slt_descripcion_seg');
 const fieldset_cantidad_seg = document.querySelector('#slt_cantidad_seg');
 const input_nombre_seg = document.querySelector('#txt_nombre_seg');
+const boton_enviar = document.querySelector('#btn_registrar');
 
 let validar = () => {
     let error = false;
@@ -94,7 +93,7 @@ let validar = () => {
 
 };
 
-let optener_datos = () => {
+let obtener_datos = () => {
 
     if (validar() == false) {
 
@@ -118,7 +117,7 @@ let optener_datos = () => {
         });
     }
 
-}
+};
 
 
-boton_enviar.addEventListener('click', optener_datos);
+boton_enviar.addEventListener('click', obtener_datos);
