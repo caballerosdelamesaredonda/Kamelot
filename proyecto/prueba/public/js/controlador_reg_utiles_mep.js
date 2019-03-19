@@ -1,26 +1,28 @@
 'use strict';
 
+import { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } from "constants";
+
 
 
 const fieldset_descripcion_pre = document.querySelector('#slt_descripcion_pre');
 const fieldset_cantidad_pre = document.querySelector('#slt_cantidad_pre');
-const input_tipo_pre = document.querySelector('#txt_tipo_pre');
+const input_nombre_pre = document.querySelector('#txt_tipo_pre');
 const fieldset_descripcion_pri = document.querySelector('#slt_descripcion_pri');
 const fieldset_cantidad_pri = document.querySelector('#slt_cantidad_pri');
-const input_tipo_pri = document.querySelector('#txt_tipo_pri');
+const input_nombre_pri = document.querySelector('#txt_tipo_pri');
 const fieldset_descripcion_seg = document.querySelector('#slt_descripcion_seg');
 const fieldset_cantidad_seg = document.querySelector('#slt_cantidad_seg');
-const input_tipo_seg = document.querySelector('#txt_tipo_seg');
+const input_nombre_seg = document.querySelector('#txt_tipo_seg');
 
 let validar = () => {
     let error = false;
 
 
-    if (input_tipo_pre.value == '') {
+    if (input_nombre_pre.value == '') {
         error = true;
-        input_tipo_pre.classList.add('error_input');
+        input_nombre_pre.classList.add('error_input');
     } else {
-        input_tipo_pre.classList.remove('error_input');
+        input_nombre_pre.classList.remove('error_input');
     }
 
 
@@ -41,49 +43,11 @@ let validar = () => {
 
 
 
-
-    return error;
-};
-
-let mostrar_datos = () => {
-
-    if (validar() == false) {
-        // Se ejecuta solo si la validación no da error
-
-        let tipo = input_tipo_pre.value;
-        let descripcion = fieldset_descripcion_pre.value;
-        let cantidad = fieldset_cantidad_pre.value;
-
-
-
-
-        swal.fire({
-            type: 'success',
-            title: 'Comentario enviado correctamente',
-            text: `La utiles de primaria se agregaron correctamente`
-        });
-
-
-    } else {
-        swal.fire({
-            type: 'warning',
-            title: 'El comentario no fue enviado',
-            text: 'Por favor revise los campos resaltados'
-        });
-    }
-
-};
-
-
-let validar = () => {
-    let error = false;
-
-
-    if (input_tipo_pri.value == '') {
+    if (input_nombre_pri.value == '') {
         error = true;
-        input_tipo_pri.classList.add('error_input');
+        input_nombre_pri.classList.add('error_input');
     } else {
-        input_tipo_pri.classList.remove('error_input');
+        input_nombre_pri.classList.remove('error_input');
     }
 
 
@@ -101,45 +65,6 @@ let validar = () => {
     } else {
         fieldset_descripcion_pri.classList.remove('error_input');
     }
-
-
-
-
-    return error;
-};
-
-let mostrar_datos = () => {
-
-    if (validar() == false) {
-        // Se ejecuta solo si la validación no da error
-
-        let tipo = input_tipo_pri.value;
-        let descripcion = fieldset_descripcion_pri.value;
-        let cantidad = fieldset_cantidad_pri.value;
-
-
-
-
-        swal.fire({
-            type: 'success',
-            title: 'Comentario enviado correctamente',
-            text: `La informacion se agrego correctamente`
-        });
-
-
-    } else {
-        swal.fire({
-            type: 'warning',
-            title: 'El comentario no fue enviado',
-            text: 'Por favor revise los campos resaltados'
-        });
-    }
-
-};
-
-
-let validar = () => {
-    let error = false;
 
 
     if (input_tipo_seg.value == '') {
@@ -165,40 +90,27 @@ let validar = () => {
         fieldset_descripcion_seg.classList.remove('error_input');
     }
 
-
-
-
     return error;
+
 };
 
-let mostrar_datos = () => {
+let optener_datos = () => {
 
     if (validar() == false) {
-        // Se ejecuta solo si la validación no da error
 
-        let tipo = input_tipo_seg.value;
-        let descripcion = fieldset_descripcion_seg.value;
-        let cantidad = fieldset_cantidad_seg.value;
+        let nombre = igual nombre del imput de arriba.value;
 
-
-
-
-        swal.fire({
-            type: 'success',
-            title: 'Comentario enviado correctamente',
-            text: `La informacion se agrego correctamente`
-        });
-
+        nombre de la variable en servicio **** (poner todas las variables del let)
 
     } else {
         swal.fire({
             type: 'warning',
-            title: 'El comentario no fue enviado',
+            title: 'El centro educativo no fue registrado',
             text: 'Por favor revise los campos resaltados'
         });
     }
 
-};
+}
 
 
-boton_enviar.addEventListener('click', mostrar_datos);
+boton_enviar.addEventListener('click', optener_datos);
