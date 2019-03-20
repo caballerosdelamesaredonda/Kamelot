@@ -1,15 +1,10 @@
 'use strict';
 
-const inputFiltro = document.querySelector('#txtFiltro');
-
-//limpiarForm();
-
 let citas = consultar_citas();
 
 let mostrar_datos = () => {
 
     let tabla = document.querySelector('.tabla_info tbody');
-
     tabla.innerHTML = '';
 
     for (let i = 0; i < citas.length; i++) {
@@ -26,44 +21,11 @@ let mostrar_datos = () => {
             fila.insertCell().innerHTML = citas[i]['correo'];
             //fila.insertCell().innerHTML = citas[i]['fecha'];
             fila.insertCell().innerHTML = dateformated;
-    }
-
-};
-
-let mostrar_datos_filtrados = () => {
-
-    let tabla = document.querySelector('.tabla_info tbody');
-    let filtro = inputFiltro.value;
-
-    tabla.innerHTML = '';
-
-    for (let i = 0; i < citas.length; i++) {
-        if (
-        (citas[i]['codigo'].toLowerCase().includes(filtro.toLowerCase()))
-        || (citas[i]['nombre'].toLowerCase().includes(filtro.toLowerCase()))
-        || (citas[i]['correo'].toLowerCase().includes(filtro.toLowerCase()))
-        ) {
-            let newdate = new Date(citas[i]['fecha']);
-            let month = newdate.getMonth() + 1;
-            let day = newdate.getDate();
-            let year = newdate.getFullYear();
-            let dateformated = month + '-' + day + '-' + year;
-            //console.log(month+'-'+day+'-'+year);
-
-            let fila = tabla.insertRow(); // Crea tr de la tabla
-            fila.insertCell().innerHTML = citas[i]['codigo'];
-            fila.insertCell().innerHTML = citas[i]['nombre'];
-            fila.insertCell().innerHTML = citas[i]['correo'];
-            //fila.insertCell().innerHTML = citas[i]['fecha'];
-            fila.insertCell().innerHTML = dateformated;
-        }
     }
 
 };
 
 mostrar_datos();
-mostrar_datos_filtrados();
-inputFiltro.addEventListener('keyup', mostrar_datos_filtrados);
 
 
 let citas_programadas = () => {
@@ -86,7 +48,6 @@ let citas_programadas = () => {
 /* Días a deshabilitar en el calendario de citas mediante un arreglo */
 //var disableddates = ["3-20-2019", "3-21-2019"];
 var disableddates = citas_programadas();
-
 
 function DisableSpecificDates(date) {
 
@@ -131,6 +92,6 @@ $(function () {
     $("#datepicker-13").datepicker("show");
 });
 
-let limpiarForm = () => {
-    document.forms['frm_citas'].reset();
-}
+
+
+ 
