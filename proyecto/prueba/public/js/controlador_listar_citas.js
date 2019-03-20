@@ -134,3 +134,5 @@ $(function () {
 let limpiarForm = () => {
     document.forms['frm_citas'].reset();
 }
+
+

@@ -2,8 +2,6 @@
 
 import { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } from "constants";
 
-
-
 const input_descripcion_pre = document.querySelector('#slt_descripcion_pre');
 const fieldset_cantidad_pre = document.querySelector('#slt_cantidad_pre');
 const input_nombre_pre = document.querySelector('#txt_nombre_pre');
