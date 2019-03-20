@@ -6,6 +6,41 @@ const input_correo = document.querySelector('#txt_correo');
 const input_fecha = document.querySelector('#datepicker-13');
 const boton_registrar = document.querySelector('#btn_registrar');
 
+
+let validar = () => {
+    let error = false;
+
+    if (input_codigo.value == '') {
+        error = true;
+        input_codigo.classList.add('error_input');
+    } else {
+        input_codigo.classList.remove('error_input');
+    }
+
+    if (input_nombre.value == '') {
+        error = true;
+        input_nombre.classList.add('error_input');
+    } else {
+        input_nombre.classList.remove('error_input');
+    }
+
+    if (input_correo.value == '') {
+        error = true;
+        input_correo.classList.add('error_input');
+    } else {
+        input_correo.classList.remove('error_input');
+    }
+
+    if (input_fecha.value == '') {
+        error = true;
+        input_fecha.classList.add('error_input');
+    } else {
+        input_fecha.classList.remove('error_input');
+    }
+
+    return error;
+};
+
 let obtener_datos = () => {
 
     if (validar() == false) {
