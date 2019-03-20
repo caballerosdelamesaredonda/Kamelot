@@ -14,7 +14,7 @@ let registrar_utiles = (pdescripcion_pre, pcantidad_pre, pnombre_pre, pcantidad_
         nombre_pri : pnombre_pri,
         descripcion_seg : pdescripcion_seg,
         cantidad_seg : pcantidad_seg,
-        nombre_seg : pnombre_seg,
+        nombre_seg : pnombre_seg
         
         
     },

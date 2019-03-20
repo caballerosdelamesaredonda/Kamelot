@@ -72,6 +72,10 @@ const citas = require('./componentes/citas/citas.route');
 
 const comentario = require('./componentes/reg_utiles_mep/reg_utiles.route');
 
+const registro_utiles = require('./componentes/reg_utiles_mep/reg_utiles.route');
+
+app.use('/api', registro_utiles);
+
 app.use('/api', comentario);
 
 app.use('/api', usuarios);

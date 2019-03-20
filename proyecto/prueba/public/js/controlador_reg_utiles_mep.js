@@ -2,15 +2,15 @@
 
 
 
-const input_descripcion_pre = document.querySelector('#slt_descripcion_pre');
-const fieldset_cantidad_pre = document.querySelector('#slt_cantidad_pre');
-const input_nombre_pre = document.querySelector('#txt_nombre_pre');
-const input_descripcion_pri = document.querySelector('#slt_descripcion_pri');
-const fieldset_cantidad_pri = document.querySelector('#slt_cantidad_pri');
-const input_nombre_pri = document.querySelector('#txt_nombre_pri');
-const input_descripcion_seg = document.querySelector('#slt_descripcion_seg');
-const fieldset_cantidad_seg = document.querySelector('#slt_cantidad_seg');
-const input_nombre_seg = document.querySelector('#txt_nombre_seg');
+const input_descripcion_pre = document.querySelector('#descripcion_pre');
+const fieldset_cantidad_pre = document.querySelector('#cantidad_pre');
+const input_nombre_pre = document.querySelector('#nombre_pre');
+const input_descripcion_pri = document.querySelector('#descripcion_pri');
+const fieldset_cantidad_pri = document.querySelector('#cantidad_pri');
+const input_nombre_pri = document.querySelector('#nombre_pri');
+const input_descripcion_seg = document.querySelector('#descripcion_seg');
+const fieldset_cantidad_seg = document.querySelector('#cantidad_seg');
+const input_nombre_seg = document.querySelector('#nombre_seg');
 const boton_enviar = document.querySelector('#btn_registrar');
 
 let validar = () => {

@@ -41,7 +41,7 @@ module.exports.registrar = (req, res) =>{
 
 
 module.exports.listar_todos = (req ,res) =>{
-    registroModelo.find().then(
+    registroModel.find().then(
         function(registro){
             if(registro.length > 0){
                 res.json(
