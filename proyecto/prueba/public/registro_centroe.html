@@ -13,7 +13,7 @@
 <body>
     <header id="header_principal">
         <div id="logo">
-            <img src="/public/imgs/placeholder1.jpg">   
+            <img src="/public/imgs/logo.png">   
         </div>
     </header>
     <main>
@@ -46,6 +46,7 @@
                 <div>
                     <label for="slt_tipo_centro">Tipo</label>
                     <select id="slt_tipo_centro">
+                        <option value="">--Seleccione una opción--</option>
                         <option value="publico">Público</option>
                         <option value="privado">Privado</option>
                     </select>
@@ -55,6 +56,7 @@
                 <div>
                     <label for="slt_nivel_centro">Nivel</label>
                     <select id="slt_nivel_centro">
+                        <option value ="">--Seleccione una opción--</option>
                         <option value="publico">Primer ciclo</option>
                         <option value="privado">Segundo ciclo</option>
                         <option value="privado">Tercer ciclo</option>
@@ -62,7 +64,7 @@
                 </div>
 
                 <div>
-                    <label for="input_foto">Foto</label>
+                    <label for="input_foto">Foto*</label>
                     <input type="text" id="input_foto">
                 </div>
 
@@ -119,11 +121,11 @@
                     <input type="text" id="txt_fax">
                 </div>
                 <div>
-                    <label for="txt_web">Sitio web</label>
+                    <label for="txt_web">Sitio web*</label>
                     <input type="text" id="txt_web">
                 </div>
                 <div>
-                    <label for="txt_redesso">Redes Sociales</label>
+                    <label for="txt_redesso">Redes Sociales*</label>
                     <input type="text" id="txt_redesso">
                 </div>
                 
@@ -163,7 +165,7 @@
                 <input type="text" id="txt_contacto_telefono">
             </div>
             <div>
-                <label for="txt_contacto_extension">Extensión(opcional)</label>
+                <label for="txt_contacto_extension">Extensión*</label>
                 <input type="text" id="txt_contacto_extension">
             </div>   
             <div>
@@ -188,6 +190,7 @@
     <script src="js/controlador_registrar_ce.js"></script>
     <script src="js/provincias.js"></script>
     <script src="js/cantones.js"></script>
+    <script src="js/distritos.js"></script>
     <script src="js/controlador_ubicacion.js"></script>
 
 </body>

@@ -1,5 +1,5 @@
 'use strict';
-const model_centroe = require ('./registro_centroe.model');
+const model_centroe = require ('./usuarios.model.js');
 
 module.exports.registrar = (req, res) =>{
     let centroe_nuevo = new model_centroe(
@@ -55,4 +55,28 @@ module.exports.registrar = (req, res) =>{
             }
         }
     );
+};
+
+
+module.exports.listar_centroe = (req ,res) =>{
+    model_centroe.find().then(
+        function(centroe){
+            if(centroe.length > 0){
+                res.json(
+                    {
+                        success: true,
+                        centroe: centroe
+                    }
+                )
+            }else{
+                res.json(
+                    {
+                        success: false,
+                        comentarios: 'No se encontraron usuarios centro educativo'
+                    }
+                )
+            }
+        }
+
+    )
 };

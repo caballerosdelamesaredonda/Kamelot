@@ -63,6 +63,10 @@
     
 }
 
+.error_input, .error_select{
+    border: 2px solid #ED4C67;
+}
+
 .dropzone {
     width: 75x;
     height: 75px;
