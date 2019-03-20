@@ -1,32 +1,27 @@
 
 const inputFiltro = document.querySelector('#txtFiltro');
 
+let usuarios = listar_centroe();
+
 let mostrar_datos_filtrados = () => {
 
-    let tabla = document.querySelector('.tabla_info tbody');
+    let tabla = document.querySelector('#tbl_centroe tbody');
     let filtro = inputFiltro.value;
 
     tabla.innerHTML = '';
 
-    for (let i = 0; i < citas.length; i++) {
+    for (let i = 0; i < usuarios.length; i++) {
         if (
-        (citas[i]['codigo'].toLowerCase().includes(filtro.toLowerCase()))
-        || (citas[i]['nombre'].toLowerCase().includes(filtro.toLowerCase()))
-        || (citas[i]['correo'].toLowerCase().includes(filtro.toLowerCase()))
+        (usuarios[i]['nombre'].toLowerCase().includes(filtro.toLowerCase()))
+        || (usuarios[i]['cedula_juridica'].toLowerCase().includes(filtro.toLowerCase()))
+        || (usuarios[i]['correo_electronico'].toLowerCase().includes(filtro.toLowerCase()))
+        || (usuarios[i]['telefono'].toLowerCase().includes(filtro.toLowerCase()))
         ) {
-            let newdate = new Date(citas[i]['fecha']);
-            let month = newdate.getMonth() + 1;
-            let day = newdate.getDate();
-            let year = newdate.getFullYear();
-            let dateformated = month + '-' + day + '-' + year;
-            //console.log(month+'-'+day+'-'+year);
-
             let fila = tabla.insertRow(); // Crea tr de la tabla
-            fila.insertCell().innerHTML = citas[i]['codigo'];
-            fila.insertCell().innerHTML = citas[i]['nombre'];
-            fila.insertCell().innerHTML = citas[i]['correo'];
-            //fila.insertCell().innerHTML = citas[i]['fecha'];
-            fila.insertCell().innerHTML = dateformated;
+            fila.insertCell().innerHTML = usuarios[i]['nombre'];
+            fila.insertCell().innerHTML = usuarios[i]['cedula_juridica'];
+            fila.insertCell().innerHTML = usuarios[i]['correo_electronico'];
+            fila.insertCell().innerHTML = usuarios[i]['telefono'];
         }
     }
 

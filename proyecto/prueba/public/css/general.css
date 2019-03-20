@@ -38,7 +38,7 @@ input{
     color: #3498db;
 }
 
-/* Estilos de la tabla */
+/* Estilos de la tabla general */
 
 .tabla_info {
     margin: 15px 0px;
@@ -60,6 +60,33 @@ input{
 .tabla_info tr td,.tabla_info tr th{
     padding: 20px 10px;
 }
+
+/* Estilos de la tabla centro educativo */
+
+#tbl_centroe {
+    margin: 15px 0px;
+    text-align: center;
+}
+
+#tbl_centroe thead tr{
+    background: #808e9b;
+    color: #FFF;
+}
+
+#tbl_centroe tbody tr {
+    border-bottom: 1px solid #3498db;
+}
+
+#tbl_centroe tbody tr:hover {
+    background: rgba(52,152,219 ,0.4);  /* Se utiliza RGBA por que este formato incluye el opacity incluido */
+}
+
+#tbl_centroe tr td,#tbl_centroe tr th{
+    padding: 20px 10px;
+}
+
+
+
 
 .img_logo{
     width: 70px;
