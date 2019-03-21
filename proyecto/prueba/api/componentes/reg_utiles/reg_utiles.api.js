@@ -1,18 +1,14 @@
 'use strict';
-const registroModel = require('./reg_utiles.model');
+const registro_model = require('./reg_utiles.model');
 
 module.exports.registrar = (req, res) =>{
     let registro_nuevo = new registroModel(
         {
-            descripcion_pre : req.body.descripcion_pre,
-            cantidad_pre : req.body.cantidad_pre,
-            nombre_pre : req.body.texto_pre,
-            descripcion_pri : req.body.descripcion_pri,
-            cantidad_pri : req.body.cantidad_pri,
-            nombre_pri : req.body.texto_pri,
-            descripcion_seg : req.body.descripcion_seg,
-            cantidad_seg : req.body.cantidad_seg,
-            nombre_seg : req.body.texto_seg
+            nombre_lista : req.body.nombre_lista,
+            tipo : req.body.tipo,
+            ciclo : req.body.ciclo,
+            nivel : req.body.nivel,
+            ano : req.body.cantidad_ano
             
         }
     );
@@ -41,20 +37,20 @@ module.exports.registrar = (req, res) =>{
 
 
 module.exports.listar_todos = (req ,res) =>{
-    registroModel.find().then(
-        function(registro){
-            if(registro.length > 0){
+    registro_model.find().then(
+        function(lista){
+            if(lista.length > 0){
                 res.json(
                     {
                         success: true,
-                        comentarios: comentarios
+                        lista: lista
                     }
                 )
             }else{
                 res.json(
                     {
                         success: false,
-                        comentarios: 'No se encontro informacion'
+                        lista: 'No se encontro informacion'
                     }
                 )
             }

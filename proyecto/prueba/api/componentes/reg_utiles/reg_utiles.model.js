@@ -4,17 +4,13 @@ const mongoose = require('mongoose');
 let schema_registro = new mongoose.Schema(
     {
         
-        descripcion_pre : {type : String, required: true},
-        cantidad_pre : {type: String, required: true},
-        nombre_pre : {type: String, required: true},
-        descripcion_pri : {type : String, required: true},
-        cantidad_pri : {type: String, required: true},
-        nombre_pri : {type: String, required: true},
-        descripcion_seg : {type : String, required: true},
-        cantidad_seg : {type: String, required: true},
-        nombre_seg : {type: String, required: true}
+        nombre_lista : {type : String, required: true},
+        tipo : {type: String, required: true},
+        ciclo : {type: String, required: true},
+        nivel : {type : String, required: true},
+        ano : {type: String, required: true}
         
     }
 );
 
-module.exports = mongoose.model('registro_utiles', schema_registro);
+module.exports = mongoose.model('reg_utiles', schema_registro);

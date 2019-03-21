@@ -1,21 +1,16 @@
 'use strict';
 
-let registrar_utiles = (pdescripcion_pre, pcantidad_pre, pnombre_pre, pcantidad_pri, pdescripcion_pri, pnombre_pri, pcantidad_seg, pdescripcion_seg, pnombre_seg) => {
+let registrar_utiles = (pnombre_lista, ptipo, pciclo, pnivel, pano) => {
   let request = $.ajax({
     url: "http://localhost:4000/api/registro_nuevo",
     method: "POST",
     data: {
       
-        descripcion_pre : pdescripcion_pre,
-        cantidad_pre : pcantidad_pre,
-        nombre_pre : pnombre_pre,
-        descripcion_pri : pdescripcion_pri,
-        cantidad_pri : pcantidad_pri,
-        nombre_pri : pnombre_pri,
-        descripcion_seg : pdescripcion_seg,
-        cantidad_seg : pcantidad_seg,
-        nombre_seg : pnombre_seg
-        
+        nombre_lista : pnombre_lista,
+        tipo : ptipo,
+        ciclo : pciclo,
+        nivel : pnivel,
+        ano : pano
         
     },
     dataType: "json",
@@ -25,7 +20,7 @@ let registrar_utiles = (pdescripcion_pre, pcantidad_pre, pnombre_pre, pcantidad_
   request.done(function (msg) {
     swal.fire({
       type: 'success',
-      title: 'Los utiles han sido registrados exitosamente',
+      title: 'La lista ha sido registrada',
       text: 'Gracias'
     });
   });
@@ -33,7 +28,7 @@ let registrar_utiles = (pdescripcion_pre, pcantidad_pre, pnombre_pre, pcantidad_
   request.fail(function (jqXHR, textStatus) {
     swal.fire({
       type: 'error',
-      title: 'Los utiles no han podido ser registrados',
+      title: 'La lista no ha sido registrada',
       text: 'Ocurrió un error inesperado, por favor intente de nuevo'
     });
   });
