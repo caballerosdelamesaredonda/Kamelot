@@ -74,16 +74,17 @@ const comentario = require('./componentes/reg_utiles_mep/reg_utiles.route');
 
 const registro_utiles = require('./componentes/reg_utiles_mep/reg_utiles.route');
 
+const noticias = require('./componentes/noticias/noticias.route');
+
 app.use('/api', registro_utiles);
 
 app.use('/api', comentario);
 
 app.use('/api', usuarios);
 
-
 app.use('/api', citas);
 
-
+app.use('/api', noticias);
 
 
 // Se guarda todo lo que se ha realizado
