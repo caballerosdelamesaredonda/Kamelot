@@ -1,3 +1,4 @@
+@@ -1,264 +0,0 @@
 'use strict';
 
 const input_nombre = document.querySelector('#txt_nombre');
