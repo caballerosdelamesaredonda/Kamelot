@@ -1,4 +1,3 @@
-
 'use strict';
 
 const input_nombre = document.querySelector('#txt_nombre');
@@ -261,4 +260,5 @@ let obtener_datos = () => {
     }
 
 };
+
 boton_registrar.addEventListener('click', obtener_datos);

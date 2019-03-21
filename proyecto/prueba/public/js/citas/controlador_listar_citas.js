@@ -75,22 +75,7 @@ function DisableSpecificDates(date) {
 
 }
 
-// Function to show datepicker
 
-$(function () {
-    $("#datepicker").datepicker({
-        beforeShowDay: DisableSpecificDates
-    });
-});
-
-// Function to show limited datepicker dates
-
-$("#datepicker").datepicker();
-
-$(function () {
-    $("#datepicker-13").datepicker({ dateFormat: 'mm-dd-yy', maxDate: '+20', minDate: '0', beforeShowDay: DisableSpecificDates /* $.datepicker.noWeekends */ });
-    $("#datepicker-13").datepicker("show");
-});
 
 
 

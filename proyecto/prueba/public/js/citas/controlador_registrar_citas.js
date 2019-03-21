@@ -4,6 +4,7 @@ const input_codigo = document.querySelector('#txt_codigo');
 const input_nombre = document.querySelector('#txt_nombre');
 const input_correo = document.querySelector('#txt_correo');
 const input_fecha = document.querySelector('#datepicker-13');
+const input_hora = document.querySelector('#slct_hora');
 const boton_registrar = document.querySelector('#btn_registrar');
 
 
@@ -49,8 +50,9 @@ let obtener_datos = () => {
         let nombre = input_nombre.value;
         let correo = input_correo.value;
         let fecha = input_fecha.value;
+        let hora = input_hora.value;
 
-        registrar_citas(codigo, nombre, correo, fecha);
+        registrar_citas(codigo, nombre, correo, fecha, hora);
         
 
     } else {
@@ -65,3 +67,19 @@ let obtener_datos = () => {
 
 boton_registrar.addEventListener('click', obtener_datos);
 
+// Function to show datepicker
+
+$(function () {
+    $("#datepicker").datepicker({
+        beforeShowDay: DisableSpecificDates
+    });
+});
+
+// Function to show limited datepicker dates
+
+$("#datepicker").datepicker();
+
+$(function () {
+    $("#datepicker-13").datepicker({ dateFormat: 'mm-dd-yy', maxDate: '+20', minDate: '0', beforeShowDay: DisableSpecificDates /* $.datepicker.noWeekends */ });
+    $("#datepicker-13").datepicker("show");
+});
