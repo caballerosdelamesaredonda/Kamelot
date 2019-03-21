@@ -2,7 +2,7 @@
 'use strict';
 const mongoose = require('mongoose');
 
-let schema_citas = new mongoose.Schema(
+let schema_noticias = new mongoose.Schema(
     {
         userid : {type : String, required : true},
         titulo : {type : String, required: true},
@@ -11,4 +11,4 @@ let schema_citas = new mongoose.Schema(
     }
 );
 
-module.exports = mongoose.model('Noticia', schema_citas);
+module.exports = mongoose.model('Noticia', schema_noticias);

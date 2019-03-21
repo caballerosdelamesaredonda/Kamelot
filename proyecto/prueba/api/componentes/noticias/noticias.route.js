@@ -7,7 +7,7 @@ const noticias_api = require('./noticias.api');
 router.route('/registrar_noticias')
     .post(
         function (req, res) {
-            noticias_api.registrar_citas(req, res);
+            noticias_api.registrar_noticias(req, res);
         }
     );
 

@@ -21,41 +21,40 @@
         <nav>
             <img class="img_logo" src="images/logo_transparent.png" alt="Logo Costa Rica Educa">
             <a href="#">Costa Rica Educa</a>
-            <label for="txt_buscar">Buscar</label>
-            <input type="text" id="txt_buscar">
+            <input type="text" placeholder="Buscar..." id="txt_buscar">
             <a href="index.html">Home</a>
             <a href="#">Iniciar Sesion</a>
         </nav>
     </header>
 
-    <form id="frm_citas">
+    <form id="frm_noticias">
 
         <!-- Formulario de registro de citas -->
 
         <h1>Solicitar cita con centro educativo</h1>
 
         <div>
-            <label for="txt_codigo">Codigo:</label>
-            <input type="text" id="txt_codigo">
+            <label for="txt_userid">User ID:</label>
+            <input type="text" id="txt_userid">
         </div>
 
         <div>
-            <label for="txt_nombre">Nombre:</label>
-            <input type="text" id="txt_nombre">
+            <label for="txt_titulo">Titulo:</label>
+            <input type="text" id="txt_titulo">
         </div>
 
         <div>
-            <label for="txt_correo">Correo Electronico:</label>
-            <input type="text" id="txt_correo">
+            <label for="txt_descripcion">Descripcion:</label>
+            <input type="text" id="txt_descripcion">
         </div>
 
         <div>
-            <label for="datepicker-13">Seleccionar Fecha:</label>
-            <input type="text" id="datepicker-13">
+            <label for="txt_fecha">Fecha:</label>
+            <input type="date" id="txt_fecha">
         </div>
 
         <div>
-            <button type="button" id="btn_registrar">Registrar Cita</button>
+            <button type="button" id="btn_registrar">Registrar Noticia</button>
         </div>
 
     </form>
@@ -64,9 +63,9 @@
     <table class="tabla_info">
         <thead>
             <tr>
-                <th>Codigo</th>
-                <th>Nombre</th>
-                <th>Correo</th>
+                <th>User Id</th>
+                <th>Titulo</th>
+                <th>Descripcion</th>
                 <th>Fecha</th>
             </tr>
         </thead>
@@ -87,9 +86,9 @@
 	</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="js/citas/servicio_citas.js"></script>
-    <script src="js/citas/controlador_listar_citas.js"></script>
-    <script src="js/citas/controlador_registrar_citas.js"></script>
+    <script src="js/noticias/servicio_noticias.js"></script>
+    <script src="js/noticias/controlador_registrar_noticias.js"></script>
+    <script src="js/noticias/controlador_listar_noticias.js"></script>
 
 
 </body>
