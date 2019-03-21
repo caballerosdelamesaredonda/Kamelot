@@ -5,10 +5,10 @@
 
     <title>Registro Utiles Centro Educativo</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/reg_utiles_ce.css">
+    <link rel="stylesheet" href="css/reg_utiles.css">
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fontawesome.com/icons/trash-alt?style=solid">
     <link href="https://fontawesome.com/icons/eye-slash?style=solid">
     <link href="https://fontawesome.com/icons/edit?style=solid">
@@ -17,14 +17,17 @@
 </head>
 
 <body>
-    <header class="header_principal">
-        <div>
-            <a class="active" href="#home">LOGO</a>
-            <input type="text" placeholder="Search..">
-            <a href="#about">Perfil</a>
-            <a href="#cerrar">Cerrar sesion</a>
 
-        </div>
+    <header class="header_principal">
+
+        <nav>
+            <img class="img_logo" src="images/logo_transparent.png" alt="Logo Costa Rica Educa">
+            <a href="#">Costa Rica Educa</a>
+            <label for="txt_buscar">Buscar</label>
+            <input type="text" id="txt_buscar">
+            <a href="index.html">Home</a>
+            <a href="#">Iniciar Sesion</a>
+        </nav>
     </header>
 
     <section id="titulo">
@@ -38,9 +41,11 @@
         </section>
 
         <form id="frm_utiles">
+
+
             <div>
                 <label for="nombre_lista">Nombre de la lista</label>
-                <input type="text" id="nombre_lista" placeholder="Nombre de la institución">
+                <input type="text" id="nombre_lista" placeholder="Nombre de la Lista">
             </div>
 
             <div>
@@ -83,8 +88,8 @@
                     <label for="ano">Año</label>
                     <input type="text" id="ano" placeholder="Año">
                 </div>
-                
-            </div>
+
+
 
     </main>
 
@@ -94,31 +99,118 @@
             <h1>Agregue los útiles requeridos en esta lista</h1>
         </section>
         <div id="centrar">
-           
-            <div>
+
+            <div id="lista_utiles">
                 <label for="lista_utiles">Lista de utiles</label>
-                <select >
-                        <option value="">--Seleccione su util--</option>
-                        <option value="1">Estuche para lapices</option>
-                        <option value="2">Caja de boligrafos</option>
-                        <option value="3">Lapices</option>
-                        <option value="4">Sacapuntas</option>
-                        <option value="5">Resaltadores</option>
-                        <option value="6">Marcadores</option>
-                        <option value="7">Permanentes</option>
-                        <option value="8">Folder</option>
-                        <option value="9">Perforadora</option>
-                        <option value="10">Papel rayado</option>
-                        <option value="11">Fichas</option>
-                    </select>
+
+                <div id="lista_check">
+                    <form action="/action_page.php">
+
+                        <input type="checkbox" name="Estuche para lapices"> Estuche para lapices<br>
+                        <input type="checkbox" name="Caja de boligrafos"> Caja de boligrafos<br>
+                        <input type="checkbox" name="Lapices">Lapices<br>
+                        <input type="checkbox" name="Sacapuntas">Sacapuntas<br>
+                        <input type="checkbox" name="Resaltadores">Resaltadores<br>
+                        <input type="checkbox" name="Marcadores">Marcadores<br>
+                        <input type="checkbox" name="Permanentes">Permanentes<br>
+                        <input type="checkbox" name="Folder">Folder<br>
+                        <input type="checkbox" name="Perforadora">Perforadora<br>
+                        <input type="checkbox" name="Papel rayado">Papel rayado<br>
+                        <input type="checkbox" name="Fichas">Fichas<br>
+                        <input type="checkbox" name="Carpetas">Carpetas<br>
+                        <input type="checkbox" name="Pegamento">Pegamento<br>
+                        <input type="checkbox" name="Papel Cuadriculado">Papel Cuadriculado<br>
+                        <input type="checkbox" name="Correctores">Correctores<br>
+                        <input type="checkbox" name="Trasportador">Trasportador<br>
+                        <input type="checkbox" name="Regla">Regla<br>
+                        <input type="checkbox" name="Tijera">Tijera<br>
+                        <input type="checkbox" name="Calculadora">Calculadora<br>
+                        <input type="checkbox" name="Candado">Candado<br>
+                        <input type="checkbox" name="Organizador">Organizador<br>
+                        <input type="checkbox" name="Agenda">Agenda<br>
+                        <input type="checkbox" name="Papel para forrar">Papel para forrar<br>
+                        <input type="checkbox" name="Mochila">Mochila<br>
+                        <input type="checkbox" name="Lonchera">Lonchera<br>
+                        <input type="checkbox" name="Libro de estudio">Libro de estudio<br>
+
+                        <input type="checkbox" name="Lonchera">Lonchera<br>
+                        
+                        
+                      
+                        
+                    </form>
+                </div>
+
             </div>
+
 
             <!--<div>
                 <button type="button" id="btn_agregar_item">Agregar Ítem</button>
             </div>-->
         </div>
 
-        <div>
+        </div>
+
+        <div id="upload"></div>
+        <div class="dropzone" id="dropzone">Suba su archivo aqui</div>
+
+        <script>
+            (function () {
+                var dropzone = document.getElementById('dropzone');
+
+                var displayUploads = function (data) {
+                    var uploads = document.getElementById('uploads'),
+                        anchor,
+                        x;
+
+                    for (x = 0; x < data.length; x = x + 1) {
+                        anchor = document.createElement('a');
+                        anchor.href = data[x].file;
+                        anchor.innerText = data[x].name;
+
+                        uploads.appendChild(anchor);
+                    }
+                }
+
+                var upload = function (files) {
+                    var formData = new FormData(),
+                        xhr = new XMLHttpRequest(),
+                        x;
+                    for (x = 0; x < files.length; x = x + 1) {
+                        formData.append('file[]', files[x]);
+                    }
+
+                    xhr.onload = function () {
+                        var data = JSON.parse(this.responseText);
+                        displayUploads(data);
+
+                    }
+
+                    xhr.open('post', 'upload.php');
+                    xhr.send(formData);
+                }
+
+                dropzone.ondrop = function (e) {
+                    e.preventDefault();
+                    this.className = 'dropzone';
+                    upload(e.dataTransfer.files);
+                }
+
+                dropzone.ondragover = function () {
+                    this.className = 'dropzone dragover';
+                    return false;
+                }
+
+                dropzone.ondragleave = function () {
+                    this.className = 'dropzone';
+                    return false;
+                }
+            }());
+
+        </script>
+
+
+        <div id="btn_registrar_utiles">
             <button type="button" id="btn_registrar">Registrar</button>
         </div>
         <!--<div>
@@ -128,10 +220,23 @@
         </form>
     </main>
 
+
+    <footer class="footer_principal">
+        <nav>
+            <a href="registro_centroe.html">Registrar centro educativo</a>
+            <a href="citas.html">Registrar cita</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+        </nav>
+        <br>
+        <p>Desarrollado por KAMELOT</p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/servicio_utiles_ce.js"></script>
-    <script src="js/controlador_utiles_ce.js"></script> 
+    <script src="js/controlador_utiles_ce.js"></script>
 
 </body>
 
