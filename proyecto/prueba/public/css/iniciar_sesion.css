@@ -1,0 +1,33 @@
+form{
+    position: absolute;
+    left: 43%;
+    top: 30%;
+}
+
+label{
+    display: inline-block;
+    width: 150px;
+
+}
+
+input[type= email], input[type= password]{
+    width: 200px;
+    height: 30px;
+    border-radius: 4px;
+    border: solid black 1px;
+    display: block;
+    padding: 5px;
+}
+
+#btn_ingresar{
+    width: 200px;
+    border-radius: 4px;
+    background-color: #0652DD;
+    color: white;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+div{
+    margin-bottom: 20px;
+}
