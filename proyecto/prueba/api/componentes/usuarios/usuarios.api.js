@@ -205,7 +205,7 @@ module.exports.listar_solicitud_pendiente = (req ,res) =>{
 
 //validar credenciales de los usuarios
 module.exports.validar_sesion = (req, res)=>{
-    model_usuarios.findOne({_id : req.body.correo_electronico}).then(
+    model_usuarios.findOne({correo_electronico : req.body.correo_electronico}).then(
         function(usuario){
             if(usuario){
                 if(usuario.clave === req.body.clave){
