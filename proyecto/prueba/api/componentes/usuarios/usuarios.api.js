@@ -79,8 +79,8 @@ module.exports.registrar_pf = (req, res) =>{
             canton : req.body.canton,
             distrito: req.body.distrito,
             direccion: req.body.direccion,
-            tipo_usuario : req.tipo_usuario,
-            estado : req.estado
+            tipo_usuario : req.body.tipo_usuario,
+            estado : req.body.estado
         }
     );
     
