@@ -1,3 +1,5 @@
+
+
 'use strict';
 const model_usuarios = require ('./usuarios.model.js');
 
@@ -160,7 +162,7 @@ module.exports.listar_todos = (req ,res) =>{
             if(padref.length > 0){
                 res.json(
                     {
-                        usuarios: true,
+                        success: true,
                         usuarios: usuarios
                     }
                 )
@@ -200,3 +202,50 @@ module.exports.listar_solicitud_pendiente = (req ,res) =>{
 
     )
 };
+
+//validar credenciales de los usuarios
+module.exports.validar_sesion = (req, res)=>{
+    model_usuarios.findOne({_id : req.body.correo_electronico}).then(
+        function(usuario){
+            if(usuario){
+                if(usuario.contrasenna === req.body.contrasenna){
+                    res.json({
+                        success: true,
+                        usuario: usuario
+                    })
+                }else{
+                    res.json({
+                        success: false,
+                        msj: 'contraseña incorrecta'
+                    })
+                }
+            }else{
+                res.json({
+                    success: false,
+                    msj:'No se encontró el usuario'
+                });
+            }
+
+        }
+    )
+};
+
+//busca usuario por ID
+module.exports.buscar_usuario = (req, res)=>{
+    model_usuarios.findOne({_id : req.body.id}).then(
+        function(usuario){
+            if(usuario){
+                res.json({
+                    success:true,
+                    usuario: usuario
+                });
+            }else{
+                res.json({
+                    success:false,
+                    msj: 'No se encontró el usuario'
+                });
+            }
+
+        }
+    )
+}

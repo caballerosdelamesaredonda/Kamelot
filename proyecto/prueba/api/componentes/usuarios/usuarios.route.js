@@ -36,4 +36,22 @@ router.route('/listar_ce_pendientes')
     }
 )
 
+//end point validar sesion usuario
+router.route('/validar_sesion')
+    .post(
+        function(req, res){
+            api_usuarios.validar_sesion(req, res);
+        }
+    );
+
+//end point buscar usuario por id
+
+router.route('/buscar_usuario')
+    .post(
+        function(req, res){
+            api_usuarios.buscar_usuario(req, res);
+        }
+    );
+
+
 module.exports = router;

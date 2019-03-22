@@ -1,18 +1,6 @@
-const testUsuario = {
-	usuario: 'admin@admin.com',
-	contrasenna: 'abc123'
-};
+'use strict';
 
-const respuestaTest = {
-	success: true,
-	usuario:{
-		_id: 'thisisanid1234567890',
-		tipo_usuario: 'admin',
-		nombre: 'Alexander'
-	}
-}
-
-/*let validar_credenciales = (pUsuario, pContrasenna ) =>{
+let validar_credenciales = (pUsuario, pContrasenna ) =>{
 		let usuario='';
 		let request = $.ajax({
 			url: "http://localhost:4000/api/validar_sesion",
@@ -26,38 +14,35 @@ const respuestaTest = {
 		});
 
 		request.done(function (response) {
-					//validacion_exitosa = response.success;
-					validacion_exitosa = respuestaTest.success;
+					let validacion_exitosa = response.success;
+
 					if(validacion_exitosa){
-						//usuario = response.usuario;
-						usuario = respuestaTest.usuario;
+						usuario = response;
+					}else{
+						usuario = response;
+                        swal.fire({
+                            type: 'error',
+                            title: 'Error',
+                            text: response.msj
+                        });
 					};
 		});
 		request.fail(function (jqXHR, textStatus) {
 			swal.fire({
 				type: 'error',
-				title: 'Usuar',
-				text: 'Not good try again'
+				title: 'Error buscando el usuario',
+				text: 'Revisa tu conexión e intenta de nuevo'
 			});
 		});
 
+		return usuario;
+
 };
-*/
 
-let validar_credenciales = (pUsuario, pContrasenna ) =>{
-	respuesta ='';
-
-	if(pUsuario == testUsuario.usuario && pContrasenna == testUsuario.contrasenna){
-		respuesta = respuestaTest;
-	}
-
-	return respuesta;
-};
-/*
 let obtener_usuario_por_id = (pId) =>{
     let usuario='';
     let request = $.ajax({
-        url: "http://localhost:4000/api/obtener_usuario",
+        url: "http://localhost:4000/api/buscar_usuario",
         method: 'POST',
         data: {
             id : pId
@@ -67,8 +52,19 @@ let obtener_usuario_por_id = (pId) =>{
     });
 
     request.done(function (response) {
-        usuario = response;
+
+    	if (response.success){
+    		usuario = response;
+		}else{
+            usuario = response;
+            swal.fire({
+                type: 'error',
+                title: 'Error',
+                text: response.msj
+            });
+		}
+
     });
 
     return  usuario;
-}; */
+};

@@ -32,7 +32,7 @@ let validar = () =>{
 
 let obtenerDatos = () =>{
 		let	resultadoValidacion = validar();
-		if(resultadoValidacion == false){
+		if(resultadoValidacion === false){
 				let correo = input_correo.value;
 				let contrasenna = input_contrasenna.value;
 
@@ -40,14 +40,8 @@ let obtenerDatos = () =>{
 
 				if(validacion_credenciales.success){
 						iniciar_sesion(validacion_credenciales.usuario);
-				};
+				}
 
-		}else{
-			swal.fire({
-				type: 'warning',
-				title: 'El comentario no fue enviado',
-				text: 'Por favor revise los campos resaltados'
-			});
 		}
 };
 
