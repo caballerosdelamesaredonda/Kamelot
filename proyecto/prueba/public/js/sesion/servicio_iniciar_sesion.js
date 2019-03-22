@@ -1,15 +1,16 @@
 'use strict';
 
-let validar_credenciales = (pUsuario, pClave ) =>{
+let validar_credenciales = (pCorreo, pClave ) =>{
 		let usuario='';
 		let request = $.ajax({
 			url: "http://localhost:4000/api/validar_sesion",
 			method: "POST",
+            async: false,
+            dataType: "json",
 			data: {
-                correo_electronico : pUsuario,
+                correo_electronico : pCorreo,
 				clave :  pClave
 			},
-			dataType: "json",
 			contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
 		});
 
@@ -21,17 +22,19 @@ let validar_credenciales = (pUsuario, pClave ) =>{
 					}else{
 						usuario = response;
                         swal({
-                            type: 'error',
-                            title: 'Error',
-                            text: response.msj
+                            title: "Error",
+                            text: response.msj,
+                            icon: "error",
+                            button: "ok"
                         });
 					};
 		});
 		request.fail(function (jqXHR, textStatus) {
 			swal({
-				type: 'error',
-				title: 'Error buscando el usuario',
-				text: 'Revisa tu conexión e intenta de nuevo'
+				title: "Error buscando el usuario",
+				text: "Revisa tu conexión e intenta de nuevo",
+                icon: "error",
+                button: "ok"
 			});
 		});
 
@@ -44,6 +47,7 @@ let obtener_usuario_por_id = (pId) =>{
     let request = $.ajax({
         url: "http://localhost:4000/api/buscar_usuario",
         method: 'POST',
+        async: false,
         data: {
             id : pId
         },

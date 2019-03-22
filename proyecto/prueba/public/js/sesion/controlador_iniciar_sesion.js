@@ -50,15 +50,15 @@ let iniciar_sesion =(pUsuario)=> {
 		let tipo_usuario = pUsuario['tipo_usuario'];
 
 		switch (tipo_usuario) {
-				case "admin":
+				case "AD":
 						window.location.href='perfil_admin.html';
 				break;
 
-				case "centro educativo":
+				case "CE":
 						window.location.href='perfil_centro_educativo.html';
 				break;
 
-				case "padre de familia":
+				case "PF":
 						window.location.href='perfil_admin.html';
 				break;
 		};
