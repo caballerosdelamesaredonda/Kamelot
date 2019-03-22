@@ -6,7 +6,7 @@ let validar_credenciales = (pUsuario, pClave ) =>{
 			url: "http://localhost:4000/api/validar_sesion",
 			method: "POST",
 			data: {
-				usuario : pUsuario,
+                correo_electronico : pUsuario,
 				clave :  pClave
 			},
 			dataType: "json",
