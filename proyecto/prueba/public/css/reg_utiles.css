@@ -13,6 +13,8 @@
     padding: 15;
     margin: 10;
     border: 1px solid #2d3436;
+    border: solid 0.7px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 }
 
 body{
@@ -33,7 +35,7 @@ body{
 }
 
 
-#lista_utiles:hover, #nombre_lista:hover, #lista_utiles:hover, #slt_tipo:hover, #slt_ciclo:hover, #slt_nivel:hover, #ano:hover{
+#text_ano:hover, #nombre_lista:hover, #slt_tipo:hover, #slt_ciclo:hover, #slt_nivel:hover, #ano:hover, #txt_nombre_lista:hover, #cantidad:hover{
     background: #808e9b;
 }
 
@@ -44,6 +46,11 @@ body{
     border: solid 1px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 
+}
+
+#cantidad{
+    margin: 3px;
+    padding: 3px;
 }
 
 #lista_utiles, #lista_check{
