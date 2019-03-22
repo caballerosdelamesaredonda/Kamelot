@@ -20,7 +20,7 @@ let validar_credenciales = (pUsuario, pContrasenna ) =>{
 						usuario = response;
 					}else{
 						usuario = response;
-                        swal.fire({
+                        swal({
                             type: 'error',
                             title: 'Error',
                             text: response.msj
@@ -28,7 +28,7 @@ let validar_credenciales = (pUsuario, pContrasenna ) =>{
 					};
 		});
 		request.fail(function (jqXHR, textStatus) {
-			swal.fire({
+			swal({
 				type: 'error',
 				title: 'Error buscando el usuario',
 				text: 'Revisa tu conexión e intenta de nuevo'
@@ -57,7 +57,7 @@ let obtener_usuario_por_id = (pId) =>{
     		usuario = response;
 		}else{
             usuario = response;
-            swal.fire({
+            swal({
                 type: 'error',
                 title: 'Error',
                 text: response.msj
