@@ -33,7 +33,9 @@ let registrar_centroe = (pnombre, palias, pclave, pcedula_juridica, ptipo_centro
       telefono_contacto : ptelefono_contacto,
       extension_contacto : pextension_contacto,
       correo_electronico_contacto : pcorreo_electronico_contacto,
-      foto_contacto : pfoto_contacto
+      foto_contacto : pfoto_contacto,
+      tipo_usuario: 'CE',
+      estado: false
     },
     dataType: "json",
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
