@@ -1,13 +1,13 @@
 'use strict';
 
-let validar_credenciales = (pUsuario, pContrasenna ) =>{
+let validar_credenciales = (pUsuario, pClave ) =>{
 		let usuario='';
 		let request = $.ajax({
 			url: "http://localhost:4000/api/validar_sesion",
 			method: "POST",
 			data: {
 				usuario : pUsuario,
-				contrasenna :  pContrasenna
+				clave :  pClave
 			},
 			dataType: "json",
 			contentType: 'application/x-www-form-urlencoded; charset=UTF-8'

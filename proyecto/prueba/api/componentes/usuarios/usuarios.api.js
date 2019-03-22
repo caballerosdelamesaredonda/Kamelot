@@ -208,7 +208,7 @@ module.exports.validar_sesion = (req, res)=>{
     model_usuarios.findOne({_id : req.body.correo_electronico}).then(
         function(usuario){
             if(usuario){
-                if(usuario.contrasenna === req.body.contrasenna){
+                if(usuario.clave === req.body.clave){
                     res.json({
                         success: true,
                         usuario: usuario
