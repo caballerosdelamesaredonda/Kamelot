@@ -2,7 +2,7 @@
 
 let registrar_centroe = (pnombre, palias, pclave, pcedula_juridica, ptipo_centro, pnivel_centro, pfoto, pnombre_comercial, pprovincia, pcanton, pdistrito, pdireccion, pfecha_fundacion, preferencia_historia, padjuntar_documentos, ptelefono, pfax, psitio_web, pcuentas_redesso, pcorreo_electronico, pcontacto_nombre, pcontacto_papellido, pcontacto_sapellido, pidentificacion, pdepartamento, ptelefono_contacto, pextension_contacto, pcorreo_electronico_contacto, pfoto_contacto) => {
   let request = $.ajax({
-    url: "http://localhost:4000/api/centroe_nuevo",
+    url: "http://localhost:4000/api/registrar_ce",
     method: "POST",
     data: {
       nombre : pnombre,

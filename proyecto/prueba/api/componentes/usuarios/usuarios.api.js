@@ -37,8 +37,7 @@ module.exports.registrar_ce = (req, res) =>{
         correo_electronico_contacto : req.body.correo_electronico_contacto,
         foto_contacto : req.body.foto_contacto,
         tipo_usuario : req.body.tipo_usuario,
-        estado : req.body.estado,
-
+        estado : req.body.estado
         }
     );
     
@@ -81,7 +80,7 @@ module.exports.registrar_pf = (req, res) =>{
             distrito: req.body.distrito,
             direccion: req.body.direccion,
             tipo_usuario : req.tipo_usuario,
-            estado : req.estado,
+            estado : req.estado
         }
     );
     
@@ -98,7 +97,7 @@ module.exports.registrar_pf = (req, res) =>{
                 res.json(
                     {
                         success : true,
-                        msg : `Se registró el centro educativo de manera correcta`
+                        msg : `Se registró el padre de familia de manera correcta`
                     }
                 )
             }

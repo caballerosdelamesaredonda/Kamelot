@@ -54,4 +54,13 @@ router.route('/buscar_usuario')
     );
 
 
+//end point registro ce
+router.route('/registrar_pf')
+.post(
+    function(req, res){
+        api_usuarios.registrar_pf(req, res);
+    }
+);
+
+
 module.exports = router;
