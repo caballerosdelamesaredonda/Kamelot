@@ -59,7 +59,7 @@ let iniciar_sesion =(pUsuario)=> {
 				break;
 
 				case "PF":
-						window.location.href='perfil_admin.html';
+						window.location.href='perfil_padre_familia.html';
 				break;
 		};
 
