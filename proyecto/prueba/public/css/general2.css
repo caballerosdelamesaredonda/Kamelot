@@ -1,0 +1,143 @@
+body{
+    font-family: Nunito;
+}
+
+.header_principal{
+    background: #143646;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: right;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.header_principal nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.header_principal nav a:hover{
+    color: #3498db;
+}
+
+.footer_principal{
+    background: #808e9b;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+  
+}
+.footer_principal nav a,.footer_principal p {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.img_logo{
+    width: 100px;
+    height: 71px;
+    background-color: #808e9b;
+    float: left;
+    margin-left: 20px;
+}
+
+.error_input {
+    border: 2px solid #ED4C67;
+}
+
+.h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;  
+
+}
+
+.lable {
+    display: block;
+    width: 200px;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+#txt_actividad {
+    display: block;
+    width: 800px;
+    height: 300px;
+    margin-bottom: 20px;
+} 
+
+form {
+    margin-left: 50px;
+}
+
+#btn_registrar {
+    background: linear-gradient(#0652DD, rgb(4, 40, 105));
+    padding: 10px;
+    width: 170px;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
+    
+
+}
+
+#btn_registrar:hover {
+    background: linear-gradient(#FFC312, rgb(218, 167, 13));
+    padding: 10px;
+    width: 170px;
+    font-size: 18px;
+    color: #000;
+    -webkit-box-shadow: 9px 10px 37px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 9px 10px 37px -8px rgba(0,0,0,0.75);
+    box-shadow: 9px 10px 37px -8px rgba(0,0,0,0.75);
+    
+
+}
+
+.centrar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tbl_actividad {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+thead {
+    font-size: 20px;
+}
+
+th {
+    margin-bottom: 400px;
+}
+
+tbody tr {
+    margin-bottom: 20px;
+}
+
+td {
+    padding: 20px;
+    border-bottom: 1px solid #3498db;
+}
+
+td:hover {
+    background-color: #E2E2E2;
+}
+
+.spacer {
+    margin-top: 20px;
+}
+
+.largo {
+    margin-bottom: 10px;
+}
