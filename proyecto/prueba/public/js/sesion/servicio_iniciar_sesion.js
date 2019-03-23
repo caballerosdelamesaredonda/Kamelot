@@ -49,7 +49,7 @@ let obtener_usuario_por_id = (pId) =>{
         method: 'POST',
         async: false,
         data: {
-            id : pId
+            _id : pId
         },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
