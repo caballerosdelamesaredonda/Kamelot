@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registro Actividad</title>
+<link rel="stylesheet" href="./css/reset.css" type="text/css">
+<link rel="stylesheet" href="./css/general.css" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+</head>
+
+<body>
+	<header class="header_principal">
+		<nav>
+		<img class="img_logo" src="./imgs/logo_transparent.png" alt="Logo Costa Rica Educa">
+		<label for="txt_buscar">Buscar</label>
+		<input type="text" id="txt_buscar">
+		<a href="#">Registrar Cuenta</a>
+		<a href="#">Iniciar Sesion</a>
+		</nav>
+	</header>
+	<main class="largo">
+		<section id="acti">
+		<h1 class="h1">Registro de Actividades</h1>
+		<form>
+			<div>
+			<lable for="txt_actividad" class="lable">Actividad Nueva</lable>
+			<textarea id="txt_actividad"></textarea>
+			</div>
+			
+			<button type="button" id="btn_registrar">Registrar</button>
+			
+		</form>
+		</section>
+	</main>
+	<footer class="footer_principal">
+			<nav>
+				<a href="#">Link 1</a>
+				<a href="#">Link 2</a>
+				<a href="#">Link 3</a>
+				<a href="#">Link 4</a>
+			</nav>
+			<p class="spacer">Desarrollado por KAMELOT</p>
+		</footer>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/servicio_actividad.js"></script>
+    <script src="js/controlador_actividad.js"></script>
+</body>
+</html>
