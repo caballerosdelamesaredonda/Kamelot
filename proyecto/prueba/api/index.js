@@ -75,7 +75,7 @@ const registro_utiles = require('./componentes/reg_utiles/reg_utiles.route');
 
 const noticias = require('./componentes/noticias/noticias.route');
 
-const actividad = require('./componentes/actividad.route');
+const actividad = require('./componentes/actividad/actividad.route');
 
 app.use('/api', registro_utiles);
 
