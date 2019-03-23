@@ -1,4 +1,4 @@
-$(function() {
+/*$(function() {
     let imagenUrl = '';
     // Configure Cloudinary
     // with credentials available on

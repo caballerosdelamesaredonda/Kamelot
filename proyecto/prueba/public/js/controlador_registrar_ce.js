@@ -13,7 +13,7 @@ const slt_distritos = document.querySelector('#slt_distritos');
 const input_direccion = document.querySelector('#txt_direccion');
 const input_fecha = document.querySelector('#fecha_fundacion');
 const input_referencia = document.querySelector('#txt_referencia');
-const input_documento = document.querySelector('#btnSeleccionarDoc');
+//const input_documento = document.querySelector('#btnSeleccionarDoc');
 const input_telefono = document.querySelector('#txt_telefono');
 const input_fax = document.querySelector('#txt_fax');
 const input_web = document.querySelector('#txt_web');
@@ -27,11 +27,11 @@ const input_contacto_departamento = document.querySelector('#txt_contacto_depart
 const input_contacto_telefono = document.querySelector('#txt_contacto_telefono');
 const input_contacto_extension = document.querySelector('#txt_contacto_extension');
 const input_contacto_correo = document.querySelector('#txt_contacto_correo');
-const input_contacto_foto = document.querySelector('#image_preview2');
+//const input_contacto_foto = document.querySelector('#image_preview2');
 const boton_registrar = document.querySelector('#btn_enviar');
-const input_tipo_usuario = document.querySelector('#txt_tipo_usuario')
+const input_tipo_usuario = document.querySelector('#txt_tipo_usuario');
 const input_estado = document.querySelector('#txt_estado');
-const input_imagen = document.querySelector('#image_preview');
+//const input_imagen = document.querySelector('#image_preview');
 
 
 
@@ -207,12 +207,6 @@ let validar = () => {
         input_contacto_correo.classList.remove('error_input');
     }
 
-    if (input_contacto_foto.value == '') {
-        error = true;
-        input_contacto_foto.classList.add('error_input');
-    } else {
-        input_contacto_foto.classList.remove('error_input');
-    }
 
     return error;
 };
@@ -227,7 +221,7 @@ let obtener_datos = () => {
         let cedula_juridica = input_cedulaj.value;
         let tipo_centro = slt_tipo_centro.value;
         let nivel_centro = slt_nivel_centro.value;
-        let foto = input_imagen.scr;
+        //let foto = input_imagen.scr;
         let nombre_comercial = input_nombre_comercial.value;
         let provincia = slt_provincias.value;
         let canton = slt_cantones.value;
@@ -249,12 +243,11 @@ let obtener_datos = () => {
         let telefono_contacto = input_contacto_telefono.value;
         let extension_contacto = input_contacto_extension.value;
         let correo_electronico_contacto  = input_contacto_correo.value;
-        let foto_contacto = input_contacto_foto.scr;
+        //let foto_contacto = input_contacto_foto.scr;
         let tipo_usuario = input_tipo_usuario.value;
-        let estado = input_estado.value;
+        //let estado = input_estado.value;
 
-        registrar_centroe(nombre, alias, clave, cedula_juridica, tipo_centro, nivel_centro, foto, nombre_comercial, provincia, canton, distrito, direccion, fecha_fundacion, referencia_historia, /*adjuntar_documentos*/ telefono, fax, sitio_web, cuentas_redesso, correo_electronico, contacto_nombre, papellido, sapellido, identificacion, departamento, telefono_contacto, extension_contacto, correo_electronico_contacto, foto_contacto, tipo_usuario, estado);
-        
+        registrar_centroe(nombre, alias, clave, cedula_juridica, tipo_centro, nivel_centro, /*foto*/ nombre_comercial, provincia, canton, distrito, direccion, fecha_fundacion, referencia_historia, /*adjuntar_documentos*/ telefono, fax, sitio_web, cuentas_redesso, correo_electronico, contacto_nombre, papellido, sapellido, identificacion, departamento, telefono_contacto, extension_contacto, correo_electronico_contacto, /*foto_contacto*/ tipo_usuario, /*estado*/);
 
     } else {
         swal.fire({
