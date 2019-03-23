@@ -10,10 +10,10 @@ router.route('/registrar_utiles')
         }
     );
 
-router.route('/listar_todos')
+router.route('/listar_utiles')
     .get(
         function (req, res) {
-            registro_api.listar_todos(req, res);
+            registro_api.listar_utiles(req, res);
         }
     );
 

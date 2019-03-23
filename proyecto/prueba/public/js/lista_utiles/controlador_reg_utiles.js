@@ -10,7 +10,7 @@ const input_nombre_lista = document.querySelector('#txt_nombre_lista');
 const slt_tipo = document.querySelector('#slt_tipo');
 const slt_ciclo = document.querySelector('#slt_ciclo');
 const slt_nivel = document.querySelector('#slt_nivel');
-const input_ano = document.querySelector('#txt_ano');
+const input_ano = document.querySelector('#text_ano');
 const boton_registrar = document.querySelector('#btn_registrar');
 
 
@@ -63,7 +63,7 @@ let mostrarDatos = () => {
       let tipo = slt_tipo.value;
       let ciclo = slt_ciclo.value;
       let nivel = slt_ciclo.value;
-      let ano = slt_ano.value;
+      let ano = input_ano.value;
       
 registrar_utiles(nombre_lista, tipo, ciclo, nivel, ano);
   

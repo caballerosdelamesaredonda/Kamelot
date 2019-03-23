@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./css/general2.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header_principal">
+
+        <nav>
+            <img class="img_logo" src="images/logo_transparent.png" alt="Logo Costa Rica Educa">
+            <a href="#">Costa Rica Educa</a>
+            <label for="txt_buscar">Buscar</label>
+            <input type="text" id="txt_buscar">
+            <a href="index.html">Home</a>
+            <a href="index.html" onclick="localStorage.clear();">Cerrar Sesion</a>
+        </nav>
+    </header>
+    <main>
+        <table id="tbl_actividad" align="center">
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+    <footer class="footer_principal">
+        <nav>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+        </nav>
+        <p class="spacer">Desarrollado por KAMELOT</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/servicio_actividad.js"></script>
+    <script src="js/controlador_listar_actividad.js"></script>
+</body>
+
+</html>

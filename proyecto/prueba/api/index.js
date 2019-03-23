@@ -71,11 +71,13 @@ const citas = require('./componentes/citas/citas.route');
 
 //const comentario = require('./componentes/reg_utiles_mep/reg_utiles.route');
 
-const registro_utiles = require('./componentes/reg_utiles/reg_utiles.route');
+const utiles = require('./componentes/reg_utiles/reg_utiles.route');
 
 const noticias = require('./componentes/noticias/noticias.route');
 
-app.use('/api', registro_utiles);
+const actividad = require('./componentes/actividad/actividad.route');
+
+app.use('/api', utiles);
 
 //app.use('/api', comentario);
 
@@ -84,6 +86,8 @@ app.use('/api', usuarios);
 app.use('/api', citas);
 
 app.use('/api', noticias);
+
+app.use('/api', actividad);
 
 
 // Se guarda todo lo que se ha realizado

@@ -36,21 +36,21 @@ module.exports.registrar = (req, res) =>{
 
 
 
-module.exports.listar_todos = (req ,res) =>{
+module.exports.listar_utiles = (req ,res) =>{
     registro_model.find().then(
-        function(lista){
-            if(lista.length > 0){
+        function(utiles){
+            if(utiles.length > 0){
                 res.json(
                     {
                         success: true,
-                        lista: lista
+                        utiles: utiles
                     }
                 )
             }else{
                 res.json(
                     {
                         success: false,
-                        lista: 'No se encontro informacion'
+                        utiles: 'No se encontro informacion'
                     }
                 )
             }
