@@ -68,6 +68,7 @@ app.use( function(req, res, next) {
 const usuarios = require('./componentes/usuarios/usuarios.route');
 
 const citas = require('./componentes/citas/citas.route');
+const etiquetas = require('./componentes/etiquetas/etiquetas.route');
 
 //const comentario = require('./componentes/reg_utiles_mep/reg_utiles.route');
 
@@ -90,6 +91,7 @@ app.use('/api', citas);
 app.use('/api', noticias);
 
 app.use('/api', actividad);
+app.use('/api', etiquetas);
 
 app.use('/api', evaluacion_ce);
 
