@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/banner_rce.css">
+    <link rel="stylesheet" href="/public/css/registro_ce.css">
+    <title>Registrar etiqueta</title>
+</head>
+
+<body>
+    <header id="header_principal">
+        <div id="logo">
+            <img src="/public/imgs/logo.png">
+        </div>
+    </header>
+    <main>
+        <div class="etiqueta_header">
+            <h1>Registro etiqueta</h1>
+        </div>
+        <div>
+            <label for="txt_nombre">Nombre</label>
+            <input type="text" id="txt_nombre">
+        </div>
+        <div class="btn_enviar">
+            <button type="button" id="btn_enviar">Enviar</button>
+        </div>
+
+        <div>
+            <label for="slt_tipo">Tipo</label>
+            <select id="slt_tipo">
+                <option value="">--Seleccione un tipo--</option>
+                <option value="mep">MEP</option>
+                <option value="centro_educativo">Centro Educativo</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="slt_ciclo">Ciclo</label>
+            <select id="slt_ciclo">
+                <option value="">--Seleccione un ciclo--</option>
+                <option value="primaria">Primaria</option>
+                <option value="secundaria">Secundaria</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+        <div>
+            <label for="slt_nivel">Nivel</label>
+            <select id="slt_nivel">
+                <option value="">--Seleccione un nivel--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+
+            <div>
+                <label for="ano">Año</label>
+                <input type="text" id="text_ano" placeholder="Año">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
