@@ -24,11 +24,11 @@ let schema_usuarios = new mongoose.Schema(
         cedula_juridica : {type : String, unique : false, required : false},
         tipo_centro : {type : String, required : false},
         nivel_centro : {type : String, required : false},
-        foto : {type : String, required : false},
+        //foto : {type : String, required : false},
         nombre_comercial : {type : String, required : false},
         fecha_fundacion : {type : String, required : false},
         referencia_historia : {type : String, required : false},
-        adjuntar_documentos : {type : String, required : false},
+        //adjuntar_documentos : {type : String, required : false},
         fax : {type : String, required : false},
         sitio_web : {type : String, required : false},
         cuentas_redesso : {type : String, required : false},
@@ -37,7 +37,7 @@ let schema_usuarios = new mongoose.Schema(
         telefono_contacto : {type : String, required : false},
         extension_contacto : {type : String, required : false},
         correo_electronico_contacto : {type : String, required : false},
-        foto_contacto : {type : String, required : false},
+        //foto_contacto : {type : String, required : false},
 
         //Todos los usuarios
         tipo_usuario : {type : String, required : false},
