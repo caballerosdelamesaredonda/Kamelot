@@ -75,6 +75,8 @@ const registro_utiles = require('./componentes/reg_utiles/reg_utiles.route');
 
 const noticias = require('./componentes/noticias/noticias.route');
 
+const actividad = require('./componentes/actividad.route');
+
 app.use('/api', registro_utiles);
 
 //app.use('/api', comentario);
@@ -84,6 +86,8 @@ app.use('/api', usuarios);
 app.use('/api', citas);
 
 app.use('/api', noticias);
+
+app.use('/api', actividad);
 
 
 // Se guarda todo lo que se ha realizado
