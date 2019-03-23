@@ -2,13 +2,13 @@
 const registro_model = require('./reg_utiles.model');
 
 module.exports.registrar = (req, res) =>{
-    let registro_nuevo = new registroModel(
+    let registro_nuevo = new registro_model(
         {
             nombre_lista : req.body.nombre_lista,
             tipo : req.body.tipo,
             ciclo : req.body.ciclo,
             nivel : req.body.nivel,
-            ano : req.body.cantidad_ano
+            ano : req.body.ano
             
         }
     );
