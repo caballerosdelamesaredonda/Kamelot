@@ -41,7 +41,7 @@ let schema_usuarios = new mongoose.Schema(
 
         //Todos los usuarios
         tipo_usuario : {type : String, required : false},
-        estado : {type : Boolean, required : false}
+        estado : {type : String, required : false}
     }
 );
 

@@ -3,7 +3,7 @@ const mongoose = require ('mongoose');
 
 let schema_etiquetas = new mongoose.Schema(
     {
-        nombre : {type : String, required : true},
+        nombre : {type : String, required : true}
     }
 );
 

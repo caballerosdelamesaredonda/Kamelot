@@ -245,9 +245,9 @@ let obtener_datos = () => {
         let correo_electronico_contacto  = input_contacto_correo.value;
         //let foto_contacto = input_contacto_foto.scr;
         let tipo_usuario = input_tipo_usuario.value;
-        //let estado = input_estado.value;
+        let estado = input_estado.value;
 
-        registrar_centroe(nombre, alias, clave, cedula_juridica, tipo_centro, nivel_centro, /*foto*/ nombre_comercial, provincia, canton, distrito, direccion, fecha_fundacion, referencia_historia, /*adjuntar_documentos*/ telefono, fax, sitio_web, cuentas_redesso, correo_electronico, contacto_nombre, papellido, sapellido, identificacion, departamento, telefono_contacto, extension_contacto, correo_electronico_contacto, /*foto_contacto*/ tipo_usuario, /*estado*/);
+        registrar_centroe(nombre, alias, clave, cedula_juridica, tipo_centro, nivel_centro, /*foto*/ nombre_comercial, provincia, canton, distrito, direccion, fecha_fundacion, referencia_historia, /*adjuntar_documentos*/ telefono, fax, sitio_web, cuentas_redesso, correo_electronico, contacto_nombre, papellido, sapellido, identificacion, departamento, telefono_contacto, extension_contacto, correo_electronico_contacto, /*foto_contacto*/ estado, tipo_usuario);
 
     } else {
         swal.fire({

@@ -1,13 +1,12 @@
 'use strict';
 const model_etiqueta = require ('./etiquetas.model');
 
-module.exports.registrar = (req, res) =>{
+module.exports.registrar_etiqueta = (req, res) =>{
     let nueva_etiqueta = new model_etiqueta(
         {
         nombre : req.body.nombre
         }
     );
-    
     nueva_etiqueta.save(
         function(error){
             if(error){
@@ -31,7 +30,7 @@ module.exports.registrar = (req, res) =>{
 
 
 module.exports.listar_etiquetas = (req ,res) =>{
-    nueva_etiqueta.find().then(
+    model_etiqueta.find().then(
         function(etiqueta){
             if(etiqueta.length > 0){
                 res.json(

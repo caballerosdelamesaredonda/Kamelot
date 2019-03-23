@@ -6,7 +6,7 @@ const api_etiquetas = require('./etiquetas.api');
 router.route('/registrar_etiqueta')
 .post(
     function(req, res){
-        api_etiquetas.registrar(req, res);
+        api_etiquetas.registrar_etiqueta(req, res);
     }
 );
 
