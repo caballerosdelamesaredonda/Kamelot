@@ -3,7 +3,12 @@
 let userid = localStorage.getItem('usuario_en_sesion');
 console.log(userid);
 
-let usario_loggeado = obtener_usuario_por_id(userid);
+if (userid != '') {
+    let usario_loggeado = obtener_usuario_por_id(userid);
+}else{
+    console.log('Usuario no iniciado sesion');
+}
+
 
 console.log(usario_loggeado);
 
