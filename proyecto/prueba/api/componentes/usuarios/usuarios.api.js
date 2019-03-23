@@ -256,7 +256,7 @@ module.exports.validar_sesion = (req, res)=>{
 
 //busca usuario por ID
 module.exports.buscar_usuario = (req, res)=>{
-    model_usuarios.findOne({_id : req.body.id}).then(
+    model_usuarios.findOne({_id : req.body._id}).then(
         function(usuario){
             if(usuario){
                 res.json({
