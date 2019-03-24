@@ -19,7 +19,6 @@ let mostrar_datos = () => {
             fila.insertCell().innerHTML = noticias[i]['titulo'];
             fila.insertCell().innerHTML = noticias[i]['descripcion'];
             fila.insertCell().innerHTML = dateformated;
-            fila.insertCell().innerHTML ='<p>Test</p>';
     }
 
 };
