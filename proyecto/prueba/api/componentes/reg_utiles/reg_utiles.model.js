@@ -13,4 +13,4 @@ let schema_registro = new mongoose.Schema(
     }
 );
 
-module.exports = mongoose.model('reg_utiles', schema_registro);
+module.exports = mongoose.model('utiles', schema_registro);

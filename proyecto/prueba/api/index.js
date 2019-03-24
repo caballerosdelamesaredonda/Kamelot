@@ -68,14 +68,19 @@ app.use( function(req, res, next) {
 const usuarios = require('./componentes/usuarios/usuarios.route');
 
 const citas = require('./componentes/citas/citas.route');
+const etiquetas = require('./componentes/etiquetas/etiquetas.route');
 
 //const comentario = require('./componentes/reg_utiles_mep/reg_utiles.route');
 
-//const registro_utiles = require('./componentes/reg_utiles_mep/reg_utiles.route');
+const utiles = require('./componentes/reg_utiles/reg_utiles.route');
 
 const noticias = require('./componentes/noticias/noticias.route');
 
-//app.use('/api', registro_utiles);
+const actividad = require('./componentes/actividad/actividad.route');
+
+const evaluacion_ce = require('./componentes/evaluacion_ce/evaluacion_ce.route');
+
+app.use('/api', utiles);
 
 //app.use('/api', comentario);
 
@@ -84,6 +89,11 @@ app.use('/api', usuarios);
 app.use('/api', citas);
 
 app.use('/api', noticias);
+
+app.use('/api', actividad);
+app.use('/api', etiquetas);
+
+app.use('/api', evaluacion_ce);
 
 
 // Se guarda todo lo que se ha realizado

@@ -2,13 +2,13 @@
 const registro_model = require('./reg_utiles.model');
 
 module.exports.registrar = (req, res) =>{
-    let registro_nuevo = new registroModel(
+    let registro_nuevo = new registro_model(
         {
             nombre_lista : req.body.nombre_lista,
             tipo : req.body.tipo,
             ciclo : req.body.ciclo,
             nivel : req.body.nivel,
-            ano : req.body.cantidad_ano
+            ano : req.body.ano
             
         }
     );
@@ -36,21 +36,21 @@ module.exports.registrar = (req, res) =>{
 
 
 
-module.exports.listar_todos = (req ,res) =>{
+module.exports.listar_utiles = (req ,res) =>{
     registro_model.find().then(
-        function(lista){
-            if(lista.length > 0){
+        function(utiles){
+            if(utiles.length > 0){
                 res.json(
                     {
                         success: true,
-                        lista: lista
+                        utiles: utiles
                     }
                 )
             }else{
                 res.json(
                     {
                         success: false,
-                        lista: 'No se encontro informacion'
+                        utiles: 'No se encontro informacion'
                     }
                 )
             }

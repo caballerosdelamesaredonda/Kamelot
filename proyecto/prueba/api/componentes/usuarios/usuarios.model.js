@@ -28,7 +28,7 @@ let schema_usuarios = new mongoose.Schema(
         nombre_comercial : {type : String, required : false},
         fecha_fundacion : {type : String, required : false},
         referencia_historia : {type : String, required : false},
-        adjuntar_documentos : {type : String, required : false},
+        //adjuntar_documentos : {type : String, required : false},
         fax : {type : String, required : false},
         sitio_web : {type : String, required : false},
         cuentas_redesso : {type : String, required : false},
@@ -41,7 +41,7 @@ let schema_usuarios = new mongoose.Schema(
 
         //Todos los usuarios
         tipo_usuario : {type : String, required : false},
-        estado : {type : Boolean, required : false}
+        estado : {type : String, required : false}
     }
 );
 

@@ -1,7 +1,15 @@
-
-
 'use strict';
-const model_usuarios = require ('./usuarios.model.js');
+const model_usuarios = require ('./usuarios.model');
+const nodemailer = require('nodemailer');
+
+let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'loscaballerosdelamesaredonnda@gmail.com',
+      pass: 'cvjplplcboqdzpjq'
+    }
+});
+
 
 //registro centro educativo
 module.exports.registrar_ce = (req, res) =>{
@@ -21,7 +29,7 @@ module.exports.registrar_ce = (req, res) =>{
         direccion: req.body.direccion,
         fecha_fundacion : req.body.fecha_fundacion,
         referencia_historia : req.body.referencia_historia,
-        adjuntar_documentos : req.body.adjuntar_documentos,
+        //adjuntar_documentos : req.body.adjuntar_documentos,
         telefono : req.body.telefono,
         fax : req.body.fax,
         sitio_web : req.body.sitio_web,
@@ -47,18 +55,35 @@ module.exports.registrar_ce = (req, res) =>{
                 res.json(
                     {
                         success : false,
-                        msg : `No se completar el registro ${error}`
+                        msg : `No se pudo guardar el centro educativo, ocurrió el siguiente error ${error}`
                     }
                 )
             }else{
+                let mailOptions = {
+                    from: 'loscaballerosdelamesaredonnda@gmail.com',
+                    to: centroe_nuevo.correo_electronico,
+                    subject: 'Registro recibido',
+                    html: `<h1 style="color:#6F1E51;">Saludos ${centroe_nuevo.nombre} </h1>
+                    <p>Gracias por registrarse</p>
+                    <p>Le estaremos escribiendo pronto, una vez los documentos hayan sido revisados y se haya tomado una decision</p>
+                    `
+                };
+                transporter.sendMail(mailOptions, function(error, info){
+                    if (error) {
+                      console.log(error);
+                    } else {
+                      console.log('Email sent: ' + info.response);
+                    }
+                  });
                 res.json(
                     {
                         success : true,
-                        msg : `Se registró el centro educativo de manera correcta`
+                        msg : `Se registró el centro educativo de forma correcta`
                     }
                 )
             }
         }
+
     );
 };
 
@@ -231,7 +256,7 @@ module.exports.validar_sesion = (req, res)=>{
 
 //busca usuario por ID
 module.exports.buscar_usuario = (req, res)=>{
-    model_usuarios.findOne({_id : req.body.id}).then(
+    model_usuarios.findOne({_id : req.body._id}).then(
         function(usuario){
             if(usuario){
                 res.json({

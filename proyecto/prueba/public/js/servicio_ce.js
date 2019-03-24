@@ -1,6 +1,6 @@
 'use strict';
 
-let registrar_centroe = (pnombre, palias, pclave, pcedula_juridica, ptipo_centro, pnivel_centro, pfoto, pnombre_comercial, pprovincia, pcanton, pdistrito, pdireccion, pfecha_fundacion, preferencia_historia, padjuntar_documentos, ptelefono, pfax, psitio_web, pcuentas_redesso, pcorreo_electronico, pcontacto_nombre, pcontacto_papellido, pcontacto_sapellido, pidentificacion, pdepartamento, ptelefono_contacto, pextension_contacto, pcorreo_electronico_contacto, pfoto_contacto) => {
+let registrar_centroe = (pnombre, palias, pclave, pcedula_juridica, ptipo_centro, pnivel_centro, pfoto, pnombre_comercial, pprovincia, pcanton, pdistrito, pdireccion, pfecha_fundacion, preferencia_historia, /*padjuntar_documentos,*/ ptelefono, pfax, psitio_web, pcuentas_redesso, pcorreo_electronico, pcontacto_nombre, ppapellido, psapellido, pidentificacion, pdepartamento, ptelefono_contacto, pextension_contacto, pcorreo_electronico_contacto, pfoto_contacto, pestado, ptipo_usuario) => {
   let request = $.ajax({
     url: "http://localhost:4000/api/registrar_ce",
     method: "POST",
@@ -19,23 +19,23 @@ let registrar_centroe = (pnombre, palias, pclave, pcedula_juridica, ptipo_centro
       direccion: pdireccion,
       fecha_fundacion : pfecha_fundacion,
       referencia_historia : preferencia_historia,
-      adjuntar_documentos : padjuntar_documentos,
+      //adjuntar_documentos : padjuntar_documentos,
       telefono : ptelefono,
       fax : pfax,
       sitio_web : psitio_web,
       cuentas_redesso : pcuentas_redesso,
       correo_electronico : pcorreo_electronico,
       contacto_nombre : pcontacto_nombre,
-      contacto_papellido : pcontacto_papellido,
-      contacto_sapellido : pcontacto_sapellido,
+      papellido : ppapellido,
+      sapellido : psapellido,
       identificacion : pidentificacion,
       departamento : pdepartamento, 
       telefono_contacto : ptelefono_contacto,
       extension_contacto : pextension_contacto,
       correo_electronico_contacto : pcorreo_electronico_contacto,
       foto_contacto : pfoto_contacto,
-      tipo_usuario: 'CE',
-      estado: false
+      estado : pestado,
+      tipo_usuario : ptipo_usuario
     },
     dataType: "json",
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8'

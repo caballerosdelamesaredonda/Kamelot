@@ -4,105 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <title>Perfil padre de familia</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/contacto.css">
-    <link rel="stylesheet" href="css/perfil_padre_familia.css">
-
-
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/perfil_ce.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
 
 <body>
 
-    <header class="header_principal">
-
+    <header class="main_header">
         <nav>
-            <img class="img_logo" src="images/logo_transparent.png" alt="Logo Costa Rica Educa">
-            <a href="#">Costa Rica Educa</a>
-            <label for="txt_buscar">Buscar</label>
-            <input type="text" id="txt_buscar">
-            <a href="index.html">Home</a>
-            <a href="#">Iniciar Sesion</a>
+            <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
+            <div class="float-right middle">
+                <lable class="white mr-1">Buscar</lable>
+                <input type="text" value="" name="" id="txtFiltro" class="input">
+                <div class="float-right mr-2">
+                    <a href="registro_centroe.html"><button type="button" class="registrar_cuenta ml-1">Registrar
+                            Centro Educativo</button></a>
+                    <a href="index.html"><button type="button" class="iniciar_sesion ml-1" onclick="localStorage.clear();">Cerrar
+                            Sesión</button></a>
+                </div>
+            </div>
         </nav>
     </header>
 
-
-
-
     <main>
 
-        <section id="contacto">
+        <section id="perfil">
 
             <div class="columna_izq">
+
+                <h1>Información General</h1>
+
                 <div>
                     <label for="imagen_perfil">
                         <img src="images/avatar.PNG">
-                        <p>
-                            Foto
-                        </p>
                     </label>
+
+                    <div>
+                        <label for="txt_primer_nombre">Primer Nombre</label>
+                        <input type="text" id="txt_primer_nombre" readonly="readonly">
+                    </div>
+
+                    <div>
+                        <label for="txt_segundo_nombre">Segundo Nombre</label>
+                        <input type="text" id="txt_segundo_nombre" readonly="readonly">
+                    </div>
+
+                    <div>
+                        <label for="txt_primer_apellido">Primer Apellido</label>
+                        <input type="text" id="txt_primer_apellido" readonly="readonly">
+                    </div>
+
+                    <div>
+                        <label for="txt_segundo_apellido">Segundo apellido</label>
+                        <input type="text" id="txt_segundo_apellido" readonly="readonly">
+                    </div>
+
+                    <div>
+                        <label for="txt_cedula">Cedula/Pasaporte</label>
+                        <input type="text" id="txt_cedula" readonly="readonly">
+                    </div>
+
+                    <div>
+                        <label for="txt_correo"> Correo Electronico</label>
+                        <input type="email" id="txt_correo" readonly="readonly">
+                    </div>
+
+
                 </div>
 
             </div>
 
-            <form class="columna_derecha_padre" id="frm_contacto">
-                <div>
-                    <label for="txt_primer_nombre">Primer Nombre</label>
-                    <input type="text" id="txt_primer_nombre">
-                </div>
+            <form class="columna_derecha" id="frm_contacto">
 
-                <div>
-                    <label for="txt_segundo_nombre">Segundo Nombre</label>
-                    <input type="text" id="txt_segundo_nombre">
-                </div>
-
-                <div>
-                    <label for="txt_primer_apellido">Primer Apellido</label>
-                    <input type="text" id="txt_primer_apellido">
-                </div>
-
-                <div>
-                    <label for="txt_segundo_apellido">Segundo apellido</label>
-                    <input type="text" id="txt_segundo_apellido">
-                </div>
-
-                <div>
-                    <label for="txt_cedula">Cedula/Pasaporte</label>
-                    <input type="text" id="txt_cedula">
-                </div>
-
-                <div>
-                    <label for="txt_correo"> Correo Electronico</label>
-                    <input type="email" id="txt_correo">
-                </div>
+                <h1>Ubicación</h1>
 
                 <div>
                     <label for="txt_provincia"> Provincia</label>
-                    <input type="text" id="txt_provincia">
+                    <input type="text" id="txt_provincia" readonly="readonly">
                 </div>
 
                 <div>
                     <label for="txt_canton"> Canton</label>
-                    <input type="text" id="txt_canton">
+                    <input type="text" id="txt_canton" readonly="readonly">
                 </div>
 
                 <div>
                     <label for="txt_distrito"> Distrito</label>
-                    <input type="text" id="txt_distrito">
-                </div>
-
-
-                <div>
-                    <label for="txt_distrito"> Distrito</label>
-                    <input type="text" id="txt_distrito">
+                    <input type="text" id="txt_distrito" readonly="readonly">
                 </div>
 
                 <div>
                     <label for="txt_direccion">Direccion</label>
-                    <textarea id="txt_direccion"></textarea> <!-- Aqui es importante no hacer un espacio con Enter -->
+                    <textarea id="txt_direccion" readonly="readonly"></textarea>
+                    <!-- Aqui es importante no hacer un espacio con Enter -->
                 </div>
-
 
             </form>
 
@@ -111,19 +108,20 @@
     </main>
 
 
-    <footer class="footer_principal">
-        <nav>
-            <a href="registro_centroe.html">Registrar centro educativo</a>
-            <a href="citas.html">Registrar cita</a>
-            <a href="#">Link 3</a>
+    <footer class="main_footer">
+        <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
+        <nav class="footer_nav mt-2 ml-1">
+            <a href="#">Link 1</a><span class="vertical-line"> | </span>
+            <a href="#">Link 2</a><span class="vertical-line"> | </span>
+            <a href="#">Link 3</a><span class="vertical-line"> | </span>
             <a href="#">Link 4</a>
         </nav>
-        <br>
-        <p>Desarrollado por KAMELOT</p>
     </footer>
 
-    <script src="js/controlador_contacto.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/padres_de_familia/servicio_padrefamilia.js"></script>
+    <script src="js/padres_de_familia/controlador_listar_padre.js"></script>
 
 </body>
 
