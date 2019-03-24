@@ -90,6 +90,11 @@ body{
 	color: #fff;
 	background-color: #f27232;
 }
+.middle {
+	margin-top: 80px;;
+	margin-bottom: auto;
+}
+
 .main_footer {
     background-color: #1e272e;
 	width: 100%;
@@ -97,7 +102,7 @@ body{
     padding-top: 15px;
     padding-bottom: 15px;
   
-		}
+}
 		
 .footer_nav a {
 	color: #fff;
