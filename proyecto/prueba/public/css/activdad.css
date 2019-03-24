@@ -131,3 +131,7 @@ td:hover {
 .error_input {
     border: 2px solid #ED4C67;
 }
+.position-fix{
+	position: fixed;
+	bottom: 0px;
+}
