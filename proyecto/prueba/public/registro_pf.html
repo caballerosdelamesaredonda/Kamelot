@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/banner_rce.css">
+    <link rel="stylesheet" href="/public/css/registro_pf.css">
+    <title>Registro</title>
+</head>
+<body>
+    <header id="header_principal">
+        <div id="logo">
+            <img src="/public/imgs/logo.png">   
+        </div>
+    </header>
+    <main>
+        <div class="registro_header">
+            <h1>Registro padre de familia</h1>
+        </div>
+        
+        <section id="columna_izquierda">
+
+            <div>
+                <label for="txt_correo">Correo electrónico</label>
+                <input type="text" id="txt_correo">
+            </div>
+            <div>
+                <label for="txt_nombre">Nombre</label>
+                <input type="text" id="txt_nombre">
+            </div>
+            <div>
+                <label for="txt_snombre">Segundo Nombre</label>
+                <input type="text" id="txt_snombre">
+            </div>
+            <div>
+                <label for="txt_papellido">Primer apellido</label>
+                <input type="text" id="txt_papellido">
+            </div>
+            <div>
+                <label for="txt_sapellido">Segundo apellido</label>
+                <input type="text" id="txt_sapellido">
+            </div>
+            <div>
+                <label for="slt_tipo_id">Tipo de identificación</label>
+                <select id="slt_tipo_id">
+                    <option value ="">--Seleccione una opción--</option>
+                    <option value="Nacional">Nacional</option>
+                    <option value="DIMEX">DIMEX</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                </select>
+            </div>
+            <div>
+                <label for="txt_id">Identificación</label>
+                <input type="text" id="txt_id">
+            </div>         
+
+            <div>
+                <label for="txt_telefono">Teléfono</label>
+                <input type="text" id="txt_telefono">
+            </div>
+
+            <div>
+                <label for="slt_provincias">Provincia</label>
+                <select id="slt_provincias">
+                    <option value="">--Provincia--</option>
+
+                </select>
+            </div>
+
+            <div>
+                <label for="slt_cantones">Cantón</label>
+                <select id="slt_cantones">
+                    <option value="">--Cantón--</option>
+
+                </select>
+            </div>
+
+            <div>
+                <label for="slt_distritos">Distrito</label>
+                <select id="slt_distritos">
+                    <option value="">--Distrito--</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="txt_direccion">Dirección exacta</label>
+                <input type="text" id="txt_direccion">
+            </div>
+            <div>
+                <label for="num_cant_hijos">Cantidad de hijos</label>
+                <input type="text" id="num_cant_hijos">
+            </div>
+
+
+
+        </section>
+        <div class="btn_enviar">
+            <button type="button" id="btn_enviar">Enviar</button>
+        </div>
+        </form>
+    </main>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/PF/servicio_pf.js"></script>
+    <script src="js/PF/controlador_registro_pf.js"></script>
+    <script src="js/provincias.js"></script>
+    <script src="js/cantones.js"></script>
+    <script src="js/distritos.js"></script>
+    <script src="js/controlador_ubicacion.js"></script>
+
+</body>
+</html>
