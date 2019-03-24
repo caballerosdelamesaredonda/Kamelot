@@ -13,7 +13,7 @@ let registrar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
             identificacion : pIdentificacion,
             cantidad_hijos : pCantHijos,
             correo_electronico : pCorreo,
-            clave: ******,
+            clave: '***',
             telefono : pTelefono,
             provincia : pProvincia,
             canton : pCanton,

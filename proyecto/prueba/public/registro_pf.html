@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/public/css/reset.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="/public/css/banner_rce.css">
-    <link rel="stylesheet" href="/public/css/registro_pf.css">
-    <title>Registro</title>
+    <title>Registro padre de familia</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/perfil_ce.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
+
 <body>
-    <header id="header_principal">
-        <div id="logo">
-            <img src="/public/imgs/logo.png">   
-        </div>
+
+    <header class="main_header">
+        <nav>
+            <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
+            <div class="float-right middle">
+                <lable class="white mr-1">Buscar</lable>
+                <input type="text" value="" name="" id="txtFiltro" class="input">
+                <div class="float-right mr-2">
+                    <a href="index.html"><button type="button" class="iniciar_sesion ml-1">Inicio</button></a>
+                    <a href="registro_centroe.html"><button type="button" class="registrar_cuenta ml-1">Registrar
+                            Centro Educativo</button></a>
+                </div>
+            </div>
+        </nav>
     </header>
+
     <main>
         <div class="registro_header">
             <h1>Registro padre de familia</h1>
@@ -44,7 +55,7 @@
             <div>
                 <label for="slt_tipo_id">Tipo de identificación</label>
                 <select id="slt_tipo_id">
-                    <option value ="">--Seleccione una opción--</option>
+                    <option value="">--Seleccione una opción--</option>
                     <option value="Nacional">Nacional</option>
                     <option value="DIMEX">DIMEX</option>
                     <option value="Pasaporte">Pasaporte</option>
@@ -91,17 +102,27 @@
                 <label for="num_cant_hijos">Cantidad de hijos</label>
                 <input type="text" id="num_cant_hijos">
             </div>
-            
+
             <div class="btn_enviar">
                 <button type="button" id="btn_enviar">Enviar</button>
             </div>
         </form>
 
 
+        <footer class="main_footer">
+            <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
+            <nav class="footer_nav mt-2 ml-1">
+                <a href="#">Link 1</a><span class="vertical-line"> | </span>
+                <a href="#">Link 2</a><span class="vertical-line"> | </span>
+                <a href="#">Link 3</a><span class="vertical-line"> | </span>
+                <a href="#">Link 4</a>
+            </nav>
+        </footer>
 
     </main>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="js/padres_de_familia/servicio_padrefamilia.js"></script>
     <script src="js/padres_de_familia/controlador_registro_pf.js"></script>
     <script src="js/provincias.js"></script>
@@ -110,4 +131,5 @@
     <script src="js/controlador_ubicacion.js"></script>
 
 </body>
+
 </html>
