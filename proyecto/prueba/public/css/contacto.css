@@ -17,18 +17,6 @@ fieldset {
     box-sizing: border-box;
 }
 
-
-
-/*Estilos del banner*/
-
-#banner {
-    height: 200px;
-    background-image: url('../images/house_blue.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-
 /* Estilos de formulario */
 
 #contacto {

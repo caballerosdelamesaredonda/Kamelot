@@ -6,62 +6,65 @@
 		Costa Rica Educa
 	</title>
 	<meta charset="utf-8"> <!-- para permitir el uso de chars especiales -->
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/general.css">
-	<link rel="stylesheet" href="css/index.css">
-
+	<link rel="stylesheet" href="./css/reset.css" type="text/css">
+	<link rel="stylesheet" href="./css/general.css" type="text/css">
+	<link rel="stylesheet" href="./css/activdad.css" type="text/css">
 </head>
 
 <body>
 
-	<header class="header_principal">
-
+	<header class="main_header">
 		<nav>
-			<img class="img_logo" src="images/logo_transparent.png" alt="Logo Costa Rica Educa">
-			<input type="text" placeholder="Buscar..." id="txtFiltro">
-			<a href="registro_centroe.html">Registrar centro educativo</a>
-			<a href="iniciar_sesion.html">Iniciar Sesion</a>
+			<img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
+			<div class="float-right middle">
+				<lable class="white mr-1">Buscar</lable>
+				<input type="text" value="" name="" id="txtFiltro" class="input">
+				<div class="float-right mr-2">
+					<a href="registro_centroe.html"><button type="button" class="registrar_cuenta ml-1">Registrar Centro Educativo</button></a>
+					<a href="iniciar_sesion.html"><button type="button" class="iniciar_sesion ml-1">Iniciar Sesión</button></a>
+				</div>
+			</div>
 		</nav>
 	</header>
 
-	<h1>Top 10 Secundaria MEP</h1>
+	<main>
 
-	<!-- Tabla top 10 Secundaria MEP -->
+		<h1>Top 10 Secundaria MEP</h1>
 
-	<table id="tbl_centroe">
-		<thead>
-			<tr>
-				<th>Nombre</th>
-				<th>Cedula Juridica</th>
-				<th>Correo Electronico</th>
-				<th>Telefono</th>
-			</tr>
-		</thead>
-		<tbody>
+		<!-- Tabla top 10 Secundaria MEP -->
 
-		</tbody>
-	</table>
+		<table id="tbl_centroe">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Cedula Juridica</th>
+					<th>Correo Electronico</th>
+					<th>Telefono</th>
+				</tr>
+			</thead>
+			<tbody>
 
+			</tbody>
+		</table>
 
+	</main>
 
-	<footer class="footer_principal">
-		<nav>
-			<a href="citas.html">Registrar cita</a>
-			<a href="registro_noticias.html">Registrar noticias</a>
-			<a href="reg_utiles.html">Registrar utiles</a>
-			<a href="listar_utiles.html">Listar utiles</a>
-			<a href="registro_actividad.html">Registrar actividad</a>
-			<a href="listar_actividad.html">Listar actividad</a>
+	<footer class="main_footer">
+		<p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
+		<nav class="footer_nav mt-2 ml-1">
+			<a href="#">Link 1</a><span class="vertical-line"> | </span>
+			<a href="#">Link 2</a><span class="vertical-line"> | </span>
+			<a href="#">Link 3</a><span class="vertical-line"> | </span>
+			<a href="#">Link 4</a>
 		</nav>
-		<br>
-		<p>Desarrollado por KAMELOT</p>
 	</footer>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
 	<script src="js/servicio_ce.js"></script>
 	<script src="js/controlador_listar_centroe.js"></script>
 	<script src="js/realizarbusqueda.js"></script>
-    
+
 
 </body>
 
