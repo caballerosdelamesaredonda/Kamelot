@@ -3,14 +3,19 @@
 let userid = localStorage.getItem('usuario_en_sesion');
 console.log(userid);
 
-if (userid != '') {
-    let usario_loggeado = obtener_usuario_por_id(userid);
+let usario_loggeado = [];
+
+if (userid != null) {
+    usario_loggeado = obtener_usuario_por_id(userid);
+    mostrar_datos(usario_loggeado);
 }else{
-    console.log('Usuario no iniciado sesion');
+    swal({
+        type: 'error',
+        title: 'Error',
+        text: 'El usuario no ha iniciado sesion'
+    });
+    window.location.href='index.html';
 }
-
-
-console.log(usario_loggeado);
 
 let mostrar_datos = (pUsuarioLoggeado) => {
 
@@ -26,5 +31,5 @@ let mostrar_datos = (pUsuarioLoggeado) => {
     document.getElementById('txt_direccion').value = usario_loggeado.direccion;
 };
 
-mostrar_datos(usario_loggeado);
+
 
