@@ -1,42 +1,105 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
 
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: Nunito, 'Montserrat', sans-serif;
 }
 
-p {
-    color: #000;
+.h1 {
+	font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+	color: #2f3640;
 }
 
-label {
-        color: #000;
+.float-right {
+	float: right;
+}
+		
+.float-left {
+	float: left;
 }
 
-h1 {
-    padding: 10px 0px;
+.white {
+	color: #ffffff;
+	font-size: 18px;
 }
 
-input{
-    height: 25px;
+.error_input {
+	border: 2px solid #ed4c67;
 }
 
 /* Estilos header y footer */
 
-.header_principal,.footer_principal{
-    background: #808e9b;
+.img_logo	{
+	float: left;
+    margin-left: 20px;
+	margin-top: 20px;
+}
+.main_header {
+	background-color: #143646;
+	width: 100%;
+	height: 200px;
+}
+.registrar_cuenta {
+	padding: 11px;
+	border:#f27232 solid 1px;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #fff;
+	background-color: #143646;
+}
+.registrar_cuenta:hover {
+	padding: 11px;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #fff;
+	background-color: #f27232;
+}
+.iniciar_sesion {
+	padding: 11px;
+	border:#f27232 solid 1px;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #fff;
+	background-color: #143646;
+}
+		
+.iniciar_sesion:hover {
+	padding: 11px;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #fff;
+	background-color: #f27232;
+}
+.main_footer {
+    background-color: #1e272e;
+	width: 100%;
+	height: 80px;
     padding-top: 15px;
     padding-bottom: 15px;
-    
+  
+		}
+		
+.footer_nav a {
+	color: #fff;
+	text-decoration: none;
+}
+		
+.footer_nav a:hover {
+	color: #f27232;
+	text-decoration: none;
+}
+		
+.vertical-line{
+	color: #fff;
+	padding: 15px;
 }
 
-.header_principal nav a ,.footer_principal nav a{
-    color: #fff;
-    text-decoration: none;
-    margin-right: 20px;
-}
 
-.header_principal nav a:hover,.footer_principal nav a:hover{
-    color: #3498db;
-}
 
 /* Estilos de la tabla general */
 
@@ -85,13 +148,6 @@ input{
     padding: 20px 10px;
 }
 
-
-
-
-.img_logo{
-    width: 70px;
-    height: 84px;
-}
 
 
 
