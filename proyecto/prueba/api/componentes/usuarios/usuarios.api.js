@@ -21,7 +21,7 @@ module.exports.registrar_ce = (req, res) =>{
         clave : req.body.clave,
         tipo_centro : req.body.tipo_centro,
         nivel_centro : req.body.nivel_centro,
-        //foto : req.body.foto,
+        foto : req.body.foto,
         nombre_comercial : req.body.nombre_comercial,
         provincia : req.body.provincia,
         canton : req.body.canton,
@@ -43,7 +43,7 @@ module.exports.registrar_ce = (req, res) =>{
         telefono_contacto : req.body.telefono_contacto,
         extension_contacto : req.body.extension_contacto,
         correo_electronico_contacto : req.body.correo_electronico_contacto,
-        //foto_contacto : req.body.foto_contacto,
+        foto_contacto : req.body.foto_contacto,
         tipo_usuario : req.body.tipo_usuario,
         estado : req.body.estado
         }
