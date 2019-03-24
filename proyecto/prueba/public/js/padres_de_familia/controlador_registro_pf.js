@@ -97,7 +97,7 @@ let validar = () => {
     }else{
         input_cant_hijos.style.border = '1px solid black';
     }
-
+    return error;
 };
 let obtener_datos = () => {
 
