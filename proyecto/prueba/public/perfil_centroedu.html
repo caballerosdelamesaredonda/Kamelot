@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil padre de familia</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/perfil_padre_familia.css">
+
+
+</head>
+
+<body>
+
+    <header class="header_principal">
+
+        <nav>
+            <img class="img_logo" src="images/logo_transparent.png" alt="Logo Costa Rica Educa">
+            <a href="#">Costa Rica Educa</a>
+            <label for="txt_buscar">Buscar</label>
+            <input type="text" id="txt_buscar">
+            <a href="index.html">Home</a>
+            <a href="index.html" onclick="localStorage.clear();">Cerrar Sesion</a>
+        </nav>
+    </header>
+
+
+
+
+    <main>
+
+        <section id="contacto">
+
+            <div class="columna_izq">
+                <div>
+                    <label for="imagen_perfil">
+                        <img src="images/avatar.PNG">
+                        <p>
+                            Foto
+                        </p>
+                    </label>
+                </div>
+
+            </div>
+
+            <form class="columna_derecha_padre" id="frm_contacto">
+                <div>
+                    <label for="txt_nombre_centro">Nombre de Centro:</label>
+                    <input type="text" id="txt_nombre_centro" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_alias">Alias</label>
+                    <input type="text" id="txt_alias" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_cedjuridica">Cédula Jurídica</label>
+                    <input type="text" id="txt_cedjuridica" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_tipo_centro">Tipo de centro</label>
+                    <input type="text" id="txt_tipo_centro" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_nivel">Nivel de centro</label>
+                    <input type="text" id="txt_nivel" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_nombrecomercial">Nombre comercial</label>
+                    <input type="email" id="txt_nombrecomercial" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_provincia"> Provincia</label>
+                    <input type="text" id="txt_provincia" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_canton"> Canton</label>
+                    <input type="text" id="txt_canton" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_distrito"> Distrito</label>
+                    <input type="text" id="txt_distrito" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_direccion">Direccion</label>
+                    <textarea id="txt_direccion" readonly="readonly"></textarea> <!-- Aqui es importante no hacer un espacio con Enter -->
+                </div>
+
+                <div>
+                    <label for="txt_fechafund">Fecha fundacion</label>
+                    <input type="text" id="txt_fechafund" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_refhistorica">Referencia historica</label>
+                    <input type="text" id="txt_refhistorica" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_telefono">Telefono</label>
+                    <input type="text" id="txt_telefono" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_fax">Fax</label>
+                    <input type="text" id="txt_fax" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_sitioweb">Sitio web</label>
+                    <input type="text" id="txt_sitioweb" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_correo">Correo electronico</label>
+                    <input type="text" id="txt_correo" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_nombrecontacto">Nombre contacto</label>
+                    <input type="text" id="txt_nombrecontacto" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_papellido">Primer Apellido contacto</label>
+                    <input type="text" id="txt_papellido" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_sapellido">Segundo Apellido contacto</label>
+                    <input type="text" id="txt_sapellido" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_identificacion">Identificacion</label>
+                    <input type="text" id="txt_identificacion" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_departamento">Departamento</label>
+                    <input type="text" id="txt_departamento" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_contacto">Telefono contacto</label>
+                    <input type="text" id="txt_contacto" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_extcontacto">Extension contacto</label>
+                    <input type="text" id="txt_extcontacto" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_correocontacto">Correo contacto</label>
+                    <input type="text" id="txt_correocontacto" readonly="readonly">
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer_principal">
+        <nav>
+            <a href="registro_centroe.html">Registrar centro educativo</a>
+            <a href="citas.html">Registrar cita</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+        </nav>
+        <br>
+        <p>Desarrollado por KAMELOT</p>
+    </footer>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/centro_educativo/servicio_centroeducativo.js"></script>
+    <script src="js/centro_educativo/controlador_listar_centroedu.js"></script>
+
+</body>
+
+</html>

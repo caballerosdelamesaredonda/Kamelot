@@ -55,7 +55,7 @@ let iniciar_sesion =(pUsuario)=> {
 				break;
 
 				case "CE":
-						window.location.href='perfil_centro_educativo.html';
+						window.location.href='perfil_centroedu.html';
 				break;
 
 				case "PF":
