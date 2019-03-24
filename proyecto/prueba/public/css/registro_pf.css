@@ -1,0 +1,119 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #ffffff;
+}
+#columna_izquierda{
+    float: left;
+    position: relative;
+    margin-left: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 20px;
+
+}
+#columna_derecha{
+    float: right;
+    position: relative;
+    margin-right: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 20px;
+}
+
+.registro_header{
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+label{
+    display: inline-block;
+    width: 140px;
+    text-align: left;
+    padding: 15px;
+    font-size: 18px;
+    clear: both;
+    white-space: nowrap;
+    margin-right: 20px;
+    
+}
+
+.cizquierda_header{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.cderecha_header{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+input{
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+    padding: 5px;
+    border: solid 0.7px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+
+}
+
+select{
+    display: inline-block;
+    width: 165px;
+    text-align: left;
+    padding: 5px;
+    border: solid 0.7px;
+
+}
+main{
+    margin-bottom: 60px;
+}
+
+.error_input, .error_select{
+    border: 2px solid #ED4C67;
+}
+
+.btn_enviar{
+display: inline-block;
+margin-top: 80px;
+margin-left: 350px;
+
+}
+.btn_enviar button{
+    padding: 10px;
+    width: 170px;
+    margin: 0 auto;
+    font-size: 16px;
+    
+}
+
+#tbl_centroe {
+    margin-left:  33%;
+    margin-top: 5%;
+}
+
+#tbl_centroe thead tr{
+    background: #808e9b;
+    color: #FFF;
+}
+
+#tbl_centroe tbody tr {
+    border-bottom: 1px solid #3498db;
+}
+
+#tbl_centroe tbody tr:hover {
+    background: rgba(52,152,219 ,0.4);  /* Se utiliza RGBA por que este formato incluye el opacity incluido */
+}
+
+#tbl_centroe tr td,.tbl_centroe tr th{
+    padding: 20px 10px;
+}
+h1{
+    margin-top: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
