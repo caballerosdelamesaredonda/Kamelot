@@ -5,18 +5,6 @@ console.log(userid);
 
 let usario_loggeado = [];
 
-if (userid != null) {
-    usario_loggeado = obtener_usuario_por_id(userid);
-    mostrar_datos(usario_loggeado);
-}else{
-    swal({
-        type: 'error',
-        title: 'Error',
-        text: 'El usuario no ha iniciado sesion'
-    });
-    window.location.href='index.html';
-}
-
 let mostrar_datos = (pUsuarioLoggeado) => {
 
     document.getElementById('txt_primer_nombre').value = usario_loggeado.nombre;
@@ -30,6 +18,20 @@ let mostrar_datos = (pUsuarioLoggeado) => {
     document.getElementById('txt_distrito').value = usario_loggeado.distrito;
     document.getElementById('txt_direccion').value = usario_loggeado.direccion;
 };
+
+if (userid != null) {
+    usario_loggeado = obtener_usuario_por_id(userid);
+    mostrar_datos(usario_loggeado);
+}else{
+    swal({
+        type: 'error',
+        title: 'Error',
+        text: 'El usuario no ha iniciado sesion'
+    });
+    window.location.href='index.html';
+}
+
+
 
 
 
