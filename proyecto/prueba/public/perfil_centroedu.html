@@ -6,8 +6,7 @@
     <title>Perfil padre de familia</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/contacto.css">
-    <link rel="stylesheet" href="./css/perfil_padre_familia.css">
+    <link rel="stylesheet" href="./css/perfil_ce.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
 
@@ -31,25 +30,67 @@
 
     <main>
 
-        <section id="contacto">
+        <section id="perfil">
 
             <div class="columna_izq">
                 <div>
+
+                    <h1>Información General</h1>
+
                     <label for="imagen_perfil">
                         <img src="images/avatar.PNG">
-                        <p>
-                            Foto
-                        </p>
                     </label>
+
+                    <div>
+                        <label for="txt_nombre_centro">Nombre de Centro:</label>
+                        <input type="text" id="txt_nombre_centro" readonly="readonly">
+                    </div>
+
+                    <div>
+                        <label for="txt_correo">Correo electronico</label>
+                        <input type="text" id="txt_correo" readonly="readonly">
+                    </div>
+
+                    <div>
+                        <label for="txt_telefono">Telefono</label>
+                        <input type="text" id="txt_telefono" readonly="readonly">
+                    </div>
+
+                    <div>
+                        <label for="txt_sitioweb">Sitio web</label>
+                        <input type="text" id="txt_sitioweb" readonly="readonly">
+                    </div>
+
+                    <h1>Ubicación</h1>
+
+                    <div>
+                        <label for="txt_provincia">Provincia</label>
+                        <input type="text" id="txt_provincia" readonly="readonly">
+                    </div>
+
+                    <div>
+                        <label for="txt_canton"> Canton</label>
+                        <input type="text" id="txt_canton" readonly="readonly">
+                    </div>
+
+                    <div>
+                        <label for="txt_distrito"> Distrito</label>
+                        <input type="text" id="txt_distrito" readonly="readonly">
+                    </div>
+
+                    <div>
+                        <label for="txt_direccion">Direccion</label>
+                        <textarea id="txt_direccion" readonly="readonly"></textarea>
+                        <!-- Aqui es importante no hacer un espacio con Enter -->
+                    </div>
+
                 </div>
 
             </div>
 
-            <form class="columna_derecha_padre" id="frm_contacto">
-                <div>
-                    <label for="txt_nombre_centro">Nombre de Centro:</label>
-                    <input type="text" id="txt_nombre_centro" readonly="readonly">
-                </div>
+            <form class="columna_derecha" id="frm_contacto">
+
+                <h1>Información Legal</h1>
 
                 <div>
                     <label for="txt_alias">Alias</label>
@@ -62,6 +103,18 @@
                 </div>
 
                 <div>
+                    <label for="txt_nombrecomercial">Nombre comercial</label>
+                    <input type="email" id="txt_nombrecomercial" readonly="readonly">
+                </div>
+
+                <div>
+                    <label for="txt_fechafund">Fecha fundacion</label>
+                    <input type="text" id="txt_fechafund" readonly="readonly">
+                </div>
+
+                <h1>Nivel de centro</h1>
+
+                <div>
                     <label for="txt_tipo_centro">Tipo de centro</label>
                     <input type="text" id="txt_tipo_centro" readonly="readonly">
                 </div>
@@ -72,44 +125,8 @@
                 </div>
 
                 <div>
-                    <label for="txt_nombrecomercial">Nombre comercial</label>
-                    <input type="email" id="txt_nombrecomercial" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_provincia"> Provincia</label>
-                    <input type="text" id="txt_provincia" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_canton"> Canton</label>
-                    <input type="text" id="txt_canton" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_distrito"> Distrito</label>
-                    <input type="text" id="txt_distrito" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_direccion">Direccion</label>
-                    <textarea id="txt_direccion" readonly="readonly"></textarea>
-                    <!-- Aqui es importante no hacer un espacio con Enter -->
-                </div>
-
-                <div>
-                    <label for="txt_fechafund">Fecha fundacion</label>
-                    <input type="text" id="txt_fechafund" readonly="readonly">
-                </div>
-
-                <div>
                     <label for="txt_refhistorica">Referencia historica</label>
                     <input type="text" id="txt_refhistorica" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_telefono">Telefono</label>
-                    <input type="text" id="txt_telefono" readonly="readonly">
                 </div>
 
                 <div>
@@ -117,15 +134,7 @@
                     <input type="text" id="txt_fax" readonly="readonly">
                 </div>
 
-                <div>
-                    <label for="txt_sitioweb">Sitio web</label>
-                    <input type="text" id="txt_sitioweb" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_correo">Correo electronico</label>
-                    <input type="text" id="txt_correo" readonly="readonly">
-                </div>
+                <h1>Información de contacto</h1>
 
                 <div>
                     <label for="txt_nombrecontacto">Nombre contacto</label>
