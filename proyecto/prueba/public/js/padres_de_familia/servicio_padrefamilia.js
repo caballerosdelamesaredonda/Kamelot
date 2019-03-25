@@ -3,7 +3,7 @@
 
 let registrar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellido, pIdentificacion, pTelefono, pProvincia, pCanton, pDistrito, pDireccion, pCantHijos) => {
     let request = $.ajax({
-        url: "http://localhost:4000/api/centroe_nuevo",
+        url: "http://localhost:4000/api/registrar_pf",
         method: "POST",
         data: {
             nombre : pNombre,
