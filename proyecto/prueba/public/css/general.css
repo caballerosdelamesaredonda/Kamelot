@@ -144,6 +144,19 @@ body{
     padding: 20px 10px;
 }
 
+.head_backg{
+	background-color: #f27232;
+	font-size: 18px;
+	color: #ffffff;
+}
+
+.padding {
+	padding: 20px;
+}
+
+.border-right {
+	border-right: #ffffff solid 2px;
+}
 /* Estilos de la tabla centro educativo */
 
 #tbl_centroe {
