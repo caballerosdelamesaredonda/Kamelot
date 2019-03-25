@@ -1,6 +1,5 @@
 'use strict';
 
-
 let input_correo = document.querySelector('#txt_correo');
 let input_nombre = document.querySelector('#txt_nombre');
 let input_snombre = document.querySelector('#txt_snombre');
@@ -104,7 +103,7 @@ let obtener_datos = () => {
     if (validar() == false){
         let correo = input_correo.value;
         let nombre = input_nombre.value;
-        let snombre = input_nombre.value;
+        let snombre = input_snombre.value;
         let papellido = input_papellido.value;
         let sapellido = input_sapellido.value;
         let tipo_id = input_tipo_id.value;
