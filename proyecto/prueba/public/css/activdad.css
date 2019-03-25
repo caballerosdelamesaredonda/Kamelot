@@ -1,6 +1,5 @@
 .lable {
-	font-size: 18px;
-			
+	font-size: 18px;		
 }
 
 .main {
@@ -8,7 +7,7 @@
 }
 		
 .input {
-	width: 150px;;
+	width: 150px;
 	height: 35px;
 	border: #6D6D6D solid 1px;
 	border-radius: 5px;
@@ -120,6 +119,9 @@ td:hover {
 }
 .mt-2 {
 	margin-top: 20px;
+}
+.mb-1 {
+	margin-bottom: 20px;
 }
 .input_actividad {
     display: block;
