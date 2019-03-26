@@ -1,14 +1,15 @@
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: Nunito;
     background: #ffffff;
 }
 #columna_izquierda{
     box-shadow: 0 4px 8px 0 #143646;
     padding: 20px;
     width: 780px;
-    margin-left: 22%;
     margin-bottom: 50px;
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -16,11 +17,12 @@ body{
     box-shadow: 0 4px 8px 0 #143646;
     padding: 20px;
     width: 780px;
-    margin-left: 22%;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
-.h2{
+.h1 {
     text-align: center;
     font-size: 30px;
     padding: 20px;
@@ -62,7 +64,7 @@ input{
 	width: 150px;;
 	height: 35px;
 	border: #6D6D6D solid 1px;
-	border-radius: 5px;
+    border-radius: 5px;
 }
 
 select{
@@ -82,9 +84,10 @@ main{
 }
 
 .btn_enviar{
-position: relative;
 margin-top: 80px;
-margin-left: 43.5%;
+margin-left: auto;
+margin-right: auto;
+width: 780px;
 
 }
 button{
@@ -143,12 +146,6 @@ h1{
     margin-left: 38%;
     
 }
-
-
-
-
-
-
 
 .lable {
 	font-size: 18px;
@@ -237,9 +234,6 @@ td:hover {
 	margin-top: 20px;
 }
 
-.error_input {
-    border: 2px solid #ED4C67;
-}
 .position-fix{
 	position: fixed;
 	bottom: 0px;

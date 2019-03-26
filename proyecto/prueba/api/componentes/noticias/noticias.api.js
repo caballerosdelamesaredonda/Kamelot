@@ -35,22 +35,21 @@ module.exports.registrar_noticias = (req, res) => {
 };
 
 
-
 module.exports.consultar_noticias = (req, res) => {
-    model_noticias.find().then(
+    model_noticias.find({userid: req.body.userid}).then(
         function (noticias) {
-            if (noticias.length > 0) {
+            if (noticias) {
                 res.json(
                     {
                         success: true,
                         noticias: noticias
                     }
                 )
-            } else {
+            } else{
                 res.json(
                     {
                         success: false,
-                        noticias: 'No se encontraron noticias'
+                        noticias: `Error, no se encontraron noticias: ${noticias}`
                     }
                 )
             }
@@ -58,3 +57,5 @@ module.exports.consultar_noticias = (req, res) => {
 
     )
 };
+
+

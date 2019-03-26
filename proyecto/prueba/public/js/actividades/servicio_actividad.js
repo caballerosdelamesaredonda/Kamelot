@@ -1,12 +1,12 @@
 'use strict';
 
-
-let registrar_actividad = (pactividad) => {
+let registrar_actividad = (pId,pActividad) => {
   let request = $.ajax({
     url: "http://localhost:4000/api/registrar_actividad",
     method: "POST",
     data: {
-      actividad: pactividad
+      userid: pId,
+      actividad: pActividad
     },
     dataType: "json",
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -52,4 +52,39 @@ let listar_actividad = () => {
   });
   return lista_actividad;
  
+};
+
+
+let consultar_actividad_usuario = (pId) => {
+
+  let consultar_actividad = [];
+
+  let request = $.ajax({
+      url: "http://localhost:4000/api/listar_actividad_usuario",
+      method: 'POST',
+      async: false,
+      data: {
+          userid : pId
+      },
+      dataType: "json",
+      contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+  });
+
+  request.done(function (response) {
+
+    if (response.success){
+      consultar_actividad = response.actividads;
+  }else{
+          consultar_actividad = response.actividads;
+          swal.fire({
+              type: 'error',
+              title: 'Error',
+              text: response.msj
+          });
+  }
+
+  });
+
+  return  consultar_actividad;
+
 };
