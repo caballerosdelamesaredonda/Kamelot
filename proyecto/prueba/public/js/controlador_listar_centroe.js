@@ -10,6 +10,8 @@ let mostrar_datos = () =>{
         fila.insertCell().innerHTML = usuarios[i]['cedula_juridica'];
         fila.insertCell().innerHTML = usuarios[i]['correo_electronico'];
         fila.insertCell().innerHTML = usuarios[i]['telefono'];
+        
+
 
 
     };
