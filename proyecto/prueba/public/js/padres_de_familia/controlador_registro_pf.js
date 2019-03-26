@@ -100,6 +100,7 @@ let validar = () => {
 };
 let obtener_datos = () => {
 
+
     if (validar() == false){
         let correo = input_correo.value;
         let nombre = input_nombre.value;
@@ -109,7 +110,7 @@ let obtener_datos = () => {
         let tipo_id = input_tipo_id.value;
         let id = input_id.value;
         let telefono = input_telefono.value;
-        let provincias = input_provincias.value;
+        let provincias = input_provincias.selectedOptions;
         let cantones = input_cantones.value;
         let distritos = input_distritos.value;
         let direccion= input_direccion.value;

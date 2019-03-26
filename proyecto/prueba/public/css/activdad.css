@@ -72,25 +72,19 @@ btn_registrar {
     margin-right: auto;
 }
 
-thead {
-    font-size: 20px;
+tbody tr td {
+	border-bottom: #00ced4 solid 2px;
+	padding: 20px;
 }
-
-th {
-    margin-bottom: 400px;
-}
-
-tbody tr {
-    margin-bottom: 20px;
-}
-
-td {
-    padding: 20px;
-    border-bottom: 1px solid #3498db;
-}
-
-td:hover {
-    background-color: #E2E2E2;
+	
+tbody tr:hover {
+	background-color: #a4b0be;
+		
+	}
+	
+tr:nth-child(even) {
+  	background-color: #f1f2f6;
+		
 }
 
 .spacer {
