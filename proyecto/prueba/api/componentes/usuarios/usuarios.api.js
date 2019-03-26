@@ -45,7 +45,8 @@ module.exports.registrar_ce = (req, res) =>{
         correo_electronico_contacto : req.body.correo_electronico_contacto,
         foto_contacto : req.body.foto_contacto,
         tipo_usuario : req.body.tipo_usuario,
-        estado : req.body.estado
+        estado : req.body.estado,
+        fecha_registro: req.body.fecha_registro
         }
     );
     
