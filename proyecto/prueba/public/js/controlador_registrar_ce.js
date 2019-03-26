@@ -31,6 +31,8 @@ const boton_registrar = document.querySelector('#btn_enviar');
 const input_tipo_usuario = document.querySelector('#txt_tipo_usuario');
 const input_estado = document.querySelector('#txt_estado');
 const input_imagen = document.querySelector('#image_preview');
+
+
 /*const dia = new Date().getDay;
 const mes = new Date().getMonth;
 const anio = new Date().getFullYear;
@@ -46,6 +48,7 @@ const fecha = dia +'-'+ mes + '-'+ anio;
 
 
 let validar = () => {
+
     let error = false;
 
     if (input_nombre.value == '') {
@@ -233,9 +236,9 @@ let obtener_datos = () => {
         let nivel_centro = slt_nivel_centro.value;
         let foto = input_imagen.src;
         let nombre_comercial = input_nombre_comercial.value;
-        let provincia = slt_provincias.textContent;
-        let canton = slt_cantones.textContent;
-        let distrito = slt_distritos.textContent;
+        let provincia = slt_provincias.options[slt_provincias.selectedIndex].textContent;
+        let canton = slt_cantones.options[slt_cantones.selectedIndex].textContent;
+        let distrito = slt_distritos.options[slt_distritos.selectedIndex].textContent;
         let direccion = input_direccion.value;
         let fecha_fundacion = input_fecha.value;
         let referencia_historia = input_referencia.value;
