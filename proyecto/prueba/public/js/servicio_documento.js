@@ -6,7 +6,7 @@ $(function() {
     $.cloudinary.config({ cloud_name: 'kamelot', api_key: '737611515723741'});
 
     // Upload button
-    let uploadButton = $('#btnSeleccionarImagen');
+    let uploadButton = $('#btnSeleccionarDoc');
 
     // Upload button event
     uploadButton.on('click', function(e){

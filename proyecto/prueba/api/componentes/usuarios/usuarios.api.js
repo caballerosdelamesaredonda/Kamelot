@@ -43,7 +43,6 @@ module.exports.registrar_ce = (req, res) =>{
         telefono_contacto : req.body.telefono_contacto,
         extension_contacto : req.body.extension_contacto,
         correo_electronico_contacto : req.body.correo_electronico_contacto,
-        foto_contacto : req.body.foto_contacto,
         tipo_usuario : req.body.tipo_usuario,
         estado : req.body.estado,
         fecha_registro: req.body.fecha_registro
@@ -206,7 +205,7 @@ module.exports.listar_todos = (req ,res) =>{
 
 //Listado centros educativos con solicitudes pendientes
 module.exports.listar_solicitud_pendiente = (req ,res) =>{
-    model_usuarios.find({estado : false}).then(
+    model_usuarios.find({estado : "inactivo"}).then(
         function(centroe){
             if(centroe.length > 0){
                 res.json(
