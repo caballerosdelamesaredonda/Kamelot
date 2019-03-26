@@ -7,6 +7,11 @@ body{
     font-family: Nunito, 'Montserrat', sans-serif;
 }
 
+a{
+	color: #fff;
+	text-decoration: none;
+}
+
 .h1 {
 	font-size: 30px;
     margin-top: 20px;
