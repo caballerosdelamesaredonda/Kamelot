@@ -19,6 +19,7 @@ let sexo = '';
 let comentario = '';
 
 
+
 let validar = () => {
 
     const btn_sexo = document.querySelector('input[name=rbt_sexo]:checked');
