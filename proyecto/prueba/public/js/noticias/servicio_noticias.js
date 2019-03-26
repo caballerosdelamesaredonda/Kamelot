@@ -33,28 +33,37 @@ let registrar_noticias = (puserid, ptitulo, pdescripcion, pfecha) => {
 };
 
 
-let consultar_noticias = () => {
+let consultar_noticias = (pId) => {
 
     let consultar_noticia = [];
 
     let request = $.ajax({
         url: "http://localhost:4000/api/consultar_noticias",
-        method: "GET",
+        method: 'POST',
+        async: false,
         data: {
+            userid : pId
         },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-        async: false
     });
 
-    request.done(function (res) {
-        consultar_noticia = res.noticias;
+    request.done(function (response) {
+
+    	if (response.success){
+    		consultar_noticia = response.noticias;
+		}else{
+            consultar_noticia = response.noticias;
+            swal.fire({
+                type: 'error',
+                title: 'Error',
+                text: response.msj
+            });
+		}
+
     });
 
-    request.fail(function (jqXHR, textStatus) {
-
-    });
-    return consultar_noticia;
+    return  consultar_noticia;
 
 };
 

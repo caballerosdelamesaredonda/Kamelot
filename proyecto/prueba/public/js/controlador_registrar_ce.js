@@ -27,11 +27,21 @@ const input_contacto_departamento = document.querySelector('#txt_contacto_depart
 const input_contacto_telefono = document.querySelector('#txt_contacto_telefono');
 const input_contacto_extension = document.querySelector('#txt_contacto_extension');
 const input_contacto_correo = document.querySelector('#txt_contacto_correo');
-const input_contacto_foto = document.querySelector('#image_preview2');
 const boton_registrar = document.querySelector('#btn_enviar');
 const input_tipo_usuario = document.querySelector('#txt_tipo_usuario');
 const input_estado = document.querySelector('#txt_estado');
 const input_imagen = document.querySelector('#image_preview');
+/*const dia = new Date().getDay;
+const mes = new Date().getMonth;
+const anio = new Date().getFullYear;
+const fecha = dia +'-'+ mes + '-'+ anio;
+*/
+
+const date = new Date();
+const dia  = date.getDay();
+const mes = date.getMonth();
+const anio = date.getFullYear();
+const fecha = dia +'-'+ mes + '-'+ anio;
 
 
 
@@ -223,9 +233,9 @@ let obtener_datos = () => {
         let nivel_centro = slt_nivel_centro.value;
         let foto = input_imagen.src;
         let nombre_comercial = input_nombre_comercial.value;
-        let provincia = slt_provincias.value;
-        let canton = slt_cantones.value;
-        let distrito = slt_distritos.value;
+        let provincia = slt_provincias.textContent;
+        let canton = slt_cantones.textContent;
+        let distrito = slt_distritos.textContent;
         let direccion = input_direccion.value;
         let fecha_fundacion = input_fecha.value;
         let referencia_historia = input_referencia.value;
@@ -243,11 +253,10 @@ let obtener_datos = () => {
         let telefono_contacto = input_contacto_telefono.value;
         let extension_contacto = input_contacto_extension.value;
         let correo_electronico_contacto  = input_contacto_correo.value;
-        let foto_contacto = input_contacto_foto.scr;
         let tipo_usuario = input_tipo_usuario.value;
         let estado = input_estado.value;
-
-        registrar_centroe(nombre, alias, clave, cedula_juridica, tipo_centro, nivel_centro, foto, nombre_comercial, provincia, canton, distrito, direccion, fecha_fundacion, referencia_historia, /*adjuntar_documentos*/ telefono, fax, sitio_web, cuentas_redesso, correo_electronico, contacto_nombre, papellido, sapellido, identificacion, departamento, telefono_contacto, extension_contacto, correo_electronico_contacto, foto_contacto, estado, tipo_usuario);
+        let fecha_registro = fecha;
+        registrar_centroe(nombre, alias, clave, cedula_juridica, tipo_centro, nivel_centro, foto, nombre_comercial, provincia, canton, distrito, direccion, fecha_fundacion, referencia_historia, /*adjuntar_documentos*/ telefono, fax, sitio_web, cuentas_redesso, correo_electronico, contacto_nombre, papellido, sapellido, identificacion, departamento, telefono_contacto, extension_contacto, correo_electronico_contacto, estado, tipo_usuario, fecha_registro);
 
     } else {
         swal.fire({
