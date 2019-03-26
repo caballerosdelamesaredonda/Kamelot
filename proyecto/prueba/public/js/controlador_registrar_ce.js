@@ -13,7 +13,7 @@ const slt_distritos = document.querySelector('#slt_distritos');
 const input_direccion = document.querySelector('#txt_direccion');
 const input_fecha = document.querySelector('#fecha_fundacion');
 const input_referencia = document.querySelector('#txt_referencia');
-//const input_documento = document.querySelector('#btnSeleccionarDoc');
+const input_documento = document.querySelector('#btnSeleccionarDoc');
 const input_telefono = document.querySelector('#txt_telefono');
 const input_fax = document.querySelector('#txt_fax');
 const input_web = document.querySelector('#txt_web');
@@ -31,11 +31,6 @@ const boton_registrar = document.querySelector('#btn_enviar');
 const input_tipo_usuario = document.querySelector('#txt_tipo_usuario');
 const input_estado = document.querySelector('#txt_estado');
 const input_imagen = document.querySelector('#image_preview');
-/*const dia = new Date().getDay;
-const mes = new Date().getMonth;
-const anio = new Date().getFullYear;
-const fecha = dia +'-'+ mes + '-'+ anio;
-*/
 
 const date = new Date();
 const dia  = date.getDay();
@@ -239,7 +234,7 @@ let obtener_datos = () => {
         let direccion = input_direccion.value;
         let fecha_fundacion = input_fecha.value;
         let referencia_historia = input_referencia.value;
-        //let adjuntar_documentos = input_documento.value;
+        let adjuntar_documentos = input_documento.href;
         let telefono = input_telefono.value;
         let fax = input_fax.value;
         let sitio_web = input_web.value;
@@ -256,7 +251,7 @@ let obtener_datos = () => {
         let tipo_usuario = input_tipo_usuario.value;
         let estado = input_estado.value;
         let fecha_registro = fecha;
-        registrar_centroe(nombre, alias, clave, cedula_juridica, tipo_centro, nivel_centro, foto, nombre_comercial, provincia, canton, distrito, direccion, fecha_fundacion, referencia_historia, /*adjuntar_documentos*/ telefono, fax, sitio_web, cuentas_redesso, correo_electronico, contacto_nombre, papellido, sapellido, identificacion, departamento, telefono_contacto, extension_contacto, correo_electronico_contacto, estado, tipo_usuario, fecha_registro);
+        registrar_centroe(nombre, alias, clave, cedula_juridica, tipo_centro, nivel_centro, foto, nombre_comercial, provincia, canton, distrito, direccion, fecha_fundacion, referencia_historia, adjuntar_documentos, telefono, fax, sitio_web, cuentas_redesso, correo_electronico, contacto_nombre, papellido, sapellido, identificacion, departamento, telefono_contacto, extension_contacto, correo_electronico_contacto, estado, tipo_usuario, fecha_registro);
 
     } else {
         swal.fire({

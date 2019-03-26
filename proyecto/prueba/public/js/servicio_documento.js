@@ -1,5 +1,5 @@
 $(function() {
-    let imagenUrl = '';
+    let documentUrl = '';
     // Configure Cloudinary
     // with credentials available on
     // your Cloudinary account dashboard
@@ -17,15 +17,14 @@ $(function() {
             // If NO error, log image data to console
             let id = result[0].public_id;
              console.log(id);
-            imagenUrl = 'https://res.cloudinary.com/kamelot/image/upload/' + id ;
-            document.querySelector('#image_preview').src = imagenUrl;
-          console.log(imagenUrl);
+            documentUrl = 'https://res.cloudinary.com/kamelot/image/upload/' + id ;
+          console.log(documentUrl);
         });
     });
 })
 
 
-function processImage(id) {
+function processdocument(id) {
     let options = {
         client_hints: true,
     };

@@ -1,6 +1,6 @@
 'use strict';
 
-let registrar_centroe = (pnombre, palias, pclave, pcedula_juridica, ptipo_centro, pnivel_centro, pfoto, pnombre_comercial, pprovincia, pcanton, pdistrito, pdireccion, pfecha_fundacion, preferencia_historia, /*padjuntar_documentos,*/ ptelefono, pfax, psitio_web, pcuentas_redesso, pcorreo_electronico, pcontacto_nombre, ppapellido, psapellido, pidentificacion, pdepartamento, ptelefono_contacto, pextension_contacto, pcorreo_electronico_contacto, pestado, ptipo_usuario, pfecha_registro) => {
+let registrar_centroe = (pnombre, palias, pclave, pcedula_juridica, ptipo_centro, pnivel_centro, pfoto, pnombre_comercial, pprovincia, pcanton, pdistrito, pdireccion, pfecha_fundacion, preferencia_historia, padjuntar_documentos, ptelefono, pfax, psitio_web, pcuentas_redesso, pcorreo_electronico, pcontacto_nombre, ppapellido, psapellido, pidentificacion, pdepartamento, ptelefono_contacto, pextension_contacto, pcorreo_electronico_contacto, pestado, ptipo_usuario, pfecha_registro) => {
   let request = $.ajax({
     url: "http://localhost:4000/api/registrar_ce",
     method: "POST",
@@ -19,7 +19,7 @@ let registrar_centroe = (pnombre, palias, pclave, pcedula_juridica, ptipo_centro
       direccion: pdireccion,
       fecha_fundacion : pfecha_fundacion,
       referencia_historia : preferencia_historia,
-      //adjuntar_documentos : padjuntar_documentos,
+      adjuntar_documentos : padjuntar_documentos,
       telefono : ptelefono,
       fax : pfax,
       sitio_web : psitio_web,

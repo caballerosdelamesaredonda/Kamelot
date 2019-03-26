@@ -29,7 +29,7 @@ module.exports.registrar_ce = (req, res) =>{
         direccion: req.body.direccion,
         fecha_fundacion : req.body.fecha_fundacion,
         referencia_historia : req.body.referencia_historia,
-        //adjuntar_documentos : req.body.adjuntar_documentos,
+        adjuntar_documentos : req.body.adjuntar_documentos,
         telefono : req.body.telefono,
         fax : req.body.fax,
         sitio_web : req.body.sitio_web,
