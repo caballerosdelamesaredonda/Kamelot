@@ -1,14 +1,15 @@
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: Nunito;
     background: #ffffff;
 }
 #columna_izquierda{
     box-shadow: 0 4px 8px 0 #143646;
     padding: 20px;
     width: 780px;
-    margin-left: 22%;
     margin-bottom: 50px;
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -16,11 +17,12 @@ body{
     box-shadow: 0 4px 8px 0 #143646;
     padding: 20px;
     width: 780px;
-    margin-left: 22%;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
-.h2{
+.h1 {
     text-align: center;
     font-size: 30px;
     padding: 20px;
@@ -31,11 +33,8 @@ label{
     display: inline-block;
     width: 140px;
     text-align: left;
-    padding: 17px;
     font-size: 18px;
-    clear: both;
     white-space: nowrap;
-    margin-right: 25px;
     
 }
 
@@ -59,10 +58,10 @@ label{
 
 }
 input{
-	width: 150px;;
+	width: 200px;
 	height: 35px;
 	border: #6D6D6D solid 1px;
-	border-radius: 5px;
+    border-radius: 5px;
 }
 
 select{
@@ -82,9 +81,10 @@ main{
 }
 
 .btn_enviar{
-position: relative;
 margin-top: 80px;
-margin-left: 43.5%;
+margin-left: auto;
+margin-right: auto;
+width: 780px;
 
 }
 button{
@@ -143,3 +143,106 @@ h1{
     margin-left: 38%;
     
 }
+
+.lable {
+	font-size: 18px;
+			
+}
+
+.main {
+	height: 800px;
+}
+		
+.input {
+	width: 150px;;
+	height: 35px;
+	border: #6D6D6D solid 1px;
+	border-radius: 5px;
+}
+
+.middle {
+	margin-top: 80px;;
+	margin-bottom: auto;
+}
+		
+.white {
+	color: #ffffff;
+	font-size: 18px;
+}
+
+
+.centrar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tbl_solicitudes {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+thead {
+    font-size: 20px;
+}
+
+th {
+    margin-bottom: 400px;
+}
+
+tbody tr {
+    margin-bottom: 20px;
+}
+
+td {
+    padding: 20px;
+    border-bottom: 1px solid #3498db;
+}
+
+td:hover {
+    background-color: #E2E2E2;
+}
+
+.spacer {
+    margin-top: 20px;
+}
+
+.largo {
+    margin-bottom: 10px;
+}
+.mr-1 {
+	margin-right: 20px;
+}
+.mr-2 {
+	margin-right: 50px;
+}
+		
+.ml-1 {
+	margin-left: 20px;
+}
+		
+.ml-2 {
+	margin-left: 40px;
+}
+.mt-1 {
+	margin-top: 40px;
+}
+.mt-2 {
+	margin-top: 20px;
+}
+
+.position-fix{
+	position: fixed;
+	bottom: 0px;
+}
+.form-control {
+    display: block;
+    width: 40%;
+    height: 30px;
+    padding: 6px 12px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;

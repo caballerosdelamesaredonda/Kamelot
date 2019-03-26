@@ -12,7 +12,7 @@ router.route('/registrar_noticias')
     );
 
 router.route('/consultar_noticias')
-    .get(
+    .post(
         function (req, res) {
             noticias_api.consultar_noticias(req, res);
         }
