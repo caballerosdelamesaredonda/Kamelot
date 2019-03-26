@@ -5,6 +5,7 @@ const model_actividad = require('./actividad.model');
 module.exports.registrar = (req, res) =>{
     let actividad_nueva = new model_actividad(
         {
+            userid: req.body.userid,
             actividad : req.body.actividad
         }
     );
@@ -55,7 +56,7 @@ module.exports.listar_todos = (req ,res) =>{
 };
 
 module.exports.listar_actividades_usuario = (req, res) => {
-    model_noticias.find({userid: req.body.userid}).then(
+    model_actividad.find({userid: req.body.userid}).then(
         function (actividads) {
             if (actividads) {
                 res.json(
