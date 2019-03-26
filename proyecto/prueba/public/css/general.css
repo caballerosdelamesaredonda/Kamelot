@@ -129,7 +129,10 @@ a{
 /* Estilos de la tabla general */
 
 .tabla_info {
-    margin: 15px 0px;
+    margin: 30px 0px 30px 0px;
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
 }
 
 .tabla_info thead tr{
@@ -165,8 +168,10 @@ a{
 /* Estilos de la tabla centro educativo */
 
 #tbl_centroe {
-    margin: 15px 0px;
-    text-align: center;
+    margin: 30px 0px 30px 0px;
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
 }
 
 #tbl_centroe thead tr{
