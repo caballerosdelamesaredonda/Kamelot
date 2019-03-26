@@ -4,15 +4,6 @@ form{
     top: 30%;
 }
 
-h1{
-    font-size: 30px;
-}
-
-header p{
-    color: white;
-    display: inline-block;
-}
-
 label{
     display: inline-block;
     width: 150px;
@@ -28,18 +19,13 @@ input[type= email], input[type= password]{
     padding: 5px;
 }
 
-form button{
-    background-color: #f27232;
-    padding: 10px;
-    width: 215px;
-    font-size: 18px;
-    color: #fff;
-    margin-bottom: 50px;
-    border-radius: 5px;
-    -webkit-box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
-    box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
-    clear: both;
+#btn_ingresar{
+    width: 200px;
+    border-radius: 4px;
+    background-color: #0652DD;
+    color: white;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 div{

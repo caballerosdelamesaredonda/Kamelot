@@ -2,7 +2,6 @@
 
 const input_actividad = document.querySelector('#txt_actividad');
 const boton_registrar = document.querySelector('#btn_registrar');
-let userlocal = localStorage.getItem('usuario_en_sesion');
 
 let actividad = '';
 
@@ -24,7 +23,9 @@ let mostrarDatos = () => {
 
     if (validar() == false) {
         let actividad = input_actividad.value;
-        registrar_actividad(userlocal,actividad);
+        registrar_actividad(actividad);
+
+
     }else{
         
         Swal.fire({

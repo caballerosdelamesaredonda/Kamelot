@@ -37,7 +37,7 @@ module.exports.registrar_cita = (req, res) => {
 
 
 module.exports.consultar_citas = (req, res) => {
-    model_citas.findOne({_id: req.body._id}).then(
+    model_citas.find().then(
         function (citas) {
             if (citas.length > 0) {
                 res.json(
@@ -58,4 +58,3 @@ module.exports.consultar_citas = (req, res) => {
 
     )
 };
-

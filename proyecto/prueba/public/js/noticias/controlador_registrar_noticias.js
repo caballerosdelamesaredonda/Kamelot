@@ -1,6 +1,6 @@
 'use strict';
 
-const userid = localStorage.getItem('usuario_en_sesion');
+const input_userid = document.querySelector('#txt_userid');
 const input_titulo = document.querySelector('#txt_titulo');
 const input_descripcion = document.querySelector('#txt_descripcion');
 const input_fecha = document.querySelector('#txt_fecha');
@@ -9,6 +9,13 @@ const boton_registrar = document.querySelector('#btn_registrar');
 
 let validar = () => {
     let error = false;
+
+    if (input_userid.value == '') {
+        error = true;
+        input_userid.classList.add('error_input');
+    } else {
+        input_userid.classList.remove('error_input');
+    }
 
     if (input_titulo.value == '') {
         error = true;
@@ -38,12 +45,12 @@ let obtener_datos = () => {
 
     if (validar() == false) {
         // Se ejecuta solo si la validación no da error
-        let userloggeado = userid;
+        let userid = input_userid.value;
         let titulo = input_titulo.value;
         let descripcion = input_descripcion.value;
         let fecha = input_fecha.value;
 
-        registrar_noticias(userloggeado, titulo, descripcion, fecha);
+        registrar_noticias(userid, titulo, descripcion, fecha);
         
 
     } else {

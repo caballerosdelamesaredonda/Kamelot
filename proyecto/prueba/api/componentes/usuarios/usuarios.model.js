@@ -37,6 +37,7 @@ let schema_usuarios = new mongoose.Schema(
         telefono_contacto : {type : String, required : false},
         extension_contacto : {type : String, required : false},
         correo_electronico_contacto : {type : String, required : false},
+        foto_contacto : {type : String, required : false},
 
         //Todos los usuarios
         tipo_usuario : {type : String, required : false},

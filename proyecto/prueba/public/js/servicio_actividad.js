@@ -1,12 +1,12 @@
 'use strict';
 
-let registrar_etiqueta = (pId,pNombre) => {
+
+let registrar_actividad = (pactividad) => {
   let request = $.ajax({
-    url: "http://localhost:4000/api/registrar_etiqueta",
+    url: "http://localhost:4000/api/registrar_actividad",
     method: "POST",
     data: {
-      userid: pId,
-      nombre : pNombre
+      actividad: pactividad
     },
     dataType: "json",
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -15,27 +15,25 @@ let registrar_etiqueta = (pId,pNombre) => {
   request.done(function (msg) {
     swal.fire({
       type: 'success',
-      title: 'La ha sido registrada',
-      text: 'Gracias'
+      title: 'La actividad fue enviada',
+      text: 'En unos segundos se mostrará en tu perfil'
     });
   });
 
   request.fail(function (jqXHR, textStatus) {
     swal.fire({
       type: 'error',
-      title: 'La no ha sido registrada',
+      title: 'La actividad no pude ser enviada',
       text: 'Ocurrió un error inesperado, por favor intente de nuevo'
     });
   });
 };
 
-let listado_etiquetas = () => {
- 
-  let lista_etiquetas = [];
+let listar_actividad = () => {
+  let lista_actividad = [];
 
   let request = $.ajax({
-
-    url: "http://localhost:4000/api/listar_etiquetas",
+    url: "http://localhost:4000/api/listar_actividad",
     method: "GET",
     data: {
     },
@@ -45,13 +43,13 @@ let listado_etiquetas = () => {
   });
 
   request.done(function (res) {
-    lista_etiquetas = res.etiqueta;
+    lista_actividad = res.actividad;
     
   });
 
   request.fail(function (jqXHR, textStatus) {
     
   });
-  return lista_etiquetas;
+  return lista_actividad;
  
 };
