@@ -6,9 +6,9 @@
         Aplicacion MEP
     </title>
     <meta charset="utf-8"> <!-- para permitir el uso de chars especiales -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/citas.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/citas.css">
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
@@ -16,14 +16,27 @@
 
 <body>
 
-    <header class="header_principal">
-
+    <header class="main_header">
         <nav>
-            <img class="img_logo" src="images/logo_transparent.png" alt="Logo Costa Rica Educa">
-            <a href="#">Costa Rica Educa</a>
-            <input type="text" placeholder="Buscar..." id="txt_buscar">
-            <a href="index.html">Home</a>
-            <a href="iniciar_sesion.html">Iniciar Sesion</a>
+            <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
+            <div class="float-right middle">
+                <lable class="white mr-1">Buscar</lable>
+                <input type="text" value="" name="" id="txtFiltro" class="input">
+                <div class="float-right mr-2">
+                    <a href="registro_centroe.html"><button type="button" class="registrar_cuenta ml-1">Registrar
+                            Centro Educativo</button></a>
+                    <a href="index.html"><button type="button" class="iniciar_sesion ml-1" onclick="localStorage.clear();">Cerrar
+                            Sesión</button></a>
+                </div>
+
+                <div>
+                    <a href="registro_noticias.html">Registrar noticia</a>
+                    <a href="listar_solicitudes.html">Listar solicitudes</a>
+                    <a href="reg_utiles.html">Registrar utiles</a>
+                    <a href="registro_actividad.html">Registro actividad</a>
+                </div>
+
+            </div>
         </nav>
     </header>
 
@@ -32,11 +45,6 @@
         <!-- Formulario de registro de citas -->
 
         <h1>Solicitar cita con centro educativo</h1>
-
-        <div>
-            <label for="txt_userid">User ID:</label>
-            <input type="text" id="txt_userid">
-        </div>
 
         <div>
             <label for="txt_titulo">Titulo:</label>
@@ -63,7 +71,6 @@
     <table class="tabla_info">
         <thead>
             <tr>
-                <th>User Id</th>
                 <th>Titulo</th>
                 <th>Descripcion</th>
                 <th>Fecha</th>
@@ -74,18 +81,18 @@
         </tbody>
     </table>
 
-	<footer class="footer_principal">
-		<nav>
-			<a href="registro_centroe.html">Registrar centro educativo</a>
-			<a href="citas.html">Registrar cita</a>
-			<a href="registro_noticias.html">Registrar noticias</a>
-			<a href="#">Link 4</a>
-		</nav>
-		<br>
-		<p>Desarrollado por KAMELOT</p>
-	</footer>
+    <footer class="main_footer">
+        <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
+        <nav class="footer_nav mt-2 ml-1">
+            <a href="#">Link 1</a><span class="vertical-line"> | </span>
+            <a href="#">Link 2</a><span class="vertical-line"> | </span>
+            <a href="#">Link 3</a><span class="vertical-line"> | </span>
+            <a href="#">Link 4</a>
+        </nav>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/noticias/servicio_noticias.js"></script>
     <script src="js/noticias/controlador_registrar_noticias.js"></script>
     <script src="js/noticias/controlador_listar_noticias.js"></script>
