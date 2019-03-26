@@ -53,3 +53,26 @@ module.exports.listar_todos = (req ,res) =>{
 
     )
 };
+
+module.exports.listar_actividades_usuario = (req, res) => {
+    model_noticias.find({userid: req.body.userid}).then(
+        function (actividads) {
+            if (actividads) {
+                res.json(
+                    {
+                        success: true,
+                        actividads: actividads
+                    }
+                )
+            } else{
+                res.json(
+                    {
+                        success: false,
+                        actividads: `Error, no se encontraron actividads: ${actividads}`
+                    }
+                )
+            }
+        }
+
+    )
+};
