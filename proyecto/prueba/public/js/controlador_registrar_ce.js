@@ -31,8 +31,17 @@ const boton_registrar = document.querySelector('#btn_enviar');
 const input_tipo_usuario = document.querySelector('#txt_tipo_usuario');
 const input_estado = document.querySelector('#txt_estado');
 const input_imagen = document.querySelector('#image_preview');
-const fecha = new Date();
-const fecha_registro = fecha.getDay +'-' + fecha.getMonth +'-' + fecha.getFullYear;
+/*const dia = new Date().getDay;
+const mes = new Date().getMonth;
+const anio = new Date().getFullYear;
+const fecha = dia +'-'+ mes + '-'+ anio;
+*/
+
+const date = new Date();
+const dia  = date.getDay();
+const mes = date.getMonth();
+const anio = date.getFullYear();
+const fecha = dia +'-'+ mes + '-'+ anio;
 
 
 
@@ -224,9 +233,9 @@ let obtener_datos = () => {
         let nivel_centro = slt_nivel_centro.value;
         let foto = input_imagen.src;
         let nombre_comercial = input_nombre_comercial.value;
-        let provincia = slt_provincias.value;
-        let canton = slt_cantones.value;
-        let distrito = slt_distritos.value;
+        let provincia = slt_provincias.textContent;
+        let canton = slt_cantones.textContent;
+        let distrito = slt_distritos.textContent;
         let direccion = input_direccion.value;
         let fecha_fundacion = input_fecha.value;
         let referencia_historia = input_referencia.value;
@@ -246,7 +255,7 @@ let obtener_datos = () => {
         let correo_electronico_contacto  = input_contacto_correo.value;
         let tipo_usuario = input_tipo_usuario.value;
         let estado = input_estado.value;
-        let fecha_registro = fecha_registro.value;
+        let fecha_registro = fecha;
         registrar_centroe(nombre, alias, clave, cedula_juridica, tipo_centro, nivel_centro, foto, nombre_comercial, provincia, canton, distrito, direccion, fecha_fundacion, referencia_historia, /*adjuntar_documentos*/ telefono, fax, sitio_web, cuentas_redesso, correo_electronico, contacto_nombre, papellido, sapellido, identificacion, departamento, telefono_contacto, extension_contacto, correo_electronico_contacto, estado, tipo_usuario, fecha_registro);
 
     } else {
