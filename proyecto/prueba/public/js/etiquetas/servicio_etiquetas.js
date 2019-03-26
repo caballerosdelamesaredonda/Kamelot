@@ -1,11 +1,12 @@
 'use strict';
 
-let registrar_etiqueta = (pnombre) => {
+let registrar_etiqueta = (pId,pNombre) => {
   let request = $.ajax({
     url: "http://localhost:4000/api/registrar_etiqueta",
     method: "POST",
     data: {
-      nombre : pnombre
+      userid: pId,
+      nombre : pNombre
     },
     dataType: "json",
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
