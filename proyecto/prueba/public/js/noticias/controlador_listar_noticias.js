@@ -1,9 +1,6 @@
 'use strict';
 
-let userlocal = localStorage.getItem('usuario_en_sesion');
-//console.log(userlocal);
-let noticias = consultar_noticias(userlocal);
-console.log(noticias);
+let noticias = consultar_noticias();
 
 let mostrar_datos = () => {
 
@@ -18,6 +15,7 @@ let mostrar_datos = () => {
             let dateformated = month + '-' + day + '-' + year;
 
             let fila = tabla.insertRow(); // Crea tr de la tabla
+            fila.insertCell().innerHTML = noticias[i]['userid'];
             fila.insertCell().innerHTML = noticias[i]['titulo'];
             fila.insertCell().innerHTML = noticias[i]['descripcion'];
             fila.insertCell().innerHTML = dateformated;

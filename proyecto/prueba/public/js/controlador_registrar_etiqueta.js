@@ -2,7 +2,6 @@
 
 const input_nombre = document.querySelector('#txt_nombre');
 const boton_enviar = document.querySelector('#btn_enviar');
-let userlocal = localStorage.getItem('usuario_en_sesion');
 
 let validar = () => {
     let error = false;
@@ -21,7 +20,7 @@ let obtener_datos = () => {
     if (validar() == false) {
     let nombre = input_nombre.value;
     
-    registrar_etiqueta(userlocal,nombre);
+    registrar_etiqueta(nombre);
 
 } else {
     swal.fire({

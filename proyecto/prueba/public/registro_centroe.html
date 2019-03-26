@@ -1,68 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/public/css/reset.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="./css/general.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="./css/general.css" type="text/css">
     <link rel="stylesheet" href="/public/css/banner_rce.css">
     <link rel="stylesheet" href="/public/css/registro_ce.css">
     <title>Registro centro educativo</title>
 </head>
-
 <body>
-    <header class="main_header">
-        <nav>
-            <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
-            <div class="float-right middle">
-                <lable class="white mr-1">Buscar</lable>
-                <input type="text" value="" name="" id="" class="input">
-                <div class="float-right mr-2">
-                    <a href="index.html"><button type="button" class="iniciar_sesion ml-1">Inicio</button></a>
-                    <a href="registro_pf.html"><button type="button" class="registrar_cuenta ml-1">Registrar
-                            Padre de Familia</button></a>
-                    <a href="iniciar_sesion.html"><button type="button" class="registrar_cuenta ml-1">Iniciar sesion</button></a>
-                </div>
-            </div>
-        </nav>
-    </header>
+	<header class="main_header">
+		<nav>
+			<img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
+			<div class="float-right middle">
+				<lable class="white mr-1">Buscar</lable>
+				<input type="text" value="" name="" id="txtFiltro" class="input">
+				<div class="float-right mr-2">
+					<a href="registro_centroe.html"><button type="button" class="registrar_cuenta ml-1">Registrar Centro Educativo</button></a>
+					<a href="iniciar_sesion.html"><button type="button" class="iniciar_sesion ml-1">Iniciar Sesión</button></a>
+				</div>
+			</div>
+		</nav>
+	</header>
     <main>
         <section id="columna_izquierda">
             <div class="cizquierda_header">
-                <h1 class="h1">Información centro educativo</h1>
+                <h2>Información centro educativo</h2>
             </div>
             <form id="frm_registro_ce">
-
+               
                 <div class="input_image1">
 
                     <figure class="image_holder">
                         <img src="/public/images/photo_placeholder.jpg" alt="seleccionar imagen" id="image_preview">
-
-                    </figure>
-
-                    <button type="button" id="btnSeleccionarImagen" class="boton_imagen">Subir imagen</button>
+                        
+                    </figure>  
+                        
+                        <button type="button" id="btnSeleccionarImagen" class="boton_imagen">Subir imagen</button>
                 </div>
-
+               
                 <div>
                     <label for="txt_nombre">Nombre</label>
-                    <input class="form-control" type="text" id="txt_nombre" placeholder="Escriba su nombre">
+                    <input type="text" id="txt_nombre">
                     <label for="txt_alias">Alias</label>
-                    <input class="form-control" type="text" id="txt_alias" placeholder="Escriba su alias">
+                    <input type="text" id="txt_alias">
                 </div>
 
                 <div>
                     <label for="txt_correo">Correo</label>
-                    <input class="form-control" type="text" id="txt_correo">
+                    <input type="text" id="txt_correo">
                     <label for="pass_clave">Contraseña</label>
-                    <input class="form-control" type="password" id="pass_clave">
+                    <input type="password" id="pass_clave">
                 </div>
 
                 <div>
                     <label for="input_nombre_comercial">Nombre comercial</label>
-                    <input class="form-control" type="text" id="input_nombre_comercial">
+                    <input type="text" id="input_nombre_comercial">
                     <label for="txt_cedulaj">Cédula Jurídica</label>
                     <input type="text" id="txt_cedulaj">
                 </div>
@@ -75,10 +71,10 @@
                     </select>
                     <label for="slt_nivel_centro">Nivel</label>
                     <select id="slt_nivel_centro">
-                        <option value="">--Seleccione una opción--</option>
+                        <option value ="">--Seleccione una opción--</option>
                         <option value="Primaria">Primaria</option>
                         <option value="Secundaria">Secundaria</option>
-                        <option value="Ambos">Ambos</option>
+                        <option value="Ambos">Ambos</option>     
                     </select>
                 </div>
 
@@ -87,19 +83,19 @@
                     <label for="slt_provincias">Provincia</label>
                     <select id="slt_provincias">
                         <option value="">--Provincia--</option>
-
+                            
                     </select>
                     <label for="slt_cantones">Cantón</label>
                     <select id="slt_cantones">
                         <option value="">--Cantón--</option>
-
+                            
                     </select>
                 </div>
-
+    
                 <div>
                     <label for="slt_distritos">Distrito</label>
                     <select id="slt_distritos">
-                        <option value="">--Distrito--</option>
+                        <option value="">--Distrito--</option>    
                     </select>
                     <label for="txt_direccion">Dirección exacta</label>
                     <input type="text" id="txt_direccion">
@@ -127,19 +123,29 @@
                 </div>
 
                 <div class="input_documento">
-                    <button type="button" id="btnSeleccionarDoc" class="boton_doc">Subir documentos</button>
+                    <button type="button" id="btnSeleccionarDoc" class="boton_doc">Subir documentos</button>                    
                 </div>
 
-                <input type="hidden" id="txt_estado" value="inactivo">
-                <input type="hidden" id="txt_tipo_usuario" value="CE">
+                <input type="hidden" id="txt_estado" value= "inactivo">
+                <input type="hidden" id="txt_tipo_usuario" value= "CE">
 
         </section>
-
+        
         <section id="columna_derecha">
             <div class="cderecha_header">
                 <h3>Información de contacto</h3>
             </div>
 
+            <div class="input_image2">
+
+                <figure class="image_holder_contacto">
+                    <img src="/public/images/photo_placeholder.jpg" alt="seleccionar imagen" id="image_preview_contacto">
+                        
+                </figure>  
+                        
+                    <button type="button" id="btnSeleccionarImagen_contacto" class="boton_imagen">Subir imagen</button>
+            </div>
+            
             <div>
                 <label for="txt_contacto_nombre">Nombre</label>
                 <input type="text" id="txt_contacto_nombre">
@@ -151,7 +157,7 @@
                 <input type="text" id="txt_contacto_sapellido">
                 <label for="txt_contacto_id">Identificación</label>
                 <input type="text" id="txt_contacto_id">
-            </div>
+            </div>           
             <div>
                 <label for="txt_contacto_departamento">Departamento</label>
                 <input type="text" id="txt_contacto_departamento">
@@ -163,7 +169,7 @@
                 <input type="text" id="txt_contacto_telefono">
                 <label for="txt_contacto_extension">Extensión*</label>
                 <input type="text" id="txt_contacto_extension">
-            </div>
+            </div>   
 
         </section>
         <div class="btn_enviar">
@@ -172,21 +178,20 @@
         </form>
     </main>
 
-    <footer class="main_footer">
-        <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
-        <nav class="footer_nav mt-2 ml-1">
-            <a href="#">Link 1</a><span class="vertical-line"> | </span>
-            <a href="#">Link 2</a><span class="vertical-line"> | </span>
-            <a href="#">Link 3</a><span class="vertical-line"> | </span>
-            <a href="#">Link 4</a>
-        </nav>
-    </footer>
+	<footer class="main_footer">
+		<p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
+		<nav class="footer_nav mt-2 ml-1">
+			<a href="#">Link 1</a><span class="vertical-line"> | </span>
+			<a href="#">Link 2</a><span class="vertical-line"> | </span>
+			<a href="#">Link 3</a><span class="vertical-line"> | </span>
+			<a href="#">Link 4</a>
+		</nav>
+	</footer>
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="/public/js/servicio_ce.js"></script>
     <script src="/public/js/controlador_registrar_ce.js"></script>
     <script src="js/provincias.js"></script>
@@ -198,5 +203,4 @@
     <script src="js/servicio_imagen.js"></script>
 
 </body>
-
 </html>

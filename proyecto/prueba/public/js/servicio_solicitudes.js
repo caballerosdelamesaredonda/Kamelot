@@ -1,10 +1,10 @@
 let listar_solicitudes = () => {
  
-    let lista_solicitudes = [];
+    let listar_centroe = [];
   
     let request = $.ajax({
   
-      url: "http://localhost:4000/api/listar_ce_pendientes",
+      url: "http://localhost:4000/api/listar_centroe",
       method: "GET",
       data: {
       },
@@ -14,13 +14,13 @@ let listar_solicitudes = () => {
     });
   
     request.done(function (res) {
-      lista_solicitudes = res.centroe;
+      listar_centroe = res.centroe;
       
     });
   
     request.fail(function (jqXHR, textStatus) {
       
     });
-    return lista_solicitudes;
+    return listar_centroe;
    
   };
