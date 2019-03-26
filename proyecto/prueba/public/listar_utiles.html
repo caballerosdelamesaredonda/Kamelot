@@ -12,17 +12,30 @@
 </head>
 
 <body>
-    <header class="header_principal">
-
+    <header class="main_header">
         <nav>
-            <img class="img_logo" src="images/logo_transparent.png" alt="Logo Costa Rica Educa">
-            <a href="#">Costa Rica Educa</a>
-            <label for="txt_buscar">Buscar</label>
-            <input type="text" id="txt_buscar">
-            <a href="index.html">Home</a>
-            <a href="index.html" onclick="localStorage.clear();">Cerrar Sesion</a>
+            <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
+            <div class="float-right middle">
+                <lable class="white mr-1">Buscar</lable>
+                <input type="text" value="" name="" id="txtFiltro" class="input">
+                <div class="float-right mr-2">
+                    <a href="perfil_centroedu.html"><button type="button" class="registrar_cuenta ml-1">Ver perfil</button></a>
+                    <a href="index.html"><button type="button" class="iniciar_sesion ml-1" onclick="localStorage.clear();">Cerrar
+                            Sesión</button></a>
+                </div>
+
+                <div>
+                    <a href="reg_utiles.html">Registrar utiles</a>
+                    <a href="registro_noticias.html">Registrar noticia</a>
+                    <a href="listar_actividad.html">Registro actividad</a>
+                    <a href="registro_actividad.html">Registro actividad</a>
+                    <a href="registrar_etiqueta.html">Registrar etiqueta</a>
+                </div>
+            </div>
         </nav>
     </header>
+
+
     <main>
         <table class="tabla_info">
             <thead>
@@ -35,23 +48,26 @@
                 </tr>
             </thead>
             <tbody>
-    
+
             </tbody>
         </table>
     </main>
-    <footer class="footer_principal">
-        <nav>
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+
+    <footer class="main_footer">
+        <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
+        <nav class="footer_nav mt-2 ml-1">
+            <a href="#">Link 1</a><span class="vertical-line"> | </span>
+            <a href="#">Link 2</a><span class="vertical-line"> | </span>
+            <a href="#">Link 3</a><span class="vertical-line"> | </span>
             <a href="#">Link 4</a>
         </nav>
-        <p class="spacer">Desarrollado por KAMELOT</p>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="js/lista_utiles/servicio_reg_utiles.js"></script>
     <script src="js/lista_utiles/controlador_listar_utiles.js"></script>
+
 </body>
 
 </html>
