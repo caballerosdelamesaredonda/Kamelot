@@ -24,7 +24,6 @@ $(function() {
     });
 })
 
-
 function processImage(id) {
     let options = {
         client_hints: true,

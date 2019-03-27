@@ -87,6 +87,11 @@ margin-right: auto;
 width: 780px;
 
 }
+
+#btnSeleccionarDoc:visited{
+    color: #1e272e;
+}
+
 button{
     background-color: #f27232;
     padding: 10px;
@@ -246,3 +251,4 @@ td:hover {
     color: #555;
     background-color: #fff;
     border: 1px solid #ccc;
+}
