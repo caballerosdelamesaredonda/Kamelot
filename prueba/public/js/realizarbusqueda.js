@@ -18,6 +18,7 @@ let mostrar_datos_filtrados = () => {
         || (usuarios[i]['telefono'].toLowerCase().includes(filtro.toLowerCase()))
         ) {
             let fila = tabla.insertRow(); // Crea tr de la tabla
+            fila.setAttribute('id',usuarios[i]['_id']);
             fila.insertCell().innerHTML = usuarios[i]['nombre'];
             fila.insertCell().innerHTML = usuarios[i]['cedula_juridica'];
             fila.insertCell().innerHTML = usuarios[i]['correo_electronico'];
