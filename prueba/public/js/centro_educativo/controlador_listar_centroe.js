@@ -12,10 +12,6 @@ let mostrar_datos = () =>{
         fila.insertCell().innerHTML = usuarios[i]['telefono'];
         fila.insertCell().innerHTML = `<img src="${usuarios[i]['foto']}" alt="seleccionar imagen" id="image_preview">`
         
-        
-
-
-
     };
 
 };

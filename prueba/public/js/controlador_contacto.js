@@ -12,13 +12,10 @@ const fieldset_sexo = document.querySelector('#fieldset_sexo');
 const input_comentario = document.querySelector('#txt_comentario');
 const boton_enviar = document.querySelector('#btn_enviar');
 
-
 let nombre = '';
 let correo = '';
 let sexo = '';
 let comentario = '';
-
-
 
 let validar = () => {
 
