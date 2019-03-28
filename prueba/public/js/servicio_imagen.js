@@ -30,9 +30,3 @@ function processImage(id) {
     };
     return  $.cloudinary.url(id, options);
 }
-
-btnSeleccionarImagen.addEventListener('click', function() {
-    const curColour = document.body.style.backgroundColor;
-
-    document.body.style.backgroundColor = curColour === 'red' ? 'blue' : 'red';
-});
