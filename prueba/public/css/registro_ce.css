@@ -17,6 +17,10 @@ body{
     height: 900px;
 }
 
+.wrapper {
+    margin-left: 20px;
+}
+
 #columna_derecha{
     box-shadow: 0 4px 8px 0 #143646;
     padding: 20px;
