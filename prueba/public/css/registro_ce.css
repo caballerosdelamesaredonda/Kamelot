@@ -2,7 +2,7 @@ body{
     font-family: Nunito;
     background: #ffffff;
 }
-#columna_izquierda{
+#section{
     box-shadow: 0 4px 8px 0 #143646;
     padding: 20px;
     width: 780px;
@@ -10,7 +10,11 @@ body{
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
+    height: 1750px;
 
+}
+.main{
+    height: 900px;
 }
 
 #columna_derecha{
@@ -38,11 +42,12 @@ label{
     
 }
 
-.cizquierda_header{
+.header{
 	font-size: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 50px;
+    margin-left: auto;
+    margin-right: auto;
     color: #2f3640;
     text-align: center;
 
@@ -73,11 +78,6 @@ select{
 }
 main{
     margin-bottom: 60px;
-}
-
-.error_input, .error_select{
-    border: 2px solid #ED4C67;
-    
 }
 
 .btn_enviar{
@@ -251,8 +251,6 @@ td:hover {
     padding: 6px 12px;
     margin-bottom: 15px;
     font-size: 14px;
-    line-height: 1.42857143;
-    border: 1px solid #ccc;
 }
 
 .form-select {
@@ -263,7 +261,6 @@ td:hover {
     margin-bottom: 15px;
     font-size: 14px;
     line-height: 1.42857143;
-    border: 1px solid #ccc;
 }
 
 .col-iz {
@@ -273,4 +270,12 @@ td:hover {
 
 .col-der{
     float: left;
+}
+.subir {
+    margin-top: 40px;
+}
+
+.error_input, .error_select{
+    border: 2px solid #ED4C67;
+    
 }
