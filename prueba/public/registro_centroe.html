@@ -30,7 +30,7 @@
         </nav>
     </header>
     <main>
-        <section id="columna_izquierda">
+        <section id="section">
             <div class="cizquierda_header">
                 <h1 class="h1">Información centro educativo</h1>
             </div>
@@ -72,6 +72,9 @@
                     <input class="form-control" type="text" id="txt_telefono">
                     <label for="txt_web">Sitio web*</label>
                     <input class="form-control" type="text" id="txt_web">
+                    <div class="subir">
+                        <button type="button" id="btnSeleccionarDoc" src= "" class="boton_doc">Subir documentos</button>
+                    </div>
             </div>
                 <div class="col-der">
                     <label for="txt_alias">Alias</label>
@@ -99,50 +102,40 @@
                     <input class="form-control" type="text" id="txt_fax">
                     <label for="txt_redesso">Redes Sociales*</label>
                     <input class="form-control" type="text" id="txt_redesso">
-            </div>    
-                <div class="input_documento">
-                    <button type="button" id="btnSeleccionarDoc" src= "" class="boton_doc">Subir documentos</button>
-                </div>
-
+            </div>  
                 <input type="hidden" id="txt_estado" value="inactivo">
                 <input type="hidden" id="txt_tipo_usuario" value="CE">
 
-        </section>
+        
 
-        <section id="columna_derecha">
+            <div style="clear:both;"></div>
             <div class="cderecha_header">
                 <h3>Información de contacto</h3>
             </div>
-
-            <div>
+            <div class="col-iz"> 
                 <label for="txt_contacto_nombre">Nombre</label>
-                <input type="text" id="txt_contacto_nombre">
+                <input class="form-control" type="text" id="txt_contacto_nombre">
                 <label for="txt_contacto_papellido">Primer apellido</label>
-                <input type="text" id="txt_contacto_papellido">
-            </div>
-            <div>
+                <input class="form-control" type="text" id="txt_contacto_papellido">
                 <label for="txt_contacto_sapellido">Segundo apellido</label>
-                <input type="text" id="txt_contacto_sapellido">
+                <input class="form-control" type="text" id="txt_contacto_sapellido">
                 <label for="txt_contacto_id">Identificación</label>
-                <input type="text" id="txt_contacto_id">
+                <input class="form-control" type="text" id="txt_contacto_id">
             </div>
-            <div>
+            <div class="col-der">   
                 <label for="txt_contacto_departamento">Departamento</label>
-                <input type="text" id="txt_contacto_departamento">
+                <input class="form-control" type="text" id="txt_contacto_departamento">
                 <label for="txt_contacto_correo">Correo electrónico</label>
-                <input type="text" id="txt_contacto_correo">
-            </div>
-            <div>
+                <input class="form-control" type="text" id="txt_contacto_correo">
                 <label for="txt_contacto_telefono">Teléfono</label>
-                <input type="text" id="txt_contacto_telefono">
+                <input class="form-control" type="text" id="txt_contacto_telefono">
                 <label for="txt_contacto_extension">Extensión*</label>
-                <input type="text" id="txt_contacto_extension">
-            </div>
-
-        </section>
-        <div class="btn_enviar">
+                <input class="form-control" type="text" id="txt_contacto_extension">
+            </div>     
+        <div class="btn_enviar" style="margin-top: 350px;">
             <button type="button" id="btn_enviar">Registrar</button>
         </div>
+    </section>
         </form>
     </main>
 
