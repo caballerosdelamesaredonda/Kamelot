@@ -14,7 +14,7 @@ let input_distritos= document.querySelector('#slt_distritos');
 let input_direccion= document.querySelector('#txt_direccion');
 let input_cant_hijos= document.querySelector('#num_cant_hijos');
 
-const boton_registrar = document.querySelector('#btn_enviar');
+const boton_registrar = document.querySelector('#btn_registrar');
 
 let validar = () => {
     let error = false;
@@ -100,8 +100,9 @@ let validar = () => {
 };
 let obtener_datos = () => {
 
+    let validacion = validar();
 
-    if (validar() == false){
+    if (validacion === false){
         let correo = input_correo.value;
         let nombre = input_nombre.value;
         let snombre = input_snombre.value;
