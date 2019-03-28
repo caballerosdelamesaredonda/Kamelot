@@ -39,3 +39,12 @@ let mostrar_datos_filtrados = () => {
 
 mostrar_datos_filtrados();
 inputFiltro.addEventListener('keyup', mostrar_datos_filtrados);
+
+$("#tbl_centroe tbody").on("click", "tr", function () {
+    let nombre_centro = $(this).find('td:first').text();
+    let id_centro_row = $(this).closest('tr').attr('id');
+    //alert(nombre_centro);
+    //alert(id_centro_row);
+    window.localStorage.setItem('centro_id',id_centro_row);
+    window.location.href='tablero_centroeducativo.html';
+});
