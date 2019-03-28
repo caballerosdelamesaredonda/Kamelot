@@ -1,8 +1,9 @@
-'use strict';
+/*'use strict';
 
 const tabla = document.querySelector('#tbl_centroe tbody');
 let tablerowvalue = '';
 const centro_id = '';
+
 
 
 
@@ -11,10 +12,16 @@ let mostrar_datos = () => {
     for (let i = 0; i < usuarios.length; i++) {
         let fila = tabla.insertRow(); //Linea crea el tr de la table
         fila.setAttribute('id',usuarios[i]['_id']);
-        fila.insertCell().innerHTML = usuarios[i]['nombre'];
-        fila.insertCell().innerHTML = usuarios[i]['cedula_juridica'];
-        fila.insertCell().innerHTML = usuarios[i]['correo_electronico'];
-        fila.insertCell().innerHTML = usuarios[i]['telefono'];
+        //fila.insertCell().innerHTML = usuarios[i]['nombre'];
+        //fila.insertCell().innerHTML = usuarios[i]['cedula_juridica'];
+        //fila.insertCell().innerHTML = usuarios[i]['correo_electronico'];
+        //fila.insertCell().innerHTML = usuarios[i]['telefono'];
+        let celda = fila.insertCell();
+        let imagen = document.createElement('img');
+        imagen.src = 'https://res.cloudinary.com/kamelot/image/upload/kwthyrvmavlxrlegvlqm';
+       
+        celda.appendChild(imagen);
+
     };
 };
 
@@ -29,3 +36,5 @@ $("#tbl_centroe tbody").on("click", "tr", function () {
     window.location.href='tablero_centroeducativo.html';
 });
 
+*/
+;
