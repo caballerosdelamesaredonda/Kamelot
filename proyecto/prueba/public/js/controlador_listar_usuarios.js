@@ -1,6 +1,6 @@
 'use strict';
 
-const input_busqueda = document.querySelector('#textBusqueda');
+const input_busqueda = document.querySelector('#txt_buscar');
 
 const tabla = document.querySelector('#tbl_actividad tbody');
 
@@ -13,7 +13,9 @@ let mostrar_datos = () =>{
 
     let usuarios = obtener_usuarios;
 
-    let usuarios_filtrados = usuarios.filter(filtrar_por('nombre', input_busqueda.value));
+    let usuarios_filtrados =
+
+    usuarios_filtrados = usuarios.filter(filtrar_por('nombre', input_busqueda.value));
 
     let tabla = document.querySelector('#tabla_usuarios tbody');
     tabla.innerHTML = '';
