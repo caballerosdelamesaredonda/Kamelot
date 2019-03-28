@@ -1,13 +1,8 @@
 .wrapper {
     height: 450px;
 }
-form{
-    position: absolute;
-    left: 43%;
-    top: 30%;
-}
 
-h1{
+.h1{
     font-size: 30px;
 }
 
@@ -17,7 +12,6 @@ header p{
 }
 
 .label2{
-label{
     display: inline-block;
     font-size: 18px;
     margin-bottom: 5px;
@@ -29,16 +23,6 @@ label{
 
 
 .ingresar{
-input[type= email], input[type= password]{
-    width: 200px;
-    height: 30px;
-    border-radius: 4px;
-    border: solid black 1px;
-    display: block;
-    padding: 5px;
-}
-
-form button{
     background-color: #f27232;
     padding: 10px;
     width: 215px;
@@ -51,9 +35,7 @@ form button{
     text-align: center;
 }
 
-div{
-    margin-bottom: 20px;
-}
+
 
 .section {
     background-color: #E6E6E6;
