@@ -45,87 +45,61 @@
 
                     <button type="button" id="btnSeleccionarImagen" class="boton_imagen">Subir imagen</button>
                 </div>
-
-                <div>
+                <div class="col-iz"> 
                     <label for="txt_nombre">Nombre</label>
-                    <input class="form-control" type="text" id="txt_nombre" placeholder="Escriba su nombre">
-                    <label for="txt_alias">Alias</label>
-                    <input class="form-control" type="text" id="txt_alias" placeholder="Escriba su alias">
-                </div>
-
-                <div>
+                    <input class="form-control" type="text" id="txt_nombre" placeholder="Escriba Su Nombre">
                     <label for="txt_correo">Correo</label>
-                    <input class="form-control" type="text" id="txt_correo">
-                    <label for="pass_clave">Contraseña</label>
-                    <input class="form-control" type="password" id="pass_clave">
-                </div>
-
-                <div>
+                    <input class="form-control" type="text" id="txt_correo" placeholder="Escriba Su Correo">
                     <label for="input_nombre_comercial">Nombre comercial</label>
                     <input class="form-control" type="text" id="input_nombre_comercial">
-                    <label for="txt_cedulaj">Cédula Jurídica</label>
-                    <input type="text" id="txt_cedulaj">
-                </div>
-                <div>
                     <label for="slt_tipo_centro">Tipo</label>
-                    <select id="slt_tipo_centro">
+                    <select class="form-select" id="slt_tipo_centro">
                         <option value="">--Seleccione una opción--</option>
                         <option value="publico">Público</option>
                         <option value="privado">Privado</option>
                     </select>
+                    <label for="slt_provincias">Provincia</label>
+                    <select class="form-select"id="slt_provincias">
+                        <option value="">--Provincia--</option>
+                    </select>
+                    <label for="slt_distritos">Distrito</label>
+                    <select class="form-select" id="slt_distritos">
+                        <option value="">--Distrito--</option>
+                    </select>
+                    <label for="fecha_fundacion">Fecha de fundación</label>
+                    <input class="form-control" type="date" id="fecha_fundacion">
+                    <label for="txt_telefono">Teléfono</label>
+                    <input class="form-control" type="text" id="txt_telefono">
+                    <label for="txt_web">Sitio web*</label>
+                    <input class="form-control" type="text" id="txt_web">
+            </div>
+                <div class="col-der">
+                    <label for="txt_alias">Alias</label>
+                    <input class="form-control" type="text" id="txt_alias" placeholder="Escriba Su Alias">
+                    <label for="pass_clave">Contraseña</label>
+                    <input class="form-control" type="password" id="pass_clave">
+                    <label for="txt_cedulaj">Cédula Jurídica</label>
+                    <input class="form-control" type="text" id="txt_cedulaj">
                     <label for="slt_nivel_centro">Nivel</label>
-                    <select id="slt_nivel_centro">
+                    <select class="form-select" id="slt_nivel_centro">
                         <option value="">--Seleccione una opción--</option>
                         <option value="Primaria">Primaria</option>
                         <option value="Secundaria">Secundaria</option>
                         <option value="Ambos">Ambos</option>
                     </select>
-                </div>
-
-
-                <div>
-                    <label for="slt_provincias">Provincia</label>
-                    <select id="slt_provincias">
-                        <option value="">--Provincia--</option>
-
-                    </select>
                     <label for="slt_cantones">Cantón</label>
-                    <select id="slt_cantones">
+                    <select class="form-select" id="slt_cantones">
                         <option value="">--Cantón--</option>
-
-                    </select>
-                </div>
-
-                <div>
-                    <label for="slt_distritos">Distrito</label>
-                    <select id="slt_distritos">
-                        <option value="">--Distrito--</option>
                     </select>
                     <label for="txt_direccion">Dirección exacta</label>
-                    <input type="text" id="txt_direccion">
-                </div>
-
-                <div>
-                    <label for="fecha_fundacion">Fecha de fundación</label>
-                    <input type="date" id="fecha_fundacion">
+                    <input class="form-control" type="text" id="txt_direccion">
                     <label for="txt_referencia">Referencia histórica</label>
-                    <input type="text" id="txt_referencia">
-                </div>
-
-                <div>
-                    <label for="txt_telefono">Teléfono</label>
-                    <input type="text" id="txt_telefono">
+                    <input class="form-control" type="text" id="txt_referencia">
                     <label for="txt_fax">Fax</label>
-                    <input type="text" id="txt_fax">
-                </div>
-
-                <div>
-                    <label for="txt_web">Sitio web*</label>
-                    <input type="text" id="txt_web">
+                    <input class="form-control" type="text" id="txt_fax">
                     <label for="txt_redesso">Redes Sociales*</label>
-                    <input type="text" id="txt_redesso">
-                </div>
-
+                    <input class="form-control" type="text" id="txt_redesso">
+            </div>    
                 <div class="input_documento">
                     <button type="button" id="btnSeleccionarDoc" src= "" class="boton_doc">Subir documentos</button>
                 </div>

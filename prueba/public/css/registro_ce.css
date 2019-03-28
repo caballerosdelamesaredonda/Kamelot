@@ -246,13 +246,31 @@ td:hover {
 }
 .form-control {
     display: block;
-    width: 40%;
+    width: 315px;
     height: 30px;
     padding: 6px 12px;
     margin-bottom: 15px;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
     border: 1px solid #ccc;
+}
+
+.form-select {
+    display: block;
+    width: 340px;
+    height: 45px;
+    padding: 6px 12px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border: 1px solid #ccc;
+}
+
+.col-iz {
+    float: left;
+    width: 400px;
+}
+
+.col-der{
+    float: left;
 }
