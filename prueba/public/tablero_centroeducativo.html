@@ -29,6 +29,8 @@
 
     <main>
 
+         <!-- Seccion de perfil centro. -->
+
         <section id="perfil">
 
             <div class="columna_izq">
@@ -60,55 +62,33 @@
                         <input type="text" id="txt_sitioweb" readonly="readonly">
                     </div>
 
-                    <h1>Ubicación</h1>
-
-                    <div>
-                        <label for="txt_provincia">Provincia</label>
-                        <input type="text" id="txt_provincia" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_canton"> Canton</label>
-                        <input type="text" id="txt_canton" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_distrito"> Distrito</label>
-                        <input type="text" id="txt_distrito" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_direccion">Direccion</label>
-                        <textarea id="txt_direccion" readonly="readonly"></textarea>
-                        <!-- Aqui es importante no hacer un espacio con Enter -->
-                    </div>
-
                 </div>
 
             </div>
 
             <form class="columna_derecha" id="frm_contacto">
 
-                <h1>Información Legal</h1>
+                <h1>Ubicación</h1>
 
                 <div>
-                    <label for="txt_alias">Alias</label>
-                    <input type="text" id="txt_alias" readonly="readonly">
+                    <label for="txt_provincia">Provincia</label>
+                    <input type="text" id="txt_provincia" readonly="readonly">
                 </div>
 
                 <div>
-                    <label for="txt_cedjuridica">Cédula Jurídica</label>
-                    <input type="text" id="txt_cedjuridica" readonly="readonly">
+                    <label for="txt_canton"> Canton</label>
+                    <input type="text" id="txt_canton" readonly="readonly">
                 </div>
 
                 <div>
-                    <label for="txt_nombrecomercial">Nombre comercial</label>
-                    <input type="email" id="txt_nombrecomercial" readonly="readonly">
+                    <label for="txt_distrito"> Distrito</label>
+                    <input type="text" id="txt_distrito" readonly="readonly">
                 </div>
 
                 <div>
-                    <label for="txt_fechafund">Fecha fundacion</label>
-                    <input type="text" id="txt_fechafund" readonly="readonly">
+                    <label for="txt_direccion">Direccion</label>
+                    <textarea id="txt_direccion" readonly="readonly"></textarea>
+                    <!-- Aqui es importante no hacer un espacio con Enter -->
                 </div>
 
                 <h1>Nivel de centro</h1>
@@ -133,51 +113,28 @@
                     <input type="text" id="txt_fax" readonly="readonly">
                 </div>
 
-                <h1>Información de contacto</h1>
-
-                <div>
-                    <label for="txt_nombrecontacto">Nombre contacto</label>
-                    <input type="text" id="txt_nombrecontacto" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_papellido">Primer Apellido contacto</label>
-                    <input type="text" id="txt_papellido" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_sapellido">Segundo Apellido contacto</label>
-                    <input type="text" id="txt_sapellido" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_identificacion">Identificacion</label>
-                    <input type="text" id="txt_identificacion" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_departamento">Departamento</label>
-                    <input type="text" id="txt_departamento" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_contacto">Telefono contacto</label>
-                    <input type="text" id="txt_contacto" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_extcontacto">Extension contacto</label>
-                    <input type="text" id="txt_extcontacto" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_correocontacto">Correo contacto</label>
-                    <input type="text" id="txt_correocontacto" readonly="readonly">
-                </div>
 
             </form>
-
         </section>
+
+        <!-- Seccion de noticias. -->
+
+        <section id='noticias'>
+            <table class="tabla_info">
+                <thead>
+                    <tr>
+                        <th>Titulo</th>
+                        <th>Descripcion</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </section>
+
+
 
     </main>
 
@@ -194,8 +151,8 @@
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="js/centro_educativo/servicio_centroeducativo.js"></script>
-    <script src="js/centro_educativo/controlador_listar_centroedu.js"></script>
+    <script src="js/centro_educativo/servicio_ce.js"></script>
+    <script src="js/centro_educativo/controlador_tablero_ce.js"></script>
 
 </body>
 
