@@ -72,7 +72,7 @@ const etiquetas = require('./componentes/etiquetas/etiquetas.route');
 
 //const comentario = require('./componentes/reg_utiles_mep/reg_utiles.route');
 
-const utiles = require('./componentes/reg_utiles/reg_utiles.route');
+//const utiles = require('./componentes/reg_utiles/reg_utiles.route');
 
 const noticias = require('./componentes/noticias/noticias.route');
 
@@ -84,7 +84,7 @@ const evaluacion_ce = require('./componentes/evaluacion_ce/evaluacion_ce.route')
 const utiles = require('./componentes/reg_utiles/utiles.route');
 
 
-app.use('/api', utiles);
+//app.use('/api', utiles);
 
 
 //app.use('/api', comentario);
