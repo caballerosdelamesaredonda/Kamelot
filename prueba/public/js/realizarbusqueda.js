@@ -1,5 +1,7 @@
 
 const inputFiltro = document.querySelector('#txtFiltro');
+const usuarioSesion= localStorage.getItem('usuario_en_sesion');
+
 
 let usuarios = listar_centroe();
 
@@ -36,8 +38,12 @@ let mostrar_datos_filtrados = () => {
     }
 
 };
-
 mostrar_datos_filtrados();
+
+
+if (usuarioSesion == null) {
+    
+} else {
 inputFiltro.addEventListener('keyup', mostrar_datos_filtrados);
 
 $("#tbl_centroe tbody").on("click", "tr", function () {
@@ -48,3 +54,5 @@ $("#tbl_centroe tbody").on("click", "tr", function () {
     window.localStorage.setItem('centro_id',id_centro_row);
     window.location.href='tablero_centroeducativo.html';
 });
+}
+
