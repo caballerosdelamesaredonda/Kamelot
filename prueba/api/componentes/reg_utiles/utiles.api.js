@@ -1,31 +1,35 @@
 'use strict';
-const registro_model = require('./reg_utiles.model');
+const model_utiles = require('./utiles.model');
+
 
 module.exports.registrar = (req, res) =>{
-    let registro_nuevo = new registro_model(
+    let utiles_nueva = new model_utiles(
         {
-            nombre_lista : req.body.nombre_lista,
-            tipo : req.body.tipo,
-            ciclo : req.body.ciclo,
+            nombre : req.body.nombre, 
+            tipo : req.body.tipo, 
+            ciclo : req.body.ciclo, 
             nivel : req.body.nivel,
-            ano : req.body.ano
+            ano : req.body.ano,
+            util : req.body.util,
+            cantidad : req.body.cantidad
+             
             
         }
     );
-    
-    registro_nuevo.save(function(error){
+    utiles_nueva.save(
+        function(error){
             if(error){
                 res.json(
                     {
                         success : false,
-                        msg : `No se pudo guardar la informacion ocurrió el siguiente error ${error}`
+                        msg : `No se pudo guardar la pregunta ocurrió el siguiente error ${error}`
                     }
                 )
             }else{
                 res.json(
                     {
                         success : true,
-                        msg : `Se registro la informacion de forma correcta`
+                        msg : `Se registró la pregunta de forma correcta`
                     }
                 )
             }
@@ -35,9 +39,8 @@ module.exports.registrar = (req, res) =>{
 };
 
 
-
-module.exports.listar_utiles = (req ,res) =>{
-    registro_model.find().then(
+module.exports.listar_todos = (req ,res) =>{
+    model_utiles.find().then(
         function(utiles){
             if(utiles.length > 0){
                 res.json(
@@ -50,7 +53,7 @@ module.exports.listar_utiles = (req ,res) =>{
                 res.json(
                     {
                         success: false,
-                        utiles: 'No se encontro informacion'
+                        utiles: 'No se encontraron preguntas'
                     }
                 )
             }
