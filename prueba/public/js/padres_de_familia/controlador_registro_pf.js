@@ -13,10 +13,9 @@ let input_cantones= document.querySelector('#slt_cantones');
 let input_distritos= document.querySelector('#slt_distritos');
 let input_direccion= document.querySelector('#txt_direccion');
 let input_cant_hijos= document.querySelector('#num_cant_hijos');
+let input_foto= document.querySelector('#image_preview')
 
-let boton_registrar= document.querySelector('#btn_registrar');
-const input_imagen = document.querySelector('#image_preview');
-
+const boton_registrar = document.querySelector('#btn_registrar');
 
 let validar = () => {
     let error = false;
@@ -32,11 +31,23 @@ let validar = () => {
     }else{
         input_nombre.style.border = '1px solid black';
     }
+    if (input_snombre.value == ''){
+        error = true;
+        input_snombre.style.border='1px solid red';
+    }else{
+        input_snombre.style.border = '1px solid black';
+    }
     if (input_papellido.value == ''){
         error = true;
         input_papellido.style.border='1px solid red';
     }else{
         input_papellido.style.border = '1px solid black';
+    }
+    if (input_sapellido.value == ''){
+        error = true;
+        input_sapellido.style.border='1px solid red';
+    }else{
+        input_sapellido.style.border = '1px solid black';
     }
     if (input_tipo_id.value == ''){
         error = true;
@@ -90,10 +101,8 @@ let validar = () => {
 };
 let obtener_datos = () => {
 
-    let validacion = validar();
 
-    if (validacion === false){
-        let foto = input_imagen.src;        
+    if (validar() == false){
         let correo = input_correo.value;
         let nombre = input_nombre.value;
         let snombre = input_snombre.value;
@@ -102,13 +111,14 @@ let obtener_datos = () => {
         let tipo_id = input_tipo_id.value;
         let id = input_id.value;
         let telefono = input_telefono.value;
-        let provincias = input_provincias.value;
-        let cantones = input_cantones.value;
-        let distritos = input_distritos.value;
+        let provincias = input_provincias.options[slt_provincias.selectedIndex].textContent;
+        let cantones = input_cantones.options[slt_cantones.selectedIndex].textContent;
+        let distritos = input_distritos.options[slt_distritos.selectedIndex].textContent;
         let direccion= input_direccion.value;
+        let foto = input_foto.src;
         let cant_hijos= input_cant_hijos.value;
 
-        registrar_pf(foto,correo, nombre,snombre, papellido, sapellido, tipo_id, id, telefono, provincias, cantones, distritos, direccion, cant_hijos);
+        registrar_pf(correo, nombre,snombre, papellido, sapellido, id, telefono, provincias, cantones, distritos, direccion, cant_hijos, foto);
 
     }else{
         swal({
