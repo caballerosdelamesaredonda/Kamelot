@@ -1,12 +1,11 @@
 'use strict';
 
 
-let registrar_pf = (pfoto, pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellido, pIdentificacion, pTelefono, pProvincia, pCanton, pDistrito, pDireccion, pCantHijos) => {
+let registrar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellido, pIdentificacion, pTelefono, pProvincia, pCanton, pDistrito, pDireccion, pCantHijos, pFoto) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/registrar_pf",
         method: "POST",
         data: {
-            foto: pfoto,
             nombre : pNombre,
             segundo_nombre: pSegundoNombre,
             papellido : pApellido,
@@ -20,6 +19,7 @@ let registrar_pf = (pfoto, pCorreo, pNombre, pSegundoNombre, pApellido, pSegundo
             canton : pCanton,
             distrito: pDistrito,
             direccion: pDireccion,
+            foto: pFoto,
             tipo_usuario : 'PF',
             estado : 'activo',
         },
