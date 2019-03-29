@@ -11,6 +11,8 @@ let mostrar_datos = () =>{
         let fila = tabla.insertRow();// Crea el tr de la tabla
 
         fila.insertCell().innerHTML = actividad[i]['actividad'];
+        fila.insertCell().innerHTML = `<img src="${actividad[i]['foto']}" height="110px" width="110px"> `
+
     }; 
 
 };
