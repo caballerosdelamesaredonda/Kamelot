@@ -14,7 +14,9 @@ let input_distritos= document.querySelector('#slt_distritos');
 let input_direccion= document.querySelector('#txt_direccion');
 let input_cant_hijos= document.querySelector('#num_cant_hijos');
 
-const boton_registrar = document.querySelector('#btn_registrar');
+let boton_registrar= document.querySelector('#btn_registrar');
+let input_imagen = document.querySelector('#image_preview');
+
 
 let validar = () => {
     let error = false;
@@ -103,6 +105,7 @@ let obtener_datos = () => {
     let validacion = validar();
 
     if (validacion === false){
+        let foto = input_imagen.scr;
         let correo = input_correo.value;
         let nombre = input_nombre.value;
         let snombre = input_snombre.value;
@@ -117,7 +120,7 @@ let obtener_datos = () => {
         let direccion= input_direccion.value;
         let cant_hijos= input_cant_hijos.value;
 
-        registrar_pf(correo, nombre,snombre, papellido, sapellido, tipo_id, id, telefono, provincias, cantones, distritos, direccion, cant_hijos);
+        registrar_pf(foto,correo, nombre,snombre, papellido, sapellido, tipo_id, id, telefono, provincias, cantones, distritos, direccion, cant_hijos);
 
     }else{
         swal({

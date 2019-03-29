@@ -90,7 +90,8 @@ module.exports.registrar_ce = (req, res) =>{
 //registro padre familia
 module.exports.registrar_pf = (req, res) =>{
     let padref_nuevo = new model_usuarios(
-        {
+        {   
+            foto : req.body.foto,
             nombre : req.body.nombre,
             segundo_nombre: req.body.segundo_nombre,
             papellido : req.body.papellido,

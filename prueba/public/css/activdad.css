@@ -47,7 +47,7 @@ btn_registrar {
     box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
     clear: both;
 }
-#btn_SeleccionarImagen {
+#btnSeleccionarImagen {
 	background-color: #f27232;
     padding: 10px;
     width: 170px;
@@ -134,4 +134,10 @@ tr:nth-child(even) {
 .position-fix{
 	position: fixed;
 	bottom: 0px;
+}
+
+#image_preview{
+    width: 170px;
+    height: 170px;
+    border: 1px solid #48dbfb;
 }

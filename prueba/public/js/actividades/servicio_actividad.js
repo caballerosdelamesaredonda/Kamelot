@@ -1,12 +1,13 @@
 'use strict';
 
-let registrar_actividad = (pId,pActividad) => {
+let registrar_actividad = (pId,pActividad, pfoto) => {
   let request = $.ajax({
     url: "http://localhost:4000/api/registrar_actividad",
     method: "POST",
     data: {
       userid: pId,
-      actividad: pActividad
+      actividad: pActividad,
+      foto: pfoto
     },
     dataType: "json",
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8'

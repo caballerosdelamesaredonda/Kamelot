@@ -7,6 +7,7 @@ let usario_loggeado = [];
 
 let mostrar_datos = (pUsuarioLoggeado) => {
 
+    document.getElementById('imagen_perfil').src = usario_loggeado.foto;
     document.getElementById('txt_nombre_centro').value = usario_loggeado.nombre;
     document.getElementById('txt_alias').value = usario_loggeado.alias;
     document.getElementById('txt_cedjuridica').value = usario_loggeado.cedula_juridica;
