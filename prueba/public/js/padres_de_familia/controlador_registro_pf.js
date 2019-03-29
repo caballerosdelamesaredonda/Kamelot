@@ -15,7 +15,7 @@ let input_direccion= document.querySelector('#txt_direccion');
 let input_cant_hijos= document.querySelector('#num_cant_hijos');
 
 let boton_registrar= document.querySelector('#btn_registrar');
-let input_imagen = document.querySelector('#image_preview');
+const input_imagen = document.querySelector('#image_preview');
 
 
 let validar = () => {
@@ -32,23 +32,11 @@ let validar = () => {
     }else{
         input_nombre.style.border = '1px solid black';
     }
-    if (input_snombre.value == ''){
-        error = true;
-        input_snombre.style.border='1px solid red';
-    }else{
-        input_snombre.style.border = '1px solid black';
-    }
     if (input_papellido.value == ''){
         error = true;
         input_papellido.style.border='1px solid red';
     }else{
         input_papellido.style.border = '1px solid black';
-    }
-    if (input_sapellido.value == ''){
-        error = true;
-        input_sapellido.style.border='1px solid red';
-    }else{
-        input_sapellido.style.border = '1px solid black';
     }
     if (input_tipo_id.value == ''){
         error = true;
@@ -105,7 +93,7 @@ let obtener_datos = () => {
     let validacion = validar();
 
     if (validacion === false){
-        let foto = input_imagen.scr;
+        let foto = input_imagen.src;        
         let correo = input_correo.value;
         let nombre = input_nombre.value;
         let snombre = input_snombre.value;
@@ -114,7 +102,7 @@ let obtener_datos = () => {
         let tipo_id = input_tipo_id.value;
         let id = input_id.value;
         let telefono = input_telefono.value;
-        let provincias = input_provincias.selectedOptions;
+        let provincias = input_provincias.value;
         let cantones = input_cantones.value;
         let distritos = input_distritos.value;
         let direccion= input_direccion.value;
