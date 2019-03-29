@@ -1,10 +1,10 @@
 'use strict';
 
 const tabla = document.querySelector('#tbl_actividad tbody');
-let userlocal = localStorage.getItem('usuario_en_sesion');
+let id_centro_actividad = localStorage.getItem('centro_id');
 
 let mostrar_lista_actividades = () =>{
-    let actividad = consultar_actividad_usuario(userlocal);
+    let actividad = consultar_actividad_usuario(id_centro_actividad);
     console.log(actividad);
     for(let i = 0; i < actividad.length; i++){
 
@@ -17,5 +17,6 @@ let mostrar_lista_actividades = () =>{
 
 };
 
-
 mostrar_lista_actividades();
+
+
