@@ -99,12 +99,13 @@ module.exports.registrar_pf = (req, res) =>{
             identificacion : req.body.identificacion,
             cantidad_hijos : req.body.cantidad_hijos,
             correo_electronico : req.body.correo_electronico,
-            clave: req.body.clave,
+            clave: 'clave123',
             telefono : req.body.telefono,
             provincia : req.body.provincia,
             canton : req.body.canton,
             distrito: req.body.distrito,
             direccion: req.body.direccion,
+            foto: req.body.foto,
             tipo_usuario : req.body.tipo_usuario,
             estado : req.body.estado
         }
