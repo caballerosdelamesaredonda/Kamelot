@@ -185,7 +185,7 @@ module.exports.listar_pf = (req ,res) =>{
 module.exports.listar_todos = (req ,res) =>{
     model_usuarios.find().then(
         function(usuarios){
-            if(padref.length > 0){
+            if(usuarios.length > 0){
                 res.json(
                     {
                         success: true,
