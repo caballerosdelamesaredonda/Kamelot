@@ -4,10 +4,10 @@ const mongoose = require('mongoose');
 
 let schema_citas = new mongoose.Schema(
     {
-        codigo : {type : String, required : true, unique: true},
-        nombre : {type : String, required: true},
-        correo : {type: String, required: true},
-        fecha : {type: Date, required: true}
+        userid : {type : String, required : true},
+        centroid : {type : String, required : true},
+        fecha : {type: Date, required: true},
+        hora : {type : String, required : true}
     }
 );
 

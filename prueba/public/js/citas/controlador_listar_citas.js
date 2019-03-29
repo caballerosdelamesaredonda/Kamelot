@@ -2,9 +2,9 @@
 
 let citas = consultar_citas();
 
-let mostrar_datos = () => {
+let mostrar_lista_citas = () => {
 
-    let tabla = document.querySelector('.tabla_info tbody');
+    let tabla = document.querySelector('.tabla_citas tbody');
     tabla.innerHTML = '';
 
     for (let i = 0; i < citas.length; i++) {
@@ -16,20 +16,20 @@ let mostrar_datos = () => {
             //console.log(month+'-'+day+'-'+year);
 
             let fila = tabla.insertRow(); // Crea tr de la tabla
-            fila.insertCell().innerHTML = citas[i]['codigo'];
-            fila.insertCell().innerHTML = citas[i]['nombre'];
-            fila.insertCell().innerHTML = citas[i]['correo'];
+            fila.insertCell().innerHTML = citas[i]['userid'];
+            fila.insertCell().innerHTML = citas[i]['centroid'];
             //fila.insertCell().innerHTML = citas[i]['fecha'];
             fila.insertCell().innerHTML = dateformated;
+            fila.insertCell().innerHTML = citas[i]['hora'];
     }
 
 };
 
-mostrar_datos();
+//mostrar_lista_citas();
 
 
 let citas_programadas = () => {
-    let citas = consultar_citas();
+    let citas = consultar_citas(userCentro_citas);
     let listacitas = [];
     for (let i = 0; i < citas.length; i++) {
         let newdate = new Date(citas[i]['fecha']);

@@ -1,8 +1,8 @@
 'use strict';
 
-let userlocal = localStorage.getItem('centro_id');
-//console.log(userlocal);
-let noticias = consultar_noticias(userlocal);
+let userlocal_noticias = localStorage.getItem('centro_id');
+//console.log(userlocal_noticias);
+let noticias = consultar_noticias(userlocal_noticias);
 console.log(noticias);
 
 let mostrar_noticias_tablero = () => {

@@ -1,24 +1,19 @@
 
-#frm_citas {
-    padding: 10px;
+section #frm_citas{
+text-align: center;
+width: 450px;
+height: 200px;
+background-color: grey;
+margin-bottom: 10px;
+margin-left: auto;
+margin-right: auto;
 }
 
-#frm_citas button{
-    display: block;
-    background:  #f1c40f;
+section #frm_citas div{
     padding: 10px;
-    width: 170px;
-    font-size: 16px;
-}
-#frm_citas button:hover{
-    background:  #f39c12;
 }
 
 .highlight_citas {
     background-color: #d63031;
     color: #d63031;
-}
-
-.error_input{
-    border: 2px solid #d63031;
 }

@@ -1,8 +1,7 @@
 'use strict';
 
-const input_codigo = document.querySelector('#txt_codigo');
-const input_nombre = document.querySelector('#txt_nombre');
-const input_correo = document.querySelector('#txt_correo');
+const userPadre_citas = localStorage.getItem('usuario_en_sesion');
+const userCentro_citas = localStorage.getItem('centro_id');
 const input_fecha = document.querySelector('#datepicker-13');
 const input_hora = document.querySelector('#slct_hora');
 const boton_registrar = document.querySelector('#btn_registrar');
@@ -10,27 +9,6 @@ const boton_registrar = document.querySelector('#btn_registrar');
 
 let validar = () => {
     let error = false;
-
-    if (input_codigo.value == '') {
-        error = true;
-        input_codigo.classList.add('error_input');
-    } else {
-        input_codigo.classList.remove('error_input');
-    }
-
-    if (input_nombre.value == '') {
-        error = true;
-        input_nombre.classList.add('error_input');
-    } else {
-        input_nombre.classList.remove('error_input');
-    }
-
-    if (input_correo.value == '') {
-        error = true;
-        input_correo.classList.add('error_input');
-    } else {
-        input_correo.classList.remove('error_input');
-    }
 
     if (input_fecha.value == '') {
         error = true;
@@ -46,14 +24,13 @@ let obtener_datos = () => {
 
     if (validar() == false) {
         // Se ejecuta solo si la validación no da error
-        let codigo = input_codigo.value;
-        let nombre = input_nombre.value;
-        let correo = input_correo.value;
+        let userLoggeado = userPadre_citas;
+        let userCentro = userCentro_citas;
         let fecha = input_fecha.value;
         let hora = input_hora.value;
 
-        registrar_citas(codigo, nombre, correo, fecha, hora);
-        
+        registrar_citas(userLoggeado, userCentro, fecha, hora);
+
 
     } else {
         swal.fire({
@@ -77,9 +54,7 @@ $(function () {
 
 // Function to show limited datepicker dates
 
-$("#datepicker").datepicker();
-
 $(function () {
     $("#datepicker-13").datepicker({ dateFormat: 'mm-dd-yy', maxDate: '+20', minDate: '0', beforeShowDay: DisableSpecificDates /* $.datepicker.noWeekends */ });
-    $("#datepicker-13").datepicker("show");
+    //$("#datepicker-13").datepicker("show");
 });

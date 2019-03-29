@@ -5,10 +5,10 @@ const model_citas = require('./citas.model');
 module.exports.registrar_cita = (req, res) => {
     let cita_nueva = new model_citas(
         {
-            codigo: req.body.codigo,
-            nombre: req.body.nombre,
-            correo: req.body.correo,
-            fecha: req.body.fecha
+            userid: req.body.userid,
+            centroid: req.body.centroid,
+            fecha: req.body.fecha,
+            hora: req.body.hora
         }
     );
 
@@ -37,7 +37,7 @@ module.exports.registrar_cita = (req, res) => {
 
 
 module.exports.consultar_citas = (req, res) => {
-    model_citas.findOne({_id: req.body._id}).then(
+    model_citas.find({centroid: req.body.centroid}).then(
         function (citas) {
             if (citas.length > 0) {
                 res.json(

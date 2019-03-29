@@ -3,7 +3,7 @@
 const tabla = document.querySelector('#tbl_actividad tbody');
 let userlocal = localStorage.getItem('usuario_en_sesion');
 
-let mostrar_datos = () =>{
+let mostrar_lista_actividades = () =>{
     let actividad = consultar_actividad_usuario(userlocal);
     console.log(actividad);
     for(let i = 0; i < actividad.length; i++){
@@ -18,4 +18,4 @@ let mostrar_datos = () =>{
 };
 
 
-mostrar_datos();
+mostrar_lista_actividades();

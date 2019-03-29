@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/perfil_ce.css">
+    <link rel="stylesheet" href="./css/activdad.css" type="text/css">
+    <link rel="stylesheet" href="css/citas.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -29,7 +34,16 @@
 
     <main>
 
-         <!-- Seccion de perfil centro. -->
+        <section id='submenu_centro'>
+            <h1>Información adicional centro:</h1>
+            <button type="button" class="registrar_cuenta ml-1" onClick="document.getElementById('noticias').scrollIntoView();">Ver
+                noticias</button>
+            <button type="button" class="registrar_cuenta ml-1" onClick="document.getElementById('actividades').scrollIntoView();">Ver
+                actividades</button>
+            <button type="button" class="registrar_cuenta ml-1" onClick="document.getElementById('citas').scrollIntoView();">Registrar cita</button>
+        </section>
+
+        <!-- Seccion de perfil centro. -->
 
         <section id="perfil">
 
@@ -135,7 +149,61 @@
             </table>
         </section>
 
+        <!-- Seccion de actividades. -->
 
+        <section id='actividades'>
+            <h1 style="text-align:center;margin-top:15px;font-weight: bold;">Actividades del centro:</h1>
+            <table width="800" id="tbl_actividad" align="center">
+                <thead class="head_backg">
+                    <tr>
+                        <th class="padding border-right">Descripción</th>
+                        <th class="padding">Foto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Seccion de citas. -->
+
+        <section id='citas'>
+
+            <h1 style="text-align:center;margin-top:15px;font-weight: bold;">Registar citas con el centro:</h1>
+
+            <form id="frm_citas">
+
+                <!-- Formulario de registro de citas -->
+                <div>
+                    <label for="datepicker-13">Seleccionar Fecha:</label>
+                    <input type="text" id="datepicker-13">
+                </div>
+
+                <div>
+                    <label for="slct_hora">Seleccionar Hora:</label>
+                    <select id="slct_hora">
+                        <option value="9:00" class="time_9">9:00</option>
+                        <option value="10:00" class="time_10">10:00</option>
+                        <option value="11:00" class="time_11">11:00</option>
+                        <option value="12:00" class="time_12">12:00</option>
+                        <option value="13:00" class="time_13">13:00</option>
+                        <option value="14:00" class="time_14">14:00</option>
+                        <option value="15:00" class="time_15">15:00</option>
+                        <option value="16:00" class="time_16">16:00</option>
+                        <option value="17:00" class="time_17">17:00</option>
+                        <option value="18:00" class="time_18">18:00</option>
+                        <option value="19:00" class="time_19">19:00</option>
+                        <option value="20:00" class="time_20">20:00</option>
+                        <option value="21:00" class="time_21">21:00</option>
+                    </select>
+                </div>
+
+                <div>
+                    <button type="button" id="btn_registrar">Registrar Cita</button>
+                </div>
+
+            </form>
+        </section>
 
     </main>
 
@@ -150,13 +218,16 @@
         </nav>
     </footer>
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/centro_educativo/servicio_ce.js"></script>
     <script src="js/centro_educativo/controlador_tablero_ce.js"></script>
     <script src="js/noticias/servicio_noticias.js"></script>
     <script src="js/noticias/controlador_listar_noticias_tablero.js"></script>
-
+    <script src="js/actividades/servicio_actividad.js"></script>
+    <script src="js/actividades/controlador_listar_actividad.js"></script>
+    <script src="js/citas/servicio_citas.js"></script>
+    <script src="js/citas/controlador_registrar_citas.js"></script>
+    <script src="js/citas/controlador_listar_citas.js"></script>
 </body>
 
 </html>

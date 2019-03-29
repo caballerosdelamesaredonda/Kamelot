@@ -12,7 +12,7 @@ router.route('/registrar_citas')
     );
 
 router.route('/consultar_citas')
-    .get(
+    .post(
         function (req, res) {
             citas_api.consultar_citas(req, res);
         }
