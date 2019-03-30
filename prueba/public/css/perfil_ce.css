@@ -1,9 +1,12 @@
-/*Font*/
-
-
-
 form {
     margin-left: 50px;
+}
+
+.input {
+	width: 150px;
+	height: 35px;
+	border: #6D6D6D solid 1px;
+	border-radius: 5px;
 }
 
 .lable {
@@ -20,6 +23,15 @@ form {
 
 .error_input{
     border: 2px solid #d63031;
+}
+
+.white {
+	color: #ffffff;
+	font-size: 18px;
+}
+.descripcion {
+    width: 350px;
+    height: 150px;
 }
 
 /* Estilos de formulario */
@@ -89,7 +101,7 @@ form {
 	margin-top: 20px;
 }
 .mt-3 {
-	margin-top: 70px;
+	margin-top: 90px;
 }
 .mb-1 {
 	margin-bottom: 20px;
