@@ -9,19 +9,19 @@ let validar = () =>{
 	let error = false;
 
 	if(input_correo == ''){
-		input_correo.style.borderBottom='1px solid red';
+		input_correo.classList.add('error_input');
 		error = true;
 	} else {
-		input_correo.style.borderBottom='1px solid black';
+		input_correo.classList.add('error_input');
 	}
 
 
 
 	if(input_contrasenna == ''){
-		input_contrasenna.style.borderBottom='1px solid red';
+		input_contrasenna.classList.add('error_input');
 		error = true;
 	} else {
-		input_contrasenna.style.borderBottom='1px solid black';
+		input_contrasenna.classList.add('error_input');
 	}
 
 

@@ -6,6 +6,15 @@
     font-size: 30px;
 }
 
+.white {
+	color: #ffffff;
+	font-size: 18px;
+}
+
+.border_input {
+    border: #48dbfb solid 1px;
+}
+
 header p{
     color: white;
     display: inline-block;
@@ -21,6 +30,13 @@ header p{
     font-size: 25px;
 }
 
+.mr-2 {
+	margin-right: 50px;
+}
+
+.ml-1 {
+	margin-left: 20px;
+}
 
 .ingresar{
     background-color: #f27232;
@@ -68,4 +84,8 @@ header p{
 .p {
     color: #143646;
     text-align: center;
+}
+
+.error_input {
+    border: 2px solid #ED4C67;
 }
