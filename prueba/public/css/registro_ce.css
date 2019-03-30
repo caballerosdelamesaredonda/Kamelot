@@ -13,6 +13,22 @@ body{
     height: 1750px;
 
 }
+.iniciar_sesion2 {
+    padding-top: 11px;
+    padding-bottom: 11px;
+	border:#f27232 solid 1px;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #fff;
+}
+.iniciar_sesion2:hover {
+    padding-top: 11px;
+    padding-bottom: 11px;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #fff;
+	background-color: #f27232;
+}
 .main{
     height: 900px;
 }
@@ -231,6 +247,9 @@ td:hover {
 .mt-2 {
 	margin-top: 20px;
 }
+.mt-4 {
+	margin-top: 10px;
+}
 .mb-1 {
     margin-bottom: 40px;
 }
@@ -287,5 +306,9 @@ td:hover {
 
 .error_input, .error_select{
     border: 2px solid #ED4C67;
-    
+}
+
+.width1 {
+    padding-left: 50px;
+    padding-right: 50px;
 }
