@@ -177,27 +177,27 @@ a{
 }
 /* Estilos de la tabla centro educativo */
 
-#tbl_centroe {
+#tbl_centroe, #tbl_centroe_primaria {
     margin: 30px 0px 30px 0px;
 	text-align: center;
 	margin-left: auto;
     margin-right: auto;
 }
 
-#tbl_centroe thead tr{
+#tbl_centroe thead tr, #tbl_centroe_primaria thead tr{
     background: #808e9b;
     color: #FFF;
 }
 
-#tbl_centroe tbody tr {
+#tbl_centroe tbody tr, #tbl_centroe_primaria tbody tr {
     border-bottom: 1px solid #3498db;
 }
 
-#tbl_centroe tbody tr:hover {
+#tbl_centroe tbody tr:hover, #tbl_centroe_primaria tbody tr:hover {
     background: rgba(52,152,219 ,0.4);  /* Se utiliza RGBA por que este formato incluye el opacity incluido */
 }
 
-#tbl_centroe tr td,#tbl_centroe tr th{
+#tbl_centroe tr td,#tbl_centroe tr th, #tbl_centroe_primaria tr td, #tbl_centroe_primaria tr th{
     padding: 20px 10px;
 }
 

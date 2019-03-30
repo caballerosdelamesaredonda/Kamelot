@@ -63,4 +63,15 @@ router.route('/registrar_pf')
 );
 
 
+//end point lista primaria
+
+router.route('/listar_primaria')
+    .get(
+        function(req, res){
+            api_usuarios.listar_primaria(req, res);
+    }
+)
+
+
+
 module.exports = router;
