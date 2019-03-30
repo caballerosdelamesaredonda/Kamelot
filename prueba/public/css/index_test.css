@@ -1,5 +1,5 @@
 body {
-    background-color: aqua;
+    
 }
 .mr-1 {
 	margin-right: 20px;
@@ -29,4 +29,31 @@ body {
 }
 .mb-1 {
 	margin-bottom: 20px;
+}
+
+.h-1{
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	display: block;
+	color: #2f3640;
+}
+
+.h-2{
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	display: block;
+	color: #2f3640;
+	line-height: 1.5;
+}
+
+.a_class{
+	padding: 15px;
+	background-color: #f27232;
+	color: #fff;
+	border-radius: 5px;
+	box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.75);
 }
