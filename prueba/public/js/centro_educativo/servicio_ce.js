@@ -117,3 +117,30 @@ let obtener_usuario_por_id = (pId) =>{
 
   return  usuario;
 };
+
+let listar_primaria = () => {
+ 
+  let listar_primaria = [];
+
+  let request = $.ajax({
+
+    url: "http://localhost:4000/api/listar_primaria",
+    method: "GET",
+    data: {
+    },
+    dataType: "json",
+    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    async : false
+  });
+
+  request.done(function (res) {
+    listar_primaria = res.centroe;
+    
+  });
+
+  request.fail(function (jqXHR, textStatus) {
+    
+  });
+  return listar_primaria;
+ 
+};
