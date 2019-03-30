@@ -11,6 +11,10 @@
 	font-size: 18px;
 }
 
+.border_input {
+    border: #48dbfb solid 1px;
+}
+
 header p{
     color: white;
     display: inline-block;
@@ -80,4 +84,8 @@ header p{
 .p {
     color: #143646;
     text-align: center;
+}
+
+.error_input {
+    border: 2px solid #ED4C67;
 }
