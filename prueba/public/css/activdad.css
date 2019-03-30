@@ -115,7 +115,10 @@ tr:nth-child(even) {
 	margin-top: 20px;
 }
 .mt-3 {
-	margin-top: 70px;
+	margin-top: 90px;
+}
+.mt-4 {
+	margin-top: 10px;
 }
 .mb-1 {
 	margin-bottom: 20px;
