@@ -29,11 +29,39 @@
 	</header>
 
 	<main>
-		<p>
-			
-		</p>
+			<h1>Bienvenido a Costa Rica Educa</h1>
+			<div class="w3-content w3-display-container">
+				<img class="mySlides" src="/public/images/mep.png" style="width:350px">
+				<img class="mySlides" src="/public/images/ninos-clase-guarderia.jpg" style="width:350px">
+				<img class="mySlides" src="/public/images/co.jpg" style="width:350px">
+				<img class="mySlides" src="/public/images/cole.jpg" style="width:350px">
+			  
+				<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+			  </div>
+			  
+			  <script>
+			  var slideIndex = 1;
+			  showDivs(slideIndex);
+			  
+			  function plusDivs(n) {
+				showDivs(slideIndex += n);
+			  }
+			  
+			  function showDivs(n) {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				if (n > x.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = x.length}
+				for (i = 0; i < x.length; i++) {
+				  x[i].style.display = "none";  
+				}
+				x[slideIndex-1].style.display = "block";  
+			  }
+			  </script>
 
-		<h1>Top 10 Secundaria MEP</h1>
+		<h1
+		>Top 10 Secundaria MEP</h1>
 
 		<!-- Tabla top 10 Secundaria MEP -->
 
