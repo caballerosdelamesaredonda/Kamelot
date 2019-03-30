@@ -72,9 +72,9 @@ let mostrarDatos = () => {
 
     if (validar() == false) {
         
-       /* let cantidad = input_cantidad.value;
+       let cantidad = input_cantidad.value;
         
-        let utiles = input_utiles.value;*/
+        let utiles = input_utiles.value;
         let nivel = input_nivel.value;
         let ano = input_ano.value;
         let ciclo = input_ciclo.value;
