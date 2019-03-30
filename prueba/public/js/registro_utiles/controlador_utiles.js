@@ -8,7 +8,7 @@ const input_ano = document.querySelector('#text_ano');
 const input_nivel = document.querySelector('#slt_nivel');
 const input_ciclo = document.querySelector('#slt_ciclo');
 const input_nombre = document.querySelector('#txt_nombre');
-const input_tipo = document.querySelector('#slt_tipo')
+const input_tipo = document.querySelector('#slt_tipo');
 
 
 let utiles = '';
