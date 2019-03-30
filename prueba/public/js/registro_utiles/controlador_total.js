@@ -31,37 +31,37 @@ let validar = () => {
     }*/
 
     if(input_ano.value == ''){
-        input_ano.classList.add('error_input')
+        input_ano.classList.add('error_input');
         error = true;
     }else{
-        input_ano.classList.remove('error_input')
+        input_ano.classList.remove('error_input');
     }
 
     if(input_nivel.value == ''){
-        input_nivel.classList.add('error_input')
+        input_nivel.classList.add('error_input');
         error = true;
     }else{
-        input_nivel.classList.remove('error_input')
+        input_nivel.classList.remove('error_input');
     }
     if(input_ciclo.value == ''){
-        input_ciclo.classList.add('error_input')
+        input_ciclo.classList.add('error_input');
         error = true;
     }else{
-        input_ciclo.classList.remove('error_input')
+        input_ciclo.classList.remove('error_input');
     }
 
     if(input_nombre.value == ''){
-        input_nombre.classList.add('error_input')
+        input_nombre.classList.add('error_input');
         error = true;
     }else{
-        input_nombre.classList.remove('error_input')
+        input_nombre.classList.remove('error_input');
     }
     
     if(input_tipo.value == ''){
-        input_tipo.classList.add('error_input')
+        input_tipo.classList.add('error_input');
         error = true;
     }else{
-        input_tipo.classList.remove('error_input')
+        input_tipo.classList.remove('error_input');
     }
 
     return error;
@@ -75,11 +75,12 @@ let mostrarDatos = () => {
        /* let cantidad = input_cantidad.value;
         
         let utiles = input_utiles.value;*/
+        let nivel = input_nivel.value;
         let ano = input_ano.value;
         let ciclo = input_ciclo.value;
         let nombre = input_nombre.value;
         let tipo = input_tipo.value;
-        registrar_utiles(utiles, /*nombre, ciclo, tipo, ano*/ cantidad);
+        registrar_utiles(utiles, nombre, ciclo, tipo, ano, nivel, cantidad);
 
 
     }else{

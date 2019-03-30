@@ -84,7 +84,7 @@ const evaluacion_ce = require('./componentes/evaluacion_ce/evaluacion_ce.route')
 const utiles = require('./componentes/reg_utiles/utiles.route');
 
 
-//app.use('/api', utiles);
+app.use('/api', utiles);
 
 
 //app.use('/api', comentario);
