@@ -1,6 +1,7 @@
 'use strict';
 const model_usuarios = require ('./usuarios.model');
 const nodemailer = require('nodemailer');
+const generador_clave = require('generate-password')
 
 let transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -18,7 +19,12 @@ module.exports.registrar_ce = (req, res) =>{
         nombre : req.body.nombre,
         alias : req.body.alias,
         cedula_juridica : req.body.cedula_juridica,
-        clave : req.body.clave,
+        clave : generador_clave.generate({
+            length: 8,
+            numbers: true,
+            uppercase: true,
+            strict: true
+        }),
         tipo_centro : req.body.tipo_centro,
         nivel_centro : req.body.nivel_centro,
         foto : req.body.foto,
@@ -66,6 +72,8 @@ module.exports.registrar_ce = (req, res) =>{
                     html: `<h1 style="color:#6F1E51;">Saludos ${centroe_nuevo.nombre} </h1>
                     <p>Gracias por registrarse</p>
                     <p>Le estaremos escribiendo pronto, una vez los documentos hayan sido revisados y se haya tomado una decision</p>
+                    <p>Una ves aprobada tu solicitud, podrás loguearte con tu código de verificación</p>
+                    <p> Tu código de verificación es: ${centroe_nuevo.clave}</p>
                     `
                 };
                 transporter.sendMail(mailOptions, function(error, info){
@@ -99,7 +107,12 @@ module.exports.registrar_pf = (req, res) =>{
             identificacion : req.body.identificacion,
             cantidad_hijos : req.body.cantidad_hijos,
             correo_electronico : req.body.correo_electronico,
-            clave: req.body.clave,
+            clave: generador_clave.generate({
+                length: 8,
+                numbers: true,
+                uppercase: true,
+                strict: true
+            }),
             telefono : req.body.telefono,
             provincia : req.body.provincia,
             canton : req.body.canton,
@@ -120,6 +133,23 @@ module.exports.registrar_pf = (req, res) =>{
                     }
                 )
             }else{
+                let mailOptions = {
+                    from: 'loscaballerosdelamesaredonnda@gmail.com',
+                    to: padref_nuevo.correo_electronico,
+                    subject: 'Registro recibido',
+                    html: `<h1 style="color:#6F1E51;">Saludos ${padref_nuevo.nombre} ${padref_nuevo.papellido}</h1>
+                    <p>Gracias por registrarse</p>
+                    <p>Podrás ingresar a la página utilizando tu código de verificación.</p>
+                    <p> Tu código de verificación es: ${padref_nuevo.clave}</p>
+                    `
+                };
+                transporter.sendMail(mailOptions, function(error, info){
+                    if (error) {
+                        console.log(error);
+                    } else {
+                        console.log('Email sent: ' + info.response);
+                    }
+                });
                 res.json(
                     {
                         success : true,
@@ -184,7 +214,7 @@ module.exports.listar_pf = (req ,res) =>{
 module.exports.listar_todos = (req ,res) =>{
     model_usuarios.find().then(
         function(usuarios){
-            if(padref.length > 0){
+            if(usuarios.length > 0){
                 res.json(
                     {
                         success: true,
