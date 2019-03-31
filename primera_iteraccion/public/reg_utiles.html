@@ -1,0 +1,676 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Registro Utiles Centro Educativo</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reg_utiles.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fontawesome.com/icons/trash-alt?style=solid">
+    <link href="https://fontawesome.com/icons/eye-slash?style=solid">
+    <link href="https://fontawesome.com/icons/edit?style=solid">
+
+
+</head>
+
+<body>
+
+    <header class="header_principal">
+
+        <nav>
+            <img class="img_logo" src="images/logo_transparent.png" alt="Logo Costa Rica Educa">
+            <a href="#">Costa Rica Educa</a>
+            <label for="txt_buscar">Buscar</label>
+            <input type="text" id="txt_buscar">
+            <a href="index.html">Home</a>
+            <a href="#">Iniciar Sesion</a>
+        </nav>
+    </header>
+
+    <section id="titulo">
+        <h1>Registro Lista de Útiles</h1>
+    </section>
+
+    <main>
+
+        <section id="segundo_titulo">
+            <h1>Ingrese la información solicitada</h1>
+        </section>
+
+        <form id="frm_utiles">
+
+
+            <div>
+                <label for="nombre_lista">Nombre de la lista</label>
+                <input type="text" id="txt_nombre_lista" placeholder="Nombre de la lista">
+            </div>
+
+            <div>
+                <label for="slt_tipo">Tipo</label>
+                <select id="slt_tipo">
+                    <option value="">--Seleccione un tipo--</option>
+                    <option value="mep">MEP</option>
+                    <option value="centro_educativo">Centro Educativo</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="slt_ciclo">Ciclo</label>
+                <select id="slt_ciclo">
+                    <option value="">--Seleccione un ciclo--</option>
+                    <option value="primaria">Primaria</option>
+                    <option value="secundaria">Secundaria</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div>
+                <label for="slt_nivel">Nivel</label>
+                <select id="slt_nivel">
+                    <option value="">--Seleccione un nivel--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+
+                <div>
+                    <label for="ano">Año</label>
+                    <input type="text" id="text_ano" placeholder="Año">
+                </div>
+            </div>
+
+
+    </main>
+
+    <main>
+
+        <section id="segundo_titulo">
+            <h1>Agregue los útiles requeridos en esta lista</h1>
+        </section>
+        <div id="centrar">
+
+            <div id="lista_utiles">
+                <label for="lista_utiles">Lista de utiles</label>
+
+                <div id="lista_check">
+                    <form action="/action_page.php">
+
+                        <div> <input type="checkbox" name="Estuche para lapices"> Estuche para lapices<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Caja de boligrafos"> Caja de boligrafos<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div><input type="checkbox" name="Lapices">Lapices<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Sacapuntas">Sacapuntas<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Resaltadores">Resaltadores<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Marcadores">Marcadores<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                            
+                        </div>
+                        <div> <input type="checkbox" name="Permanentes">Permanentes<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Folder">Folder<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Perforadora">Perforadora<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Papel rayado">Papel rayado<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Fichas">Fichas<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Carpetas">Carpetas<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Pegamento">Pegamento<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Papel Cuadriculado">Papel Cuadriculado<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Correctores">Correctores<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div><input type="checkbox" name="Trasportador">Trasportador<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Regla">Regla<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Tijera">Tijera<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Calculadora">Calculadora<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Candado">Candado<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Organizador">Organizador<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Agenda">Agenda<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Papel para forrar">Papel para forrar<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Mochila">Mochila<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Lonchera">Lonchera<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+                        <div> <input type="checkbox" name="Libro de estudio">Libro de estudio<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+
+                        <div> <input type="checkbox" name="Lonchera">Lonchera<br>
+                            <div><select id="cantidad">
+                                    <option value="">--Seleccione la cantidad--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select></div>
+                        </div>
+
+
+
+
+                    </form>
+                </div>
+
+            </div>
+
+
+            <!--<div>
+                <button type="button" id="btn_agregar_item">Agregar Ítem</button>
+            </div>-->
+        </div>
+
+        </div>
+
+        <div id="upload"></div>
+        <div class="dropzone" id="dropzone">Suba su archivo aqui</div>
+
+        <script>
+            (function () {
+                var dropzone = document.getElementById('dropzone');
+
+                var displayUploads = function (data) {
+                    var uploads = document.getElementById('uploads'),
+                        anchor,
+                        x;
+
+                    for (x = 0; x < data.length; x = x + 1) {
+                        anchor = document.createElement('a');
+                        anchor.href = data[x].file;
+                        anchor.innerText = data[x].name;
+
+                        uploads.appendChild(anchor);
+                    }
+                }
+
+                var upload = function (files) {
+                    var formData = new FormData(),
+                        xhr = new XMLHttpRequest(),
+                        x;
+                    for (x = 0; x < files.length; x = x + 1) {
+                        formData.append('file[]', files[x]);
+                    }
+
+                    xhr.onload = function () {
+                        var data = JSON.parse(this.responseText);
+                        displayUploads(data);
+
+                    }
+
+                    xhr.open('post', 'upload.php');
+                    xhr.send(formData);
+                }
+
+                dropzone.ondrop = function (e) {
+                    e.preventDefault();
+                    this.className = 'dropzone';
+                    upload(e.dataTransfer.files);
+                }
+
+                dropzone.ondragover = function () {
+                    this.className = 'dropzone dragover';
+                    return false;
+                }
+
+                dropzone.ondragleave = function () {
+                    this.className = 'dropzone';
+                    return false;
+                }
+            }());
+
+        </script>
+
+
+        <div id="btn_registrar_utiles">
+            <button type="button" id="btn_registrar">Registrar</button>
+        </div>
+        <!--<div>
+            <button type="button" id="btn_agregar">Agregar otra lista</button>
+        </div>-->
+
+        </form>
+    </main>
+
+
+    <footer class="footer_principal">
+        <nav>
+            <a href="registro_centroe.html">Registrar centro educativo</a>
+            <a href="citas.html">Registrar cita</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+        </nav>
+        <br>
+        <p>Desarrollado por KAMELOT</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/lista_utiles/servicio_reg_utiles.js"></script>
+    <script src="js/lista_utiles/controlador_reg_utiles.js"></script>
+
+</body>
+
+</html>
