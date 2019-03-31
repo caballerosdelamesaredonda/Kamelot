@@ -11,9 +11,9 @@ router.route('/registrar_utiles')
     );
 
 router.route('/listar_utiles')
-        .get(
+        .post(
             function(req, res){
-                utiles_api.listar_todos(req, res);
+                utiles_api.consultar_utiles(req, res);
             }
         )
 

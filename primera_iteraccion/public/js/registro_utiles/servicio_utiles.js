@@ -1,29 +1,28 @@
 'use strict';
 
-
-let registrar_utiles = (pnombre, ptipo, pciclo, pnivel, pano, putiles, pcantidad) => {
+let registrar_utiles = (pidCentro, pNombre, pTipo, pCiclo, pNivel, pAnho, pUtiles, pCantidad) => {
   let request = $.ajax({
     url: "http://localhost:4000/api/registrar_utiles",
     method: "POST",
     data: {
-      utiles: putiles,
-      cantidad: pcantidad,
-    tipo: ptipo, 
-     nombre: pnombre,
-      ciclo: pciclo,
-      nivel: pnivel, 
-      ano: pano
-      
-
+      idcentro: pidCentro,
+      nombre: pNombre,
+      tipo: pTipo,
+      ciclo: pCiclo,
+      nivel: pNivel,
+      anho: pAnho,
+      util: pUtiles,
+      cantidad: pCantidad
     },
     dataType: "json",
+    async: false,
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
   });
 
   request.done(function (msg) {
     swal.fire({
       type: 'success',
-      title: 'El util fue agregado',
+      title: 'El útil fue agregado',
       text: ''
     });
   });
@@ -31,33 +30,42 @@ let registrar_utiles = (pnombre, ptipo, pciclo, pnivel, pano, putiles, pcantidad
   request.fail(function (jqXHR, textStatus) {
     swal.fire({
       type: 'error',
-      title: 'Los utiles no pudieron ser agregados',
+      title: 'Los útiles no pudieron ser agregados',
       text: 'Ocurrió un error inesperado, por favor intente de nuevo'
     });
   });
 };
 
-let lista_utiles = () => {
-  let lista_utiles = [];
+let consultar_utiles = (pId) => {
+
+  let consultar_util = [];
 
   let request = $.ajax({
     url: "http://localhost:4000/api/listar_utiles",
-    method: "GET",
+    method: 'POST',
+    async: false,
     data: {
+      idcentro: pId
     },
     dataType: "json",
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-    async : false
   });
 
-  request.done(function (res) {
-    lista_utiles = res.utiles;
-    
+  request.done(function (response) {
+
+    if (response.success) {
+      consultar_util = response.utiles;
+    } else {
+      consultar_util = response.utiles;
+      swal.fire({
+        type: 'warning',
+        title: 'Lista de útiles vacía',
+        text: 'Por favor registrar útiles para poder listarlos'
+      });
+    }
+
   });
 
-  request.fail(function (jqXHR, textStatus) {
-    
-  });
-  return lista_utiles;
- 
+  return consultar_util;
+
 };
