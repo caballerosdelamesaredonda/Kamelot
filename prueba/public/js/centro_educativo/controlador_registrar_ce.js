@@ -2,7 +2,6 @@
 
 const input_nombre = document.querySelector('#txt_nombre');
 const input_alias = document.querySelector('#txt_alias');
-const input_clave = document.querySelector('#pass_clave');
 const input_cedulaj = document.querySelector('#txt_cedulaj');
 const slt_tipo_centro = document.querySelector('#slt_tipo_centro');
 const slt_nivel_centro = document.querySelector('#slt_nivel_centro');
@@ -61,13 +60,6 @@ let validar = () => {
     }
 
     if (input_alias.value == '') {
-        error = true;
-        input_alias.classList.add('error_input');
-    } else {
-        input_alias.classList.remove('error_input');
-    }
-
-    if (input_clave.value == '') {
         error = true;
         input_alias.classList.add('error_input');
     } else {
@@ -232,7 +224,6 @@ let obtener_datos = () => {
 
         let nombre = input_nombre.value;
         let alias = input_alias.value;
-        let clave = input_clave.value;
         let cedula_juridica = input_cedulaj.value;
         let tipo_centro = slt_tipo_centro.value;
         let nivel_centro = slt_nivel_centro.value;
@@ -261,7 +252,7 @@ let obtener_datos = () => {
         let tipo_usuario = input_tipo_usuario.value;
         let estado = input_estado.value;
         let fecha_registro = fecha;
-        registrar_centroe(nombre, alias, clave, cedula_juridica, tipo_centro, nivel_centro, foto, nombre_comercial, provincia, canton, distrito, direccion, fecha_fundacion, referencia_historia, adjuntar_documentos, telefono, fax, sitio_web, cuentas_redesso, correo_electronico, contacto_nombre, papellido, sapellido, identificacion, departamento, telefono_contacto, extension_contacto, correo_electronico_contacto, estado, tipo_usuario, fecha_registro);
+        registrar_centroe(nombre, alias, cedula_juridica, tipo_centro, nivel_centro, foto, nombre_comercial, provincia, canton, distrito, direccion, fecha_fundacion, referencia_historia, adjuntar_documentos, telefono, fax, sitio_web, cuentas_redesso, correo_electronico, contacto_nombre, papellido, sapellido, identificacion, departamento, telefono_contacto, extension_contacto, correo_electronico_contacto, estado, tipo_usuario, fecha_registro);
 
     } else {
         swal.fire({
