@@ -70,9 +70,10 @@ module.exports.registrar_ce = (req, res) =>{
                     to: centroe_nuevo.correo_electronico,
                     subject: 'Registro recibido',
                     html: `<h1 style="color:#6F1E51;">Saludos ${centroe_nuevo.nombre} </h1>
-                    <p>Gracias por registrarse</p>
-                    <p>Le estaremos escribiendo pronto, una vez los documentos hayan sido revisados y se haya tomado una decision</p>
-                    <p>Una ves aprobada tu solicitud, podrás loguearte con tu código de verificación</p>
+                    <p>Gracias por registrarse.</p>
+                    <p>Le estaremos escribiendo pronto, una vez los documentos hayan sido revisados y se haya tomado una decisión.</p>
+                    <p>Una ves aprobada tu solicitud, se le notificará por correo electrónico.</p> 
+                    <p>Encuentra abajo, tu código de verificación. Este funcionará como una clave temporal.</p>
                     <p> Tu código de verificación es: ${centroe_nuevo.clave}</p>
                     `
                 };
@@ -329,7 +330,7 @@ module.exports.listar_primaria = (req ,res) =>{
 };
 
 module.exports.listar_secundaria = (req ,res) =>{
-    model_usuarios.find({nivel_centro : 'Secundaria', nivel_centro : 'Ambos'}).then(
+    model_usuarios.find({nivel_centro : 'Secundaria'}).then(
         function(centroe){
             if(centroe.length > 0){
                 res.json(

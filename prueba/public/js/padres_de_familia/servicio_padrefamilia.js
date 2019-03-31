@@ -28,12 +28,15 @@ let registrar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
     });
 
     request.done(function (msg) {
-        swal({
-            title: 'El padre de familia se ha sido registrado',
-            text: 'Gracias',
-            icon: 'success'
+        swal.fire({
+          type: 'success',
+          title: 'El padre de familia ha sido registrado.',
+          text: 'Se le enviará un correo con una clave temporal.',
+        }).then(function() {
+          window.location = "index.html";
+    
         });
-    });
+      });
 
     request.fail(function (jqXHR, textStatus) {
         swal({
