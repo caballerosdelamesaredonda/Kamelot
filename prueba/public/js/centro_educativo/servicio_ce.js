@@ -143,3 +143,31 @@ let listar_primaria = () => {
   return listar_primaria;
  
 };
+
+let listar_secundaria = () => {
+ 
+  let listar_secundaria = [];
+
+  let request = $.ajax({
+
+    url: "http://localhost:4000/api/listar_secundaria",
+    method: "GET",
+    data: {
+    },
+    dataType: "json",
+    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    async : false
+  });
+
+  request.done(function (res) {
+    listar_secundaria = res.centroe;
+    
+  });
+
+  request.fail(function (jqXHR, textStatus) {
+    
+  });
+  return listar_secundaria;
+ 
+};
+

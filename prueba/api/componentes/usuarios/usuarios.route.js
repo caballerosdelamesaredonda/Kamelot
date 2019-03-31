@@ -72,6 +72,16 @@ router.route('/listar_primaria')
     }
 )
 
+//end point lista secundaria
+
+router.route('/listar_secundaria')
+    .get(
+        function(req, res){
+            api_usuarios.listar_secundaria(req, res);
+    }
+)
+
+
 
 
 module.exports = router;

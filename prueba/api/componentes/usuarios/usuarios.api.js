@@ -327,3 +327,26 @@ module.exports.listar_primaria = (req ,res) =>{
 
     )
 };
+
+module.exports.listar_secundaria = (req ,res) =>{
+    model_usuarios.find({nivel_centro : 'Secundaria', nivel_centro : 'Ambos'}).then(
+        function(centroe){
+            if(centroe.length > 0){
+                res.json(
+                    {
+                        success: true,
+                        centroe: centroe
+                    }
+                )
+            }else{
+                res.json(
+                    {
+                        success: false,
+                        comentarios: 'No se encontraron usuarios centro educativo'
+                    }
+                )
+            }
+        }
+
+    )
+};
