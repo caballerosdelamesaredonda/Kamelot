@@ -2254,11 +2254,6 @@ html {
           box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
 
 ul:not(.browser-default) {
   padding-left: 0;
@@ -2293,12 +2288,6 @@ a {
 .z-depth-0 {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
-}
-
-/* 2dp elevation modified*/
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .z-depth-1-half, .btn:hover, .btn-large:hover, .btn-small:hover, .btn-floating:hover {
@@ -2906,8 +2895,6 @@ table span.badge {
 }
 
 .row {
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 20px;
 }
 

@@ -147,7 +147,7 @@ a{
 }
 
 .tabla_info thead tr{
-    background: #808e9b;
+    background-color: #f27232;
     color: #FFF;
 }
 
@@ -176,6 +176,7 @@ a{
 .border-right {
 	border-right: #ffffff solid 2px;
 }
+
 /* Estilos de la tabla centro educativo */
 
 #tbl_centroe, #tbl_centroe_primaria {
@@ -185,8 +186,16 @@ a{
     margin-right: auto;
 }
 
-#tbl_centroe thead tr, #tbl_centroe_primaria thead tr{
-    background: #808e9b;
+#tbl_centroe tbody tr:hover{
+	background-color: #dfe6e9;
+}
+
+#tbl_centroe_primaria tbody tr:hover{
+	background-color: #dfe6e9;
+}
+
+/*#tbl_centroe thead tr, #tbl_centroe_primaria thead tr{
+    background-color: #f27232;
     color: #FFF;
 }
 
@@ -195,12 +204,12 @@ a{
 }
 
 #tbl_centroe tbody tr:hover, #tbl_centroe_primaria tbody tr:hover {
-    background: rgba(52,152,219 ,0.4);  /* Se utiliza RGBA por que este formato incluye el opacity incluido */
+    background: rgba(52,152,219 ,0.4);   Se utiliza RGBA por que este formato incluye el opacity incluido 
 }
 
 #tbl_centroe tr td,#tbl_centroe tr th, #tbl_centroe_primaria tr td, #tbl_centroe_primaria tr th{
     padding: 20px 10px;
-}
+}*/
 
 
 
