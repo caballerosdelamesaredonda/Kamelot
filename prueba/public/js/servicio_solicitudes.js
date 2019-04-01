@@ -1,3 +1,8 @@
+'use strict'
+
+let userid = localStorage.getItem('usuario_en_sesion');
+console.log(userid);
+
 let listar_solicitudes = () => {
  
     let lista_solicitudes = [];
@@ -24,3 +29,10 @@ let listar_solicitudes = () => {
     return lista_solicitudes;
    
   };
+
+  if (userid != null) {
+    usario_loggeado = obtener_usuario_por_id(userid);
+    mostrar_datos(usario_loggeado);
+  }else{
+    window.location.href='index.html';
+}
