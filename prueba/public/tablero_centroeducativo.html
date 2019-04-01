@@ -14,6 +14,109 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
+<style type="text/css">
+    .slideshow-container{
+        max-width: 1000px;
+        position:relative;
+        margin:auto;
+    }
+    .mySlides{
+        display:none;
+    }
+    .prev, .next{
+        cursor:pointer;
+        position:absolute;
+        top:50%;
+        width:auto;
+        margin-top:-22px;
+        padding:16px;
+        color:white;
+        font-weight:bold;
+        font-size:18px;
+        transition:0.6s ease;
+        border-radius:0 3px 3px 0;
+    }
+    .next{
+        right:0;
+        border-radius:3px 0 0 3px;
+    }
+    .prev:hover, .next:hover{
+        background-color:rgba(0,0,0,0.8);
+    }
+    
+    .fade{
+        -webkit-animation-name:fade;
+        -webkit-animation-duration:1.5s;
+        animation-name:fade;
+        animation-duration:1.5s;
+    }
+
+    @-webkit-keyframes fade{
+        from{opacity:.4}
+        to{opacity:1}
+    }
+
+    @keyframes fade{
+        from{opacity:.4}
+        to{opacity:1}
+    }
+    .wrapper {
+        height: 800px;
+    }
+    .imagencentro {
+        float: left;
+        margin-left: 100px;  
+    }
+    .card {
+        background-color: #EFEFEF;
+        width: 400px;
+        height: 650px;
+        border-radius: 10px;
+        float: left;
+        margin-left: 40px;
+    }
+
+    .card2 {
+        background-color: #EFEFEF;
+        width: 400px;
+        height: 650px;
+        border-radius: 10px;
+        float: left;
+        margin-left: 40px;
+    }
+    
+    .titulo {
+        font-size: 30px;
+        margin-bottom: 20px;
+        color: #2f3640;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .hr{
+        margin-top: 20px;
+        width: 80%;
+        border: solid #192a56 1px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .info {
+        margin-left: 40px;
+    }
+    .lable_nuevo {
+        display: block;
+    }
+    
+    .int_nuevo {
+        background-color: #EFEFEF;
+        font-family: Nunito, 'Montserrat', sans-serif;
+        border: 0px;
+        font-size: 16px;
+        margin-left: 5px;
+    }
+</style>
 
 <body>
 
@@ -44,91 +147,66 @@
 
         <!-- Seccion de perfil centro. -->
 
-        <section id="perfil">
 
-            <div class="columna_izq">
-                <div>
 
-                    <h1>Información general</h1>
-
-                    <label for="imagen_perfil">
-                        <img src="" id="imagen_perfil" width="190px">
-                    </label>
-
-                    <div>
-                        <label for="txt_nombre_centro">Nombre del centro:</label>
-                        <input type="text" id="txt_nombre_centro" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_correo">Correo electrónico</label>
-                        <input type="text" id="txt_correo" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_telefono">Teléfono</label>
-                        <input type="text" id="txt_telefono" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_sitioweb">Sitio web</label>
-                        <input type="text" id="txt_sitioweb" readonly="readonly">
-                    </div>
-
+        <div class="wrapper" id="perfil">
+            <div class="imagencentro">
+            <label for="imagen_perfil">
+                <img src="" id="imagen_perfil" width="190px">
+            </label>
+            </div>
+            <div class="card">
+                <h1 class="titulo">Informacion General</h1>
+                <div class="info">
+                <lable>Nombre del Centro:</lable>
+                <input class="int_nuevo" id="txt_nombre_centro" readonly="readonly">
+                <br>
+                <label>Correo electrónico:</label>
+                <input class="int_nuevo" id="txt_correo" readonly="readonly">
+                <br>
+                <label>Teléfono:</label>
+                <input class="int_nuevo" id="txt_telefono" readonly="readonly">
+                <br>
+                <label for="txt_fax">Fax:</label>
+                <input class="int_nuevo" type="text" id="txt_fax" readonly="readonly">
+                <br>
+                <label for="txt_sitioweb">Sitio web:</label>
+                <input class="int_nuevo" type="text" id="txt_sitioweb" readonly="readonly">
                 </div>
+                <hr class="hr">
+                <h1 class="titulo">Ubicación</h1>
+                <div class="info">
+                <label for="txt_provincia">Provincia:</label>
+                <input class="int_nuevo" type="text" id="txt_provincia" readonly="readonly">
+                <br>
+                <label for="txt_canton">Cantón:</label>
+                <input class="int_nuevo" type="text" id="txt_canton" readonly="readonly">
+                <br>
+                <label for="txt_distrito">Distrito:</label>
+                <input class="int_nuevo" type="text" id="txt_distrito" readonly="readonly">
+                <br>
+                <label for="txt_direccion">Dirección:</label>
+                <textarea id="txt_direccion" readonly="readonly"></textarea>
+                <!-- Aqui es importante no hacer un espacio con Enter -->
+                </div>
+                <hr class="hr">
 
             </div>
-
-            <form class="columna_derecha" id="frm_contacto">
-
-                <h1>Ubicación</h1>
-
-                <div>
-                    <label for="txt_provincia">Provincia</label>
-                    <input type="text" id="txt_provincia" readonly="readonly">
+            <div class="card2">
+                    <h1 class="titulo">Nivel Centro:</h1>
+                    <div class="info">
+                    <label for="txt_tipo_centro">Tipo de centro:</label>
+                    <input class="int_nuevo" type="text" id="txt_tipo_centro" readonly="readonly">
+                    <br>
+                    <label for="txt_nivel">Nivel de centro:</label>
+                    <input class="int_nuevo" type="text" id="txt_nivel" readonly="readonly">
+                    <br>
+                    <label for="txt_refhistorica">Referencia histórica:</label>
+                    <input class="int_nuevo" type="text" id="txt_refhistorica" readonly="readonly">
+                    </div>
+                    <hr class="hr">
                 </div>
-
-                <div>
-                    <label for="txt_canton"> Cantón</label>
-                    <input type="text" id="txt_canton" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_distrito"> Distrito</label>
-                    <input type="text" id="txt_distrito" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_direccion">Dirección</label>
-                    <textarea id="txt_direccion" readonly="readonly"></textarea>
-                    <!-- Aqui es importante no hacer un espacio con Enter -->
-                </div>
-
-                <h1>Nivel de centro</h1>
-
-                <div>
-                    <label for="txt_tipo_centro">Tipo de centro</label>
-                    <input type="text" id="txt_tipo_centro" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_nivel">Nivel de centro</label>
-                    <input type="text" id="txt_nivel" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_refhistorica">Referencia histórica</label>
-                    <input type="text" id="txt_refhistorica" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_fax">Fax</label>
-                    <input type="text" id="txt_fax" readonly="readonly">
-                </div>
-
-
-            </form>
-        </section>
+        </div>
 
         <!-- Seccion de noticias. -->
 
