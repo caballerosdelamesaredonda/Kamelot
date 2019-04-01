@@ -59,31 +59,43 @@
         }
         .imagencentro {
             float: left;
-            margin-left: 150px;  
+            margin-left: 100px;  
         }
         .card {
-			background-color: #D5D5D5;
+			background-color: #EFEFEF;
 			width: 400px;
-			height: 500px;
+			height: 450px;
             border-radius: 10px;
             float: left;
             margin-left: 40px;
-            text-align: center;
-		}
-		
+        }
+        
 		.titulo {
 			font-size: 30px;
             margin-bottom: 20px;
 	        color: #2f3640;
             text-align: center;
             padding: 10px;
+            margin-top: 20px;
+        }
+
+        .hr{
+            margin-top: 20px;
+            width: 80%;
+            border: solid #192a56 1px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .info {
+            margin-left: 40px;
         }
         .lable_nuevo {
             display: block;
         }
         
         .int_nuevo {
-            background-color: #D5D5D5;
+            background-color: #EFEFEF;
             font-family: Nunito, 'Montserrat', sans-serif;
             border: 0px;
             font-size: 16px;
@@ -143,17 +155,69 @@
     </label>
     </div>
     <div class="card">
-		<h1 class="titulo">Informacion General</h1>
+        <h1 class="titulo">Informacion General</h1>
+        <div class="info">
 		<lable>Nombre del Centro:</lable>
         <input class="int_nuevo" id="txt_nombre_centro" readonly="readonly">
         <br>
         <label>Correo electrónico:</label>
         <input class="int_nuevo" id="txt_correo" readonly="readonly">
         <br>
-        <label>Teléfono</label>
-        <input id="txt_telefono" readonly="readonly">
+        <label>Teléfono:</label>
+        <input class="int_nuevo" id="txt_telefono" readonly="readonly">
+        <br>
+        <label for="txt_sitioweb">Sitio web:</label>
+        <input class="int_nuevo" type="text" id="txt_sitioweb" readonly="readonly">
+        </div>
+        <hr class="hr">
+        <h1 class="titulo">Ubicación</h1>
+        <div class="info">
+        <label for="txt_provincia">Provincia:</label>
+        <input class="int_nuevo" type="text" id="txt_provincia" readonly="readonly">
+        <br>
+        <label for="txt_canton">Cantón:</label>
+        <input class="int_nuevo" type="text" id="txt_canton" readonly="readonly">
+        <br>
+        <label for="txt_distrito">Distrito:</label>
+        <input class="int_nuevo" type="text" id="txt_distrito" readonly="readonly">
+        <br>
+        <label for="txt_direccion">Dirección</label>
+        <textarea class="int_nuevo" id="txt_direccion" readonly="readonly"></textarea>
+        <!-- Aqui es importante no hacer un espacio con Enter -->
+        </div>
 	</div>
-
+    <div class="card">
+            <h1 class="titulo">Información Legal</h1>
+            <div class="info">
+            <lable>Nombre del Centro:</lable>
+            <input class="int_nuevo" id="txt_nombre_centro" readonly="readonly">
+            <br>
+            <label>Correo electrónico:</label>
+            <input class="int_nuevo" id="txt_correo" readonly="readonly">
+            <br>
+            <label>Teléfono:</label>
+            <input class="int_nuevo" id="txt_telefono" readonly="readonly">
+            <br>
+            <label for="txt_sitioweb">Sitio web:</label>
+            <input class="int_nuevo" type="text" id="txt_sitioweb" readonly="readonly">
+            </div>
+            <hr class="hr">
+            <h1 class="titulo">Ubicación</h1>
+            <div class="info">
+            <label for="txt_provincia">Provincia:</label>
+            <input class="int_nuevo" type="text" id="txt_provincia" readonly="readonly">
+            <br>
+            <label for="txt_canton">Cantón:</label>
+            <input class="int_nuevo" type="text" id="txt_canton" readonly="readonly">
+            <br>
+            <label for="txt_distrito">Distrito:</label>
+            <input class="int_nuevo" type="text" id="txt_distrito" readonly="readonly">
+            <br>
+            <label for="txt_direccion">Dirección</label>
+            <textarea class="int_nuevo" id="txt_direccion" readonly="readonly"></textarea>
+            <!-- Aqui es importante no hacer un espacio con Enter -->
+            </div>
+        </div>
 
 
 
@@ -169,7 +233,7 @@
     <script src="./js/centro_educativo/slider.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="js/centro_educativo/servicio_ce.js"></script>
-    <script src="js/centro_educativo/controlador_perfil_ce.js"></script>
+    <script src="./js/centro_educativo/servicio_ce.js"></script>
+    <script src="./js/centro_educativo/controlador_perfil_ce.js"></script>
 </body>
 </html>
