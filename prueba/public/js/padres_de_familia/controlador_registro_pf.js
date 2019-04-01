@@ -31,12 +31,6 @@ let validar = () => {
     }else{
         input_nombre.style.border = '1px solid black';
     }
-    if (input_snombre.value == ''){
-        error = true;
-        input_snombre.style.border='1px solid red';
-    }else{
-        input_snombre.style.border = '1px solid black';
-    }
     if (input_papellido.value == ''){
         error = true;
         input_papellido.style.border='1px solid red';
