@@ -1,7 +1,11 @@
 'use strict';
 
 let utiles = consultar_utiles(userid);
-console.log(utiles);
+let user_local_utiles = localStorage.getItem('usuario_en_sesion');
+
+if (user_local_utiles == null) {
+    window.location.href = 'index.html';
+}
 
 let mostrar_datos = () => {
 

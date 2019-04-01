@@ -25,5 +25,8 @@ let mostrar_datos = () => {
 
 };
 
-mostrar_datos();
-
+if (userlocal != null) {
+    mostrar_datos();
+}else{
+    window.location.href='index.html';
+}

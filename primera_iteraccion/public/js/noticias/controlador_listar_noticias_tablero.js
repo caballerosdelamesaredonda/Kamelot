@@ -25,5 +25,8 @@ let mostrar_noticias_tablero = () => {
 
 };
 
-mostrar_noticias_tablero();
-
+if (userlocal_noticias != null) {
+    mostrar_noticias_tablero();
+}else{
+    window.location.href='index.html';
+}

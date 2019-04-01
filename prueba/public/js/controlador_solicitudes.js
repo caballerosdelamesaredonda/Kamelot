@@ -14,7 +14,6 @@ let mostrar_datos = () =>{
         fila.insertCell().innerHTML = `<a href="${usuarios[i]['adjuntar_documentos']}" download><button type="button">Bajar</button></a>`;
         fila.insertCell().innerHTML ='<button type="button" id="btn_enviar">Aprobar</button>';
         fila.insertCell().innerHTML ='<button type="button" id="btn_enviar">Rechazar</button>';
-        fila.insertCell().innerHTML ='<i class="fas fa-exclamation-triangle"></i>';
 
     };
 

@@ -23,24 +23,22 @@ h1{
 }
 
 #tbl_etiquetas {
-    margin-left:  33%;
-    margin-top: 5%;
-
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#tbl_etiquetas thead tr{
-    background: #808e9b;
-    color: #FFF;
+tbody tr td {
+	border-bottom: #00ced4 solid 2px;
+	padding: 20px;
 }
-
-#tbl_etiquetas tbody tr {
-    border-bottom: 1px solid #3498db;
-}
-
-#tbl_etiquetas tbody tr:hover {
-    background: rgba(52,152,219 ,0.4);  /* Se utiliza RGBA por que este formato incluye el opacity incluido */
-}
-
-#tbl_etiquetas tr td,.tbl_centroe tr th{
-    padding: 20px 10px;
+	
+tbody tr:hover {
+	background-color: #a4b0be;
+		
+	}
+	
+tr:nth-child(even) {
+  	background-color: #f1f2f6;
+		
 }

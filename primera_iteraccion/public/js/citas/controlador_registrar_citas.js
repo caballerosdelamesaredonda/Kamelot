@@ -7,6 +7,11 @@ const input_hora = document.querySelector('#slct_hora');
 const boton_registrar = document.querySelector('#btn_registrar');
 
 
+
+if (userPadre_citas == null) {
+    window.location.href = 'index.html';
+}
+
 let validar = () => {
     let error = false;
 
