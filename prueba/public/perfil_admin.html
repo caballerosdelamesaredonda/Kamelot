@@ -8,11 +8,75 @@
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/perfil_ce.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <style>
+        .wrapper {
+            height: 500px;
+        }
+        .imagencentro {
+            float: left;
+            margin-left: 100px;  
+        }
+        .card {
+			background-color: #EFEFEF;
+			width: 400px;
+			height: 350px;
+            border-radius: 10px;
+            float: left;
+            margin-left: 40px;
+        }
+
+        .card2 {
+			background-color: #EFEFEF;
+			width: 400px;
+			height: 650px;
+            border-radius: 10px;
+            float: left;
+            margin-left: 40px;
+        }
+        
+		.titulo {
+			font-size: 30px;
+            margin-bottom: 20px;
+	        color: #2f3640;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .hr{
+            margin-top: 20px;
+            width: 80%;
+            border: solid #192a56 1px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .info {
+            margin-left: 40px;
+        }
+        .lable_nuevo {
+            display: block;
+        }
+        
+        .int_nuevo {
+            background-color: #EFEFEF;
+            font-family: Nunito, 'Montserrat', sans-serif;
+            border: 0px;
+            font-size: 16px;
+            margin-left: 5px;
+        }
+        .int_nuevo2 {
+            background-color: #EFEFEF;
+            font-family: Nunito, 'Montserrat', sans-serif;
+            border: 0px;
+            font-size: 16px;
+            margin-left: 5px;
+            width: 350px;
+        }
+    </style>
 </head>
 
-<body>
-
-
+<body> 
     <header class="main_header">
         <nav>
             <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
@@ -26,58 +90,36 @@
         </nav>
 
     </header>
-
-    <main>
-
-        <section id="perfil">
-
-            <div class="columna_izq">
-
-                <h1>Información General Administrador</h1>
-
-                <div>
-                    <label for="imagen_perfil">
-                        <img src="" id='imagen_perfil' width="190px">
-                    </label>
-
-                    <div>
-                        <label for="txt_primer_nombre">Primer nombre</label>
-                        <input type="text" id="txt_primer_nombre" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_segundo_nombre">Segundo nombre</label>
-                        <input type="text" id="txt_segundo_nombre" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_primer_apellido">Primer apellido</label>
-                        <input type="text" id="txt_primer_apellido" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_segundo_apellido">Segundo apellido</label>
-                        <input type="text" id="txt_segundo_apellido" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_cedula">Cédula/pasaporte</label>
-                        <input type="text" id="txt_cedula" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_correo">Correo Electrónico</label>
-                        <input type="email" id="txt_correo" readonly="readonly">
-                    </div>
-
-
-                </div>
-
+    <div class="wrapper" id="perfil">
+            <div class="imagencentro">
+            <label for="imagen_perfil">
+                <img src="" id="imagen_perfil" width="190px">
+            </label>
             </div>
-
-        </section>
-
-    </main>
+            <div class="card">
+                <h1 class="titulo">Información General Administrador</h1>
+                <div class="info">
+                        <label>Primer Nombre:</label>
+                        <input class="int_nuevo" type="text" id="txt_primer_nombre" readonly="readonly">
+                        <br>
+                        <label for="txt_segundo_nombre">Segundo nombre:</label>
+                        <input class="int_nuevo" type="text" id="txt_segundo_nombre" readonly="readonly">
+                        <br>
+                        <label for="txt_primer_apellido">Primer apellido:</label>
+                        <input class="int_nuevo" type="text" id="txt_primer_apellido" readonly="readonly">
+                        <br>
+                        <label for="txt_segundo_apellido">Segundo apellido:</label>
+                        <input class="int_nuevo" type="text" id="txt_segundo_apellido" readonly="readonly">
+                        <br>
+                        <label for="txt_cedula">Cédula/pasaporte:</label>
+                        <input class="int_nuevo" type="text" id="txt_cedula" readonly="readonly">
+                        <br>
+                        <label for="txt_correo">Correo Electrónico:</label><br>
+                        <input class="int_nuevo2" type="email" id="txt_correo" readonly="readonly">
+                    </div>
+                </div>
+        </div>
+    
 
     <footer class="main_footer">
         <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
