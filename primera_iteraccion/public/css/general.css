@@ -98,7 +98,16 @@ a{
 	font-size: 14px;
 	color: #fff;
 }
-		
+
+.cerrar_sesion:hover {
+	padding: 11px;
+	bbackground-color: #f27232;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #fff;
+}
+
+
 .iniciar_sesion:hover {
 	padding: 11px;
 	border-radius: 5px;
