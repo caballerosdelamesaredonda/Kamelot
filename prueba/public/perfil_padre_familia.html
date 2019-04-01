@@ -65,6 +65,15 @@
             font-size: 16px;
             margin-left: 5px;
         }
+
+        .area {
+            background-color: #EFEFEF;
+            font-family: Nunito, 'Montserrat', sans-serif;
+            border: 0px;
+            font-size: 16px;
+            margin-left: 5px;
+            width: 150px;
+        }
     </style>
 </head>
 
@@ -94,13 +103,19 @@
                 <input class="int_nuevo" type="text" id="txt_primer_nombre" readonly="readonly">
                 <br>
                 <label for="txt_segundo_nombre">Segundo Nombre:</label>
-                <input type="text" id="txt_segundo_nombre" readonly="readonly">
+                <input class="int_nuevo" type="text" id="txt_segundo_nombre" readonly="readonly">
                 <br>
                 <label for="txt_primer_apellido">Primer Apellido:</label>
-                <input type="text" id="txt_primer_apellido" readonly="readonly">
+                <input class="int_nuevo" type="text" id="txt_primer_apellido" readonly="readonly">
                 <br>
                 <label for="txt_segundo_apellido">Segundo apellido</label>
-                <input type="text" id="txt_segundo_apellido" readonly="readonly">
+                <input class="int_nuevo" type="text" id="txt_segundo_apellido" readonly="readonly">
+                <br>
+                <label for="txt_cedula">Cédula/pasaporte</label>
+                <input class="int_nuevo" type="text" id="txt_cedula" readonly="readonly">
+                <br>
+                <label for="txt_correo">Correo Electrónico</label>
+                <input class="int_nuevo" type="email" id="txt_correo" readonly="readonly">
                 </div>
                 <hr class="hr">
                 <h1 class="titulo">Ubicación</h1>
@@ -115,91 +130,11 @@
                 <input class="int_nuevo" type="text" id="txt_distrito" readonly="readonly">
                 <br>
                 <label for="txt_direccion">Dirección:</label>
-                <textarea id="txt_direccion" readonly="readonly"></textarea>
+                <textarea class="area" id="txt_direccion" readonly="readonly"></textarea>
                 <!-- Aqui es importante no hacer un espacio con Enter -->
                 </div>
             </div>
         </div>
-
-    <main>
-
-        <section id="perfil">
-
-            <div class="columna_izq">
-
-                <h1>Información General</h1>
-
-                <div>
-                    <label for="imagen_perfil">
-                        <img src="" id='imagen_perfil' width="190px">
-                    </label>
-
-                    <div>
-                        <label for="txt_primer_nombre">Primer nombre</label>
-                        <input type="text" id="txt_primer_nombre" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_segundo_nombre">Segundo nombre</label>
-                        <input type="text" id="txt_segundo_nombre" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_primer_apellido">Primer apellido</label>
-                        <input type="text" id="txt_primer_apellido" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_segundo_apellido">Segundo apellido</label>
-                        <input type="text" id="txt_segundo_apellido" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_cedula">Cédula/pasaporte</label>
-                        <input type="text" id="txt_cedula" readonly="readonly">
-                    </div>
-
-                    <div>
-                        <label for="txt_correo">Correo Electrónico</label>
-                        <input type="email" id="txt_correo" readonly="readonly">
-                    </div>
-
-
-                </div>
-
-            </div>
-
-            <form class="columna_derecha" id="frm_contacto">
-
-                <h1>Ubicación</h1>
-
-                <div>
-                    <label for="txt_provincia">Provincia</label>
-                    <input type="text" id="txt_provincia" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_canton">Canton</label>
-                    <input type="text" id="txt_canton" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_distrito">Distrito</label>
-                    <input type="text" id="txt_distrito" readonly="readonly">
-                </div>
-
-                <div>
-                    <label for="txt_direccion">Dirección</label>
-                    <textarea id="txt_direccion" readonly="readonly"></textarea>
-                    <!-- Aqui es importante no hacer un espacio con Enter -->
-                </div>
-
-            </form>
-
-        </section>
-
-    </main>
-
 
     <footer class="main_footer">
         <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
