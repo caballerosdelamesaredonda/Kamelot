@@ -1,7 +1,6 @@
 'use strict';
 
 let userid = localStorage.getItem('usuario_en_sesion');
-console.log(userid);
 
 let usario_loggeado = [];
 

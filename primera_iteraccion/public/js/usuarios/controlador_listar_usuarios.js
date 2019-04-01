@@ -1,24 +1,24 @@
 'use strict';
 
 const input_busqueda = document.querySelector('#txt_buscar');
-
+let userlocal_admin = localStorage.getItem('usuario_en_sesion');
 let usuarios = listar_usuarios();
 let tabla = document.querySelector('#tbl_usuarios tbody');
 
-let mostrar_datos = () =>{
+let mostrar_datos = () => {
 
 
     let busqueda = '';
-    if (input_busqueda.value !== null){
+    if (input_busqueda.value !== null) {
         busqueda = input_busqueda.value;
     }
-    let resultado =[];
+    let resultado = [];
 
     resultado = usuarios.filter(usuario => (
         busqueda.length > 0 ? usuario.nombre.toLowerCase().trim().includes(
             busqueda.toLowerCase().trim()
-            ) : usuario
-        )
+        ) : usuario
+    )
     );
 
     console.log('Se encontró un: ' + typeof resultado + ':');
@@ -28,7 +28,7 @@ let mostrar_datos = () =>{
 
     tabla.innerHTML = '';
 
-    for(let i = 0; i < resultado.length; i++){
+    for (let i = 0; i < resultado.length; i++) {
 
         let fila = tabla.insertRow();// Crea el tr de la tabla
 
@@ -38,10 +38,10 @@ let mostrar_datos = () =>{
         let estado = fila.insertCell();
 
         celda_nombre.innerHTML = resultado[i]['nombre'];
-        
+
         if (resultado[i]['tipo_usuario'] === 'PF') {
-            celda_nombre.innerHTML = resultado[i]['nombre'] +' '+resultado[i]['papellido'];
-        }else {
+            celda_nombre.innerHTML = resultado[i]['nombre'] + ' ' + resultado[i]['papellido'];
+        } else {
             celda_nombre.innerHTML = resultado[i]['nombre'];
         }
 
@@ -53,5 +53,9 @@ let mostrar_datos = () =>{
 
 };
 
-mostrar_datos();
-input_busqueda.addEventListener('keyup', mostrar_datos);
+if (userlocal_admin != null) {
+    mostrar_datos();
+    input_busqueda.addEventListener('keyup', mostrar_datos);
+} else {
+    window.location.href = 'index.html';
+}

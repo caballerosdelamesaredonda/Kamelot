@@ -1,5 +1,6 @@
 'use strict';
 
+let userid = localStorage.getItem('usuario_en_sesion');
 const tabla = document.querySelector('#tbl_solicitudes tbody');
 
 let mostrar_datos = () =>{
@@ -21,5 +22,8 @@ let mostrar_datos = () =>{
     
 };
 
-
-mostrar_datos();
+if (userid != null) {
+    mostrar_datos();
+}else{
+    window.location.href='index.html';
+}

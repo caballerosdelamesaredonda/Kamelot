@@ -4,6 +4,10 @@ const input_nombre = document.querySelector('#txt_nombre');
 const boton_enviar = document.querySelector('#btn_enviar');
 let userlocal = localStorage.getItem('usuario_en_sesion');
 
+if (userlocal == null) {
+    window.location.href = 'index.html';
+}
+
 let validar = () => {
     let error = false;
 
