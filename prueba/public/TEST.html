@@ -53,7 +53,29 @@
         @keyframes fade{
             from{opacity:.4}
             to{opacity:1}
-        }          
+        }
+        .card {
+			background-color: #D5D5D5;
+			width: 400px;
+			height: 500px;
+			border-radius: 10px;
+		}
+		
+		.titulo {
+			font-size: 30px;
+            margin-bottom: 20px;
+	        color: #2f3640;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .int_nuevo {
+            background-color: #D5D5D5;
+            font-family: Nunito, 'Montserrat', sans-serif;
+            border: 0px;
+            font-size: 16px;
+            margin-left: 5px;
+        }
     </style>
 <body>
     <header class="main_header">
@@ -105,7 +127,11 @@
     <label for="imagen_perfil">
         <img src="" id="imagen_perfil" width="190px">
     </label>
-
+    <div class="card">
+		<h1 class="titulo">Informacion General</h1>
+		<lable>Nombre del Centro:</lable>
+		<input class="int_nuevo" id="txt_nombre_centro" readonly="readonly">
+	</div>
 
 
 
