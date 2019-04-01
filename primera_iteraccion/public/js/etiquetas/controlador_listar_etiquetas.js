@@ -1,6 +1,11 @@
 'use strict';
 
 const tabla = document.querySelector('#tbl_etiquetas tbody');
+let user_local_etiqueta = localStorage.getItem('usuario_en_sesion');
+
+if (user_local_etiqueta == null) {
+    window.location.href = 'index.html';
+}
 
 let mostrar_datos = () =>{
     let etiquetas = listado_etiquetas();
