@@ -1,6 +1,11 @@
 'use strict';
 
 const tabla = document.querySelector('#tbl_solicitudes tbody');
+let userid = localStorage.getItem('usuario_en_sesion');
+
+if(userid==null){
+    window.location.href='index.html';
+}
 
 let mostrar_datos = () =>{
     let usuarios = listar_solicitudes();

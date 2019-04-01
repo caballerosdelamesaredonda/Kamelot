@@ -4,6 +4,12 @@ const input_busqueda = document.querySelector('#txt_buscar');
 
 let usuarios = listar_usuarios();
 let tabla = document.querySelector('#tbl_usuarios tbody');
+let userid = localStorage.getItem('usuario_en_sesion');
+
+
+if(userid==null){
+    window.location.href='index.html';
+}
 
 let mostrar_datos = () =>{
 
