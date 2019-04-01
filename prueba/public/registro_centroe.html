@@ -18,8 +18,6 @@
         <nav>
             <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
             <div class="float-right middle">
-                <lable class="white mr-1">Buscar</lable>
-                <input type="text" value="" name="" id="" class="input">
                 <div class="float-right mr-2 mt-4">
                     <a href="index.html" class="iniciar_sesion2 ml-1 width1">Inicio</a>
                     <a href="registro_pf.html" class="registrar_cuenta ml-1">Registro Familiar</a>
@@ -57,14 +55,12 @@
                         <option value="publico">Público</option>
                         <option value="privado">Privado</option>
                     </select>
-                    <label class="color_text" for="slt_provincias">Provincia</label>
-                    <select class="form-select"id="slt_provincias">
-                        <option value="">--Provincia--</option>
+                    <label class="color_text" for="slt_cantones">Cantón</label>
+                    <select class="form-select" id="slt_cantones">
+                        <option value="">--Cantón--</option>
                     </select>
-                    <label class="color_text" for="slt_distritos">Distrito</label>
-                    <select class="form-select" id="slt_distritos">
-                        <option value="">--Distrito--</option>
-                    </select>
+                    <label class="color_text" for="txt_direccion">Dirección exacta</label>
+                    <input class="form-control" type="text" id="txt_direccion" placeholder="Escriba La Dirección Exacta Del Centro Educativo">
                     <label class="color_text" for="fecha_fundacion">Fecha de Fundación</label>
                     <input class="form-control" type="date" id="fecha_fundacion" placeholder="Escriba La Fecha De Fundación">
                     <label class="color_text" for="txt_telefono">Teléfono</label>
@@ -87,12 +83,14 @@
                         <option value="Secundaria">Secundaria</option>
                         <option value="Ambos">Ambos</option>
                     </select>
-                    <label class="color_text" for="slt_cantones">Cantón</label>
-                    <select class="form-select" id="slt_cantones">
-                        <option value="">--Cantón--</option>
+                    <label class="color_text" for="slt_provincias">Provincia</label>
+                    <select class="form-select"id="slt_provincias">
+                        <option value="">--Provincia--</option>
                     </select>
-                    <label class="color_text" for="txt_direccion">Dirección exacta</label>
-                    <input class="form-control" type="text" id="txt_direccion" placeholder="Escriba La Dirección Exacta Del Centro Educativo">
+                    <label class="color_text" for="slt_distritos">Distrito</label>
+                    <select class="form-select" id="slt_distritos">
+                        <option value="">--Distrito--</option>
+                    </select>
                     <label class="color_text" for="txt_referencia">Referencia histórica</label>
                     <input class="form-control" type="text" id="txt_referencia" placeholder="Escriba La Referencia Historica">
                     <label class="color_text" for="txt_fax">Fax</label>
@@ -110,24 +108,26 @@
                 <h1 class="color_text d2 mb-1">Información de contacto</h1>
             </div>
             <div class="col-iz"> 
-                <label class="color_text" for="txt_contacto_nombre">Nombre</label>
-                <input class="form-control" type="text" id="txt_contacto_nombre" placeholder="Escriba el Nombre de Contacto">
-                <label class="color_text" for="txt_contacto_papellido">Primer apellido</label>
-                <input class="form-control" type="text" id="txt_contacto_papellido" placeholder="Escriba el Apellido del Contacto">
-                <label class="color_text" for="txt_contacto_sapellido">Segundo apellido</label>
-                <input class="form-control" type="text" id="txt_contacto_sapellido" placeholder="Escriba el Segundo Apellido del Contacto">
                 <label class="color_text" for="txt_contacto_id">Identificación</label>
                 <input class="form-control" type="text" id="txt_contacto_id" placeholder="Escriba la Identificación del Contacto">
-            </div>
-            <div class="col-der">   
-                <label class="color_text" for="txt_contacto_departamento">Departamento</label>
-                <input class="form-control" type="text" id="txt_contacto_departamento" placeholder="Escriba el Departamento del Contacto">
-                <label class="color_text" for="txt_contacto_correo">Correo electrónico</label>
-                <input class="form-control" type="text" id="txt_contacto_correo" placeholder="Escriba el Correo del Contacto">
+                <label class="color_text" for="txt_contacto_papellido">Primer apellido</label>
+                <input class="form-control" type="text" id="txt_contacto_papellido" placeholder="Escriba el Apellido del Contacto">
                 <label class="color_text" for="txt_contacto_telefono">Teléfono</label>
                 <input class="form-control" type="text" id="txt_contacto_telefono" placeholder="Escriba el Teléfono del Contacto">
+                <label class="color_text" for="txt_contacto_departamento">Departamento</label>
+                <input class="form-control" type="text" id="txt_contacto_departamento" placeholder="Escriba el Departamento del Contacto">
+            </div>
+            <div class="col-der">   
+                <label class="color_text" for="txt_contacto_nombre">Nombre</label>
+                <input class="form-control" type="text" id="txt_contacto_nombre" placeholder="Escriba el Nombre de Contacto">
+                <label class="color_text" for="txt_contacto_sapellido">Segundo apellido</label>
+                <input class="form-control" type="text" id="txt_contacto_sapellido" placeholder="Escriba el Segundo Apellido del Contacto">
                 <label class="color_text" for="txt_contacto_extension">Extensión*</label>
                 <input class="form-control" type="text" id="txt_contacto_extension" placeholder="Escriba la Extensión del Contacto">
+                <label class="color_text" for="txt_contacto_correo">Correo electrónico</label>
+                <input class="form-control" type="text" id="txt_contacto_correo" placeholder="Escriba el Correo del Contacto">
+
+
             </div>
                 
         <div class="btn_enviar" style="margin-top: 350px;">
