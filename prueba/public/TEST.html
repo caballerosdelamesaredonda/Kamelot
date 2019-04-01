@@ -54,11 +54,21 @@
             from{opacity:.4}
             to{opacity:1}
         }
+        .wrapper {
+            height: 800px;
+        }
+        .imagencentro {
+            float: left;
+            margin-left: 150px;  
+        }
         .card {
 			background-color: #D5D5D5;
 			width: 400px;
 			height: 500px;
-			border-radius: 10px;
+            border-radius: 10px;
+            float: left;
+            margin-left: 40px;
+            text-align: center;
 		}
 		
 		.titulo {
@@ -67,6 +77,9 @@
 	        color: #2f3640;
             text-align: center;
             padding: 10px;
+        }
+        .lable_nuevo {
+            display: block;
         }
         
         .int_nuevo {
@@ -124,13 +137,21 @@
 </div>
 <!--Slider End-->
 <div class="wrapper" id="perfil">
+    <div class="imagencentro">
     <label for="imagen_perfil">
         <img src="" id="imagen_perfil" width="190px">
     </label>
+    </div>
     <div class="card">
 		<h1 class="titulo">Informacion General</h1>
 		<lable>Nombre del Centro:</lable>
-		<input class="int_nuevo" id="txt_nombre_centro" readonly="readonly">
+        <input class="int_nuevo" id="txt_nombre_centro" readonly="readonly">
+        <br>
+        <label>Correo electrónico:</label>
+        <input class="int_nuevo" id="txt_correo" readonly="readonly">
+        <br>
+        <label>Teléfono</label>
+        <input id="txt_telefono" readonly="readonly">
 	</div>
 
 
