@@ -18,6 +18,8 @@ let registrar_actividad = (pId,pActividad, pfoto) => {
       type: 'success',
       title: 'La actividad fue enviada',
       text: 'En unos segundos se mostrará en tu perfil'
+    }).then(function() {
+      window.location = "perfil_centroedu.html";
     });
   });
 

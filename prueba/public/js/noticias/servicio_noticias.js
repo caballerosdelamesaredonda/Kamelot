@@ -20,6 +20,8 @@ let registrar_noticias = (puserid, ptitulo, pdescripcion, pfecha) => {
             type: 'success',
             title: 'La noticia fue registrada',
             text: 'Gracias por registrar una actividad'
+        }).then(function() {
+            window.location = "perfil_centroedu.html";
         });
     });
 
