@@ -7,7 +7,7 @@ console.log(noticias);
 
 let mostrar_noticias_tablero = () => {
 
-    let tabla = document.querySelector('.tabla_info tbody');
+    let tabla = document.querySelector('#tabla_noticias tbody');
     tabla.innerHTML = '';
 
     for (let i = 0; i < noticias.length; i++) {
