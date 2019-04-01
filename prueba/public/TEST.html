@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Perfil Centro Educativo</title>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/general.css">
+        <link rel="stylesheet" href="./css/perfil_ce.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    </head>
+    <style type="text/css">
+        .slideshow-container{
+            max-width: 1000px;
+            position:relative;
+            margin:auto;
+        }
+        .mySlides{
+            display:none;
+        }
+        .prev, .next{
+            cursor:pointer;
+            position:absolute;
+            top:50%;
+            width:auto;
+            margin-top:-22px;
+            padding:16px;
+            color:white;
+            font-weight:bold;
+            font-size:18px;
+            transition:0.6s ease;
+            border-radius:0 3px 3px 0;
+        }
+        .next{
+            right:0;
+            border-radius:3px 0 0 3px;
+        }
+        .prev:hover, .next:hover{
+            background-color:rgba(0,0,0,0.8);
+        }
+        
+        .fade{
+            -webkit-animation-name:fade;
+            -webkit-animation-duration:1.5s;
+            animation-name:fade;
+            animation-duration:1.5s;
+        }
+
+        @-webkit-keyframes fade{
+            from{opacity:.4}
+            to{opacity:1}
+        }
+
+        @keyframes fade{
+            from{opacity:.4}
+            to{opacity:1}
+        }          
+    </style>
+<body>
+    <header class="main_header">
+        <nav>
+            <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
+            <div class="float-right middle">
+                <!--<lable class="white mr-1">Buscar</lable>
+                <input type="text" value="" name="" id="txtFiltro" class="input">-->
+                <div class="float-right mr-2 mt-4">
+                    <a href="perfil_centroedu.html" class="registrar_cuenta ml-1">Ver perfil</a>
+                    <a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar Sesión</a>
+                </div>
+            </div>
+        </nav>
+        <div style="clear:both; margin-bottom: 20px;"></div>
+        <div class="fondonav">
+            <nav>
+                <ul>
+                    <li><a class="color_text" href="registro_noticias.html">Registrar noticias</a></li>
+                    <li><a class="color_text" href="listar_noticias.html">Listar noticias</a></li>
+                    <li><a class="color_text" href="registro_actividad.html">Registro actividad</a></li>
+                    <li><a class="color_text" href="listar_actividad.html">Listar actividad</a></li>
+                    <li><a class="color_text" href="reg_utiles.html">Registrar utiles</a></li>
+                    <li><a class="color_text" href="listar_utiles.html">Listar utiles</a></li>
+                    <li><a class="color_text" href="etiqueta_centroe.html">Asociar etiqueta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!--Slider Start-->
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="./images/background1.jpg" style="width:100%">
+ </div>
+ 
+ <div class="mySlides fade">
+        <img src="./images/background2.jpg" style="width:100%">
+ </div>
+ 
+ <div class="mySlides fade">
+        <img src="./images/background3.jpg" style="width:100%">
+ </div>
+ <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+ <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<!--Slider End-->
+<script src="./js/centro_educativo/slider.js"></script>
+<div class="wrapper">
+
+
+
+
+
+
+
+</div>
+<footer class="main_footer">
+    <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
+    <nav class="footer_nav mt-2 ml-1">
+        <a href="#">Link 1</a><span class="vertical-line"> | </span>
+        <a href="#">Link 2</a><span class="vertical-line"> | </span>
+        <a href="#">Link 3</a><span class="vertical-line"> | </span>
+        <a href="#">Link 4</a>
+    </nav>
+</footer>
+
+</body>
+</html>
