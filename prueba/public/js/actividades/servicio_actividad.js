@@ -19,7 +19,7 @@ let registrar_actividad = (pId,pActividad, pfoto) => {
       title: 'La actividad fue enviada',
       text: 'En unos segundos se mostrará en tu perfil'
     }).then(function() {
-      window.location = "listar_actividad.html";
+      window.location = "registro_actividad.html";
     });
   });
 

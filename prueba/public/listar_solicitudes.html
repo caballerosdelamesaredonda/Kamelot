@@ -16,17 +16,19 @@
 </head>
 
 <body>
-    <header class="main_header">
-            <nav>
+        <header class="main_header">
+                <nav>
                     <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
                     <div class="float-right middle">
                         <div class="float-right mr-2 mt-4">
                             <a href="perfil_admin.html" class="registrar_cuenta ml-1">Ver perfil</a>
+                            <a href="listar_usuarios.html" class="cerrar_sesion ml-1">Listar usuarios</a>
                             <a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar Sesión</a>
+
                         </div>
                     </div>
                 </nav>
-    </header>
+        </header>
     <main class="main">
 			<h1 class="h1">Lista de solicitudes pendientes</h1>
         <table width="800" id="tbl_solicitudes" align="center">
