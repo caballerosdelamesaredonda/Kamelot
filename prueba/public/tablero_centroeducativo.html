@@ -62,7 +62,10 @@
     }
     .wrapper {
         height: 800px;
+        width: 100%;
+        margin-left: 100px;
     }
+    
     .imagencentro {
         float: left;
         margin-left: 100px;  
@@ -116,6 +119,40 @@
         font-size: 16px;
         margin-left: 5px;
     }
+
+    .cerrar_sesion2 {
+        padding: 11px;
+        background-color: #f27232;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #fff;
+    }
+
+    .cerrar_sesion2:hover {
+        padding: 11px;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #40739e;
+    }
+
+    .margen {
+        margin-bottom: 20px;
+    }
+
+    .centrado {
+        margin-left: 500px;
+    }
+
+    .input_citas {
+        width: 150px;
+        height: 35px;
+        border: 1px solid #48dbfb;
+        border-radius: 5px;
+    }
+    .ml-citas {
+        margin-left: 5px;
+    }   
 </style>
 
 <body>
@@ -136,13 +173,13 @@
     <main>
 
         <section id='submenu_centro'>
-            <h1 class="h1">Información adicional del centro:</h1>
-            <button type="button" class="registrar_cuenta ml-1" onClick="document.getElementById('noticias').scrollIntoView();">Ver
-                noticias</button>
-            <button type="button" class="registrar_cuenta ml-1" onClick="document.getElementById('actividades').scrollIntoView();">Ver
-                actividades</button>
-            <button type="button" class="registrar_cuenta ml-1" onClick="document.getElementById('citas').scrollIntoView();">Registrar
-                cita</button>
+            <h1 class="h1 margen">Información adicional del centro:</h1><br>
+            <a class="cerrar_sesion2 ml-1" onClick="document.getElementById('noticias').scrollIntoView();">Ver
+                noticias</a>
+            <a class="cerrar_sesion2 ml-1" onClick="document.getElementById('actividades').scrollIntoView();">Ver
+                actividades</a>
+            <a class="cerrar_sesion2 ml-1" onClick="document.getElementById('citas').scrollIntoView();">Registrar
+                cita</a>
         </section>
 
         <!-- Seccion de perfil centro. -->
@@ -212,12 +249,12 @@
 
         <section id='noticias'>
             <h1 class="h1">Noticias del centro:</h1>
-            <table class="tabla_info">
-                <thead>
+            <table width="800" id="tbl_actividad" align="center">
+                <thead class="head_backg">
                     <tr>
-                        <th>Título</th>
-                        <th>Descripción</th>
-                        <th>Fecha</th>
+                        <th class="padding border-right">Título</th>
+                        <th class="padding border-right">Descripción</th>
+                        <th class="padding">Fecha</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -247,18 +284,18 @@
         <section id='citas'>
 
             <h1 class="h1">Registar citas con el centro:</h1>
-
+            <div class="centrado">
             <form id="frm_citas">
 
                 <!-- Formulario de registro de citas -->
                 <div>
                     <label for="datepicker-13">Seleccionar fecha:</label>
-                    <input type="text" id="datepicker-13">
+                    <input class="input_citas mb-1" type="text" id="datepicker-13">
                 </div>
 
                 <div>
                     <label for="slct_hora">Seleccionar hora:</label>
-                    <select id="slct_hora">
+                    <select class="input_citas ml-citas" id="slct_hora">
                         <option value="9:00" class="time_9">9:00</option>
                         <option value="10:00" class="time_10">10:00</option>
                         <option value="11:00" class="time_11">11:00</option>
@@ -274,12 +311,13 @@
                         <option value="21:00" class="time_21">21:00</option>
                     </select>
                 </div>
-
+                <br><br>
                 <div>
                     <button type="button" id="btn_registrar">Registrar cita</button>
                 </div>
 
             </form>
+        </div>
         </section>
 
     </main>
