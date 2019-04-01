@@ -5,15 +5,14 @@ const model_utiles = require('./utiles.model');
 module.exports.registrar = (req, res) =>{
     let utiles_nueva = new model_utiles(
         {
+            idcentro: req.body.idcentro,
             nombre : req.body.nombre, 
             tipo : req.body.tipo, 
             ciclo : req.body.ciclo, 
             nivel : req.body.nivel,
-            ano : req.body.ano,
+            anho : req.body.anho,
             util : req.body.util,
             cantidad : req.body.cantidad
-             
-            
         }
     );
     utiles_nueva.save(
@@ -39,8 +38,8 @@ module.exports.registrar = (req, res) =>{
 };
 
 
-module.exports.listar_todos = (req ,res) =>{
-    model_utiles.find().then(
+module.exports.consultar_utiles = (req ,res) =>{
+    model_utiles.find({idcentro: req.body.idcentro}).then(
         function(utiles){
             if(utiles.length > 0){
                 res.json(
@@ -53,7 +52,7 @@ module.exports.listar_todos = (req ,res) =>{
                 res.json(
                     {
                         success: false,
-                        utiles: 'No se encontraron preguntas'
+                        utiles: utiles
                     }
                 )
             }
