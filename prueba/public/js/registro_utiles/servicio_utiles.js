@@ -55,13 +55,6 @@ let consultar_utiles = (pId) => {
 
     if (response.success) {
       consultar_util = response.utiles;
-    } else {
-      consultar_util = response.utiles;
-      swal.fire({
-        type: 'warning',
-        title: 'Lista de útiles vacía',
-        text: 'Por favor registrar útiles para poder listarlos'
-      });
     }
 
   });
