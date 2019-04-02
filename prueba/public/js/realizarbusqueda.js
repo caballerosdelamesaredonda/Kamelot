@@ -2,6 +2,9 @@
 const inputFiltro = document.querySelector('#txtFiltro');
 const usuarioSesion= localStorage.getItem('usuario_en_sesion');
 
+if(usuarioSesion==null){
+    window.location.href='index.html';
+}
 
 let usuarios = listar_centroe();
 

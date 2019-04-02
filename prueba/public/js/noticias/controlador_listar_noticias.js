@@ -3,7 +3,10 @@
 let userlocal = localStorage.getItem('usuario_en_sesion');
 //console.log(userlocal);
 let noticias = consultar_noticias(userlocal);
-console.log(noticias);
+
+if(userlocal==null){
+    window.location.href='index.html';
+}
 
 let mostrar_datos = () => {
 

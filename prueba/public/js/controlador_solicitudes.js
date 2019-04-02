@@ -1,9 +1,8 @@
 'use strict';
 
 const tabla = document.querySelector('#tbl_solicitudes tbody');
-let userid = localStorage.getItem('usuario_en_sesion');
 
-if(userid==null){
+if(user_admin==null){
     window.location.href='index.html';
 }
 

@@ -3,7 +3,10 @@
 let userlocal_noticias = localStorage.getItem('centro_id');
 //console.log(userlocal_noticias);
 let noticias = consultar_noticias(userlocal_noticias);
-console.log(noticias);
+
+if(userlocal_noticias==null){
+    window.location.href='index.html';
+}
 
 let mostrar_noticias_tablero = () => {
 

@@ -2,6 +2,12 @@
 
 let citas = consultar_citas();
 
+let userlocal = localStorage.getItem('usuario_en_sesion');
+
+if(userlocal==null){
+    window.location.href='index.html';
+}
+
 let mostrar_lista_citas = () => {
 
     let tabla = document.querySelector('.tabla_citas tbody');

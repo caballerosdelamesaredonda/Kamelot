@@ -7,8 +7,6 @@ let tablerowvalue = '';
 const centro_id = '';
 
 
-
-
 let mostrar_datos = () => {
     let usuarios = listar_primaria();
     for (let i = 0; i < 10; i++) {

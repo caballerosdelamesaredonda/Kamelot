@@ -3,6 +3,10 @@
 const tabla = document.querySelector('#tbl_actividad tbody');
 let user_local_actividad = localStorage.getItem('usuario_en_sesion');
 
+if(user_local_actividad==null){
+    window.location.href='index.html';
+}
+
 let mostrar_lista_actividades = () =>{
     let actividad = consultar_actividad_usuario(user_local_actividad);
     console.log(actividad);
