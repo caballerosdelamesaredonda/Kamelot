@@ -15,8 +15,10 @@ let registrar_etiqueta = (pId,pNombre) => {
   request.done(function (msg) {
     swal.fire({
       type: 'success',
-      title: 'La ha sido registrada',
-      text: 'Gracias'
+      title: 'La etiqueta ha sido registrada',
+      text: 'En unos segundos estará lista para su uso'
+    }).then(function() {
+      window.location = "registrar_etiqueta.html";
     });
   });
 

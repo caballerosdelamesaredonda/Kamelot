@@ -2,7 +2,6 @@
 
 const input_nombre = document.querySelector('#txt_nombre');
 const boton_enviar = document.querySelector('#btn_enviar');
-let userlocal = localStorage.getItem('usuario_en_sesion');
 
 let validar = () => {
     let error = false;
@@ -26,7 +25,7 @@ let obtener_datos = () => {
 } else {
     swal.fire({
         type: 'warning',
-        title: 'El centro educativo no fue registrado',
+        title: 'La etiqueta no fue registrada',
         text: 'Por favor revise los campos resaltados'
     });
 }
