@@ -5,6 +5,11 @@ console.log(userid);
 
 let usario_loggeado = [];
 
+//Funcion para colocar la imagen de avatar en el div con el id de avatar_img
+let mostrar_avatar = (pUsuarioLoggeado) =>{
+    $("#avatar_img").attr("src",usario_loggeado.foto);
+}
+
 let mostrar_datos = (pUsuarioLoggeado) => {
 
     document.getElementById('imagen_perfil').src = usario_loggeado.foto;
@@ -37,6 +42,7 @@ let mostrar_datos = (pUsuarioLoggeado) => {
 
 if (userid != null) {
     usario_loggeado = obtener_usuario_por_id(userid);
+    mostrar_avatar(usario_loggeado);
     mostrar_datos(usario_loggeado);
 }else{
     swal({
