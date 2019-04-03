@@ -8,7 +8,7 @@
     <meta charset="utf-8"> <!-- para permitir el uso de chars especiales -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/citas.css">
+    <link rel="stylesheet" href="./css/perfil_ce.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -17,62 +17,45 @@
 
 <body>
 
-        <header class="main_header">
-                <nav>
-                    <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
-                    <div class="float-right middle">
-                        <lable class="white mr-1">Buscar</lable>
-                        <input type="text" value="" name="" id="txtFiltro" class="buscar">
-                        <div class="float-right mr-2 mt-4">
-                            <a href="perfil_padre_familia.html" class="registrar_cuenta ml-1">Inicio</a>
-                            <a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar Sesión</a>
-                        </div>
-                    </div>
-                </nav>
-        </header>
-    <main class="largo mt-3">
-            <h1 class="h1">Solicitar cita con centro educativo</h1>
-            <!-- Formulario de registro de citas --> 
-            <section style="margin-left:50px;"> 
-            <form id="frm_citas">
-                <label class="lable color_text" for="txt_codigo">Codigo:</label>
-                <input class="input_form" type="text" id="txt_codigo">
-                <label for="txt_nombre">Nombre:</label>
-                <input class="input_form" type="text" id="txt_nombre">
-                <label for="txt_correo">Correo Electronico:</label>
-                <input class="input_form" type="text" id="txt_correo">
-                <label for="datepicker-13">Seleccionar Fecha:</label>
-                <input class="input_form" type="text" id="datepicker-13">
-                <label for="slct_hora">Seleccionar Hora:</label>
-                <select class="input_form" id="slct_hora">
-                    <option value="9:00" class="time_9">9:00</option>
-                    <option value="10:00" class="time_10">10:00</option>
-                    <option value="11:00" class="time_11">11:00</option>
-                    <option value="12:00" class="time_12">12:00</option>
-                    <option value="13:00" class="time_13">13:00</option>
-                    <option value="14:00" class="time_14">14:00</option>
-                    <option value="15:00" class="time_15">15:00</option>
-                    <option value="16:00" class="time_16">16:00</option>
-                    <option value="17:00" class="time_17">17:00</option>
-                    <option value="18:00" class="time_18">18:00</option>
-                    <option value="19:00" class="time_19">19:00</option>
-                    <option value="20:00" class="time_20">20:00</option>
-                    <option value="21:00" class="time_21">21:00</option>
-                </select>
-                <div>
-                <button type="button" id="btn_registrar">Registrar Cita</button>
+    <header class="main_header">
+        <nav>
+            <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
+            <div class="float-right middle">
+                <!--<lable class="white mr-1">Buscar</lable>
+                <input type="text" value="" name="" id="txtFiltro" class="input">-->
+                <div class="float-right mr-2 mt-4">
+                    <a href="perfil_centroedu.html" class="registrar_cuenta ml-1">Ver perfil</a>
+                    <a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar Sesión</a>
                 </div>
-            </form>
-            </section>
+            </div>
+        </nav>
+        <div style="clear:both; margin-bottom: 20px;"></div>
+        <div class="fondonav">
+            <nav>
+                <ul>
+                    <li><a class="color_text" href="registro_noticias.html">Registrar noticias</a></li>
+                    <li><a class="color_text" href="listar_noticias.html">Listar noticias</a></li>
+                    <li><a class="color_text" href="registro_actividad.html">Registro actividad</a></li>
+                    <li><a class="color_text" href="listar_actividad.html">Listar actividad</a></li>
+                    <li><a class="color_text" href="registrar_utiles.html">Registrar utiles</a></li>
+                    <li><a class="color_text" href="etiqueta_centroe.html">Asociar etiqueta</a></li>
+                    <li><a class="color_text" href="citas.html">Listar Citas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="largo mt-3">
+            <h1 class="h1">Lista de citas con centro educativo</h1>
     </main>  
 
     <table class="tabla_info">
         <thead>
             <tr>
-                <th>Codigo</th>
-                <th>Nombre</th>
-                <th>Correo</th>
+                <th>Codigo Usuario</th>
+                <th>Codigo Centro</th>
                 <th>Fecha</th>
+                <th>Hora</th>
             </tr>
         </thead>
         <tbody>
@@ -94,6 +77,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/citas/servicio_citas.js"></script>
     <script src="js/citas/controlador_registrar_citas.js"></script>
+    <script src="js/citas/controlador_listar_citas.js"></script>
 
 </body>
 

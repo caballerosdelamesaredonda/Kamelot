@@ -1,19 +1,19 @@
 'use strict';
 
-let citas = consultar_citas();
-
 let userlocal = localStorage.getItem('usuario_en_sesion');
+let citas = consultar_citas(userlocal);
+console.log(citas);
 
-if(userlocal==null){
-    window.location.href='index.html';
+if (userlocal == null) {
+    window.location.href = 'index.html';
 }
 
 let mostrar_lista_citas = () => {
 
-    let tabla = document.querySelector('.tabla_citas tbody');
+    let tabla = document.querySelector('.tabla_info tbody');
     tabla.innerHTML = '';
-
-    for (let i = 0; i < citas.length; i++) {
+    if (citas.success) {
+        for (let i = 0; i < citas.length; i++) {
             let newdate = new Date(citas[i]['fecha']);
             let month = newdate.getMonth() + 1;
             let day = newdate.getDate();
@@ -27,11 +27,11 @@ let mostrar_lista_citas = () => {
             //fila.insertCell().innerHTML = citas[i]['fecha'];
             fila.insertCell().innerHTML = dateformated;
             fila.insertCell().innerHTML = citas[i]['hora'];
+        }
     }
-
 };
 
-//mostrar_lista_citas();
+mostrar_lista_citas();
 
 
 let citas_programadas = () => {
@@ -85,4 +85,3 @@ function DisableSpecificDates(date) {
 
 
 
- 
