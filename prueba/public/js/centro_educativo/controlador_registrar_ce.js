@@ -141,12 +141,12 @@ let validar = () => {
         input_referencia.classList.remove('error_input');
     }
 
-    /*if (input_documento.value == '') {
+    if (input_documento.src == '') {
         error = true;
         input_documento.classList.add('error_input');
     } else {
         input_documento.classList.remove('error_input');
-    }*/
+    }
     
     if (input_telefono.value == '') {
         error = true;
