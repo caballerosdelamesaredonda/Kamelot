@@ -8,6 +8,13 @@
    ;
 }
 
+
+
+#btn_registrar{
+    text-align: center;
+    
+}
+
 #btn_registrar_utiles{
     text-align: center;
     padding: 15;
@@ -20,6 +27,16 @@
 body{
     font-family: 'Roboto', sans-serif;
     background: #ffffff;
+}
+
+
+.col-iz {
+    float: left;
+    width: 400px;
+}
+
+.col-der{
+    float: left;
 }
 
 

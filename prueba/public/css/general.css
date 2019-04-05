@@ -204,6 +204,15 @@ a{
 	background-color: #dfe6e9;
 }
 
+.col-iz {
+    float: left;
+    width: 400px;
+}
+
+.col-der{
+    float: left;
+}
+
 /*#tbl_centroe thead tr, #tbl_centroe_primaria thead tr{
     background-color: #f27232;
     color: #FFF;

@@ -13,6 +13,20 @@ body{
     height: 1800px;
 
 }
+
+#section_utiles{
+    box-shadow: 0 4px 8px 0 #143646;
+    padding: 20px;
+    width: 780px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+
+}
+
+
 .iniciar_sesion2 {
     padding-top: 11px;
     padding-bottom: 11px;
