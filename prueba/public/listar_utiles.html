@@ -9,16 +9,21 @@
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/general.css" type="text/css">
     <link rel="stylesheet" href="./css/solicitudes.css" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/perfil_ce.css">
-    
+
 
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-        </head>
+
+    <link rel="stylesheet" href="./css/banner_rce.css">
+    <link rel="stylesheet" href="./css/registro_ce.css">
+
+</head>
 
 <body>
-       
+
     <header class="main_header">
         <nav>
             <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
@@ -40,7 +45,7 @@
                     <li><a class="color_text" href="registrar_utiles.html">Registrar utiles</a></li>
                     <li><a class="color_text" href="etiqueta_centroe.html">Asociar etiqueta</a></li>
                     <li><a class="color_text" href="listar_utiles.html">Listar Utiles</a></li>
-                    
+
                 </ul>
             </nav>
         </div>
@@ -48,46 +53,48 @@
 
 
 
-    <main class="main">
-			<h1 class="h1">Lista de Utiles</h1>
-        <table width="800" id="tabla_listar_utiles" align="center" class="tabla_info">
-            <thead class="head_backg">
-                <tr>
-                    <th>Nombre</th>
-                    <th>Tipo</th>
-                    <th>Ciclo</th>
-                    <th>Nivel</th>
-                    <th>Año</th>
-                    <th>Utíl</th>
-                    <th>cantidad</th>
-                    
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+    <main class="main_utiles">
+
+
+            <h1 class="h1">Lista de Utiles</h1>
+            <table width="800" id="tabla_listar_utiles" align="center" class="tabla_info">
+                <thead class="head_backg">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Ciclo</th>
+                        <th>Nivel</th>
+                        <th>Año</th>
+                        <th>Utíl</th>
+                        <th>cantidad</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
     </main>
 
 
-    
+
 
 
 
 
 
     <footer class="main_footer">
-            <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
-            <nav class="footer_nav mt-2 ml-1">
-                <a href="#">Link 1</a><span class="vertical-line"> | </span>
-                <a href="#">Link 2</a><span class="vertical-line"> | </span>
-                <a href="#">Link 3</a><span class="vertical-line"> | </span>
-                <a href="#">Link 4</a>
-            </nav>
+        <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
+        <nav class="footer_nav mt-2 ml-1">
+            <a href="#">Link 1</a><span class="vertical-line"> | </span>
+            <a href="#">Link 2</a><span class="vertical-line"> | </span>
+            <a href="#">Link 3</a><span class="vertical-line"> | </span>
+            <a href="#">Link 4</a>
+        </nav>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="/public/js/registro_utiles/servicio_utiles.js"></script>
     <script src="/public/js/registro_utiles/controlador_regutiles.js"></script>
     <script src="/public/js/registro_utiles/controlador_listar_utiles.js"></script>
