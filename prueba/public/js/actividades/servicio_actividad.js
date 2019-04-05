@@ -6,6 +6,7 @@ let registrar_actividad = (pId,pActividad, pfoto) => {
     method: "POST",
     data: {
       userid: pId,
+      titulo: ptitulo,
       actividad: pActividad,
       foto: pfoto
     },
