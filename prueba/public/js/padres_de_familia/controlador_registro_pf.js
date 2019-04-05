@@ -115,10 +115,10 @@ let obtener_datos = () => {
         registrar_pf(correo, nombre,snombre, papellido, sapellido, id, telefono, provincias, cantones, distritos, direccion, cant_hijos, foto);
 
     }else{
-        swal({
+        swal.fire({
+            type: 'warning',
             title: 'El padre de familia no fue registrado',
-            text: 'Por favor revise los campos resaltados',
-            icon: 'warning'
+            text: 'Por favor revise los campos resaltados'
         });
     }
 };

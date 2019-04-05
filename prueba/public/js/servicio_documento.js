@@ -10,7 +10,11 @@ $(function() {
 
     // Upload button event
     uploadButton.on('click', function(e){
-        // Initiate upload
+        swal.fire({
+            type: 'warning',
+            title: 'Deberá subir los documentos necesarios',
+            text: 'Por favor subir un solo documento con toda la información',
+          }).then(function(){
         cloudinary.openUploadWidget({ cloud_name: 'kamelot', upload_preset: 'kamelot-1', tags: ['cgal']},
         function(error, result) {
             if(error) console.log(error);
@@ -20,7 +24,7 @@ $(function() {
             imagenUrl = 'https://res.cloudinary.com/kamelot/image/upload/' + id ;
             document.querySelector('#btnSeleccionarDoc').src = imagenUrl;
           console.log(imagenUrl);
-        });
+        })});
     });
 })
 
