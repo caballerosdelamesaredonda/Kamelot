@@ -1,6 +1,6 @@
 'use strict';
 
-let registrar_centroe = (pnombre, palias, pcedula_juridica, ptipo_centro, pnivel_centro, pfoto, pnombre_comercial, pprovincia, pcanton, pdistrito, pdireccion, pfecha_fundacion, preferencia_historia, padjuntar_documentos, ptelefono, pfax, psitio_web, pcuentas_redesso, pcorreo_electronico, pcontacto_nombre, ppapellido, psapellido, pidentificacion, pdepartamento, ptelefono_contacto, pextension_contacto, pcorreo_electronico_contacto, pestado, ptipo_usuario, pfecha_registro) => {
+let registrar_centroe = (pnombre, palias, pcedula_juridica, ptipo_centro, pnivel_centro, pfoto, pnombre_comercial, pprovincia, pcanton, pdistrito, pdireccion, pfecha_fundacion, preferencia_historia, padjuntar_documentos, ptelefono, pfax, psitio_web, pfacebook, pinstagram,pyoutube, ptwitter, pcorreo_electronico, pcontacto_nombre, ppapellido, psapellido, pidentificacion, pdepartamento, ptelefono_contacto, pextension_contacto, pcorreo_electronico_contacto, pestado, ptipo_usuario, pfecha_registro) => {
   let request = $.ajax({
     url: "http://localhost:4000/api/registrar_ce",
     method: "POST",
@@ -22,7 +22,10 @@ let registrar_centroe = (pnombre, palias, pcedula_juridica, ptipo_centro, pnivel
       telefono : ptelefono,
       fax : pfax,
       sitio_web : psitio_web,
-      cuentas_redesso : pcuentas_redesso,
+      facebook : pfacebook,
+      instagram: pinstagram,
+      youtube : pyoutube,
+      twitter: ptwitter,
       correo_electronico : pcorreo_electronico,
       contacto_nombre : pcontacto_nombre,
       papellido : ppapellido,

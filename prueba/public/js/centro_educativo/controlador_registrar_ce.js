@@ -16,7 +16,11 @@ const input_documento = document.querySelector('#btnSeleccionarDoc');
 const input_telefono = document.querySelector('#txt_telefono');
 const input_fax = document.querySelector('#txt_fax');
 const input_web = document.querySelector('#txt_web');
-const input_redes = document.querySelector('#txt_redesso');
+const input_face = document.querySelector('#facebook');
+const input_youtube = document.querySelector('#youtube');
+const input_insta = document.querySelector('#instagram');
+const input_twitter = document.querySelector('#twitter');
+
 const input_correo = document.querySelector('#txt_correo');
 const input_contacto_nombre = document.querySelector('#txt_contacto_nombre');
 const input_contacto_papellido = document.querySelector('#txt_contacto_papellido');
@@ -239,7 +243,10 @@ let obtener_datos = () => {
         let telefono = input_telefono.value;
         let fax = input_fax.value;
         let sitio_web = input_web.value;
-        let cuentas_redesso = input_redes.value;
+        let facebook = input_face.value;
+        let youtube = input_youtube.value;
+        let twitter = input_twitter.value;
+        let instagram = input_insta.value;
         let correo_electronico = input_correo.value;
         let contacto_nombre = input_contacto_nombre.value;
         let papellido = input_contacto_papellido.value;
@@ -252,7 +259,7 @@ let obtener_datos = () => {
         let tipo_usuario = input_tipo_usuario.value;
         let estado = input_estado.value;
         let fecha_registro = fecha;
-        registrar_centroe(nombre, alias, cedula_juridica, tipo_centro, nivel_centro, foto, nombre_comercial, provincia, canton, distrito, direccion, fecha_fundacion, referencia_historia, adjuntar_documentos, telefono, fax, sitio_web, cuentas_redesso, correo_electronico, contacto_nombre, papellido, sapellido, identificacion, departamento, telefono_contacto, extension_contacto, correo_electronico_contacto, estado, tipo_usuario, fecha_registro);
+        registrar_centroe(nombre, alias, cedula_juridica, tipo_centro, nivel_centro, foto, nombre_comercial, provincia, canton, distrito, direccion, fecha_fundacion, referencia_historia, adjuntar_documentos, telefono, fax, sitio_web, facebook, instagram, youtube, twitter, correo_electronico, contacto_nombre, papellido, sapellido, identificacion, departamento, telefono_contacto, extension_contacto, correo_electronico_contacto, estado, tipo_usuario, fecha_registro);
 
     } else {
         swal.fire({
