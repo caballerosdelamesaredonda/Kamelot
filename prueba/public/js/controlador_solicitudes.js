@@ -14,9 +14,9 @@ let mostrar_datos = () =>{
         fila.insertCell().innerHTML = usuarios[i]['correo_electronico'];
         fila.insertCell().innerHTML = usuarios[i]['telefono'];
         fila.insertCell().innerHTML = usuarios[i]['fecha_registro'];
-        fila.insertCell().innerHTML = `<a href="${usuarios[i]['adjuntar_documentos']}" download><button type="button">Bajar</button></a>`;
-        fila.insertCell().innerHTML ='<button type="button" id="btn_enviar">Aprobar</button>';
-        fila.insertCell().innerHTML ='<button type="button" id="btn_enviar">Rechazar</button>';
+        fila.insertCell().innerHTML = `<a href="${usuarios[i]['adjuntar_documentos']}" download><img src="https://img.icons8.com/ios/38/000000/download.png"></a>`;
+        fila.insertCell().innerHTML ='<img src="https://img.icons8.com/ios/38/000000/facebook-like.png">'
+        fila.insertCell().innerHTML ='<img src="https://img.icons8.com/ios/38/000000/delete-sign.png">';
 
     };
 
