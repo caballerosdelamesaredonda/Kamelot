@@ -78,22 +78,31 @@
 
 <body> 
     <header class="main_header">
-        <nav>
-            <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
-            <div class="float-right middle">
-                <div class="float-right mr-2 mt-4">
-                        <a href="listar_solicitudes.html" class="registrar_cuenta ml-1">Listar solicitudes</a>
-                        <a href="listar_usuarios.html" class="registrar_cuenta ml-1">Listar usuarios</a>
-                        <a href="registrar_etiqueta.html" class="registrar_cuenta ml-1">Registrar etiqueta</a>
-                        <a href="lista_etiquetas.html" class="registrar_cuenta ml-1">Listar etiqueta</a>
-
-
-                    <a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar Sesión</a>
-                </div>
-            </div>
-        </nav>
-
-    </header>
+		<nav>
+			<img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
+			<div class="float-right middle">
+				<!--<lable class="white mr-1">Buscar</lable>
+				<input type="text" value="" name="" id="txtFiltro" class="input">-->
+				<div class="float-right mr-2 mt-4">
+					<a href="perfil_centroedu.html" class="registrar_cuenta ml-1">Ver perfil</a>
+					<a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar Sesión</a>
+				</div>
+			</div>
+		</nav>
+		<div style="clear:both; margin-bottom: 20px;"></div>
+		<div class="fondonav">
+			<nav>
+                <ul>
+                    <li><a class="color_text" href="registro_pregunta.html">Registrar Pregunta Frecuente</a></li>
+                    <li><a class="color_text" href="listar_pregunta.html">Listar Pregunta Frecuente</a></li>
+                    <li><a class="color_text" href="listar_usuarios.html">Listar Usuarios</a></li>
+                    <li><a class="color_text" href="listar_solicitudes.html">Listar Solicitudes</a></li>
+                    <li><a class="color_text" href="registrar_etiqueta.html">Registrar Etiquetas</a></li>
+                    <li><a class="color_text" href="listar_etiqueta.html">Listar Etiquitas</a></li>
+                </ul>
+			</nav>
+		</div>
+	</header>
     <div class="wrapper" id="perfil">
             <div class="imagencentro">
             <label for="imagen_perfil">
