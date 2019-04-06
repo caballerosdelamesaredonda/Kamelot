@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>
+        Aplicacion MEP
+    </title>
+    <meta charset="utf-8"> <!-- para permitir el uso de chars especiales -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/perfil_ce.css">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="main_header">
+		<nav>
+			<img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
+			<div class="float-right middle">
+				<!--<lable class="white mr-1">Buscar</lable>
+				<input type="text" value="" name="" id="txtFiltro" class="input">-->
+				<div class="float-right mr-2 mt-4">
+					<a href="perfil_centroedu.html" class="registrar_cuenta ml-1">Ver perfil</a>
+					<a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar Sesión</a>
+				</div>
+			</div>
+		</nav>
+		<div style="clear:both; margin-bottom: 20px;"></div>
+		<div class="fondonav">
+			<nav>
+                <ul>
+                    <li><a class="color_text" href="registro_pregunta.html">Registrar Pregunta Frecuente</a></li>
+                    <li><a class="color_text" href="listar_pregunta.html">Listar Pregunta Frecuente</a></li>
+                    <li><a class="color_text" href="listar_usuarios.html">Listar Usuarios</a></li>
+                    <li><a class="color_text" href="listar_solicitudes.html">Listar Solicitudes</a></li>
+                    <li><a class="color_text" href="registrar_etiqueta.html">Registrar Etiquetas</a></li>
+                    <li><a class="color_text" href="listar_etiqueta.html">Listar Etiquitas</a></li>
+                </ul>
+			</nav>
+		</div>
+	</header>
+
+    <table class="tabla_info">
+
+        <thead>
+            <tr>
+                <th>Pregunta</th>
+                <th>Respuesta</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <footer class="main_footer">
+		<p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
+		<nav class="footer_nav mt-2 ml-1">
+			<a href="#">Link 1</a><span class="vertical-line"> | </span>
+			<a href="#">Link 2</a><span class="vertical-line"> | </span>
+			<a href="#">Link 3</a><span class="vertical-line"> | </span>
+			<a href="#">Link 4</a>
+		</nav>
+	</footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/pregunta/servicio_pregunta.js"></script>
+    <script src="js/noticias/controlador_listar_noticias.js"></script>
+</body>
+</html>
