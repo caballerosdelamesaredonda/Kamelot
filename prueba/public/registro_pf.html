@@ -43,74 +43,79 @@
                 <button type="button" id="btnSeleccionarImagen" class="boton_imagen">Subir imagen</button>
             </div>
             <form id="frm_registro_pf">
-                <section>
-                    
-                    <div>
-                        <label class="color_text" for="txt_correo">Correo electrónico</label>
-                        <input type="text" id="txt_correo">
-                    </div>
-                    <div>
-                        <label class="color_text"for="txt_nombre">Nombre</label>
-                        <input type="text" id="txt_nombre">
-                    </div>
-                    <div>
-                        <label class="color_text" for="txt_snombre">Segundo nombre</label>
-                        <input type="text" id="txt_snombre">
-                    </div>
-                    <div>
-                        <label class="color_text" for="txt_papellido">Primer apellido</label>
-                        <input type="text" id="txt_papellido">
-                    </div>
-                    <div>
-                        <label class="color_text" for="txt_sapellido">Segundo apellido</label>
-                        <input type="text" id="txt_sapellido">
-                    </div>
-                    <div>
-                        <label class="color_text" for="slt_tipo_id">Tipo de identificación</label>
-                        <select class="form-select" id="slt_tipo_id">
-                            <option value="">--Seleccione una opción--</option>
-                            <option value="Nacional">Nacional</option>
-                            <option value="DIMEX">DIMEX</option>
-                            <option value="Pasaporte">Pasaporte</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="color_text" for="txt_id">Identificación</label>
-                        <input type="number" min="0" id="txt_id">
-                    </div>
-                    <div>
-                        <label class="color_text" for="txt_telefono">Teléfono</label>
-                        <input type="number" min="0" id="txt_telefono">
-                    </div>
-                    <div>
-                        <label class="color_text" for="slt_provincias">Provincia</label>
-                        <select class="form-select" id="slt_provincias">
-                            <option value="">--Provincia--</option>
+                <div class="wrapper">
+                    <section class="col-iz">
+                        <div>
+                            <label class="color_text"for="txt_nombre">Nombre</label>
+                            <input type="text" id="txt_nombre" placeholder="Escriba el nombre de usuario">
+                        </div>
+                        <div>
+                            <label class="color_text" for="txt_papellido">Primer apellido</label>
+                            <input type="text" id="txt_papellido" placeholder="Escriba el primer apellido del usuario">
+                        </div>
 
-                        </select>
-                    </div>
-                    <div>
-                        <label  class="color_text" for="slt_cantones">Cantón</label>
-                        <select class="form-select" id="slt_cantones">
-                            <option value="">--Cantón--</option>
+                        <div>
+                            <label class="color_text" for="slt_tipo_id">Tipo de identificación</label>
+                            <select class="form-select" id="slt_tipo_id">
+                                <option value="">--Seleccione una opción--</option>
+                                <option value="Nacional">Nacional</option>
+                                <option value="DIMEX">DIMEX</option>
+                                <option value="Pasaporte">Pasaporte</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="color_text" for="txt_correo">Correo electrónico</label>
+                            <input type="text" id="txt_correo" placeholder="Escriba el correo del usuario">
+                        </div>
+                        <div>
+                            <label class="color_text" for="num_cant_hijos">Cantidad de hijos</label>
+                            <input type="number" min="0" id="num_cant_hijos" placeholder="Escriba la cantidad de hijos">
+                        </div>
+                        <div>
+                            <label  class="color_text" for="slt_cantones">Cantón</label>
+                            <select class="form-select" id="slt_cantones">
+                                <option value="">--Cantón--</option>
 
-                        </select>
-                    </div>
-                    <div>
-                        <label class="color_text" for="slt_distritos">Distrito</label>
-                        <select class="form-select" id="slt_distritos">
-                            <option value="">--Distrito--</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="color_text" for="txt_direccion">Dirección exacta</label>
-                        <input type="text" id="txt_direccion">
-                    </div>
-                    <div>
-                        <label class="color_text" for="num_cant_hijos">Cantidad de hijos</label>
-                        <input type="number" min="0" id="num_cant_hijos">
-                    </div>
-                </section>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="color_text" for="txt_direccion">Dirección exacta</label>
+                            <textarea type="text" id="txt_direccion" placeholder="Escriba la dirección exacta" rows="3"></textarea>
+                        </div>
+                    </section>
+                    <section class="col-der">
+                        <div>
+                            <label class="color_text" for="txt_snombre">Segundo nombre</label>
+                            <input type="text" id="txt_snombre" placeholder="Escriba el segundo nombre del usuario">
+                        </div>
+                        <div>
+                            <label class="color_text" for="txt_sapellido">Segundo apellido</label>
+                            <input type="text" id="txt_sapellido" placeholder="Escriba el segundo apellido del usuario">
+                        </div>
+                        <div>
+                            <label class="color_text" for="txt_id">Identificación</label>
+                            <input type="number" min="0" id="txt_id" placeholder="Escriba la identificación">
+                        </div>
+                        <div>
+                            <label class="color_text" for="txt_telefono">Teléfono</label>
+                            <input type="number" min="0" id="txt_telefono" placeholder="Escriba el número de teléfono">
+                        </div>
+                        <div>
+                            <label class="color_text" for="slt_provincias">Provincia</label>
+                            <select class="form-select" id="slt_provincias">
+                                <option value="">--Provincia--</option>
+
+                            </select>
+                        </div>
+                        <div>
+                            <label class="color_text" for="slt_distritos">Distrito</label>
+                            <select class="form-select" id="slt_distritos">
+                                <option value="">--Distrito--</option>
+                            </select>
+                        </div>
+
+                    </section>
+                </div>
 
                 <div class="btn_enviar center">
                     <button type="button" id="btn_registrar">Enviar</button>
