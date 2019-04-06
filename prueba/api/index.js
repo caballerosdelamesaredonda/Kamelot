@@ -80,8 +80,9 @@ const actividad = require('./componentes/actividad/actividad.route');
 
 const evaluacion_ce = require('./componentes/evaluacion_ce/evaluacion_ce.route');
 
-
 const utiles = require('./componentes/reg_utiles/utiles.route');
+
+const pregunta = require('./componentes/pregunta/pregunta.route');
 
 
 app.use('/api', utiles);
@@ -97,7 +98,7 @@ app.use('/api', noticias);
 
 app.use('/api', actividad);
 app.use('/api', etiquetas);
-
+app.use('/api', pregunta);
 app.use('/api', evaluacion_ce);
 
 
