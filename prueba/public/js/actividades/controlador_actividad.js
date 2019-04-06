@@ -6,6 +6,11 @@ const input_imagen = document.querySelector('#image_preview');
 let userlocal = localStorage.getItem('usuario_en_sesion');
 let boton_registrar = document.querySelector('#btn_registrar');
 
+if (userlocal ==null) {
+   
+    window.location.href='index.html';
+    
+} 
 
 let validar = () => {
     let error = false;
