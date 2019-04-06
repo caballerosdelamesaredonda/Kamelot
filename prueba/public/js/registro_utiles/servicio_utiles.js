@@ -24,6 +24,9 @@ let registrar_utiles = (pidCentro, pNombre, pTipo, pCiclo, pNivel, pAnho, pUtile
       type: 'success',
       title: 'El útil fue agregado',
       text: ''
+    }).then(function() {
+      window.location = "listar_utiles.html";
+
     });
   });
 
