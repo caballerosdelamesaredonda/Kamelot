@@ -43,6 +43,11 @@ let mostrar_datos = () =>{
         let celda_tipo = fila.insertCell();
         let estado = fila.insertCell();
 
+        celda_nombre.classList.add('column1');
+        celda_correo.classList.add('column2');
+        celda_tipo.classList.add('column3');
+        estado.classList.add('column4');
+
         celda_nombre.innerHTML = resultado[i]['nombre'];
         
         if (resultado[i]['tipo_usuario'] === 'PF') {
@@ -52,7 +57,20 @@ let mostrar_datos = () =>{
         }
 
         celda_correo.innerHTML = resultado[i]['correo_electronico'];
-        celda_tipo.innerHTML = resultado[i]['tipo_usuario'];
+
+        let tipo_usuario = resultado[i]['tipo_usuario'];
+        switch (tipo_usuario) {
+            case 'AD':
+                celda_tipo.innerHTML = 'Administrador';
+                break;
+            case 'PF':
+                celda_tipo.innerHTML = 'Padre de familia';
+                break;
+            case 'CE':
+                celda_tipo.innerHTML = 'Centro educativo';
+                break;
+        }
+
         estado.innerHTML = resultado[i]['estado'];
 
     }
