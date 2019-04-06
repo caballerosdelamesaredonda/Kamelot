@@ -9,6 +9,7 @@ let registrar_pregunta = (ppregunta, prespuesta) => {
       respuesta : prespuesta
     },
     dataType: "json",
+    async: false,
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
   });
 

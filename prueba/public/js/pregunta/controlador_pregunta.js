@@ -4,9 +4,6 @@ const input_pregunta = document.querySelector('#txt_pregunta');
 const input_respuesta = document.querySelector('#txt_respuesta');
 const boton_registrar = document.querySelector('#btn_registrar');
 
-let pregunta = '';
-let respuesta = '';
-
 let validar = () => {
     let error = false;
 
@@ -32,8 +29,8 @@ let mostrarDatos = () => {
 
     if (validar() == false) {
         let pregunta = input_pregunta.value;
+        let respuesta = input_respuesta.value;
         registrar_pregunta(pregunta, respuesta);
-
 
     }else{
         
@@ -43,8 +40,6 @@ let mostrarDatos = () => {
             text: `Revise los Campos`    
         })
     }
-
-    
 
 }
 
