@@ -25,8 +25,8 @@
 
 #txt_actividad {
     display: block;
-    width: 800px;
-    height: 300px;
+    width: 350px;
+    height: 100px;
     margin-bottom: 20px;
 } 
 
@@ -123,6 +123,20 @@ tr:nth-child(even) {
 .mb-1 {
 	margin-bottom: 20px;
 }
+
+.p-t1 {
+    padding-top: 30px;
+}
+
+.input_titulo_acti {
+    display: block;
+    width: 350px;
+    height: 50px;
+    margin-bottom: 20px;
+    border: #48dbfb solid 1px;
+    font-size: 18px;
+				
+}
 .input_actividad {
     display: block;
     width: 250px;
@@ -182,4 +196,25 @@ ul li a {
 
 ul li a:hover {
     color: #f27232;
+}
+
+.centro {
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form_backgorund {
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+	box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.75);
+}
+
+.h1-actividad {
+	font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+	color: #2f3640;
+	text-align: center;
 }

@@ -13,7 +13,7 @@ let mostrar_lista_actividades = () =>{
     for(let i = 0; i < actividad.length; i++){
 
         let fila = tabla.insertRow();// Crea el tr de la tabla
-
+        fila.insertCell().innerHTML = actividad[i]['titulo'];
         fila.insertCell().innerHTML = actividad[i]['actividad'];
         fila.insertCell().innerHTML = `<img src="${actividad[i]['foto']}" height="110px" width="110px"> `
 

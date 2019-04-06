@@ -39,25 +39,30 @@
 		</div>
 	</header>
 
-	<main class="largo mt-3" style="height: 600px;">
+	<main class="largo mt-3" style="height: 500px;">
 		<section id="acti">
-			<h1 class="h1 color_text">Registro de Actividades</h1>
+			<div class="form_backgorund">
+			<h1 class="h1-actividad color_text p-t1">Registro de Actividades</h1>
+			<div class="centro p-t1">
 			<form class="form_control">
 				<div class="float-left">
-					<lable for="txt_actividad" class="lable color_text">Actividad Nueva</lable>
-					<textarea id="txt_actividad" class="input_actividad mt-2"></textarea>
+					<lable for="txt_actividad" class="lable color_text">Título de la Actividad</lable>
+					<input class="input_titulo_acti" type="text" id="txt_titulo_actividad">
+					<lable for="txt_actividad" class="lable color_text">Descripción de la Actividad</lable> 
+					<textarea id="txt_actividad" class="input_actividad"></textarea>
+					<button type="button" id="btn_registrar">Registrar</button>
 				</div>
 				<div class="float-left ml-2">
 					<label class="lable color_text">Subir Imagen</label>
-					<figure class="margin-bottom">
-						<img src="./images/placeholder-image.png" alt="seleccionar imagen" id="image_preview" width="160" class="mt-2">
+					<figure>
+						<img src="./images/placeholder-image.png" alt="seleccionar imagen" id="image_preview" width="160">
 					</figure>
 					<button type="button" id="btnSeleccionarImagen">Subir Imagen</button>
 				</div>
 				<div style="clear:both;"></div>
-				<button type="button" id="btn_registrar">Registrar</button>
-
 			</form>
+			</div>
+			</div>
 		</section>
 	</main>
 	<footer class="main_footer">
