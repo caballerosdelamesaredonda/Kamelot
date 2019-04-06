@@ -27,7 +27,7 @@
 
                         <a href="listar_solicitudes.html" class="registrar_cuenta ml-1">Listar solicitudes</a>
                         <a href="listar_usuarios.html" class="registrar_cuenta ml-1">Listar usuarios</a>
-                        <a href="lista_etiquetas.html" class="registrar_cuenta ml-1">Listar etiquetas</a>
+                        <a href="registrar_etiqueta.html" class="registrar_cuenta ml-1">Registrar etiqueta</a>
                         <a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar Sesión</a>
                     
                     </div>
@@ -37,19 +37,22 @@
 
     <main>
 
+        <h1>Lista etiquetas</h1>
+        <table width="800" id="tbl_etiquetas" align="center">
+            <thead class="head_backg">
+                <tr>
+                    <th class="padding border-right">Nombre</th>
+                    <th class="padding border-right">Asociar</th>
+                    <th class="padding border-right">Modificar</th>
+                    <th class="padding">Eliminar</th>
 
-        <div class="etiqueta">
-                <div class="etiqueta_header">
-                        <h1>Registro etiqueta</h1>
-                    </div>
-            <label for="txt_nombre">Nombre</label>
-            <input type="text" id="txt_nombre">
+                </tr>
+            </thead>
 
-            <div class="registro">
-                    <button type="button" id="btn_enviar">Enviar</button>
-                </div>
+            <tbody>
 
-        </div>
+            </tbody>
+        </table>
 
 
     </main>
@@ -71,7 +74,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
 <script src="/public/js/etiquetas/servicio_etiquetas.js"></script>
-<script src="/public/js/etiquetas/controlador_registrar_etiqueta.js"></script>
+<script src="/public/js/etiquetas/controlador_listar_etiquetas.js"></script>
 
 
 

@@ -1,20 +1,26 @@
 .etiqueta{
+
 margin-left: 38%;
 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-height: 60px;
+height: 300px;
 width: 385px;
 margin-bottom: 20px;
+padding-top: 5px;
+padding-left: 25px;
+padding-right: 25px;
+margin-top: 30px;
 }
 
 .registro{
+    margin-top: 30px;
     height: 60px;
-    margin-left: 45%;
+    margin-left: 30%;
 
 }
 
 h1{
 	font-size: 30px;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -41,4 +47,8 @@ tbody tr:hover {
 tr:nth-child(even) {
   	background-color: #f1f2f6;
 		
+}
+
+.etiqueta_header{
+    margin-top: 30px;
 }
