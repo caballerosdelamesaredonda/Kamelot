@@ -21,28 +21,35 @@
             <input type="text" value="" name="" id="txt_buscar" class="input">
             <div class="float-right mr-2 mt-4">
                     <a href="perfil_admin.html" class="registrar_cuenta ml-1">Ver perfil</a>
-                    <a href="registrar_etiqueta.html" class="registrar_cuenta ml-1">Registrar etiqueta</a>
                     <a href="listar_solicitudes.html" class="cerrar_sesion ml-1">Listar solicitudes</a>
-                    <a href="listar_etiquetas.html" class="registrar_cuenta ml-1">Listar etiqueta</a>
-
                     <a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar Sesión</a>
                 </div>
         </div>
     </nav>
 </header>
 <main class="main">
-    <table width="800" id="tbl_usuarios" align="center">
-        <thead class="head_backg">
-        <tr>
-            <th>Nombre del usuario o institucion</th>
-            <th>Usuario</th>
-            <th>tipo</th>
-            <th>Estado</th>
-        </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    <h1 class="d1 color_text title_center mb-1">Listar usuarios</h1>
+    <section id="seccion_tablas">
+        <div class="contenedor_tablas">
+            <div class="contenedor_head">
+                <table>
+                    <thead class="head_backg">
+                        <tr>
+                            <th class="column1">Nombre del usuario o institucion</th>
+                            <th class="column2">Usuario</th>
+                            <th class="column3">tipo</th>
+                            <th class="column4">Estado</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="contenedor_body">
+                <table id="tbl_usuarios">
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 </main>
 <footer class="main_footer">
     <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
