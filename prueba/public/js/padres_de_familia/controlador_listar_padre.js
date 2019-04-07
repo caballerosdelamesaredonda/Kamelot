@@ -22,6 +22,12 @@ let mostrar_datos = (pUsuarioLoggeado) => {
 
 if (userid != null) {
     usario_loggeado = obtener_usuario_por_id(userid);
+    if(usario_loggeado.segundo_nombre == ''){
+        document.getElementById('txt_segundo_nombre').style.display = 'none';
+        document.getElementById('segundo_nombre').style.display = 'none';
+        
+
+    }
     mostrar_datos(usario_loggeado);
 }else{
     swal({
