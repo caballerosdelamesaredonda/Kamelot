@@ -7,33 +7,28 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/perfil_ce.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family='Nunito'" rel="stylesheet">
     <style>
         .wrapper {
-            height: 500px;
+            height: 650px;
+            position: relative;
+            margin-left: 27%;
         }
         .imagencentro {
-            float: left;
-            margin-left: 100px;  
+            margin-left: 150px;  
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
         .card {
-			background-color: #EFEFEF;
-			width: 400px;
-			height: 350px;
+            background-color: #ffffff;
+            width: 650px;
+			height: 600px;
             border-radius: 10px;
             float: left;
             margin-left: 40px;
+            box-shadow: 0 4px 8px 0 #143646;
         }
 
-        .card2 {
-			background-color: #EFEFEF;
-			width: 400px;
-			height: 650px;
-            border-radius: 10px;
-            float: left;
-            margin-left: 40px;
-        }
-        
 		.titulo {
 			font-size: 30px;
             margin-bottom: 20px;
@@ -52,26 +47,26 @@
         }
 
         .info {
-            margin-left: 40px;
+            margin-left: 150px;
+            font-size: 20px;
         }
         .lable_nuevo {
             display: block;
         }
         
         .int_nuevo {
-            background-color: #EFEFEF;
-            font-family: Nunito, 'Montserrat', sans-serif;
+            font-family: 'Nunito', 'Montserrat', sans-serif;
             border: 0px;
-            font-size: 16px;
             margin-left: 5px;
+            font-size: 20px;
+			background-color: #ffffff;
         }
         .int_nuevo2 {
-            background-color: #EFEFEF;
-            font-family: Nunito, 'Montserrat', sans-serif;
+            font-family: 'Nunito', 'Montserrat', sans-serif;
             border: 0px;
-            font-size: 16px;
             margin-left: 5px;
-            width: 350px;
+            font-size: 20px;
+			background-color: #ffffff;
         }
     </style>
 </head>
@@ -104,13 +99,13 @@
 		</div>
 	</header>
     <div class="wrapper" id="perfil">
-            <div class="imagencentro">
-            <label for="imagen_perfil">
-                <img src="" id="imagen_perfil" width="190px">
-            </label>
-            </div>
+           
             <div class="card">
-                <h1 class="titulo">Información General Administrador</h1>
+                    <div class="imagencentro">
+                        <label for="imagen_perfil">
+                            <img src="" id="imagen_perfil" width="350px" height="206px">
+                        </label>
+                    </div>
                 <div class="info">
                         <label>Primer Nombre:</label>
                         <input class="int_nuevo" type="text" id="txt_primer_nombre" readonly="readonly">
@@ -127,8 +122,9 @@
                         <label for="txt_cedula">Cédula/pasaporte:</label>
                         <input class="int_nuevo" type="text" id="txt_cedula" readonly="readonly">
                         <br>
-                        <label for="txt_correo">Correo Electrónico:</label><br>
-                        <input class="int_nuevo2" type="email" id="txt_correo" readonly="readonly">
+                        <label for="txt_correo">Correo Electrónico:</label>
+                        <br>
+                        <input class="int_nuevo2" type="text" id="txt_correo" readonly="readonly">
                     </div>
                 </div>
         </div>
