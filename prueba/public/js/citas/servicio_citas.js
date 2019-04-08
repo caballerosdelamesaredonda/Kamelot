@@ -1,14 +1,15 @@
 
 // Validar informacion de campos de formulario
 
-let registrar_citas = (puserId, puserCentro, pfecha, pHora) => {
+let registrar_citas = (puserId, puserCentro,pRazon, pFecha, pHora) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/registrar_citas",
         method: "POST",
         data: {
             userid: puserId,
             centroid: puserCentro,
-            fecha: pfecha,
+            razon: pRazon,
+            fecha: pFecha,
             hora: pHora
         },
         dataType: "json",

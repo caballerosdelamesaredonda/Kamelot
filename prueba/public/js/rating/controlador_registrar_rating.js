@@ -39,7 +39,6 @@ let mostrarDatos = () => {
         let centroid = userCentroId;
         let comentario = input_comentario.value;
         let rating = parseInt($('#stars li.selected').last().data('value'), 10);
-        console.log(rating)
         registrar_actividad(userid, centroid, comentario, rating);
     } else {
         Swal.fire({

@@ -6,6 +6,7 @@ let schema_citas = new mongoose.Schema(
     {
         userid : {type : String, required : true},
         centroid : {type : String, required : true},
+        razon : {type : String, required : true},
         fecha : {type: Date, required: true},
         hora : {type : String, required : true}
     }

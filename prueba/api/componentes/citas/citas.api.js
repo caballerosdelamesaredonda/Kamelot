@@ -7,6 +7,7 @@ module.exports.registrar_cita = (req, res) => {
         {
             userid: req.body.userid,
             centroid: req.body.centroid,
+            razon: req.body.razon,
             fecha: req.body.fecha,
             hora: req.body.hora
         }
@@ -50,7 +51,7 @@ module.exports.consultar_citas = (req, res) => {
                 res.json(
                     {
                         success: false,
-                        citas: 'No se encontraron citas'
+                        citas: citas
                     }
                 )
             }

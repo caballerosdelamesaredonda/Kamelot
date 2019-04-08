@@ -78,7 +78,7 @@ const noticias = require('./componentes/noticias/noticias.route');
 
 const actividad = require('./componentes/actividad/actividad.route');
 
-const evaluacion_ce = require('./componentes/evaluacion_ce/evaluacion_ce.route');
+const evaluacion_ce = require('./componentes/rating/rating.route');
 
 const utiles = require('./componentes/reg_utiles/utiles.route');
 
