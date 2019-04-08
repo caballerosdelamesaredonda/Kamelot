@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/perfil_ce.css">
     <link rel="stylesheet" href="./css/activdad.css" type="text/css">
     <link rel="stylesheet" href="./css/popr.css">
+    <link rel="stylesheet" href="./css/blogcards.css">
+    <link rel="stylesheet" href="./scss/style.scss">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -78,7 +80,7 @@
     }
 
     .wrapper {
-        height: 800px;
+        height: 550px;
         width: 100%;
         margin-left: 100px;
     }
@@ -91,7 +93,7 @@
     .card {
         background-color: #EFEFEF;
         width: 400px;
-        height: 650px;
+        height: 500px;
         border-radius: 10px;
         float: left;
         margin-left: 40px;
@@ -100,7 +102,7 @@
     .card2 {
         background-color: #EFEFEF;
         width: 400px;
-        height: 650px;
+        height: 500px;
         border-radius: 10px;
         float: left;
         margin-left: 40px;
@@ -308,20 +310,29 @@
 
         <!-- Seccion de noticias. -->
         <h1 class="h1">Noticias del centro:</h1>
-        <section id='noticias' style="margin-left:320px;">
-            <table width="800" id="tabla_noticias" align="center">
-                <thead class="head_backg">
-                    <tr>
-                        <th class="padding border-right">Título</th>
-                        <th class="padding border-right">Descripción</th>
-                        <th class="padding">Fecha</th>
-                    </tr>
-                </thead>
-                <tbody>
 
-                </tbody>
-            </table>
-        </section>
+        <div id="news_cards">
+
+        </div>
+
+
+        <template id="tmpl_news">
+            <div class="blog-card">
+
+                <div class="meta">
+                    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+                </div>
+
+                <div class="description">
+                    <h1 id='h1_card'></h1>
+                    <h2 id='h2_card'></h2>
+                    <p id='p_card'></p>
+                    <p class="read-more">
+                        <a href="">Leer más</a>
+                    </p>
+                </div>
+            </div>
+        </template>
 
         <!-- Seccion de actividades. -->
 
