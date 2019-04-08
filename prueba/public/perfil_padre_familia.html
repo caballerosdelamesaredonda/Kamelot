@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/perfil_ce.css">
+    <link rel="stylesheet" href="./css/popr.css">
     <link href="https://fonts.googleapis.com/css?family='Nunito'" rel="stylesheet">
     <style type="text/css">
         .wrapper {
@@ -14,42 +15,44 @@
             position: relative;
             margin-left: 27%;
         }
+
         .imagencentro {
-            margin-left: 150px;  
+            margin-left: 150px;
             margin-top: 20px;
             margin-bottom: 20px;
 
         }
+
         .card {
-			background-color: #ffffff;
+            background-color: #ffffff;
             width: 650px;
-			height: 800px;
+            height: 800px;
             border-radius: 10px;
             float: left;
             margin-left: 40px;
             box-shadow: 0 4px 8px 0 #143646;
-            
+
         }
 
         .card2 {
-			background-color: #ffffff;
-			width: 400px;
-			height: 650px;
+            background-color: #ffffff;
+            width: 400px;
+            height: 650px;
             border-radius: 10px;
             float: left;
             margin-left: 40px;
         }
-        
-		.titulo {
-			font-size: 30px;
+
+        .titulo {
+            font-size: 30px;
             margin-bottom: 20px;
-	        color: #2f3640;
+            color: #2f3640;
             text-align: center;
             padding: 10px;
             margin-top: 20px;
         }
 
-        .hr{
+        .hr {
             margin-top: 20px;
             width: 80%;
             border: solid #f27232 1px;
@@ -63,16 +66,17 @@
 
 
         }
+
         .lable_nuevo {
             display: block;
         }
-        
+
         .int_nuevo {
             font-family: 'Nunito', 'Montserrat', sans-serif;
             border: 0px;
             margin-left: 5px;
             font-size: 20px;
-			background-color: #ffffff;
+            background-color: #ffffff;
 
 
         }
@@ -91,7 +95,6 @@
             font-size: 20px;
 
         }
-        
     </style>
 </head>
 
@@ -101,22 +104,55 @@
         <nav>
             <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
             <div class="float-right middle">
+                <!--<lable class="white mr-1">Buscar</lable>
+                <input type="text" value="" name="" id="txtFiltro" class="input">-->
                 <div class="float-right mr-2 mt-4">
-                    <a href="listar_centroe.html" class="registrar_cuenta ml-1">Listar centros</a>
-                    <a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar Sesión</a>
+
+                    <div id="menu_right_icons">
+                        <div class="popr" data-id="2"><img src="./images/settings_2.png" id=""></div>
+                        <div class="avatar_cont"><img src="" id="avatar_img"></div>
+                    </div>
+
                 </div>
+
+                <div id="avatar_container" style="margin-right: 100px;">
+
+                    <div class="popr-box" data-box-id="2">
+                        <a href="perfil_padre_familia.html">
+                            <div class="popr-item" id="">Ver Perfil</div>
+                        </a>
+
+                        <a href="#">
+                            <div class="popr-item" id="">Ajustes</div>
+                        </a>
+
+                        <a href="index.html" onclick="localStorage.clear();">
+                            <div class="popr-item">Cerrar Sesion</div>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </nav>
+        <div style="clear:both; margin-bottom: 20px;"></div>
+        <div class="fondonav">
+            <nav>
+                <ul>
+                    <li><a class="color_text" href="listar_centroe.html">Listar centros educativos</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <h1 class="h1"> Bienvenido</h1>
     <div class="wrapper" id="perfil">
-            <div class="card">
-                    <div class="imagencentro">
-                        <label for="imagen_perfil">
-                            <img src="" id="imagen_perfil" width="350px" height="206px">
-                        </label>
-                    </div>
-                <div class="info">
+        <div class="card">
+            <div class="imagencentro">
+                <label for="imagen_perfil">
+                    <img src="" id="imagen_perfil" width="350px" height="206px">
+                </label>
+            </div>
+            <div class="info">
                 <label for="txt_primer_nombre">Primer nombre:</label>
                 <input class="int_nuevo" type="text" id="txt_primer_nombre" readonly="readonly">
                 <br>
@@ -134,10 +170,10 @@
                 <br>
                 <label for="txt_correo">Correo electrónico:</label>
                 <input class="int_nuevo" type="email" id="txt_correo" readonly="readonly">
-                </div>
-                <hr class="hr">
-                <h1 class="titulo">Ubicación:</h1>
-                <div class="info">
+            </div>
+            <hr class="hr">
+            <h1 class="titulo">Ubicación:</h1>
+            <div class="info">
                 <label for="txt_provincia">Provincia:</label>
                 <input class="int_nuevo" type="text" id="txt_provincia" readonly="readonly">
                 <br>
@@ -150,9 +186,9 @@
                 <label for="txt_direccion">Dirección:</label>
                 <textarea class="area" id="txt_direccion" readonly="readonly">&nbsp;</textarea>
                 <!-- Aqui es importante no hacer un espacio con Enter -->
-                </div>
             </div>
         </div>
+    </div>
 
     <footer class="main_footer">
         <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
@@ -168,6 +204,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/padres_de_familia/servicio_padrefamilia.js"></script>
     <script src="js/padres_de_familia/controlador_listar_padre.js"></script>
+    <script src="js/popmenu/popr.js"></script>
 
 </body>
 

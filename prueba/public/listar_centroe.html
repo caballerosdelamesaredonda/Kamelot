@@ -8,29 +8,59 @@
     <link rel="stylesheet" href="/public/css/reset.css">
     <link rel="stylesheet" href="/public/css/general.css">
     <link rel="stylesheet" href="/public/css/solicitudes.css">
-    
-
-
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/registro_ce.css">
+    <link rel="stylesheet" href="./css/popr.css">
 
     <title>Lista centro educativos</title>
 </head>
 
 <body>
+
     <header class="main_header">
         <nav>
             <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
             <div class="float-right middle">
-                <lable class="white mr-1">Buscar</lable>
-                <input type="text" value="" name="" id="txtFiltro" class="input">
+
                 <div class="float-right mr-2 mt-4">
-                        <a href="perfil_padre_familia.html" class="registrar_cuenta ml-1">Ver perfil</a>
-                        <a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar Sesión</a>
+                    <div id="menu_right_icons">
+                        <lable class="white mr-1">Buscar</lable>
+                        <input type="text" value="" name="" id="txtFiltro" class="input">
+                        <div class="popr" data-id="2"><img src="./images/settings_2.png" id=""></div>
+                        <div class="avatar_cont"><img src="" id="avatar_img"></div>
+                    </div>
+
                 </div>
+
+                <div id="avatar_container" style="margin-right: 100px;">
+
+                    <div class="popr-box" data-box-id="2">
+                        <a href="perfil_padre_familia.html">
+                            <div class="popr-item" id="">Ver Perfil</div>
+                        </a>
+
+                        <a href="#">
+                            <div class="popr-item" id="">Ajustes</div>
+                        </a>
+
+                        <a href="index.html" onclick="localStorage.clear();">
+                            <div class="popr-item">Cerrar Sesion</div>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </nav>
+        <div style="clear:both; margin-bottom: 20px;"></div>
+        <div class="fondonav">
+            <nav>
+                <ul>
+                    <li><a class="color_text" href="listar_centroe.html">Listar centros educativos</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
         <h1 class="h1">Lista centros educativos</h1>
         <table width="800" id="tbl_centroe" align="center">
@@ -55,13 +85,13 @@
     </main>
 
     <footer class="main_footer">
-            <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
-            <nav class="footer_nav mt-2 ml-1">
-                <a href="#">Link 1</a><span class="vertical-line"> | </span>
-                <a href="#">Link 2</a><span class="vertical-line"> | </span>
-                <a href="#">Link 3</a><span class="vertical-line"> | </span>
-                <a href="#">Link 4</a>
-            </nav>
+        <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
+        <nav class="footer_nav mt-2 ml-1">
+            <a href="#">Link 1</a><span class="vertical-line"> | </span>
+            <a href="#">Link 2</a><span class="vertical-line"> | </span>
+            <a href="#">Link 3</a><span class="vertical-line"> | </span>
+            <a href="#">Link 4</a>
+        </nav>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -69,6 +99,7 @@
     <script src="js/centro_educativo/servicio_ce.js"></script>
     <script src="js/centro_educativo/controlador_listar_centroe.js"></script>
     <script src="js/realizarbusqueda.js"></script>
+    <script src="js/popmenu/popr.js"></script>
 
 </body>
 
