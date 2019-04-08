@@ -9,67 +9,86 @@
     <link rel="stylesheet" href="./css/perfil_ce.css">
     <link rel="stylesheet" href="./css/activdad.css" type="text/css">
     <link rel="stylesheet" href="css/citas.css">
+    <link rel="stylesheet" href="./css/popr.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
 <style type="text/css">
-    .slideshow-container{
+    .slideshow-container {
         max-width: 1000px;
-        position:relative;
-        margin:auto;
-    }
-    .mySlides{
-        display:none;
-    }
-    .prev, .next{
-        cursor:pointer;
-        position:absolute;
-        top:50%;
-        width:auto;
-        margin-top:-22px;
-        padding:16px;
-        color:white;
-        font-weight:bold;
-        font-size:18px;
-        transition:0.6s ease;
-        border-radius:0 3px 3px 0;
-    }
-    .next{
-        right:0;
-        border-radius:3px 0 0 3px;
-    }
-    .prev:hover, .next:hover{
-        background-color:rgba(0,0,0,0.8);
-    }
-    
-    .fade{
-        -webkit-animation-name:fade;
-        -webkit-animation-duration:1.5s;
-        animation-name:fade;
-        animation-duration:1.5s;
+        position: relative;
+        margin: auto;
     }
 
-    @-webkit-keyframes fade{
-        from{opacity:.4}
-        to{opacity:1}
+    .mySlides {
+        display: none;
     }
 
-    @keyframes fade{
-        from{opacity:.4}
-        to{opacity:1}
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
     }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
     .wrapper {
         height: 800px;
         width: 100%;
         margin-left: 100px;
     }
-    
+
     .imagencentro {
         float: left;
-        margin-left: 100px;  
+        margin-left: 100px;
     }
+
     .card {
         background-color: #EFEFEF;
         width: 400px;
@@ -87,7 +106,7 @@
         float: left;
         margin-left: 40px;
     }
-    
+
     .titulo {
         font-size: 30px;
         margin-bottom: 20px;
@@ -97,7 +116,7 @@
         margin-top: 20px;
     }
 
-    .hr{
+    .hr {
         margin-top: 20px;
         width: 80%;
         border: solid #192a56 1px;
@@ -108,10 +127,11 @@
     .info {
         margin-left: 40px;
     }
+
     .lable_nuevo {
         display: block;
     }
-    
+
     .int_nuevo {
         background-color: #EFEFEF;
         font-family: Nunito, 'Montserrat', sans-serif;
@@ -150,19 +170,21 @@
         border: 1px solid #48dbfb;
         border-radius: 5px;
     }
+
     .ml-citas {
         margin-left: 5px;
     }
+
     .area {
-            background-color: #EFEFEF;
-            font-family: Nunito, 'Montserrat', sans-serif;
-            border: 0px;
-            font-size: 16px;
-            margin-left: 5px;
-            width: 250px;
-            position: relative;
-            top: 28px;
-        }   
+        background-color: #EFEFEF;
+        font-family: Nunito, 'Montserrat', sans-serif;
+        border: 0px;
+        font-size: 16px;
+        margin-left: 5px;
+        width: 250px;
+        position: relative;
+        top: 28px;
+    }
 </style>
 
 <body>
@@ -171,13 +193,47 @@
         <nav>
             <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
             <div class="float-right middle">
-                    <div class="float-right mr-2 mt-4">
-                            <a href="listar_centroe.html" class="registrar_cuenta ml-1">Ver centros educativos</a>
-                            <a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar Sesión</a>
+                <!--<lable class="white mr-1">Buscar</lable>
+                <input type="text" value="" name="" id="txtFiltro" class="input">-->
+                <div class="float-right mr-2 mt-4">
+
+                    <div id="menu_right_icons">
+                        <div class="popr" data-id="2"><img src="./images/settings_2.png" id=""></div>
+                        <div class="avatar_cont"><img src="" id="avatar_img"></div>
                     </div>
+
+                </div>
+
+                <div id="avatar_container" style="margin-right: 100px;">
+
+                    <div class="popr-box" data-box-id="2">
+                        <a href="perfil_centroedu.html">
+                            <div class="popr-item" id="">Ver Perfil</div>
+                        </a>
+
+                        <a href="#">
+                            <div class="popr-item" id="">Ajustes</div>
+                        </a>
+
+                        <a href="index.html" onclick="localStorage.clear();">
+                            <div class="popr-item">Cerrar Sesion</div>
+                        </a>
+                    </div>
+                </div>
 
             </div>
         </nav>
+        <div style="clear:both; margin-bottom: 20px;"></div>
+        <div class="fondonav">
+            <nav>
+                <ul>
+                    <li><a class="color_text" href="listar_centroe.html">Listar centros educativos</a></li>
+                    <li><a class="color_text" href="tablero_centroeducativo.html">Perfil centro educativo</a></li>
+                    <li><a class="color_text" href="citas.html">Registrar citas con el centro</a></li>
+                    <li><a class="color_text" href="rating_centro.html">Dejar evaluacion de centro</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -198,48 +254,48 @@
 
         <div class="wrapper" id="perfil">
             <div class="imagencentro">
-            <label for="imagen_perfil">
-                <img src="" id="imagen_perfil" width="190px">
-            </label>
+                <label for="imagen_perfil">
+                    <img src="" id="imagen_perfil" width="190px">
+                </label>
             </div>
             <div class="card">
                 <h1 class="titulo">Informacion General</h1>
                 <div class="info">
-                <lable>Nombre del Centro:</lable>
-                <input class="int_nuevo" id="txt_nombre_centro" readonly="readonly">
-                <br>
-                <label>Correo electrónico:</label>
-                <input class="int_nuevo" id="txt_correo" readonly="readonly">
-                <br>
-                <label>Teléfono:</label>
-                <input class="int_nuevo" id="txt_telefono" readonly="readonly">
-                <br>
-                <label for="txt_fax">Fax:</label>
-                <input class="int_nuevo" type="text" id="txt_fax" readonly="readonly">
-                <br>
-                <label for="txt_sitioweb">Sitio web:</label>
-                <input class="int_nuevo" type="text" id="txt_sitioweb" readonly="readonly">
+                    <lable>Nombre del Centro:</lable>
+                    <input class="int_nuevo" id="txt_nombre_centro" readonly="readonly">
+                    <br>
+                    <label>Correo electrónico:</label>
+                    <input class="int_nuevo" id="txt_correo" readonly="readonly">
+                    <br>
+                    <label>Teléfono:</label>
+                    <input class="int_nuevo" id="txt_telefono" readonly="readonly">
+                    <br>
+                    <label for="txt_fax">Fax:</label>
+                    <input class="int_nuevo" type="text" id="txt_fax" readonly="readonly">
+                    <br>
+                    <label for="txt_sitioweb">Sitio web:</label>
+                    <input class="int_nuevo" type="text" id="txt_sitioweb" readonly="readonly">
                 </div>
                 <hr class="hr">
                 <h1 class="titulo">Ubicación</h1>
                 <div class="info">
-                <label for="txt_provincia">Provincia:</label>
-                <input class="int_nuevo" type="text" id="txt_provincia" readonly="readonly">
-                <br>
-                <label for="txt_canton">Cantón:</label>
-                <input class="int_nuevo" type="text" id="txt_canton" readonly="readonly">
-                <br>
-                <label for="txt_distrito">Distrito:</label>
-                <input class="int_nuevo" type="text" id="txt_distrito" readonly="readonly">
-                <br>
-                <label for="txt_direccion">Dirección:</label>
-                <textarea class="area" id="txt_direccion" readonly="readonly"></textarea>
-                <!-- Aqui es importante no hacer un espacio con Enter -->
+                    <label for="txt_provincia">Provincia:</label>
+                    <input class="int_nuevo" type="text" id="txt_provincia" readonly="readonly">
+                    <br>
+                    <label for="txt_canton">Cantón:</label>
+                    <input class="int_nuevo" type="text" id="txt_canton" readonly="readonly">
+                    <br>
+                    <label for="txt_distrito">Distrito:</label>
+                    <input class="int_nuevo" type="text" id="txt_distrito" readonly="readonly">
+                    <br>
+                    <label for="txt_direccion">Dirección:</label>
+                    <textarea class="area" id="txt_direccion" readonly="readonly"></textarea>
+                    <!-- Aqui es importante no hacer un espacio con Enter -->
                 </div>
             </div>
             <div class="card2">
-                    <h1 class="titulo">Nivel Centro:</h1>
-                    <div class="info">
+                <h1 class="titulo">Nivel Centro:</h1>
+                <div class="info">
                     <label for="txt_tipo_centro">Tipo de centro:</label>
                     <input class="int_nuevo" type="text" id="txt_tipo_centro" readonly="readonly">
                     <br>
@@ -248,9 +304,9 @@
                     <br>
                     <label for="txt_refhistorica">Referencia histórica:</label>
                     <input class="int_nuevo" type="text" id="txt_refhistorica" readonly="readonly">
-                    </div>
-                    <hr class="hr">
                 </div>
+                <hr class="hr">
+            </div>
         </div>
 
         <!-- Seccion de noticias. -->
@@ -277,54 +333,14 @@
             <table width="800" id="tbl_actividad" align="center">
                 <thead class="head_backg">
                     <tr>
-                        <th class="padding border-right">Descripción</th>
+                        <th class="padding border-right">Titulo</th>
+                        <th class="padding">Descripción</th>
                         <th class="padding">Foto</th>
                     </tr>
                 </thead>
                 <tbody>
                 </tbody>
             </table>
-        </section>
-
-        <!-- Seccion de citas. -->
-
-        <section id='citas'>
-
-            <h1 class="h1">Registar citas con el centro:</h1>
-            <div class="centrado">
-            <form id="frm_citas">
-
-                <!-- Formulario de registro de citas -->
-                <div>
-                    <label for="datepicker-13">Seleccionar fecha:</label>
-                    <input class="input_citas mb-1" type="text" id="datepicker-13">
-                </div>
-
-                <div>
-                    <label for="slct_hora">Seleccionar hora:</label>
-                    <select class="input_citas ml-citas" id="slct_hora">
-                        <option value="9:00" class="time_9">9:00</option>
-                        <option value="10:00" class="time_10">10:00</option>
-                        <option value="11:00" class="time_11">11:00</option>
-                        <option value="12:00" class="time_12">12:00</option>
-                        <option value="13:00" class="time_13">13:00</option>
-                        <option value="14:00" class="time_14">14:00</option>
-                        <option value="15:00" class="time_15">15:00</option>
-                        <option value="16:00" class="time_16">16:00</option>
-                        <option value="17:00" class="time_17">17:00</option>
-                        <option value="18:00" class="time_18">18:00</option>
-                        <option value="19:00" class="time_19">19:00</option>
-                        <option value="20:00" class="time_20">20:00</option>
-                        <option value="21:00" class="time_21">21:00</option>
-                    </select>
-                </div>
-                <br><br>
-                <div>
-                    <button type="button" id="btn_registrar">Registrar cita</button>
-                </div>
-
-            </form>
-        </div>
         </section>
 
     </main>
@@ -347,9 +363,7 @@
     <script src="js/noticias/controlador_listar_noticias_tablero.js"></script>
     <script src="js/actividades/servicio_actividad.js"></script>
     <script src="js/actividades/controlador_listar_actividad_publico.js"></script>
-    <script src="js/citas/servicio_citas.js"></script>
-    <script src="js/citas/controlador_registrar_citas.js"></script>
-    <script src="js/citas/controlador_listar_citas.js"></script>
+    <script src="./js/popmenu/popr.js"></script>
 </body>
 
 </html>

@@ -7,10 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css'>
-    <link rel='stylesheet' href='./css/general.css'>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/perfil_ce.css">
     <link rel='stylesheet' href='./css/rating/laxvek.css'>
     <link rel='stylesheet' href='./css/rating/style.css'>
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/popr.css">
+    <title>Rating de Centro Educativo</title>
 </head>
 
 <body>
@@ -19,14 +22,46 @@
         <nav>
             <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
             <div class="float-right middle">
+                <!--<lable class="white mr-1">Buscar</lable>
+                <input type="text" value="" name="" id="txtFiltro" class="input">-->
                 <div class="float-right mr-2 mt-4">
-                    <a href="perfil_padre_familia.html" class="registrar_cuenta ml-1">Ver perfil</a>
-                    <a href="listar_centroe.html" class="registrar_cuenta ml-1">Ver centros educativos</a>
-                    <a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar Sesión</a>
+
+                    <div id="menu_right_icons">
+                        <div class="popr" data-id="2"><img src="./images/settings_2.png" id=""></div>
+                        <div class="avatar_cont"><img src="" id="avatar_img"></div>
+                    </div>
+
+                </div>
+
+                <div id="avatar_container" style="margin-right: 100px;">
+
+                    <div class="popr-box" data-box-id="2">
+                        <a href="perfil_centroedu.html">
+                            <div class="popr-item" id="">Ver Perfil</div>
+                        </a>
+
+                        <a href="#">
+                            <div class="popr-item" id="">Ajustes</div>
+                        </a>
+
+                        <a href="index.html" onclick="localStorage.clear();">
+                            <div class="popr-item">Cerrar Sesion</div>
+                        </a>
+                    </div>
                 </div>
 
             </div>
         </nav>
+        <div style="clear:both; margin-bottom: 20px;"></div>
+        <div class="fondonav">
+            <nav>
+                <ul>
+                    <li><a class="color_text" href="tablero_centroeducativo.html">Perfil centro educativo</a></li>
+                    <li><a class="color_text" href="citas.html">Registrar citas con el centro</a></li>
+                    <li><a class="color_text" href="rating_centro.html">Dejar evaluacion de centro</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section class='rating-widget'>
@@ -89,5 +124,6 @@
 <script src="js/rating/index.js"></script>
 <script src="js/rating/servicio_rating.js"></script>
 <script src="js/rating/controlador_registrar_rating.js"></script>
+<script src="./js/popmenu/popr.js"></script>
 
 </html>
