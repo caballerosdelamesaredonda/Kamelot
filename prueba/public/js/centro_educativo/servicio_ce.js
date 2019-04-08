@@ -92,7 +92,7 @@ let listar_centroe = () => {
 
 // Validar informacion de campos de formulario
 
-let obtener_usuario_por_id = (pId) =>{
+let obtener_usuario_por_id_centro = (pId) =>{
   let usuario=[];
   let request = $.ajax({
       url: "http://localhost:4000/api/buscar_usuario",

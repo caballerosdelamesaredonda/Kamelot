@@ -23,7 +23,7 @@
             <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
             <div class="float-right middle">
                 <!--<lable class="white mr-1">Buscar</lable>
-                <input type="text" value="" name="" id="txtFiltro" class="input">-->
+                        <input type="text" value="" name="" id="txtFiltro" class="input">-->
                 <div class="float-right mr-2 mt-4">
 
                     <div id="menu_right_icons">
@@ -36,7 +36,7 @@
                 <div id="avatar_container" style="margin-right: 100px;">
 
                     <div class="popr-box" data-box-id="2">
-                        <a href="perfil_centroedu.html">
+                        <a href="perfil_padre_familia.html">
                             <div class="popr-item" id="">Ver Perfil</div>
                         </a>
 
@@ -56,6 +56,7 @@
         <div class="fondonav">
             <nav>
                 <ul>
+                    <li><a class="color_text" href="listar_centroe.html">Listar centros educativos</a></li>
                     <li><a class="color_text" href="tablero_centroeducativo.html">Perfil centro educativo</a></li>
                     <li><a class="color_text" href="citas.html">Registrar citas con el centro</a></li>
                     <li><a class="color_text" href="rating_centro.html">Dejar evaluacion de centro</a></li>
@@ -115,15 +116,18 @@
         </nav>
     </footer>
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="./js/padres_de_familia/servicio_padrefamilia.js"></script>
+    <script src="./js/padres_de_familia/controlador_avatar_pf.js"></script>
+    <script src="js/rating/laxvek.js"></script>
+    <script src="js/rating/index.js"></script>
+    <script src="js/rating/servicio_rating.js"></script>
+    <script src="js/rating/controlador_registrar_rating.js"></script>
+    <script src="./js/popmenu/popr.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-<script src="js/rating/laxvek.js"></script>
-<script src="js/rating/index.js"></script>
-<script src="js/rating/servicio_rating.js"></script>
-<script src="js/rating/controlador_registrar_rating.js"></script>
+</body>
 
 
 </html>

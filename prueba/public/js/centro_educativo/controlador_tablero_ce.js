@@ -24,7 +24,7 @@ let mostrar_datos = (pUsuarioLoggeado) => {
 };
 
 if (userid != null) {
-    usario_loggeado = obtener_usuario_por_id(userid);
+    usario_loggeado = obtener_usuario_por_id_centro(userid);
     mostrar_datos(usario_loggeado);
 }else{
     swal({
