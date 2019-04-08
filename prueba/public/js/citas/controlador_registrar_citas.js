@@ -7,15 +7,30 @@ const input_fecha = document.querySelector('#datepicker-13');
 const input_hora = document.querySelector('#slct_hora');
 const boton_registrar = document.querySelector('#btn_registrar');
 
-
 let validar = () => {
     let error = false;
+
+    if (input_razon.value == '') {
+        error = true;
+        input_razon.classList.add('error_input');
+    } else {
+        input_razon.classList.remove('error_input');
+    }
 
     if (input_fecha.value == '') {
         error = true;
         input_fecha.classList.add('error_input');
     } else {
         input_fecha.classList.remove('error_input');
+    }
+    
+    console.log(input_hora.value);
+
+    if (input_hora.value == '') {
+        error = true;
+        input_hora.classList.add('error_input');
+    } else {
+        input_hora.classList.remove('error_input');
     }
 
     return error;
@@ -88,6 +103,7 @@ let limpiar_datos_citas = () =>{
     for (let i = 0; i < e.length; i++) {
         e.options[i].removeAttribute("disabled");
     }
+    e.options[0].setAttribute("disabled", "true");
 }
 
 
