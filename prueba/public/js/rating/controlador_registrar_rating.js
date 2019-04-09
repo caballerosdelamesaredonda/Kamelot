@@ -43,8 +43,8 @@ let mostrarDatos = () => {
     } else {
         Swal.fire({
             type: 'warning',
-            title: 'Actividad No enviada con éxito',
-            text: `Revise los Campos`
+            title: 'La evaluación no pudo ser registrada',
+            text: `Por favor revise los campos resaltados`
         })
     }
 
