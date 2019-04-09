@@ -33,6 +33,21 @@ a:hover {
   color: #2196f3;
 }
 
+section#rating_container{
+  box-shadow: 0 4px 8px 0 #143646;
+  padding: 20px;
+  width: 780px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  height: 500px;
+}
+
+section#rating_container
+
+
 pre {
 display: block;
 padding: 9.5px;
@@ -72,8 +87,6 @@ border-radius: 4px;
 .header p {
   font-size:14px;
 }
-
-
 
 #a-footer {
   margin: 20px 0;
@@ -122,13 +135,11 @@ border-radius: 4px;
   color:#888;
 }
 
-
-
 /* Rating Star Widgets Style */
 .rating-stars ul {
   list-style-type:none;
   padding:0;
-  
+  text-align: center;
   -moz-user-select:none;
   -webkit-user-select:none;
 }

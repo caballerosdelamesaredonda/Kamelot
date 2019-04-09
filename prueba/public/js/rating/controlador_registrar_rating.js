@@ -4,7 +4,7 @@ const userPadreId = localStorage.getItem('usuario_en_sesion');
 const userCentroId = localStorage.getItem('centro_id');
 const input_comentario = document.querySelector('#rating_text_area');
 const input_rating = document.querySelector('#stars');
-const boton_registrar = document.querySelector('#btn_enviar');
+const boton_registrar = document.querySelector('#btn_registrar');
 
 
 
