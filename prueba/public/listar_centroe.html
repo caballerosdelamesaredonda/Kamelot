@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/registro_ce.css">
     <link rel="stylesheet" href="./css/popr.css">
+    <link rel="stylesheet" href="./css/tabla_centros/listar_centros.css">
 
     <title>Lista centro educativos</title>
 </head>
@@ -24,8 +25,6 @@
 
                 <div class="float-right mr-2 mt-4">
                     <div id="menu_right_icons">
-                        <lable class="white mr-1">Buscar</lable>
-                        <input type="text" value="" name="" id="txtFiltro" class="input">
                         <div class="popr" data-id="2"><img src="./images/settings_2.png" id=""></div>
                         <div class="avatar_cont"><img src="" id="avatar_img"></div>
                     </div>
@@ -62,25 +61,39 @@
     </header>
 
     <main>
-        <h1 class="h1">Lista centros educativos</h1>
-        <table width="800" id="tbl_centroe" align="center">
-            <thead class="head_backg">
-                <tr>
-                    <th class="padding border-right">Logo</th>
-                    <th class="padding border-right">Nombre</th>
-                    <th class="padding border-right">Correo</th>
-                    <th class="padding border-right">Teléfono</th>
-                    <th class="padding border-right">Tipo</th>
-                    <th class="padding border-right">Nivel</th>
-                    <th class="padding border-right">Provincia</th>
-                    <th class="padding">Cantón</th>
 
-                </tr>
-            </thead>
-            <tbody>
+        <h1 class="h1">Lista de centros educativos</h1>
 
-            </tbody>
-        </table>
+        <div id='filter_space'>
+            <lable class="black mr-1">Buscar:</lable>
+            <input type="text" value="" name="" id="txtFiltro" class="input">
+        </div>
+
+        <section>
+            <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <thead>
+                        <tr>
+                            <th class="padding border-right">Logo</th>
+                            <th class="padding border-right">Nombre</th>
+                            <th class="padding border-right">Correo</th>
+                            <th class="padding border-right">Teléfono</th>
+                            <th class="padding border-right">Tipo</th>
+                            <th class="padding border-right">Nivel</th>
+                            <th class="padding border-right">Provincia</th>
+                            <th class="padding">Canton</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0" id='tbl_centroe'>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
     </main>
 
