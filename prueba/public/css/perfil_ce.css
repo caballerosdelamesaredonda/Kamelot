@@ -145,3 +145,8 @@ ul li a {
 ul li a:hover {
     color: #f27232;
 }
+
+.middle2 {
+	margin-top: 40px;;
+	margin-bottom: auto;
+}
