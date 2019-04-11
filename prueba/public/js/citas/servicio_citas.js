@@ -60,4 +60,30 @@ let consultar_citas = (pCentroID) => {
 
 };
 
+let consultar_citas_pf = (pUserPF) => {
+
+    let consultar_cita = [];
+
+    let request = $.ajax({
+        url: "http://localhost:4000/api/consultar_citas_pf",
+        method: "POST",
+        data: {
+            userid : pUserPF
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+        async: false
+    });
+
+    request.done(function (res) {
+        consultar_cita = res.citas;
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+
+    });
+    return consultar_cita;
+
+};
+
 

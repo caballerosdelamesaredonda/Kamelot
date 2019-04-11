@@ -60,3 +60,26 @@ module.exports.consultar_citas = (req, res) => {
     )
 };
 
+module.exports.consultar_citas_pf = (req, res) => {
+    model_citas.find({userid: req.body.userid}).then(
+        function (citas) {
+            if (citas.length > 0) {
+                res.json(
+                    {
+                        success: true,
+                        citas: citas
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: false,
+                        citas: citas
+                    }
+                )
+            }
+        }
+
+    )
+};
+
