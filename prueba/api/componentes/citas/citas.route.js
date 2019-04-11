@@ -4,11 +4,10 @@ const express = require('express');
 const router = express.Router();
 const citas_api = require('./citas.api');
 
-router.param('id_noticia',function(req,res,next,id_noticia){
+router.param('id_noticia', function (req, res, next, id_noticia) {
     req.body.id_noticia = id_noticia;
     next();
 });
-
 
 router.route('/registrar_citas')
     .post(
@@ -21,6 +20,13 @@ router.route('/consultar_citas')
     .post(
         function (req, res) {
             citas_api.consultar_citas(req, res);
+        }
+    )
+
+router.route('/consultar_citas_pf')
+    .post(
+        function (req, res) {
+            citas_api.consultar_citas_pf(req, res);
         }
     )
 
