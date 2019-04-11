@@ -84,6 +84,8 @@ const utiles = require('./componentes/reg_utiles/utiles.route');
 
 const pregunta = require('./componentes/pregunta/pregunta.route');
 
+const transacciones = require('./componentes/transacciones/transacciones.route');
+
 
 app.use('/api', utiles);
 
@@ -100,6 +102,7 @@ app.use('/api', actividad);
 app.use('/api', etiquetas);
 app.use('/api', pregunta);
 app.use('/api', evaluacion_ce);
+app.use('/api', transacciones);
 
 
 // Se guarda todo lo que se ha realizado
