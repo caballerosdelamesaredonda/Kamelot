@@ -5,14 +5,19 @@
 
 		
 .input {
-	width: 150px;;
+	width: 150px;
 	height: 35px;
 	border: #6D6D6D solid 1px;
 	border-radius: 5px;
 }
 
 .middle {
-	margin-top: 80px;;
+	margin-top: 80px;
+	margin-bottom: auto;
+}
+
+.middle2 {
+	margin-top: 40px;
 	margin-bottom: auto;
 }
 		

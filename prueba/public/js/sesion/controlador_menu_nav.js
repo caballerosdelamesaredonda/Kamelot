@@ -3,20 +3,20 @@
 const usuario_en_sesion = obtener_usuario_por_id(localStorage.usuario_en_sesion);
 let menu_usuario = [];
 
-if (usuario_en_sesion == null || usuario_en_sesion == ''){
+if (usuario_en_sesion == null || usuario_en_sesion === ''){
     window.location.href = 'iniciar_sesion.html';
 }else{
     switch (usuario_en_sesion['tipo_usuario']) {
-        case 'admin':
+        case 'AD':
             menu_usuario = admin;
             break;
-        case 'padre de familia':
+        case 'PD':
             menu_usuario = padre_familia;
             break;
-        case 'centro educativo':
+        case 'CE':
             menu_usuario = centro_educativo;
             break;
-    };
+    }
 };
 
 let cargar_nav_con_menu = () =>{
@@ -33,7 +33,7 @@ let cargar_nav_con_menu = () =>{
 
     for (let i =0; i< menu_usuario.length; i++){
 
-    };
+    }
 
 
 

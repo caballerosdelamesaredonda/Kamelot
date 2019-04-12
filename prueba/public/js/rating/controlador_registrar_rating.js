@@ -4,7 +4,7 @@ const userPadreId = localStorage.getItem('usuario_en_sesion');
 const userCentroId = localStorage.getItem('centro_id');
 const input_comentario = document.querySelector('#rating_text_area');
 const input_rating = document.querySelector('#stars');
-const boton_registrar = document.querySelector('#btn_enviar');
+const boton_registrar = document.querySelector('#btn_registrar');
 
 
 
@@ -43,8 +43,8 @@ let mostrarDatos = () => {
     } else {
         Swal.fire({
             type: 'warning',
-            title: 'Actividad No enviada con éxito',
-            text: `Revise los Campos`
+            title: 'La evaluación no pudo ser registrada',
+            text: `Por favor revise los campos resaltados`
         })
     }
 

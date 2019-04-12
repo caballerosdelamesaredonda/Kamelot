@@ -5,24 +5,40 @@
 	border-radius: 5px;
 }
 
-/*section #frm_citas{
-text-align: center;
-width: 450px;
-height: 200px;
-background-color: grey;
-margin-bottom: 10px;
-margin-left: auto;
-margin-right: auto;
+section #frm_citas{
+    box-shadow: 0 4px 8px 0 #143646;
+    padding: 20px;
+    width: 780px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+    height: 300px;
 }
 
 section #frm_citas div{
     padding: 10px;
 }
 
+section #frm_citas input{
+		width: 200px;
+		height: 35px;
+		border: #48dbfb solid 1px;
+		border-radius: 5px;
+}
+
+section #frm_citas select{
+	width: 200px;
+	height: 35px;
+	border: #48dbfb solid 1px;
+	border-radius: 5px;
+}
+
 .highlight_citas {
     background-color: #d63031;
     color: #d63031;
-}*/
+}
 
 .white {
 	color: #ffffff;
@@ -67,14 +83,6 @@ section #frm_citas div{
 	font-size: 18px;		
 }
 
-.input_form {
-	display: block;
-    width: 200px;
-    height: 35px;
-    margin-bottom: 20px;
-	border: #48dbfb solid 1px;
-}
-
-.error_input {
+section #frm_citas .error_input {
     border: 2px solid #ED4C67;
 }
