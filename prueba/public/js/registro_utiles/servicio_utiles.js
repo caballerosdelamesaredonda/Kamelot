@@ -65,3 +65,204 @@ let consultar_utiles = (pId) => {
   return consultar_util;
 
 };
+
+/*let registrar_utiles = (pidCentro, pNombre, pTipo, pCiclo, pNivel, pAnho, pUtiles, pCantidad) => {
+  let request = $.ajax({
+    url: "http://localhost:4000/api/desactivar_utiles",
+    method: "POST",
+    data: {
+      idcentro: pidCentro,
+      nombre: pNombre,
+      tipo: pTipo,
+      ciclo: pCiclo,
+      nivel: pNivel,
+      anho: pAnho,
+      util: pUtiles,
+      cantidad: pCantidad
+    },
+    dataType: "json",
+    async: false,
+    contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+  });
+
+  request.done(function (msg) {
+    swal.fire({
+      type: 'success',
+      title: 'El útil fue agregado',
+      text: ''
+    }).then(function() {
+      window.location = "listar_utiles.html";
+
+    });
+  });
+
+  request.fail(function (jqXHR, textStatus) {
+    swal.fire({
+      type: 'error',
+      title: 'Los útiles no pudieron ser agregados',
+      text: 'Ocurrió un error inesperado, por favor intente de nuevo'
+    });
+  });
+};*/
+
+
+let buscar_util = (_id) => {
+  let util = [];
+
+  let request = $.ajax({
+    url: "http://localhost:400/api/buscar_util/"+id,
+    method: "GET", 
+    data:{
+    },
+    dataType: "json",
+    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    async : false
+  });
+
+  request.done(function (res){
+    util = res.util;
+  });
+
+  request.fail(function (jqXHR, textStatus){
+
+  });
+  return util;
+
+};
+
+let actualizar_utiles = (pidCentro, pNombre, pTipo, pCiclo, pNivel, pAnho, pUtiles, pCantidad, pid) =>{
+  let request = $.ajax({
+    url: "http://localhost:4000/api/actualizar_utiles",
+    method: "POST",
+    data: {
+      idcentro: pidCentro,
+      nombre: pNombre,
+      tipo: pTipo,
+      ciclo: pCiclo,
+      nivel: pNivel,
+      anho: pAnho,
+      util: pUtiles,
+      cantidad: pCantidad,
+      id: pid
+    },
+    dataType: "json",
+    async: false,
+    contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+  });
+
+  request.done(function (msg) {
+    swal.fire({
+      type: 'success',
+      title: 'El útil fue agregado',
+      text: ''
+    }).then(function() {
+      window.location = "listar_utiles.html";
+
+    });
+  });
+
+  request.fail(function (jqXHR, textStatus) {
+    swal.fire({
+      type: 'error',
+      title: 'Los útiles no pudieron ser agregados',
+      text: 'Ocurrió un error inesperado, por favor intente de nuevo'
+    });
+  });
+};
+
+
+let desactivar = (pid) => {
+  let request = $.ajax({
+    url: "http://localhost:4000/api/desactivar_utiles",
+    method: "POST",
+    data: {
+      id : pid,
+    },
+    dataType: "json",
+    async: false,
+    contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+  });
+
+  request.done(function (msg) {
+    swal.fire({
+      type: 'success',
+      title: 'El útil fue desactivado',
+      text: ''
+    }).then(function() {
+      window.location = "listar_utiles.html";
+
+    });
+  });
+
+  request.fail(function (jqXHR, textStatus) {
+    swal.fire({
+      type: 'error',
+      title: 'Los útiles no pudieron ser desactivador',
+      text: 'Ocurrió un error inesperado, por favor intente de nuevo'
+    });
+  });
+};
+
+let activar = (pid) => {
+  let request = $.ajax({
+    url: "http://localhost:4000/api/activar_utiles",
+    method: "POST",
+    data: {
+      id : pid,
+    },
+    dataType: "json",
+    async: false,
+    contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+  });
+
+  request.done(function (msg) {
+    swal.fire({
+      type: 'success',
+      title: 'El útil fue activado',
+      text: ''
+    }).then(function() {
+      window.location = "listar_utiles.html";
+
+    });
+  });
+
+  request.fail(function (jqXHR, textStatus) {
+    swal.fire({
+      type: 'error',
+      title: 'Los útiles no pudieron ser activados',
+      text: 'Ocurrió un error inesperado, por favor intente de nuevo'
+    });
+  });
+};
+
+let eliminar = (pid) => {
+  let request = $.ajax({
+    url: "http://localhost:4000/api/eliminar_utiles",
+    method: "POST",
+    data: {
+      id : pid,
+    },
+    dataType: "json",
+    async: false,
+    contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+  });
+
+  request.done(function (msg) {
+    swal.fire({
+      type: 'success',
+      title: 'El útil fue activado',
+      text: ''
+    }).then(function() {
+      window.location = "listar_utiles.html";
+
+    });
+  });
+
+  request.fail(function (jqXHR, textStatus) {
+    swal.fire({
+      type: 'error',
+      title: 'Los útiles no pudieron ser activados',
+      text: 'Ocurrió un error inesperado, por favor intente de nuevo'
+    });
+  });
+};
