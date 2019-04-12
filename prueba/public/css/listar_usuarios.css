@@ -125,7 +125,31 @@ tr:hover {
 }
 
 .column4 {
+    width: 330px;
+}
 
+.column5 {
+    width: 330px;
+}
+.column5 button{
+
+}
+
+.deshabilitar, .habilitar, .borrar{
+    cursor:pointer;
+    border: none;
+    text-align: center;
+}
+
+.habilitar{
+    background-image: url('https://img.icons8.com/ios/38/000000/visible.png');
+}
+.deshabilitar{
+    background-image: url('https://img.icons8.com/ios/38/000000/hide.png');
+}
+
+.borrar{
+    background-image: url('https://img.icons8.com/ios/38/000000/delete-sign.png');
 }
 
 .spacer {
@@ -177,3 +201,15 @@ button{
     box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
     clear: both;
 }
+
+
+input{
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 18px;
+    display: block;
+    width: 320px;
+    border: #48dbfb solid 1px;
+    border-radius: 5px;
+}
+
