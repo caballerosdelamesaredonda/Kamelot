@@ -20,7 +20,9 @@ let registrar_citas = (puserId, puserCentro,pRazon, pFecha, pHora) => {
         swal.fire({
             type: 'success',
             title: 'La cita fue registrada',
-            text: 'Gracias por registrar una actividad'
+            text: `Gracias por registrar una cita con el centro. Fecha: ${pFecha} Hora: ${pHora}`
+        }).then(function() {
+            window.location = "/public/padrefamilia/listar_citas_pf.html";
         });
     });
 
