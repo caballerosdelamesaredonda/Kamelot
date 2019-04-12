@@ -741,7 +741,6 @@ module.exports.registrar_pf = (req, res) =>{
     );
 };
 
-
 //listado centro educativo
 module.exports.listar_ce = (req ,res) =>{
     model_usuarios.find({tipo_usuario : 'CE'}).then(
@@ -930,3 +929,20 @@ module.exports.listar_secundaria = (req ,res) =>{
 
     )
 };
+
+
+module.exports.deshabilitar_usuario = (req ,res) =>{
+    model_usuarios.findByIdAndUpdate(req.body._id, {$set: {
+                estado: 'inactivo'
+            }},
+        function(error){
+            if(error){
+                res.json({success: false ,msg: 'No se pudo deshabilitar el usuario '});
+            }else{
+                res.json({success: true ,msg: 'El usuario se desactivó con éxito'});
+            }
+        }
+    )
+};
+module.exports.habilitar_usuario = (req ,res) =>{};
+module.exports.borrar_usuario = (req ,res) =>{};

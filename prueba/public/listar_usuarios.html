@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/general.css" type="text/css">
     <link rel="stylesheet" href="./css/listar_usuarios.css" type="text/css">
+    <link rel="stylesheet" href="./css/grupo_boton_radio.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
 
@@ -32,7 +33,12 @@
     <section id="seccion_tablas">
         <div>
             <input type="text" id="txt_buscar" placeholder="Filtrar">
-
+            <div class="grupo_boton_radio ">
+                <input type="radio" class="boton_radio" name="activo" value="activo" id="Activos" checked />
+                <label for="Activos">Activos</label>
+                <input type="radio" class="boton_radio" name="activo" value="inactivo" id="Inactivos" />
+                <label for="Inactivos">Inactivos</label>
+            </div>
         </div>
         <div class="contenedor_tablas">
             <div class="contenedor_head">

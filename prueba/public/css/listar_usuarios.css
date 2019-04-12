@@ -53,7 +53,7 @@ h1{
 }
 
 .contenedor_tablas {
-    top: 60px;
+    top: 28px;
     position: relative;
     padding-top: 40px;
     padding-bottom: 20px;
@@ -63,7 +63,7 @@ h1{
     vertical-align: middle;
     position: absolute;
     width: 100%;
-    top: 8px;
+    top: 0px;
 }
 
 .contenedor_head table tr th{
@@ -72,15 +72,17 @@ h1{
 
 th, td{
     padding: 20px;
-    text-align: center;
+    text-align: left;
+    vertical-align: middle;
 }
 
 
 .contenedor_body{
-    max-height: 440px;
+    max-height: 420px;
     overflow: auto;
     position: absolute;
-    top: 67px;
+    top: 60px;
+    border: 1px #E2E2E2 solid;
 }
 
 .contenedor_body td {
@@ -108,37 +110,47 @@ td {
     height: 38px;
 }
 
-tr:hover {
+.contenedor_body tr:hover {
     background-color: #E2E2E2;
 }
 
+.column1, .column2, .column3, .column4, .column5{
+    text-align: center;
+
+}
+
 .column1 {
-    width: 450px;
+    width: 22%;
 }
 
 .column2 {
-    width: 330px;
+    width: 35%;
 }
 
 .column3 {
-    width: 200px;
+    width: 15%;
 }
 
 .column4 {
-    width: 330px;
+    width: 10%;
 }
 
 .column5 {
-    width: 330px;
-}
-.column5 button{
-
+    width: 10%;
 }
 
 .deshabilitar, .habilitar, .borrar{
     cursor:pointer;
     border: none;
     text-align: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px 5px;
+    box-shadow: none;
 }
 
 .habilitar{
@@ -207,9 +219,10 @@ input{
     height: 30px;
     padding: 6px 12px;
     font-size: 18px;
-    display: block;
+    display: inline-block;
     width: 320px;
     border: #48dbfb solid 1px;
     border-radius: 5px;
+    margin-right: 20px;
 }
 
