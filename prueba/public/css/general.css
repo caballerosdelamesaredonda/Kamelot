@@ -12,6 +12,15 @@ a{
 	text-decoration: none;
 }
 
+b{
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	margin: 5px;
+	border: 1px;
+
+	border-color:  rgb(0, 0, 0);
+}  
+
 .color_text {
 	color: #192a56;
 }

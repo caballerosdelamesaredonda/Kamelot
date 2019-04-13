@@ -66,7 +66,7 @@ module.exports.consultar_utiles = (req, res) => {
 };
 
 module.exports.buscar_por_id = function (req, res) {
-    modelo_utiles.find({ _id: req.body.id }).then(
+    modelo_utiles.find({ _id: req.body.id_util }).then(
         function (utiles) {
             if (utiles.length > 0) {
                 registrar_utiles.json({ success: true, lista_utiles: utiles });
