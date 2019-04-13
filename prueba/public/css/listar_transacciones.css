@@ -31,6 +31,11 @@ h1{
     margin-bottom: auto;
 }
 
+.middle2 {
+    margin-top: 50px;
+    margin-bottom: auto;
+}
+
 .white {
     color: #ffffff;
     font-size: 18px;
@@ -48,7 +53,7 @@ h1{
 }
 
 .contenedor_tablas {
-    top: 60px;
+    top: 28px;
     position: relative;
     padding-top: 40px;
     padding-bottom: 20px;
@@ -58,7 +63,7 @@ h1{
     vertical-align: middle;
     position: absolute;
     width: 100%;
-    top: 8px;
+    top: 0px;
 }
 
 .contenedor_head table tr th{
@@ -67,15 +72,17 @@ h1{
 
 th, td{
     padding: 20px;
-    text-align: center;
+    text-align: left;
+    vertical-align: middle;
 }
 
 
 .contenedor_body{
-    max-height: 440px;
+    max-height: 420px;
     overflow: auto;
     position: absolute;
-    top: 67px;
+    top: 60px;
+    border: 1px #E2E2E2 solid;
 }
 
 .contenedor_body td {
@@ -103,24 +110,58 @@ td {
     height: 38px;
 }
 
-tr:hover {
+.contenedor_body tr:hover {
     background-color: #E2E2E2;
 }
 
+.column1, .column2, .column3, .column4, .column5{
+    text-align: center;
+
+}
+
 .column1 {
-    width: 450px;
+    width: 12%;
 }
 
 .column2 {
-    width: 330px;
+    width: 12%;
 }
 
 .column3 {
-    width: 200px;
+    width: 30%;
 }
 
 .column4 {
+    width: 10%;
+}
 
+.column5 {
+    width: 10%;
+}
+
+.deshabilitar, .habilitar, .borrar{
+    cursor:pointer;
+    border: none;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px 5px;
+    box-shadow: none;
+}
+
+.habilitar{
+    background-image: url('https://img.icons8.com/ios/38/000000/visible.png');
+}
+.deshabilitar{
+    background-image: url('https://img.icons8.com/ios/38/000000/hide.png');
+}
+
+.borrar{
+    background-image: url('https://img.icons8.com/ios/38/000000/delete-sign.png');
 }
 
 .spacer {
@@ -172,3 +213,16 @@ button{
     box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
     clear: both;
 }
+
+
+input{
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 18px;
+    display: inline-block;
+    width: 320px;
+    border: #48dbfb solid 1px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+

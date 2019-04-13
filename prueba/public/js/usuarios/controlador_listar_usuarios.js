@@ -104,6 +104,8 @@ let mostrar_datos = () =>{
             boton_deshabilitar.dataset.id_usuario = resultado[i]['_id'];
             boton_deshabilitar.addEventListener('click', function(){
                 deshabilitar(this.dataset.id_usuario);
+                tabla.innerHTML = '';
+                usuarios = listar_usuarios();
                 mostrar_datos();
             });
             boton_deshabilitar.classList.add('deshabilitar');
@@ -114,6 +116,7 @@ let mostrar_datos = () =>{
             boton_habilitar.addEventListener('click', function(){
                 habilitar(this.dataset.id_usuario);
                 tabla.innerHTML = '';
+                usuarios = listar_usuarios();
                 mostrar_datos();
             });
             boton_habilitar.classList.add('habilitar');
@@ -126,7 +129,9 @@ let mostrar_datos = () =>{
         boton_borrar.onclick = function(){
             borrar(this.dataset.id_usuario);
             tabla.innerHTML = '';
+            usuarios = listar_usuarios();
             mostrar_datos();
+
         };
         boton_borrar.classList.add('borrar');
         opciones.appendChild(boton_borrar);
