@@ -18,7 +18,7 @@ let get_param = (param) => {
     return id;
 }
 
-let _id = get_param('id');
+let _id = get_param('id_util');
 
 let utiles = buscar_util(_id);
 
