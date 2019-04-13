@@ -25,6 +25,7 @@ let registrar_transaccion = (pUsuario, pTipoUsuario, pTransaccion, pEstatus) => 
 
     peticion.fail(function(response){
         respuesta = response;
+        console.log(response.msj);
     });
 
     return respuesta;
