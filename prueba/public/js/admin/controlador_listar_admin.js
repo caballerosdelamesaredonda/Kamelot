@@ -6,13 +6,11 @@ console.log(userid);
 let usario_loggeado = [];
 
 let mostrar_datos = (pUsuarioLoggeado) => {
-    document.getElementById('imagen_perfil').src = usario_loggeado.foto;
-    document.getElementById('txt_primer_nombre').value = usario_loggeado.nombre;
-    document.getElementById('txt_segundo_nombre').value = usario_loggeado.segundo_nombre;
-    document.getElementById('txt_primer_apellido').value = usario_loggeado.papellido;
-    document.getElementById('txt_segundo_apellido').value = usario_loggeado.sapellido;
-    document.getElementById('txt_cedula').value = usario_loggeado.identificacion;
-    document.getElementById('txt_correo').value = usario_loggeado.correo_electronico;
+    document.getElementById('prueba').src = usario_loggeado.foto;
+    document.querySelector('#nombre').innerHTML = usario_loggeado.nombre;
+    document.querySelector('#apellido').innerHTML = usario_loggeado.papellido;
+    document.querySelector('#id').innerHTML = usario_loggeado.identificacion;
+    document.querySelector('#correo').innerHTML = usario_loggeado.correo_electronico;
 };
 
 if (userid != null) {

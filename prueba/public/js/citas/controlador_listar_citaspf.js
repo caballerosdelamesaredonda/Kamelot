@@ -15,20 +15,39 @@ let mostrar_lista_citas = () => {
             let dateformated = month + '-' + day + '-' + year;
             let cita_userid = obtener_usuario_por_id_avatar(citas[i]['userid']);
             let cita_centroid = obtener_usuario_por_id_centro(citas[i]['centroid']);
+            //let idcita = citas[i]['_id'];
             //console.log(month+'-'+day+'-'+year);
 
             let fila = tabla.insertRow(); // Crea tr de la tabla
-            fila.insertCell().innerHTML = cita_userid.nombre+' '+cita_userid.papellido;
+            //fila.setAttribute('id', idcita);
+            fila.insertCell().innerHTML = cita_userid.nombre + ' ' + cita_userid.papellido;
             fila.insertCell().innerHTML = cita_centroid.nombre;
             //fila.insertCell().innerHTML = citas[i]['fecha'];
             fila.insertCell().innerHTML = citas[i]['razon'];
             fila.insertCell().innerHTML = dateformated;
             fila.insertCell().innerHTML = citas[i]['hora'];
+            fila.insertCell().innerHTML = '<button class="btn_editar_cita"><img src="/public/images/edit.png" style="width: 20px; height:20px;"></button>' + ' ' + '<button class="btn_borrar_cita"><img src="/public/images/garbage.png" style="width: 20px; height:20px;"></button>';
+            fila.querySelector('button.btn_editar_cita').setAttribute('id', citas[i]['_id']);
+            fila.querySelector('button.btn_borrar_cita').setAttribute('id', citas[i]['_id']);
         }
     }
 };
 
 mostrar_lista_citas();
+
+$('.btn_editar_cita').click(function () {
+    var id_value = $(this).attr('id');
+    console.log('Editar' + id_value);
+});
+
+$('.btn_borrar_cita').click(function () {
+    var id_value = $(this).attr('id');
+    console.log('Borar' + id_value);
+});
+
+
+
+
 
 
 

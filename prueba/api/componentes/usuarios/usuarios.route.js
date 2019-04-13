@@ -70,7 +70,7 @@ router.route('/listar_primaria')
         function(req, res){
             api_usuarios.listar_primaria(req, res);
     }
-)
+);
 
 //end point lista secundaria
 
@@ -79,7 +79,37 @@ router.route('/listar_secundaria')
         function(req, res){
             api_usuarios.listar_secundaria(req, res);
     }
-)
+);
+
+//end point habilitar usuario
+
+router.route('/habilitar_usuario')
+    .post(
+        function(req, res){
+            api_usuarios.habilitar_usuario(req, res);
+        }
+    );
+
+//end point deshabilitar usuario
+
+router.route('/deshabilitar_usuario')
+    .post(
+        function(req, res){
+            api_usuarios.deshabilitar_usuario(req, res);
+        }
+    );
+
+//end point borrar usuario
+
+router.route('/borrar_usuario')
+    .post(
+        function(req, res){
+            api_usuarios.borrar_usuario(req, res);
+        }
+    );
+
+
+
 
 
 

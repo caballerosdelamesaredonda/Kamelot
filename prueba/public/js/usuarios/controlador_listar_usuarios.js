@@ -2,7 +2,7 @@
 
 const input_busqueda = document.querySelector('#txt_buscar');
 
-let usuarios = listar_usuarios();
+
 let tabla = document.querySelector('#tbl_usuarios tbody');
 let userid = localStorage.getItem('usuario_en_sesion');
 
@@ -13,14 +13,27 @@ if(userid==null){
 
 let mostrar_datos = () =>{
 
+    let usuarios = listar_usuarios();
 
     let busqueda = '';
     if (input_busqueda.value !== null){
         busqueda = input_busqueda.value;
     }
+
+    let resultadoEstado =[];
     let resultado =[];
 
-    resultado = usuarios.filter(usuario => (
+    let activo = document.querySelector('input[name="activo"]:checked');
+    if (activo.value === activo){
+        resultadoEstado = usuarios.filter(usuario => (
+                activo.value !== '' ? usuario.estado === 'activo' : usuario
+            )
+        );
+    }else{
+
+    }
+
+    resultado = resultadoEstado.filter(usuario => (
         busqueda.length > 0 ? usuario.nombre.toLowerCase().trim().includes(
             busqueda.toLowerCase().trim()
             ) : usuario
@@ -42,11 +55,13 @@ let mostrar_datos = () =>{
         let celda_correo = fila.insertCell();
         let celda_tipo = fila.insertCell();
         let estado = fila.insertCell();
+        let opciones = fila.insertCell();
 
         celda_nombre.classList.add('column1');
         celda_correo.classList.add('column2');
         celda_tipo.classList.add('column3');
         estado.classList.add('column4');
+        opciones.classList.add('column5');
 
         celda_nombre.innerHTML = resultado[i]['nombre'];
         
@@ -71,7 +86,39 @@ let mostrar_datos = () =>{
                 break;
         }
 
+
+
         estado.innerHTML = resultado[i]['estado'];
+        
+        if (resultado[i]['estado'] === 'activo'){
+
+            let boton_deshabilitar = document.createElement('button');
+            boton_deshabilitar.dataset.id_usuario = resultado[i]['_id'];
+            boton_deshabilitar.addEventListener('click', function(){
+                deshabilitar(this.dataset.id_usuario);
+                mostrar_datos();
+            });
+            boton_deshabilitar.classList.add('deshabilitar');
+            opciones.appendChild(boton_deshabilitar);
+        } else {
+            let boton_habilitar = document.createElement('button');
+            boton_habilitar.dataset.id_usuario = resultado[i]['_id'];
+            boton_habilitar.addEventListener('click', function(){
+                habilitar(this.dataset.id_usuario);
+                mostrar_datos();
+            });
+            boton_habilitar.classList.add('habilitar');
+            opciones.appendChild(boton_habilitar);
+        }
+
+        let boton_borrar = document.createElement('button');
+        boton_borrar.dataset.id_usuario = resultado[i]['_id'];
+        boton_borrar.addEventListener('click', function(){
+            borrar(this.dataset.id_usuario);
+            mostrar_datos();
+        });
+        boton_borrar.classList.add('borrar');
+        opciones.appendChild(boton_borrar);
 
     }
 

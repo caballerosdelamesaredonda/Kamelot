@@ -29,7 +29,7 @@ let registrar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
 
     request.done(function (msg) {
         swal.fire({
-          type: 'success',
+          icon: 'success',
           title: 'El padre de familia ha sido registrado.',
           text: 'Se le enviará un correo con una clave temporal.',
         }).then(function() {

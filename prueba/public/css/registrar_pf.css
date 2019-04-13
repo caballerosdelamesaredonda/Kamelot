@@ -61,7 +61,7 @@ body{
 
 #frm_registro_pf {
     position: absolute;
-    top: 650px;
+    top: 560px;
 }
 
 form section div{
@@ -136,7 +136,7 @@ main{
 }
 #btn_registrar {
     display: block;
-    margin-left: 36%;
+    margin-left: 37%;
 }
 
 button{

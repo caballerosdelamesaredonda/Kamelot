@@ -7,16 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/public/css/reset.css">
     <link rel="stylesheet" href="/public/css/general.css">
-    <link rel="stylesheet" href="./css/listar_usuarios.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/solicitudes.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/registro_ce.css">
     <link rel="stylesheet" href="./css/popr.css">
-    <title>Lista de transacciones</title>
+    <link rel="stylesheet" href="./css/tabla_centros/listar_centros.css">
+    <title>Lista centro educativos</title>
 </head>
 
 <body>
 
     <header class="main_header">
         <nav>
-            <img class="img_logo" src="./images/Logo.png" width="100" height="150" alt="Logo Costa Rica Educa">
+            <img class="img_logo" src="./images/Logo.png" width="61" height="80" alt="Logo Costa Rica Educa">
             <div class="float-right middle">
                 <!--<lable class="white mr-1">Buscar</lable>
                         <input type="text" value="" name="" id="txtFiltro" class="input">-->
@@ -52,7 +55,7 @@
         <div class="fondonav">
             <nav>
                 <ul>
-
+                    
                 </ul>
             </nav>
         </div>
@@ -60,33 +63,36 @@
 
     <main>
 
-        <h1 class="h1">Lista de transacciones</h1>
+        <h1 class="h1">Lista de centros educativos</h1>
 
         <div id='filter_space'>
             <lable class="black mr-1">Buscar:</lable>
             <input type="text" value="" name="" id="txtFiltro" class="input">
         </div>
 
-        <section id="seccion_tablas">
-            <div class="contenedor_tablas">
-                <div class="contenedor_head">
-                    <table>
-                        <thead class="head_backg">
+        <section>
+            <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <thead>
                         <tr>
-                            <th>Fecha y hora</th>
-                            <th>Tipo de transacción</th>
-                            <th>Usuario</th>
-                            <th>Tipo de usuario</th>
-                            <th>Estatus</th>
+                            <th class="padding border-right">Logo</th>
+                            <th class="padding border-right">Nombre</th>
+                            <th class="padding border-right">Correo</th>
+                            <th class="padding border-right">Teléfono</th>
+                            <th class="padding border-right">Tipo</th>
+                            <th class="padding border-right">Nivel</th>
+                            <th class="padding border-right">Provincia</th>
+                            <th class="padding">Canton</th>
                         </tr>
-                        </thead>
-                    </table>
-                </div>
-                <div class="contenedor_body">
-                    <table id="tbl_usuarios">
-                        <tbody></tbody>
-                    </table>
-                </div>
+                    </thead>
+                </table>
+            </div>
+            <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0" id='tbl_centroe'>
+                    <tbody>
+
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -100,16 +106,16 @@
             <a href="#">Contacto</a>
         </nav>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <script src="./js/padres_de_familia/servicio_padrefamilia.js"></script>
     <script src="./js/padres_de_familia/controlador_avatar_pf.js"></script>
     <script src="js/centro_educativo/servicio_ce.js"></script>
     <script src="js/centro_educativo/controlador_listar_centroe.js"></script>
     <script src="js/realizarbusqueda.js"></script>
     <script src="js/popmenu/popr.js"></script>
+
 </body>
 
 </html>
