@@ -70,6 +70,12 @@ a{
 	height: 120px;
 	margin-bottom: 80px;
 }
+
+.main_header_perfil {
+	background-color: #192a56;
+	width: 100%;
+	height: 120px;
+}
 .registrar_cuenta {
 	padding: 11px;
 	border:#f27232 solid 1px;
