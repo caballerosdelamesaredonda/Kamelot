@@ -83,3 +83,26 @@ module.exports.consultar_citas_pf = (req, res) => {
     )
 };
 
+module.exports.buscarcita_idcita = (req, res) => {
+    model_citas.find({_id: req.body.id_cita}).then(
+        function (citas) {
+            if (citas) {
+                res.json(
+                    {
+                        success: true,
+                        citas: citas
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: false,
+                        citas: citas
+                    }
+                )
+            }
+        }
+
+    )
+};
+
