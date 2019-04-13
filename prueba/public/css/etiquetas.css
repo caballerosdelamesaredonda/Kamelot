@@ -2,7 +2,7 @@
 
 margin-left: 33%;
 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-height: 300px;
+height: 100%;
 width: 385px;
 margin-bottom: 20px;
 padding-top: 5px;
@@ -13,7 +13,7 @@ margin-top: 30px;
 
 .registro{
     margin-top: 30px;
-    height: 60px;
+    height: 100%;
     margin-left: 30%;
 
 }
