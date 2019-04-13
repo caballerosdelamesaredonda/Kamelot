@@ -1,10 +1,11 @@
 'use strict';
 
 let citas = consultar_citas_pf(userPadreFamilia);
+const tabla = document.querySelector('.tabla_info tbody');
 
 let mostrar_lista_citas = () => {
 
-    let tabla = document.querySelector('.tabla_info tbody');
+    tabla.innerHTML = '';
 
     if (citas.success = true) {
         for (let i = 0; i < citas.length; i++) {
@@ -43,7 +44,29 @@ $('.btn_editar_cita').click(function () {
 
 $('.btn_borrar_cita').click(function () {
     var id_value = $(this).attr('id');
-    console.log('Borar' + id_value);
+    //console.log('Borar' + id_value);
+
+    Swal.fire({
+        title: 'Desea eliminar la cita?',
+        text: "Este accion no puede ser reversada!",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Si, eliminar cita!'
+    }).then((result) => {
+        if (result.value) {
+            Swal.fire(
+                'Eliminado!',
+                'La cita fue eliminada.',
+                'success'
+            )
+            eliminar_cita(id_value);
+            window.location = "/public/padrefamilia/listar_citas_pf.html";
+        }
+    })
+
 });
 
 
