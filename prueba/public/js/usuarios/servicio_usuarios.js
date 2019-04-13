@@ -45,7 +45,6 @@ let deshabilitar = (pId) =>{
         if (response.success){
             swal({
                 title: 'El usuario se deshabilito con éxito',
-                text: 'Ocurrió un error inesperado, por favor intente de nuevo',
                 icon: 'success',
             });
         }else{
@@ -57,8 +56,15 @@ let deshabilitar = (pId) =>{
         }
 
     });
-};
 
+    request.fail(function (jqXHR, textStatus) {
+        swal({
+            title: 'El usuario no se pudo deshabilitar',
+            text: 'Ocurrió un error inesperado, por favor intente de nuevo',
+            icon: 'error',
+        });
+    });
+};
 
 let habilitar = (pId) =>{
 
@@ -78,6 +84,44 @@ let habilitar = (pId) =>{
         if (response.success){
             swal({
                 title: 'El usuario se habilito con éxito',
+                icon: 'success',
+            });
+        }else{
+            swal({
+                title: 'El usuario no se pudo habilitar',
+                text: 'Ocurrió un error inesperado, por favor intente de nuevo',
+                icon: 'error',
+            });
+        }
+
+    });
+    request.fail(function (jqXHR, textStatus) {
+        swal({
+            title: 'El usuario no se pudo deshabilitar',
+            text: 'Ocurrió un error inesperado, por favor intente de nuevo',
+            icon: 'error',
+        });
+    });
+};
+
+let borrar = (pId) =>{
+
+    let request = $.ajax({
+        url: "http://localhost:4000/api/borrar_usuario",
+        method: 'POST',
+        async: false,
+        data: {
+            _id : pId
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    });
+
+    request.done(function (response) {
+
+        if (response.success){
+            swal({
+                title: 'El usuario se borró con éxito',
                 text: 'Ocurrió un error inesperado, por favor intente de nuevo',
                 icon: 'success',
             });
@@ -89,5 +133,12 @@ let habilitar = (pId) =>{
             });
         }
 
+    });
+    request.fail(function (jqXHR, textStatus) {
+        swal({
+            title: 'El usuario no se pudo deshabilitar',
+            text: 'Ocurrió un error inesperado, por favor intente de nuevo',
+            icon: 'error',
+        });
     });
 };

@@ -19,9 +19,21 @@ let mostrar_datos = () =>{
     if (input_busqueda.value !== null){
         busqueda = input_busqueda.value;
     }
+
+    let resultadoEstado =[];
     let resultado =[];
 
-    resultado = usuarios.filter(usuario => (
+    let activo = document.querySelector('input[name="activo"]:checked');
+    if (activo.value === activo){
+        resultadoEstado = usuarios.filter(usuario => (
+                activo.value !== '' ? usuario.estado === 'activo' : usuario
+            )
+        );
+    }else{
+
+    }
+
+    resultado = resultadoEstado.filter(usuario => (
         busqueda.length > 0 ? usuario.nombre.toLowerCase().trim().includes(
             busqueda.toLowerCase().trim()
             ) : usuario
@@ -86,6 +98,8 @@ let mostrar_datos = () =>{
                 deshabilitar(this.dataset.id_usuario);
                 mostrar_datos();
             });
+            boton_deshabilitar.classList.add('deshabilitar');
+            opciones.appendChild(boton_deshabilitar);
         } else {
             let boton_habilitar = document.createElement('button');
             boton_habilitar.dataset.id_usuario = resultado[i]['_id'];
@@ -93,19 +107,18 @@ let mostrar_datos = () =>{
                 habilitar(this.dataset.id_usuario);
                 mostrar_datos();
             });
+            boton_habilitar.classList.add('habilitar');
+            opciones.appendChild(boton_habilitar);
         }
 
-
-
         let boton_borrar = document.createElement('button');
-
-        boton_habilitar.classList.add('habilitar');
-        boton_deshabilitar.classList.add('deshabilitar');
+        boton_borrar.dataset.id_usuario = resultado[i]['_id'];
+        boton_borrar.addEventListener('click', function(){
+            borrar(this.dataset.id_usuario);
+            mostrar_datos();
+        });
         boton_borrar.classList.add('borrar');
-
-        boton_habilitar
-        boton_deshabilitar
-        boton_borrar
+        opciones.appendChild(boton_borrar);
 
     }
 
