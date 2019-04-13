@@ -43,7 +43,7 @@ let validar_credenciales = (pCorreo, pClave ) =>{
 };
 
 let obtener_usuario_por_id = (pId) =>{
-    let usuario='';
+    let usuario=[];
     let request = $.ajax({
         url: "http://localhost:4000/api/buscar_usuario",
         method: 'POST',
@@ -57,18 +57,20 @@ let obtener_usuario_por_id = (pId) =>{
 
     request.done(function (response) {
 
-    	if (response.success){
-    		usuario = response;
-		}else{
+        if (response.success){
+            usuario = response.usuario;
+        }else{
             usuario = response;
             swal({
                 type: 'error',
                 title: 'Error',
                 text: response.msj
             });
-		}
+        }
 
     });
 
     return  usuario;
 };
+
+

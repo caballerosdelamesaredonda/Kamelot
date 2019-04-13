@@ -30,5 +30,6 @@
 }
 .boton_radio:checked + label {
     background-color: #e2e2e2;
-    color: #b2bec3;
+    color: black;
+    font-weight: bold;
 }

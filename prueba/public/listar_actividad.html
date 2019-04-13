@@ -11,12 +11,17 @@
 	<link rel="stylesheet" href="./css/activdad.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
+<style>
+.middle2{
+	margin-top: 40px;
+}
 
+</style>
 <body>
 	<header class="main_header">
 		<nav>
 			<img class="img_logo" src="./images/Logo.png" width="61" height="80" alt="Logo Costa Rica Educa">
-			<div class="float-right middle">
+			<div class="float-right middle2">
 				<div class="float-right mr-2 mt-4">
 					<a href="perfil_centroedu.html" class="registrar_cuenta ml-1">Ver perfil</a>
 					<a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar
@@ -53,7 +58,7 @@
 		</table>
 	</main>
 
-	<footer class="main_footer">
+	<footer class="main_footer position-a">
 		<p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
 		<nav class="footer_nav mt-2 ml-1">
 			<a href="#">Inicio</a><span class="vertical-line"> | </span>
@@ -64,6 +69,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	 crossorigin="anonymous"></script>
+	<script src="js/transacciones/servicio_transaccion.js"></script>
 	<script src="js/actividades/servicio_actividad.js"></script>
 	<script src="js/actividades/controlador_listar_actividad_admin.js"></script>
 

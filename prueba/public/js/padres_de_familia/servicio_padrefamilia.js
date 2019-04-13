@@ -27,12 +27,16 @@ let registrar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
     });
 
+    let estado = 'Fallido';
+
     request.done(function (msg) {
         swal.fire({
           icon: 'success',
           title: 'El padre de familia ha sido registrado.',
           text: 'Se le enviará un correo con una clave temporal.',
         }).then(function() {
+          let usuario = obtener_usuario_por_id(localStorage.usuario_en_sesion);
+          registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "Registrar padre de familia", "Exitoso");
           window.location = "index.html";
     
         });
@@ -44,6 +48,8 @@ let registrar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
             text: 'Ocurrió un error inesperado, por favor intente de nuevo',
             icon: 'error',
         });
+        let usuario = obtener_usuario_por_id(localStorage.usuario_en_sesion);
+        registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "Registrar padre de familia", "Fallida");
     });
 };
 

@@ -2,7 +2,7 @@
 
 //funcion que llama al api mandadole los parametros requeridos para registrar categoria, con la funcion de manejo de errores
 
-function registrarTransaccion(pUsuario, pTipoUsuario, pTransaccion, pEstatus){
+let registrar_transaccion = (pUsuario, pTipoUsuario, pTransaccion, pEstatus) => {
     let respuesta = '';
     let peticion = $.ajax({
         url: 'http://localhost:4000/api/registrar_transaccion',
@@ -20,10 +20,12 @@ function registrarTransaccion(pUsuario, pTipoUsuario, pTransaccion, pEstatus){
 
     peticion.done(function(response){
         respuesta = response;
+        console.log(response.msj);
     });
 
     peticion.fail(function(response){
         respuesta = response;
+        console.log(response.msj);
     });
 
     return respuesta;
