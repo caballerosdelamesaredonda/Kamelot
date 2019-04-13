@@ -944,5 +944,28 @@ module.exports.deshabilitar_usuario = (req ,res) =>{
         }
     )
 };
-module.exports.habilitar_usuario = (req ,res) =>{};
-module.exports.borrar_usuario = (req ,res) =>{};
+module.exports.habilitar_usuario = (req ,res) =>{
+    model_usuarios.findByIdAndUpdate(req.body._id, {$set: {
+                estado: 'activo'
+            }},
+        function(error){
+            if(error){
+                res.json({success: false ,msg: 'No se pudo habilitar el usuario '});
+            }else{
+                res.json({success: true ,msg: 'El usuario se activó con éxito'});
+            }
+        }
+    )
+};
+
+module.exports.borrar_usuario = (req ,res) =>{
+    model_usuarios.findByIdAndDelete(req.body._id,
+        function(error){
+            if(error){
+                res.json({success: false ,msg: 'No se pudo borrar el usuario '});
+            }else{
+                res.json({success: true ,msg: 'El usuario se borro con éxito'});
+            }
+        }
+    )
+};
