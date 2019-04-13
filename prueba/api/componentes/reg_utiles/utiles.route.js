@@ -3,8 +3,8 @@ const express = require('express');
 const router = express.Router();
 const utiles_api = require('./utiles.api');
 
-router.param('id', function (req, res, next, id) {
-    req.body.id = id;
+router.param('id_util', function (req, res, next, id_util) {
+    req.body.id_util = id_util;
     next();
 });
 
@@ -29,7 +29,7 @@ router.route('/listar_utiles')
         }
     );
 
-router.route('/buscar_utiles/:id')
+router.route('/buscar_utiles/:id_util')
     .get(
         function (req, res) {
             utiles_api.buscar_por_id(req, res);

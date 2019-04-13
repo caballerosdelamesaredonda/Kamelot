@@ -2,16 +2,18 @@
 
 const input_busqueda = document.querySelector('#txt_buscar');
 
-
+let boton_activo = document.querySelector('input[name="activo"]:checked');
 let tabla = document.querySelector('#tbl_usuarios tbody');
 let userid = localStorage.getItem('usuario_en_sesion');
 
+tabla.innerHTML = '';
 
 if(userid==null){
     window.location.href='index.html';
 }
 
 let mostrar_datos = () =>{
+    tabla.innerHTML = '';
 
     let usuarios = listar_usuarios();
 
@@ -24,13 +26,19 @@ let mostrar_datos = () =>{
     let resultado =[];
 
     let activo = document.querySelector('input[name="activo"]:checked');
-    if (activo.value === activo){
+
+    if (activo.value === 'activo'){
         resultadoEstado = usuarios.filter(usuario => (
                 activo.value !== '' ? usuario.estado === 'activo' : usuario
             )
         );
+        tabla.innerHTML = '';
     }else{
-
+        resultadoEstado = usuarios.filter(usuario => (
+                activo.value !== '' ? usuario.estado === 'inactivo' : usuario
+            )
+        );
+        tabla.innerHTML = '';
     }
 
     resultado = resultadoEstado.filter(usuario => (
@@ -45,7 +53,7 @@ let mostrar_datos = () =>{
 
 
 
-    tabla.innerHTML = '';
+
 
     for(let i = 0; i < resultado.length; i++){
 
@@ -105,6 +113,7 @@ let mostrar_datos = () =>{
             boton_habilitar.dataset.id_usuario = resultado[i]['_id'];
             boton_habilitar.addEventListener('click', function(){
                 habilitar(this.dataset.id_usuario);
+                tabla.innerHTML = '';
                 mostrar_datos();
             });
             boton_habilitar.classList.add('habilitar');
@@ -113,10 +122,12 @@ let mostrar_datos = () =>{
 
         let boton_borrar = document.createElement('button');
         boton_borrar.dataset.id_usuario = resultado[i]['_id'];
-        boton_borrar.addEventListener('click', function(){
+
+        boton_borrar.onclick = function(){
             borrar(this.dataset.id_usuario);
+            tabla.innerHTML = '';
             mostrar_datos();
-        });
+        };
         boton_borrar.classList.add('borrar');
         opciones.appendChild(boton_borrar);
 

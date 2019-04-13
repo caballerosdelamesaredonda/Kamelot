@@ -31,7 +31,7 @@ a, a:hover {
   height: auto;
   min-height: 100vh;
   padding: 50px 20px;
-  padding-top: 100px;
+  padding-top: 50px;
   display: flex;
   display: flex;
 }
@@ -292,7 +292,7 @@ a, a:hover {
 .profile-card__button.button--gray {
   box-shadow: none;
   background: #dcdcdc;
-  color: #142029;
+  color: #ffffff;
 }
 .profile-card-message {
   width: 100%;
