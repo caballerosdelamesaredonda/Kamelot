@@ -59,9 +59,6 @@ let obtener_datos_cita = () => {
 
 };
 
-boton_registrar.addEventListener('click', obtener_datos_cita);
-
-
 let reservar_horas_programadas = () => {
     //console.log("Selector ejecutado");
     let citas = consultar_citas(userCentro_citas);
@@ -187,3 +184,6 @@ $(function () {
     $("#datepicker-13").datepicker({ dateFormat: 'mm-dd-yy', maxDate: '+20', minDate: '0', beforeShowDay: DisableSpecificDates /* $.datepicker.noWeekends */ });
     //$("#datepicker-13").datepicker("show");
 });
+
+
+boton_registrar.addEventListener('click', obtener_datos_cita);

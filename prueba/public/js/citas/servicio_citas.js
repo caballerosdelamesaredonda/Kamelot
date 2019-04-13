@@ -114,11 +114,12 @@ let buscarcita_citaid = (cita_id) => {
 
 };
 
-let actualizar_cita = (puserId, puserCentro,pRazon, pFecha, pHora) =>{
+let actualizar_cita = (pId,puserId, puserCentro,pRazon, pFecha, pHora) =>{
     let request = $.ajax({
-        url: "http://localhost:4000/api/registrar_citas",
+        url: "http://localhost:4000/api/actualizar_cita",
         method: "POST",
         data: {
+            _id: pId,
             userid: puserId,
             centroid: puserCentro,
             razon: pRazon,

@@ -38,7 +38,7 @@ module.exports.registrar_cita = (req, res) => {
 
 
 module.exports.consultar_citas = (req, res) => {
-    model_citas.find({centroid: req.body.centroid}).then(
+    model_citas.find({ centroid: req.body.centroid }).then(
         function (citas) {
             if (citas.length > 0) {
                 res.json(
@@ -61,7 +61,7 @@ module.exports.consultar_citas = (req, res) => {
 };
 
 module.exports.consultar_citas_pf = (req, res) => {
-    model_citas.find({userid: req.body.userid}).then(
+    model_citas.find({ userid: req.body.userid }).then(
         function (citas) {
             if (citas.length > 0) {
                 res.json(
@@ -84,7 +84,7 @@ module.exports.consultar_citas_pf = (req, res) => {
 };
 
 module.exports.buscarcita_idcita = (req, res) => {
-    model_citas.find({_id: req.body.id_cita}).then(
+    model_citas.find({ _id: req.body.id_cita }).then(
         function (citas) {
             if (citas) {
                 res.json(
@@ -106,3 +106,27 @@ module.exports.buscarcita_idcita = (req, res) => {
     )
 };
 
+module.exports.actualizar_cita = function (req, res) {
+    model_citas.findByIdAndUpdate(req.body._id, { $set: req.body },
+        
+        function (error) {
+            if (error) {
+                res.json(
+                    {
+                        success: false,
+                        msg: `No se pudo actualizar la cita, ocurrió el siguiente error ${error}`
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: true,
+                        msg: `Se actualizo la cita de forma correcta`
+                    }
+                )
+            }
+        }
+
+
+    );
+};

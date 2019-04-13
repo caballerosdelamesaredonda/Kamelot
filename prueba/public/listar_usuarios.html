@@ -34,9 +34,9 @@
         <div>
             <input type="text" id="txt_buscar" placeholder="Filtrar">
             <div class="grupo_boton_radio ">
-                <input type="radio" class="boton_radio" name="activo" value="activo" id="Activos" checked />
+                <input type="radio" class="boton_radio" name="activo" value="activo" id="Activos" checked onclick="mostrar_datos();"/>
                 <label for="Activos">Activos</label>
-                <input type="radio" class="boton_radio" name="activo" value="inactivo" id="Inactivos" />
+                <input type="radio" class="boton_radio" name="activo" value="inactivo" id="Inactivos" onclick="mostrar_datos();" />
                 <label for="Inactivos">Inactivos</label>
             </div>
         </div>
@@ -70,6 +70,7 @@
         <a href="#">Contacto</a>
     </nav>
 </footer>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="js/usuarios/servicio_usuarios.js"></script>

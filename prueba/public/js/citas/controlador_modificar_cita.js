@@ -2,7 +2,7 @@
 
 //const input_razon = document.querySelector('#razon_cita');
 //const input_fecha = document.querySelector('#datepicker-13');
-//const input_hora = document.querySelector('#slct_hora');
+const btn_actualizar = document.querySelector('#btn_actualizar');
 
 let get_param = (param) => {
     var url_string = window.location.href;
@@ -34,6 +34,19 @@ let mostrar_datos_cita = () => {
 if (cita) {
     mostrar_datos_cita();
 }
+
+let obtener_datos_update = () =>{
+    let userId = localStorage.getItem('usuario_en_sesion');
+    let centro_id = localStorage.getItem('centro_id');
+    let razon = input_razon.value;
+    let fecha = input_fecha.value;
+    let hora = input_hora.value;
+
+    actualizar_cita(cita_id,userId,centro_id,razon,fecha,hora);
+}
+
+
+btn_actualizar.addEventListener('click',obtener_datos_update);
 
 
 
