@@ -44,5 +44,12 @@ router.route('/buscar_cita/:id_cita')
         }
     )
 
+router.route('/eliminar_cita')
+    .post(
+        function (req, res) {
+            citas_api.eliminar_cita(req, res);
+        }
+    )
+
 
 module.exports = router;
