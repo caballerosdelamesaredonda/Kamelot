@@ -27,10 +27,10 @@ let mostrar_datos = () => {
             //creacion del boton de editar
             let boton_editar = document.createElement('a');
             boton_editar.textContent = 'Editar';
-            boton_editar.href = `actualizar_utiles.html?id=${utiles[i]['_id']}`;
+            boton_editar.href = `actualizar_utiles.html?id_util=${utiles[i]['_id']}`;
 
 
-            if(utiles[i]['estado'] == 'activo'){
+            if(utiles[i]['estado'] == 'activo'){    
                 //creacion boton de desactivar
             let boton_desactivar = document.createElement('a');
             boton_desactivar.textContent = 'Desactivar';
