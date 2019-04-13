@@ -106,11 +106,11 @@ let consultar_utiles = (pId) => {
 };*/
 
 
-let buscar_util = (_id) => {
+let buscar_util = (id_util) => {
   let util = [];
 
   let request = $.ajax({
-    url: "http://localhost:400/api/buscar_util/"+id,
+    url: "http://localhost:400/api/buscar_util/"+id_util,
     method: "GET", 
     data:{
     },
@@ -130,9 +130,9 @@ let buscar_util = (_id) => {
 
 };
 
-let actualizar_utiles = (pidCentro, pNombre, pTipo, pCiclo, pNivel, pAnho, pUtiles, pCantidad, pid) =>{
+let actualizar_util = (pidCentro, pNombre, pTipo, pCiclo, pNivel, pAnho, pUtiles, pCantidad, pid) =>{
   let request = $.ajax({
-    url: "http://localhost:4000/api/actualizar_utiles",
+    url: "http://localhost:4000/api/actualizar_util",
     method: "POST",
     data: {
       idcentro: pidCentro,

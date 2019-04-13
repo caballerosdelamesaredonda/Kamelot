@@ -15,7 +15,7 @@ router.route('/registrar_utiles')
         }
     );
 
-router.route('/actualizar_utiles')
+router.route('/actualizar_util')
     .post(
         function (req, res) {
             utiles_api.actualizar(req, res);

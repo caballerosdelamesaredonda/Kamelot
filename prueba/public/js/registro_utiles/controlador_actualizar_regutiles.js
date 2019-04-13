@@ -20,11 +20,11 @@ let get_param = (param) => {
 
 let _id = get_param('id_util');
 
-let utiles = buscar_util(_id);
+let util = buscar_util(_id);
 
 let mostrar_datos = () =>{
-    input_nombre.value = uties[0]['nombre'];
-    input_anho.value = utiles[0]['anho'];
+    input_nombre.value = util[0]['nombre'];
+    input_anho.value = util[0]['anho'];
 
     let opciones_tipo = document.querySelectorAll('#slt_tipo option');
     let opciones_ciclo = document.querySelectorAll('#slt_ciclo option');
@@ -33,47 +33,47 @@ let mostrar_datos = () =>{
     let opciones_nombre_util = document.querySelectorAll('#slt_nombre_util option');
     let opciones_cantidad = document.querySelectorAll('#slt_cantidad option');
 
-    const btn_actualizar = document.querySelector('#btn_actualizar');
+    //const btn_actualizar = document.querySelector('#btn_actualizar');
     
     for(let i = 0; i < opciones_tipo.length; i++){
-        if(opciones_tipo[i].textContent == utiles[0]['tipo']){
-            opciones_tipo[i].seleted = true;
+        if(opciones_tipo[i].textContent == util[0]['tipo']){
+            opciones_tipo[i].selected = true;
         }
     }
 
     for(let i = 0; i < opciones_ciclo.length; i++){
-        if(opciones_ciclo[i].textContent == utiles[0]['ciclo']){
-            opciones_ciclo[i].seleted = true;
+        if(opciones_ciclo[i].textContent == util[0]['ciclo']){
+            opciones_ciclo[i].selected = true;
         }
     }
 
     for(let i = 0; i < opciones_nivel.length; i++){
-        if(opciones_nivel[i].textContent == utiles[0]['nivel']){
-            opciones_nivel[i].seleted = true;
+        if(opciones_nivel[i].textContent == util[0]['nivel']){
+            opciones_nivel[i].selected = true;
         }
     }
 
     for(let i = 0; i < opciones_anho.length; i++){
-        if(opciones_anho[i].textContent == utiles[0]['anho']){
-            opciones_anho[i].seleted = true;
+        if(opciones_anho[i].textContent == util[0]['anho']){
+            opciones_anho[i].selected = true;
         }
     }
 
     for(let i = 0; i < opciones_nombre_util.length; i++){
-        if(opciones_nombre_util[i].textContent == utiles[0]['nombre_util']){
-            opciones_nombre_util[i].seleted = true;
+        if(opciones_nombre_util[i].textContent == util[0]['nombre_util']){
+            opciones_nombre_util[i].selected = true;
         }
     }
 
     for(let i = 0; i < opciones_cantidad.length; i++){
-        if(opciones_cantidad[i].textContent == utiles[0]['cantidad']){
-            opciones_cantidad[i].seleted = true;
+        if(opciones_cantidad[i].textContent == util[0]['cantidad']){
+            opciones_cantidad[i].selected = true;
         }
     }
 
 };
 
-if(utiles){
+if(util){
    mostrar_datos();
 
 }
@@ -87,7 +87,7 @@ let obtener_datos = () =>{
     let nombre_util = slt_nombre_util.selectedOptions[0].textContent;
     let tipo = slt_tipo.selectedOptions[0].textContent;
 
-    actualizar_utiles(nombre, anho, cantidad, ciclo, nivel, nombre_util, tipo, _id);
+    actualizar_util(nombre, anho, cantidad, ciclo, nivel, nombre_util, tipo, _id);
 };
 
 btn_actualizar.addEventListener('click', obtener_datos);
