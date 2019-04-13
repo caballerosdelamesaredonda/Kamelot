@@ -16,6 +16,13 @@ router.route('/registrar_citas')
         }
     );
 
+router.route('/actualizar_cita')
+    .post(
+        function (req, res) {
+            citas_api.actualizar_cita(req, res);
+        }
+    );
+
 router.route('/consultar_citas')
     .post(
         function (req, res) {
