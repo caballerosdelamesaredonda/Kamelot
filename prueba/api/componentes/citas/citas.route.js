@@ -4,8 +4,8 @@ const express = require('express');
 const router = express.Router();
 const citas_api = require('./citas.api');
 
-router.param('id_noticia', function (req, res, next, id_noticia) {
-    req.body.id_noticia = id_noticia;
+router.param('id_cita', function (req, res, next, id_cita) {
+    req.body.id_cita = id_cita;
     next();
 });
 
@@ -30,10 +30,10 @@ router.route('/consultar_citas_pf')
         }
     )
 
-router.route('/buscar_inmueble/:id_noticia')
+router.route('/buscar_cita/:id_cita')
     .get(
         function (req, res) {
-            citas_api.consultar_citas(req, res);
+            citas_api.buscarcita_idcita(req, res);
         }
     )
 

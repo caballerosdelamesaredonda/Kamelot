@@ -89,3 +89,64 @@ let consultar_citas_pf = (pUserPF) => {
 };
 
 
+let buscarcita_citaid = (cita_id) => {
+
+    let cita = [];
+
+    let request = $.ajax({
+        url: "http://localhost:4000/api/buscar_cita/"+cita_id,
+        method: "GET",
+        data: {
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+        async: false
+    });
+
+    request.done(function (res) {
+        cita = res.citas;
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+
+    });
+    return cita;
+
+};
+
+let actualizar_cita = (puserId, puserCentro,pRazon, pFecha, pHora) =>{
+    let request = $.ajax({
+        url: "http://localhost:4000/api/registrar_citas",
+        method: "POST",
+        data: {
+            userid: puserId,
+            centroid: puserCentro,
+            razon: pRazon,
+            fecha: pFecha,
+            hora: pHora
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+    });
+
+    request.done(function (msg) {
+        swal.fire({
+            type: 'success',
+            title: 'La cita fue registrada',
+            text: `Gracias por registrar una cita con el centro. Fecha: ${pFecha} Hora: ${pHora}`
+        }).then(function() {
+            window.location = "/public/padrefamilia/listar_citas_pf.html";
+        });
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+        swal.fire({
+            type: 'error',
+            title: 'La cita no fue registrada',
+            text: 'Ocurrió un error inesperado, por favor intente de nuevo'
+        });
+    }); 
+
+};
+
+
