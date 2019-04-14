@@ -142,7 +142,8 @@ tr:nth-child(even) {
     width: 250px;
     height: 150px;
     margin-bottom: 20px;
-	border: #48dbfb solid 1px;
+    border: #48dbfb solid 1px;
+    font-size: 18px;
 				
 }
 .form_control {
