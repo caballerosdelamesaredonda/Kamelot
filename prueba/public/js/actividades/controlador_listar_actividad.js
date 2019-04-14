@@ -1,38 +1,32 @@
 'use strict';
 
-let userlocal_noticias = localStorage.getItem('centro_id');
+let userlocal_actividad = localStorage.getItem('centro_id');
 //console.log(userlocal_noticias);
-let noticias = consultar_noticias(userlocal_noticias);
+let actividad = consultar_actividad(userlocal_actividad);
 
-if(userlocal_noticias==null){
+if(userlocal_actividad==null){
     window.location.href='index.html';
 }
 
-let mostrar_noticias_tablero = () => {
+let mostrar_actividad_tablero = () => {
 
     var docFrag = document.createDocumentFragment();
 
-    for (let i = 0; i < noticias.length; i++) {
-        let newdate = new Date(noticias[i]['fecha']);
-        let month = newdate.getMonth() + 1;
-        let day = newdate.getDate();
-        let year = newdate.getFullYear();
-        let dateformated = month + '-' + day + '-' + year;
-
+    for (let i = 0; i < actividad.length; i++) {
         // Agregar datos dinamicos como div
-        var template = document.querySelector('#tmpl_news');
+        var template = document.querySelector('#tmpl_actividad');
         var clone = document.importNode(template.content, true);
-        clone.querySelector('#h1_card').innerHTML = noticias[i]['titulo'];
-        clone.querySelector('#h2_card').innerHTML = dateformated;
-        clone.querySelector('#p_card').innerHTML = noticias[i]['descripcion'];
+        clone.querySelector('#titulo_card').innerHTML = actividad[i]['titulo'];
+        clone.querySelector('#parrafo_card').innerHTML = actividad[i]['actividad'];
+        clone.querySelector('#imagen_actividad').innerHTML = `<img src="${actividad[i]['foto']}" height="110px" width="110px"> `;
         docFrag.appendChild(clone);
     }
-    document.querySelector('#news_cards').appendChild(docFrag);
+    document.querySelector('#tmpl_actividad').appendChild(docFrag);
     //delete docFrag;
 
 };
 
-mostrar_noticias_tablero();
+mostrar_actividad_tablero();
 
 
 

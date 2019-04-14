@@ -44,16 +44,15 @@
 			</nav>
 		</div>
   </header>
-  <h1 class="h1 margen">Información adicional del centro:</h1><br>
+  <h1 class="h1 margen">Información adicional del centro:</h1>
  
 <template id="tmpl_actividad">	
 <section class="cards-wrapper">
   <div class="card-grid-space">
-    <a class="card" href="./listar_actividad.html" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+    <a class="card" href="./listar_actividad.html" style="--bg-img: url(`${actividad[i]['foto']}`)">
       <div>
-        <h1 id="titulo_card">HTML Syntax</h1>
-        <p id="parrafo_card">The syntax of a language is how it works. How to actually write it. Learn HTML</p>
-        <div class="date">6 Oct 2017</div>
+        <h1 id="titulo_card"></h1>
+        <p id="parrafo_card"></p>
         <div class="tags">
           <div class="tag">HTML</div>
         </div>
@@ -70,6 +69,12 @@
 		<a href="#">FAQ</a><span class="vertical-line"> | </span>
 		<a href="#">Contacto</a>
 	</nav>
-</footer>	
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
+<script src="./js/actividades/controlador_listar_actividad.js"></script>
+<script src="./js/actividades/servicio_actividad.js"></script>
+<script src="./js/actividades/controlador_listar_actividad_admin.js"></script>
+<script src="js/actividades/controlador_listar_actividad_publico.js"></script>	
 </body>
 </html>
