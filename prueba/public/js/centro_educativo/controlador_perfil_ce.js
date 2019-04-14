@@ -1,14 +1,7 @@
 'use strict';
 
-let userid = localStorage.getItem('usuario_en_sesion');
-console.log(userid);
-
+let userPerfilCentro = localStorage.getItem('usuario_en_sesion');
 let usario_loggeado = [];
-
-//Funcion para colocar la imagen de avatar en el div con el id de avatar_img
-let mostrar_avatar = (pUsuarioLoggeado) =>{
-    $("#avatar_img").attr("src",usario_loggeado.foto);
-}
 
 let mostrar_datos = (pUsuarioLoggeado) => {
 
@@ -40,9 +33,8 @@ let mostrar_datos = (pUsuarioLoggeado) => {
 
 };
 
-if (userid != null) {
-    usario_loggeado = obtener_usuario_por_id_centro(userid);
-    mostrar_avatar(usario_loggeado);
+if (userPerfilCentro != null) {
+    usario_loggeado = obtener_usuario_por_id_centro(userPerfilCentro);
     mostrar_datos(usario_loggeado);
 }else{
     swal({

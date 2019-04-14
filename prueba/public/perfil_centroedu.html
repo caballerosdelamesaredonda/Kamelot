@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Perfil Centro Educativo</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/perfil_ce.css">
-    <link rel="stylesheet" href="./css/popr.css">
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/general.css">
+    <link rel="stylesheet" href="/public/css/perfil_ce.css">
+    <link rel="stylesheet" href="/public/css/popr.css">
+    <link rel="stylesheet" href="/public/css/menu_nav/dropdown.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
+
 <style type="text/css">
     .slideshow-container {
         max-width: 1000px;
@@ -132,13 +134,15 @@
         font-size: 16px;
         margin-left: 5px;
     }
+
     .middle2 {
-	    margin-top: 30px;;
-	    margin-bottom: auto;
+        margin-top: 30px;
+        margin-bottom: auto;
     }
 </style>
 
 <body>
+
     <header class="main_header">
         <nav>
             <img class="img_logo" src="./images/Logo.png" width="61" height="80" alt="Logo Costa Rica Educa">
@@ -177,17 +181,39 @@
         <div class="fondonav">
             <nav>
                 <ul>
-                    <li><a class="color_text" href="registro_noticias.html">Registrar noticias</a></li>
-                    <li><a class="color_text" href="listar_noticias.html">Listar noticias</a></li>
-                    <li><a class="color_text" href="registro_actividad.html">Registro actividad</a></li>
-                    <li><a class="color_text" href="listar_actividad.html">Listar actividad</a></li>
-                    <li><a class="color_text" href="registrar_utiles.html">Registrar utiles</a></li>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Noticias</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="registro_noticias.html">Registrar noticias</a>
+                            <a class="color_text" href="listar_noticias.html">Listar noticias</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Actividades</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="registro_actividad.html">Registrar actividad</a>
+                            <a class="color_text" href="listar_actividad.html">Listar actividad</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Utiles</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="registrar_utiles.html">Registrar utiles</a>
+                            <a class="color_text" href="listar_utiles.html">Listar Utiles</a>
+                        </div>
+                    </div>
+
                     <li><a class="color_text" href="etiqueta_centroe.html">Asociar etiqueta</a></li>
                     <li><a class="color_text" href="citas.html">Listar Citas</a></li>
-                    <li><a class="color_text" href="listar_utiles.html">Listar Utiles</a></li>
-                    
+
                 </ul>
             </nav>
+
+
+
         </div>
     </header>
 
@@ -315,12 +341,13 @@
             <a href="#">Contacto</a>
         </nav>
     </footer>
-    <script src="./js/centro_educativo/slider.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/public/js/centro_educativo/slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="./js/centro_educativo/servicio_ce.js"></script>
-    <script src="./js/centro_educativo/controlador_perfil_ce.js"></script>
-    <script src="./js/popmenu/popr.js"></script>
+    <script src="/public/js/centro_educativo/servicio_ce.js"></script>
+    <script src="/public/js/centro_educativo/controlador_perfil_ce.js"></script>
+    <script src="/public/js/centro_educativo/controlador_avatar_ce.js"></script>
+    <script src="/public/js/popmenu/popr.js"></script>
 
 </body>
 
