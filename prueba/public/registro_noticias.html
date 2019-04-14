@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        Aplicacion MEP
+        Registrar Notica
     </title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./css/reset.css">
@@ -15,6 +15,26 @@
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->
+    <style type="text/css">
+        .form_backgorund {
+            width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+	        box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.75);
+        }
+        .h1_notica {
+	        font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+	        text-align: center;
+        }
+        .p-t1 {
+            padding-top: 30px;
+        }
+        .text_size {
+            font-size: 18px;
+        }
+    </style>
 </head>
 
 <body>
@@ -43,11 +63,11 @@
 		</div>
     </header>
 
-    <main class="mt-3" style="height: 500px;">
+    <main class="mt-3" style="height: 570px;">
             
-        <div>
-            <h1 class="h1 color_text">Registrar noticia del centro educativo</h1>
-                
+        <div class="form_backgorund">
+            <h1 class="h1_notica color_text p-t1">Registrar Noticia</h1>
+            <section>  
             <!-- Formulario de registro de citas -->
             <form id="frm_noticias" class="form-control">
         
@@ -58,10 +78,11 @@
             <input class="input_form descripcion" type="text" id="txt_descripcion">
 
             <label class="lable color_text" for="txt_fecha">Fecha:</label>
-            <input class="input_form" type="date" id="txt_fecha">
+            <input class="input_form text_size" type="date" id="txt_fecha">
         
             <button class="mt-2" type="button" id="btn_registrar">Registrar noticia</button>
             </form>
+            </section>
         </div>
 
     </main>
