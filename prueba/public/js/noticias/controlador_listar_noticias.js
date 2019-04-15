@@ -30,7 +30,7 @@ let mostrar_datos = () => {
         fila.insertCell().innerHTML = noticias[i]['titulo'];
         fila.insertCell().innerHTML = noticias[i]['descripcion'];
         fila.insertCell().innerHTML = dateformated;
-        fila.insertCell().innerHTML = '<button class="btn_editar_noticia"><img src="/public/images/edit.png" style="width: 20px; height:20px;"></button>' + ' ' + '<button class="btn_borrar_noticia"><img src="/public/images/garbage.png" style="width: 20px; height:20px;"></button>';
+        fila.insertCell().innerHTML = '<button class="btn_editar_noticia" style="border: none; background-color: inherit;"><img src="/public/images/edit.png" style="width: 20px; height:20px;"></button>' + ' ' + '<button class="btn_borrar_noticia" style="border: none; background-color: inherit;"><img src="/public/images/garbage.png" style="width: 20px; height:20px;"></button>';
         fila.querySelector('button.btn_editar_noticia').setAttribute('id', noticias[i]['_id']);
         fila.querySelector('button.btn_borrar_noticia').setAttribute('id', noticias[i]['_id']);
     }

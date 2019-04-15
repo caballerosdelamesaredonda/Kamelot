@@ -27,7 +27,7 @@ let mostrar_lista_citas = () => {
             fila.insertCell().innerHTML = citas[i]['razon'];
             fila.insertCell().innerHTML = dateformated;
             fila.insertCell().innerHTML = citas[i]['hora'];
-            fila.insertCell().innerHTML = '<button class="btn_editar_cita"><img src="/public/images/edit.png" style="width: 20px; height:20px;"></button>' + ' ' + '<button class="btn_borrar_cita"><img src="/public/images/garbage.png" style="width: 20px; height:20px;"></button>';
+            fila.insertCell().innerHTML = '<button class="btn_editar_cita" style="border: none; background-color: inherit;"><img src="/public/images/edit.png" style="width: 20px; height:20px;"></button>' + ' ' + '<button class="btn_borrar_cita" style="border: none; background-color: inherit;"><img src="/public/images/garbage.png" style="width: 20px; height:20px;"></button>';
             fila.querySelector('button.btn_editar_cita').setAttribute('id', citas[i]['_id']);
             fila.querySelector('button.btn_borrar_cita').setAttribute('id', citas[i]['_id']);
         }
