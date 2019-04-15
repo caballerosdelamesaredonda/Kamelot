@@ -1,14 +1,14 @@
 'use strict';
 
-let registrar_actividad = (pId,pActividad, pfoto) => {
+let registrar_actividad = (pId, pTitulo, pActividad, pFoto) => {
   let request = $.ajax({
     url: "http://localhost:4000/api/registrar_actividad",
     method: "POST",
     data: {
       userid: pId,
-      titulo: ptitulo,
+      titulo: pTitulo,
       actividad: pActividad,
-      foto: pfoto
+      foto: pFoto
     },
     dataType: "json",
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -19,7 +19,7 @@ let registrar_actividad = (pId,pActividad, pfoto) => {
       type: 'success',
       title: 'La actividad fue enviada',
       text: 'En unos segundos se mostrará en tu perfil'
-    }).then(function() {
+    }).then(function () {
       window.location = "listar_actividad.html";
     });
   });
@@ -43,19 +43,19 @@ let listar_actividad = () => {
     },
     dataType: "json",
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-    async : false
+    async: false
   });
 
   request.done(function (res) {
     lista_actividad = res.actividad;
-    
+
   });
 
   request.fail(function (jqXHR, textStatus) {
-    
+
   });
   return lista_actividad;
- 
+
 };
 
 
@@ -64,31 +64,31 @@ let consultar_actividad_usuario = (pId) => {
   let consultar_actividad = [];
 
   let request = $.ajax({
-      url: "http://localhost:4000/api/listar_actividad_usuario",
-      method: 'POST',
-      async: false,
-      data: {
-          userid : pId
-      },
-      dataType: "json",
-      contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    url: "http://localhost:4000/api/listar_actividad_usuario",
+    method: 'POST',
+    async: false,
+    data: {
+      userid: pId
+    },
+    dataType: "json",
+    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
   });
 
   request.done(function (response) {
 
-    if (response.success){
+    if (response.success) {
       consultar_actividad = response.actividads;
-  }else{
-          consultar_actividad = response.actividads;
-          swal.fire({
-              type: 'error',
-              title: 'Error',
-              text: response.msj
-          });
-  }
+    } else {
+      consultar_actividad = response.actividads;
+      swal.fire({
+        type: 'error',
+        title: 'Error',
+        text: response.msj
+      });
+    }
 
   });
 
-  return  consultar_actividad;
+  return consultar_actividad;
 
 };

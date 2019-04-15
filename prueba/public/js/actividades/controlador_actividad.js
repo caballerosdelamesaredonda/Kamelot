@@ -6,26 +6,26 @@ const input_imagen = document.querySelector('#image_preview');
 let userlocal = localStorage.getItem('usuario_en_sesion');
 let boton_registrar = document.querySelector('#btn_registrar');
 
-if (userlocal ==null) {
-   
-    window.location.href='index.html';
-    
-} 
+if (userlocal == null) {
+
+    window.location.href = 'index.html';
+
+}
 
 let validar = () => {
     let error = false;
 
-    if(input_titulo.value == ''){
+    if (input_titulo.value == '') {
         input_titulo.classList.add('error_input')
         error = true;
-    }else{
+    } else {
         input_titulo.classList.remove('error_input')
     };
 
-    if(input_actividad.value == ''){
+    if (input_actividad.value == '') {
         input_actividad.classList.add('error_input')
         error = true;
-    }else{
+    } else {
         input_actividad.classList.remove('error_input')
     };
 
@@ -38,18 +38,18 @@ let mostrarDatos = () => {
     if (validar() == false) {
         let titulo = input_titulo.value;
         let actividad = input_actividad.value;
-        let foto = input_imagen.src;        
-        registrar_actividad(userlocal,titulo,actividad, foto);
-    }else{
-        
+        let foto = input_imagen.src;
+        registrar_actividad(userlocal, titulo, actividad, foto);
+    } else {
+
         Swal.fire({
             type: 'warning',
             title: 'Actividad No enviada con éxito',
-            text: `Revise los Campos`    
+            text: `Revise los Campos`
         })
     }
 
-    
+
 
 }
 

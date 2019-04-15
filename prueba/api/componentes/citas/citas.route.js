@@ -51,5 +51,12 @@ router.route('/eliminar_cita')
         }
     )
 
+    router.route('/consultar_citas_ce')
+    .post(
+        function (req, res) {
+            citas_api.consultar_citas_ce(req, res);
+        }
+    )
+
 
 module.exports = router;

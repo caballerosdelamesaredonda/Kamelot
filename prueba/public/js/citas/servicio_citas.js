@@ -88,7 +88,6 @@ let consultar_citas_pf = (pUserPF) => {
 
 };
 
-
 let buscarcita_citaid = (cita_id) => {
 
     let cita = [];
@@ -181,5 +180,31 @@ let eliminar_cita = (pId) =>{
 
 };
 
+
+let consultar_citas_ce = (pUserCE) => {
+
+    let consultar_cita = [];
+
+    let request = $.ajax({
+        url: "http://localhost:4000/api/consultar_citas_ce",
+        method: "POST",
+        data: {
+            centroid : pUserCE
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+        async: false
+    });
+
+    request.done(function (res) {
+        consultar_cita = res.citas;
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+
+    });
+    return consultar_cita;
+
+};
 
 

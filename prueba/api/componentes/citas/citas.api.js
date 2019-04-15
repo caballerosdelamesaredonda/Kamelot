@@ -154,3 +154,28 @@ module.exports.eliminar_cita = function (req, res) {
 
     );
 };
+
+// Citas para mostrar en el perfil de centro educativo
+
+module.exports.consultar_citas_ce = (req, res) => {
+    model_citas.find({ centroid: req.body.centroid }).then(
+        function (citas) {
+            if (citas.length > 0) {
+                res.json(
+                    {
+                        success: true,
+                        citas: citas
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: false,
+                        citas: citas
+                    }
+                )
+            }
+        }
+
+    )
+};
