@@ -1,98 +1,115 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <title>
-        Aplicacion MEP
-    </title>
-    <meta charset="utf-8"> <!-- para permitir el uso de chars especiales -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/citas.css">
-    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de Utíles</title>
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./css/general.css" type="text/css">
+    <link rel="stylesheet" href="./css/perfil_ce.css">
+    <link rel="stylesheet" href="/public/css/popr.css">
+    <link rel="stylesheet" href="/public/css/menu_nav/dropdown.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+
 </head>
 
 <body>
 
-    <header class="header_principal">
-
+    <header class="main_header">
         <nav>
-            <img class="img_logo" src="images/logo_transparent.png" alt="Logo Costa Rica Educa" width="61" height="80">
-            <a href="#">Costa Rica Educa</a>
-            <label for="txt_buscar">Buscar</label>
-            <input type="text" id="txt_buscar">
-            <a href="index.html">Home</a>
-            <a href="iniciar_sesion.html">Iniciar Sesion</a>
+            <img class="img_logo" src="./images/Logo.png" width="61" height="80" alt="Logo Costa Rica Educa">
+            <div class="float-right middle2">
+                <!--<lable class="white mr-1">Buscar</lable>
+                                <input type="text" value="" name="" id="txtFiltro" class="input">-->
+                <div class="float-right mr-2">
+
+                    <div id="menu_right_icons">
+                        <div class="popr" data-id="2"><img src="./images/settings_2.png" id=""></div>
+                        <div class="avatar_cont"><img src="" id="avatar_img"></div>
+                    </div>
+
+                </div>
+
+                <div id="avatar_container" style="margin-right: 100px;">
+
+                    <div class="popr-box" data-box-id="2">
+                        <a href="perfil_centroedu.html">
+                            <div class="popr-item" id="">Ver Perfil</div>
+                        </a>
+
+                        <a href="#">
+                            <div class="popr-item" id="">Ajustes</div>
+                        </a>
+
+                        <a href="index.html" onclick="localStorage.clear();">
+                            <div class="popr-item">Cerrar Sesion</div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
         </nav>
+        <div style="clear:both; margin-bottom: 20px;"></div>
+        <div class="fondonav">
+            <nav>
+                <ul>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Noticias</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="registro_noticias.html">Registrar noticias</a>
+                            <a class="color_text" href="listar_noticias.html">Listar noticias</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Actividades</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="registro_actividad.html">Registrar actividad</a>
+                            <a class="color_text" href="listar_actividad.html">Listar actividad</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Utiles</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="registrar_utiles.html">Registrar utiles</a>
+                            <a class="color_text" href="listar_utiles.html">Listar Utiles</a>
+                        </div>
+                    </div>
+
+                    <li><a class="color_text" href="etiqueta_centroe.html">Asociar etiqueta</a></li>
+                    <li><a class="color_text" href="citas.html">Listar Citas</a></li>
+
+                </ul>
+            </nav>
+
+
+
+        </div>
     </header>
 
-    <form id="frm_citas">
 
-        <!-- Formulario de registro de citas -->
-
-        <h1>Solicitar cita con centro educativo</h1>
-
-        <div>
-            <label for="txt_codigo">Codigo:</label>
-            <input type="text" id="txt_codigo">
-        </div>
-
-        <div>
-            <label for="txt_nombre">Nombre:</label>
-            <input type="text" id="txt_nombre">
-        </div>
-
-        <div>
-            <label for="txt_correo">Correo Electronico:</label>
-            <input type="text" id="txt_correo">
-        </div>
-
-        <div>
-            <label for="datepicker-13">Seleccionar Fecha:</label>
-            <input type="text" id="datepicker-13">
-        </div>
-
-        <div>
-            <label for="slct_hora">Seleccionar Hora:</label>
-            <select id="slct_hora">
-                <option value="9:00" class="time_9">9:00</option>
-                <option value="10:00" class="time_10">10:00</option>
-                <option value="11:00" class="time_11">11:00</option>
-                <option value="12:00" class="time_12">12:00</option>
-                <option value="13:00" class="time_13">13:00</option>
-                <option value="14:00" class="time_14">14:00</option>
-                <option value="15:00" class="time_15">15:00</option>
-                <option value="16:00" class="time_16">16:00</option>
-                <option value="17:00" class="time_17">17:00</option>
-                <option value="18:00" class="time_18">18:00</option>
-                <option value="19:00" class="time_19">19:00</option>
-                <option value="20:00" class="time_20">20:00</option>
-                <option value="21:00" class="time_21">21:00</option>
-            </select>
-        </div>
-
-
-        <div>
-            <button type="button" id="btn_registrar">Registrar Cita</button>
-        </div>
-
-    </form>
-
-
-    <table class="tabla_info">
+    <h1 class="h1">Lista de Citas</h1>
+    <table width="800" id="" align="center" class="tabla_info">
         <thead>
             <tr>
-                <th>Codigo</th>
-                <th>Nombre</th>
-                <th>Correo</th>
+                <th>Nombre Padre</th>
+                <th>Nombre Centro</th>
+                <th>Razon Cita</th>
                 <th>Fecha</th>
+                <th>Hora</th>
+                <th>Modificar</th>
             </tr>
         </thead>
         <tbody>
 
         </tbody>
+
     </table>
 
     <footer class="main_footer">
@@ -105,12 +122,18 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        
     <script src="js/transacciones/servicio_transaccion.js"></script>
-    <script src="js/citas/servicio_citas.js"></script>
-    <script src="js/citas/controlador_listar_citas.js"></script>
-    <script type="text/javascript" src="js/citas/jquery.timepicker.js"></script>
+
+
+    <!-- Servicio para obtener el menu de avatar e imagen de avatar-->
+
+    <script src="/public/js/centro_educativo/servicio_ce.js"></script>
+    <script src="/public/js/centro_educativo/controlador_avatar_ce.js"></script>
+    <script src="/public/js/popmenu/popr.js"></script>
 
 </body>
-
 
 </html>
