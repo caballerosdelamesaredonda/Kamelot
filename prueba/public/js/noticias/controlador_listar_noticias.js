@@ -4,8 +4,8 @@ let userlocal = localStorage.getItem('usuario_en_sesion');
 //console.log(userlocal);
 let noticias = consultar_noticias(userlocal);
 
-if(userlocal==null){
-    window.location.href='index.html';
+if (userlocal == null) {
+    window.location.href = 'index.html';
 }
 
 let mostrar_datos = () => {
@@ -14,19 +14,24 @@ let mostrar_datos = () => {
     tabla.innerHTML = '';
 
     for (let i = 0; i < noticias.length; i++) {
-            let newdate = new Date(noticias[i]['fecha']);
-            let month = newdate.getMonth() + 1;
-            let day = newdate.getDate();
-            let year = newdate.getFullYear();
-            let dateformated = month + '-' + day + '-' + year;
+        let newdate = new Date(noticias[i]['fecha']);
+        //Align to server date
+        newdate.setHours(newdate.getHours() + 6);
 
-            let fila = tabla.insertRow(); // Crea tr de la tabla
-            fila.insertCell().innerHTML = noticias[i]['titulo'];
-            fila.insertCell().innerHTML = noticias[i]['descripcion'];
-            fila.insertCell().innerHTML = dateformated;
-            fila.insertCell().innerHTML = '<button class="btn_editar_noticia"><img src="/public/images/edit.png" style="width: 20px; height:20px;"></button>' + ' ' + '<button class="btn_borrar_noticia"><img src="/public/images/garbage.png" style="width: 20px; height:20px;"></button>';
-            fila.querySelector('button.btn_editar_noticia').setAttribute('id', noticias[i]['_id']);
-            fila.querySelector('button.btn_borrar_noticia').setAttribute('id', noticias[i]['_id']);
+        let month = newdate.getMonth() + 1;
+        let day = newdate.getDate();
+        let year = newdate.getFullYear();
+        let dateformated = month + '-' + day + '-' + year;
+
+        //var d2ISO = newdate.toISOString();
+
+        let fila = tabla.insertRow(); // Crea tr de la tabla
+        fila.insertCell().innerHTML = noticias[i]['titulo'];
+        fila.insertCell().innerHTML = noticias[i]['descripcion'];
+        fila.insertCell().innerHTML = dateformated;
+        fila.insertCell().innerHTML = '<button class="btn_editar_noticia"><img src="/public/images/edit.png" style="width: 20px; height:20px;"></button>' + ' ' + '<button class="btn_borrar_noticia"><img src="/public/images/garbage.png" style="width: 20px; height:20px;"></button>';
+        fila.querySelector('button.btn_editar_noticia').setAttribute('id', noticias[i]['_id']);
+        fila.querySelector('button.btn_borrar_noticia').setAttribute('id', noticias[i]['_id']);
     }
 
 };

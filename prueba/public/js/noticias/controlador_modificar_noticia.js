@@ -27,7 +27,6 @@ let mostar_datos_noticia = () => {
 
     input_fecha.value = datedatabase;
     input_descripcion.value = noticia[0]['descripcion'];
-
 }
 
 if (noticia) {
@@ -36,10 +35,10 @@ if (noticia) {
 
 let obtener_datos_update = () => {
     let titulo = input_titulo.value;
-    let fecha = input_fecha.value;
     let descripcion = input_descripcion.value;
+    let fecha = input_fecha.value;
 
-    actualizar_noticia(noticia_id, titulo, fecha, descripcion);
+    actualizar_noticia(noticia_id, titulo,descripcion, fecha);
 }
 
 

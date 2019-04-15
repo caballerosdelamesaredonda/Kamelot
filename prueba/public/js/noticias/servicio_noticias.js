@@ -2,6 +2,7 @@
 // Validar informacion de campos de formulario
 
 let registrar_noticias = (puserid, ptitulo, pdescripcion, pfecha) => {
+
     let request = $.ajax({
         url: "http://localhost:4000/api/registrar_noticias",
         method: "POST",
@@ -9,7 +10,7 @@ let registrar_noticias = (puserid, ptitulo, pdescripcion, pfecha) => {
             userid: puserid,
             titulo: ptitulo,
             descripcion: pdescripcion,
-            fecha: pfecha
+            fecha: isoString
         },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -20,7 +21,7 @@ let registrar_noticias = (puserid, ptitulo, pdescripcion, pfecha) => {
             type: 'success',
             title: 'La noticia fue registrada',
             text: 'Gracias por registrar una actividad'
-        }).then(function() {
+        }).then(function () {
             window.location = "listar_noticias.html";
         });
     });
@@ -34,7 +35,6 @@ let registrar_noticias = (puserid, ptitulo, pdescripcion, pfecha) => {
     });
 };
 
-
 let consultar_noticias = (pId) => {
 
     let consultar_noticia = [];
@@ -44,7 +44,7 @@ let consultar_noticias = (pId) => {
         method: 'POST',
         async: false,
         data: {
-            userid : pId
+            userid: pId
         },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
@@ -52,24 +52,24 @@ let consultar_noticias = (pId) => {
 
     request.done(function (response) {
 
-    	if (response.success){
-    		consultar_noticia = response.noticias;
-		}else{
+        if (response.success) {
+            consultar_noticia = response.noticias;
+        } else {
             consultar_noticia = response.noticias;
             swal.fire({
                 type: 'error',
                 title: 'Error',
                 text: response.msj
             });
-		}
+        }
 
     });
 
-    return  consultar_noticia;
+    return consultar_noticia;
 
 };
 
-let eliminar_noticia = (pId) =>{
+let eliminar_noticia = (pId) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/eliminar_noticia",
         method: "POST",
@@ -85,7 +85,7 @@ let eliminar_noticia = (pId) =>{
             type: 'success',
             title: 'Noticia eliminada',
             text: `Gracias, la noticia fue eliminada correctamente`
-        }).then(function() {
+        }).then(function () {
             window.location = "/public/padrefamilia/listar_citas_pf.html";
         });
     });
@@ -96,7 +96,7 @@ let eliminar_noticia = (pId) =>{
             title: 'La noticia no fue eliminada',
             text: 'Ocurrió un error inesperado, por favor intente de nuevo'
         });
-    }); 
+    });
 
 };
 
@@ -105,7 +105,7 @@ let buscarnoticia_noticiaid = (noticia_id) => {
     let noticia = [];
 
     let request = $.ajax({
-        url: "http://localhost:4000/api/buscar_noticia/"+noticia_id,
+        url: "http://localhost:4000/api/buscar_noticia/" + noticia_id,
         method: "GET",
         data: {
         },
@@ -125,7 +125,11 @@ let buscarnoticia_noticiaid = (noticia_id) => {
 
 };
 
-let actualizar_noticia = (pId,pTitulo, pFecha, pDescripcion) =>{
+let actualizar_noticia = (pId, pTitulo, pDescripcion, pFecha) => {
+
+    var now = new Date(pFecha);
+    var isoString = now.toISOString();
+
     let request = $.ajax({
         url: "http://localhost:4000/api/actualizar_noticia",
         method: "POST",
@@ -133,7 +137,7 @@ let actualizar_noticia = (pId,pTitulo, pFecha, pDescripcion) =>{
             _id: pId,
             titulo: pTitulo,
             descripcion: pDescripcion,
-            fecha: pFecha
+            fecha: isoString
         },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -144,7 +148,7 @@ let actualizar_noticia = (pId,pTitulo, pFecha, pDescripcion) =>{
             type: 'success',
             title: 'La noticia fue modificada',
             text: `Gracias por modificar la noticia. Titulo: ${pTitulo}`
-        }).then(function() {
+        }).then(function () {
             window.location = "/public/listar_noticias.html";
         });
     });
@@ -155,7 +159,7 @@ let actualizar_noticia = (pId,pTitulo, pFecha, pDescripcion) =>{
             title: 'La noticia no fue modificada',
             text: 'Ocurrió un error inesperado, por favor intente de nuevo'
         });
-    }); 
+    });
 
 };
 
