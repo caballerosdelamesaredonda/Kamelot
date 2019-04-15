@@ -24,9 +24,40 @@ let mostrar_datos = () => {
             fila.insertCell().innerHTML = noticias[i]['titulo'];
             fila.insertCell().innerHTML = noticias[i]['descripcion'];
             fila.insertCell().innerHTML = dateformated;
+            fila.insertCell().innerHTML = '<button class="btn_editar_noticia"><img src="/public/images/edit.png" style="width: 20px; height:20px;"></button>' + ' ' + '<button class="btn_borrar_noticia"><img src="/public/images/garbage.png" style="width: 20px; height:20px;"></button>';
+            fila.querySelector('button.btn_editar_noticia').setAttribute('id', noticias[i]['_id']);
+            fila.querySelector('button.btn_borrar_noticia').setAttribute('id', noticias[i]['_id']);
     }
 
 };
 
 mostrar_datos();
 
+
+
+$('.btn_borrar_noticia').click(function () {
+    var id_value = $(this).attr('id');
+    //console.log('Borar' + id_value);
+
+    Swal.fire({
+        title: 'Desea eliminar la noticia?',
+        text: "Este accion no se puede revertir!",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Si, eliminar noticia!'
+    }).then((result) => {
+        if (result.value) {
+            Swal.fire(
+                'Eliminado!',
+                'La noticia fue eliminada.',
+                'success'
+            )
+            eliminar_noticia(id_value);
+            window.location = "/public/listar_noticias.html";
+        }
+    })
+
+});

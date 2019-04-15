@@ -59,3 +59,27 @@ module.exports.consultar_noticias = (req, res) => {
 };
 
 
+module.exports.eliminar_noticia = function (req, res) {
+    model_noticias.findByIdAndRemove(req.body._id,
+        function (error) {
+            if (error) {
+                res.json(
+                    {
+                        success: false,
+                        msg: `No se pudo eliminar la noticia, ocurrió el siguiente error ${error}`
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: true,
+                        msg: `Se elimino la noticia de forma correcta`
+                    }
+                )
+            }
+        }
+
+
+    );
+};
+
