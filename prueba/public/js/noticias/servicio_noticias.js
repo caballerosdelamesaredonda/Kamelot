@@ -10,7 +10,7 @@ let registrar_noticias = (puserid, ptitulo, pdescripcion, pfecha) => {
             userid: puserid,
             titulo: ptitulo,
             descripcion: pdescripcion,
-            fecha: isoString
+            fecha: pfecha
         },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
