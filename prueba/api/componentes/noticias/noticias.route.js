@@ -18,4 +18,11 @@ router.route('/consultar_noticias')
         }
     )
 
+router.route('/eliminar_noticia')
+    .post(
+        function (req, res) {
+            noticias_api.eliminar_noticia(req, res);
+        }
+    )
+
 module.exports = router;
