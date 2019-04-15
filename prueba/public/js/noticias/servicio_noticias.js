@@ -100,3 +100,62 @@ let eliminar_noticia = (pId) =>{
 
 };
 
+let buscarnoticia_noticiaid = (noticia_id) => {
+
+    let noticia = [];
+
+    let request = $.ajax({
+        url: "http://localhost:4000/api/buscar_noticia/"+noticia_id,
+        method: "GET",
+        data: {
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+        async: false
+    });
+
+    request.done(function (res) {
+        noticia = res.noticias;
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+
+    });
+    return noticia;
+
+};
+
+let actualizar_noticia = (pId,pTitulo, pFecha, pDescripcion) =>{
+    let request = $.ajax({
+        url: "http://localhost:4000/api/actualizar_noticia",
+        method: "POST",
+        data: {
+            _id: pId,
+            titulo: pTitulo,
+            descripcion: pDescripcion,
+            fecha: pFecha
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+    });
+
+    request.done(function (msg) {
+        swal.fire({
+            type: 'success',
+            title: 'La noticia fue modificada',
+            text: `Gracias por modificar la noticia. Titulo: ${pTitulo}`
+        }).then(function() {
+            window.location = "/public/listar_noticias.html";
+        });
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+        swal.fire({
+            type: 'error',
+            title: 'La noticia no fue modificada',
+            text: 'Ocurrió un error inesperado, por favor intente de nuevo'
+        });
+    }); 
+
+};
+

@@ -83,3 +83,51 @@ module.exports.eliminar_noticia = function (req, res) {
     );
 };
 
+
+module.exports.buscarnoticia_noticiaid = (req, res) => {
+    model_noticias.find({ _id: req.body.noticia_id }).then(
+        function (noticias) {
+            if (noticias) {
+                res.json(
+                    {
+                        success: true,
+                        noticias: noticias
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: false,
+                        noticias: noticias
+                    }
+                )
+            }
+        }
+
+    )
+};
+
+module.exports.actualizar_noticia = function (req, res) {
+    model_noticias.findByIdAndUpdate(req.body._id, { $set: req.body },
+        
+        function (error) {
+            if (error) {
+                res.json(
+                    {
+                        success: false,
+                        msg: `No se pudo actualizar la noticia, ocurrió el siguiente error ${error}`
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: true,
+                        msg: `Se actualizo la noticia de forma correcta`
+                    }
+                )
+            }
+        }
+
+
+    );
+};

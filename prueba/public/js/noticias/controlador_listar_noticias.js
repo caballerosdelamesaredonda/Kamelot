@@ -34,6 +34,12 @@ let mostrar_datos = () => {
 mostrar_datos();
 
 
+$('.btn_editar_noticia').click(function () {
+    var id_value = $(this).attr('id');
+    console.log('Editar' + id_value);
+    window.location = `/public/modificar_noticias.html?id=${id_value}`;
+});
+
 
 $('.btn_borrar_noticia').click(function () {
     var id_value = $(this).attr('id');
