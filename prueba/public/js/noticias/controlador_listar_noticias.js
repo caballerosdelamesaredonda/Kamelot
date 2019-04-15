@@ -23,7 +23,8 @@ let mostrar_datos = () => {
         let year = newdate.getFullYear();
         let dateformated = month + '-' + day + '-' + year;
 
-        //var d2ISO = newdate.toISOString();
+        // Server time date
+        //var d2ISO = newdate.toISOString(); 
 
         let fila = tabla.insertRow(); // Crea tr de la tabla
         fila.insertCell().innerHTML = noticias[i]['titulo'];
