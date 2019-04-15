@@ -21,6 +21,7 @@ let mostar_datos_noticia = () => {
     input_titulo.value = noticia[0]['titulo'];
 
     let newdate = new Date(noticia[0]['fecha']);
+    newdate.setHours(newdate.getHours() + 6);
     let datedatabase = newdate.getFullYear() + '-'
     + ('0' + (newdate.getMonth() + 1)).slice(-2) + '-'
     + ('0' + newdate.getDate()).slice(-2);
