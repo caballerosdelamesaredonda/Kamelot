@@ -9,6 +9,7 @@ module.exports.registrar = (req, res) =>{
             titulo : req.body.actividad,
             actividad : req.body.actividad,
             foto : req.body.foto,
+            estado : 'Activo'
         }
     );
     actividad_nueva.save(
