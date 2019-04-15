@@ -3,18 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/general.css" type="text/css">
-    <link rel="stylesheet" href="./css/perfil_ce.css">
-
-
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/general.css">
+    <link rel="stylesheet" href="/public/css/perfil_ce.css">
+    <link rel="stylesheet" href="/public/css/registro_ce.css">
+    <link rel="stylesheet" href="/public/css/popr.css">
+    <link rel="stylesheet" href="/public/css/menu_nav/dropdown.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <link rel="stylesheet" href="./css/banner_rce.css">
-    <link rel="stylesheet" href="./css/registro_ce.css">
-    <title>Registro centro educativo</title>
-
-
 
     <title>Registrar Utiles</title>
 </head>
@@ -24,29 +19,77 @@
     <header class="main_header">
         <nav>
             <img class="img_logo" src="./images/Logo.png" width="61" height="80" alt="Logo Costa Rica Educa">
-            <div class="float-right middle3">
-                <div class="float-right mr-2 mt-4">
-                    <a href="perfil_centroedu.html" class="registrar_cuenta ml-1">Ver perfil</a>
-                    <a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar Sesión</a>
+            <div class="float-right middle2">
+                <!--<lable class="white mr-1">Buscar</lable>
+                        <input type="text" value="" name="" id="txtFiltro" class="input">-->
+                <div class="float-right mr-2">
+
+                    <div id="menu_right_icons">
+                        <div class="popr" data-id="2"><img src="./images/settings_2.png" id=""></div>
+                        <div class="avatar_cont"><img src="" id="avatar_img"></div>
+                    </div>
+
                 </div>
+
+                <div id="avatar_container" style="margin-right: 100px;">
+
+                    <div class="popr-box" data-box-id="2">
+                        <a href="perfil_centroedu.html">
+                            <div class="popr-item" id="">Ver Perfil</div>
+                        </a>
+
+                        <a href="#">
+                            <div class="popr-item" id="">Ajustes</div>
+                        </a>
+
+                        <a href="index.html" onclick="localStorage.clear();">
+                            <div class="popr-item">Cerrar Sesion</div>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </nav>
         <div style="clear:both; margin-bottom: 20px;"></div>
         <div class="fondonav">
             <nav>
                 <ul>
-                    <li><a class="color_text" href="registro_noticias.html">Registrar noticias</a></li>
-                    <li><a class="color_text" href="listar_noticias.html">Listar noticias</a></li>
-                    <li><a class="color_text" href="registro_actividad.html">Registro actividad</a></li>
-                    <li><a class="color_text" href="listar_actividad.html">Listar actividad</a></li>
-                    <li><a class="color_text" href="registrar_utiles.html">Registrar utiles</a></li>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Noticias</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="registro_noticias.html">Registrar noticias</a>
+                            <a class="color_text" href="listar_noticias.html">Listar noticias</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Actividades</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="registro_actividad.html">Registrar actividad</a>
+                            <a class="color_text" href="listar_actividad.html">Listar actividad</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Utiles</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="registrar_utiles.html">Registrar utiles</a>
+                            <a class="color_text" href="listar_utiles.html">Listar Utiles</a>
+                        </div>
+                    </div>
+
                     <li><a class="color_text" href="etiqueta_centroe.html">Asociar etiqueta</a></li>
-                    <li><a class="color_text" href="listar_utiles.html">Listar Utiles</a></li>
+                    <li><a class="color_text" href="citas.html">Listar Citas</a></li>
 
                 </ul>
             </nav>
+
+
+
         </div>
     </header>
+
 
     <main>
 
@@ -64,8 +107,7 @@
 
                                 <div>
                                     <label for="txt_nombre">Nombre:</label>
-                                    <input type="text" id="txt_nombre" class='input_form'
-                                        placeholder="Nombre de útil - Ej: Utiles Noveno">
+                                    <input type="text" id="txt_nombre" class='input_form' placeholder="Nombre de útil - Ej: Utiles Noveno">
                                 </div>
 
 
@@ -110,8 +152,7 @@
                             <div class="col-der">
                                 <div>
                                     <label for="text_anho">Año:</label>
-                                    <input type="text" id="text_anho" class='input_form'
-                                        placeholder="Digite el año - Ej: 2019">
+                                    <input type="text" id="text_anho" class='input_form' placeholder="Digite el año - Ej: 2019">
                                 </div>
 
                                 <div>
@@ -195,11 +236,17 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="js/transacciones/servicio_transaccion.js"></script>
     <script src="/public/js/registro_utiles/servicio_utiles.js"></script>
     <script src="/public/js/registro_utiles/controlador_regutiles.js"></script>
+
+    <!-- Servicio para obtener el menu de avatar e imagen de avatar-->
+
+    <script src="/public/js/centro_educativo/servicio_ce.js"></script>
+    <script src="/public/js/centro_educativo/controlador_avatar_ce.js"></script>
+    <script src="/public/js/popmenu/popr.js"></script>
 
 </body>
 
