@@ -168,7 +168,7 @@ let actualizar_actividad = (pId, pTitulo, pDescripcion, pFoto) => {
       swal.fire({
           type: 'success',
           title: 'La actividad fue modificada',
-          text: `Gracias por modificar la noticia. Titulo: ${pTitulo}`
+          text: `Gracias por modificar la actividad. Titulo: ${pTitulo}`
       }).then(function () {
           window.location = "/public/listar_actividad.html";
       });

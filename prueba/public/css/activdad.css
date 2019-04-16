@@ -74,7 +74,9 @@ form {
 
 tbody tr td {
 	border-bottom: #00ced4 solid 2px;
-	padding: 20px;
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
 }
 	
 tbody tr:hover {
@@ -223,3 +225,4 @@ ul li a:hover {
 .middle2{
     margin-top: 40px;
 }
+

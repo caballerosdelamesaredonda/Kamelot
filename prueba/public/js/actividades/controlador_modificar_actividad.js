@@ -30,7 +30,7 @@ if (actividad) {
 let obtener_datos_update = () => {
     let titulo = input_titulo.value;
     let descripcion = input_descripcion.value;
-    let foto = input_foto.value;
+    let foto = input_foto.src;
 
     actualizar_actividad(actividad_id, titulo, descripcion, foto);
 }
