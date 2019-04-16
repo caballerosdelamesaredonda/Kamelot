@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="/public/css/popr.css">
     <link rel="stylesheet" href="/public/css/blogcards.css">
     <link rel="stylesheet" href="/public/scss/style.scss">
+    <link rel="stylesheet" href="/public/css/actividad/style.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
+
 <style type="text/css">
     .slideshow-container {
         max-width: 1000px;
@@ -187,7 +189,7 @@
         top: 28px;
     }
 
-    #actividades{
+    #actividades {
         margin-bottom: 50px;
     }
 </style>
@@ -233,9 +235,11 @@
             <nav>
                 <ul>
                     <li><a class="color_text" href="/public/padrefamilia/listar_centroe.html">Listar centros educativos</a></li>
-                    <li><a class="color_text" href="/public/padrefamilia/tablero_centroeducativo.html">Perfil centro educativo</a></li>
+                    <li><a class="color_text" href="/public/padrefamilia/tablero_centroeducativo.html">Perfil centro
+                            educativo</a></li>
                     <li><a class="color_text" href="/public/centroeducativo/citas.html">Registrar citas con el centro</a></li>
-                    <li><a class="color_text" href="/public/centroeducativo/rating_centro.html">Dejar evaluacion de centro</a></li>
+                    <li><a class="color_text" href="/public/centroeducativo/rating_centro.html">Dejar evaluacion de
+                            centro</a></li>
                 </ul>
             </nav>
         </div>
@@ -336,25 +340,40 @@
             </div>
         </template>
 
-        <!-- Seccion de actividades. -->
+        <!-- Seccion de actividades cards. -->
+        <div id="actividades_cards">
 
-        <section id='actividades'>
             <h1 class="h1">Actividades del centro:</h1>
-            <table width="800" id="tbl_actividad"  align="center">
-                <thead class="head_backg">
-                    <tr>
-                        <th class="padding border-right">Titulo</th>
-                        <th class="padding">Descripción</th>
-                        <th class="padding">Foto</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </section>
+
+        </div>
+
+
+        <template id="tmpl_actividades">
+
+            <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+
+                <img id="img_actividad" src="" alt="Man with backpack" class="d-block w-full" style="height:200px;">
+
+                <div class="px-2 py-2" style="height:150px;">
+                    <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                    </p>
+
+                    <h1 id="h1_actividad" class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                    </h1>
+
+                    <p id="p_actividad" class="mb-1">
+                    </p>
+
+                </div>
+
+            </div>
+
+        </template>
+
+
+
 
     </main>
-
 
     <footer class="main_footer">
         <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
@@ -373,7 +392,7 @@
     <script src="/public/js/noticias/servicio_noticias.js"></script>
     <script src="/public/js/noticias/controlador_listar_noticias_tablero.js"></script>
     <script src="/public/js/actividades/servicio_actividad.js"></script>
-    <script src="/public/js/actividades/controlador_listar_actividad_publico.js"></script>
+    <script src="/public/js/actividades/controlador_listar_actividad_tablero.js"></script>
     <script src="/public/js/popmenu/popr.js"></script>
 </body>
 
