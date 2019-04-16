@@ -971,7 +971,7 @@ module.exports.borrar_usuario = (req ,res) =>{
 };
 
 module.exports.modificar_ce = (req, res) =>{
-    model_usuarios.findByIdAndUpdate(req.body._id, {$set: req.body},
+    model_usuarios.findByIdAndUpdate(req.body._id, { $set: req.body },
         function(error){
             if(error){
                 res.json({success: false ,msg: 'No se pudo modificar el centro educativo '});
@@ -980,4 +980,4 @@ module.exports.modificar_ce = (req, res) =>{
             }
         }
         );
-}
+};

@@ -31,14 +31,13 @@ let registrar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
 
     request.done(function (msg) {
         swal.fire({
-          icon: 'success',
-          title: 'El padre de familia ha sido registrado.',
-          text: 'Se le enviará un correo con una clave temporal.',
+            type: 'success',
+            title: 'El centro educativo ha sido registrado.',
+            text: 'Se le estará comunicando la decisión por correo. Recibirá un correo con su clave temporal.',
         }).then(function() {
-          let usuario = obtener_usuario_por_id(localStorage.usuario_en_sesion);
-          registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "Registrar padre de familia", "Exitoso");
-          window.location = "index.html";
-    
+            window.location = "index.html";
+            let usuario = obtener_usuario_por_id(localStorage.usuario_en_sesion);
+          registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "Registrar padre de familia", "Exitoso");    
         });
       });
 

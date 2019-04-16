@@ -177,10 +177,11 @@ let listar_secundaria = () => {
  
 };
 
-let modificar_centroe = (pnombre, palias, pcedula_juridica, ptipo_centro, pnivel_centro, pfoto, pnombre_comercial, pprovincia, pcanton, pdistrito, pdireccion, pfecha_fundacion, preferencia_historia, padjuntar_documentos, ptelefono, pfax, psitio_web, pfacebook, pinstagram,pyoutube, ptwitter, pcorreo_electronico, pcontacto_nombre, ppapellido, psapellido, pidentificacion, pdepartamento, ptelefono_contacto, pextension_contacto, pcorreo_electronico_contacto,pId) => {
+let modificar_centroe = (pnombre, palias, pcedula_juridica, ptipo_centro, pnivel_centro, pfoto, pnombre_comercial, pprovincia, pcanton, pdistrito, pdireccion, pfecha_fundacion, preferencia_historia, ptelefono, pfax, psitio_web, pfacebook, pinstagram,pyoutube, ptwitter, pcorreo_electronico, pcontacto_nombre, ppapellido, psapellido, pidentificacion, pdepartamento, ptelefono_contacto, pextension_contacto, pcorreo_electronico_contacto, pId) => {
   let request = $.ajax({
     url: "http://localhost:4000/api/modificar_ce",
     method: "POST",
+    async: false,
     data: {
       nombre : pnombre,
       alias : palias,
@@ -195,7 +196,6 @@ let modificar_centroe = (pnombre, palias, pcedula_juridica, ptipo_centro, pnivel
       direccion: pdireccion,
       fecha_fundacion : pfecha_fundacion,
       referencia_historia : preferencia_historia,
-      adjuntar_documentos : padjuntar_documentos,
       telefono : ptelefono,
       fax : pfax,
       sitio_web : psitio_web,

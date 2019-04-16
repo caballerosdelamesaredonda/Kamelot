@@ -31,7 +31,6 @@ const input_contacto_extension = document.querySelector('#txt_extcontacto');
 const input_contacto_correo = document.querySelector('#txt_correocontacto');
 const boton_modificar = document.querySelector('#btn_modificar');
 const input_imagen = document.querySelector('#image_preview');
-let usrid = localStorage.getItem('usuario_en_sesion');
 
 
 
@@ -233,8 +232,10 @@ let obtener_datos = () => {
         let telefono_contacto = input_contacto_telefono.value;
         let extension_contacto = input_contacto_extension.value;
         let correo_electronico_contacto  = input_contacto_correo.value;
+        let userid = localStorage.getItem('usuario_en_sesion');
 
-        modificar_centroe(nombre, alias, cedula_juridica, tipo_centro, nivel_centro, foto, nombre_comercial, provincia, canton, distrito, direccion, fecha_fundacion, referencia_historia, telefono, fax, sitio_web, facebook, instagram, youtube, twitter, correo_electronico, contacto_nombre, papellido, sapellido, identificacion, departamento, telefono_contacto, extension_contacto, correo_electronico_contacto, usrid);
+
+        modificar_centroe(nombre, alias, cedula_juridica, tipo_centro, nivel_centro, foto, nombre_comercial, provincia, canton, distrito, direccion, fecha_fundacion, referencia_historia, telefono, fax, sitio_web, facebook, instagram, youtube, twitter, correo_electronico, contacto_nombre, papellido, sapellido, identificacion, departamento, telefono_contacto, extension_contacto, correo_electronico_contacto, userid);
 
     } else {
         swal.fire({

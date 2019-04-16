@@ -18,7 +18,7 @@ let registrar_etiqueta = (pId,pNombre) => {
       title: 'La etiqueta ha sido registrada',
       text: 'En unos segundos estará lista para su uso'
     }).then(function() {
-      window.location = "registrar_etiqueta.html";
+      window.location = "lista_etiquetas.html";
     });
   });
 

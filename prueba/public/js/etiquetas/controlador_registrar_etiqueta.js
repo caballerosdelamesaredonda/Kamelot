@@ -1,7 +1,7 @@
 'use strict';
 
 const input_nombre = document.querySelector('#txt_nombre');
-const boton_enviar = document.querySelector('#btn_enviar');
+const boton_enviar = document.querySelector('#btn_registrar');
 let userlocal = localStorage.getItem('usuario_en_sesion');
 
 if(userlocal==null){
