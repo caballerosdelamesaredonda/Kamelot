@@ -92,3 +92,35 @@ let consultar_actividad_usuario = (pId) => {
   return consultar_actividad;
 
 };
+
+let eliminar_actividad = (pId) => {
+  let request = $.ajax({
+      url: "http://localhost:4000/api/eliminar_actividad",
+      method: "POST",
+      data: {
+          _id: pId
+      },
+      dataType: "json",
+      contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+  });
+
+  request.done(function (msg) {
+      swal.fire({
+          type: 'success',
+          title: 'Actividad eliminada',
+          text: `Gracias, la actividad fue eliminada correctamente`
+      }).then(function () {
+          window.location = "/public/padrefamilia/listar_citas_pf.html";
+      });
+  });
+
+  request.fail(function (jqXHR, textStatus) {
+      swal.fire({
+          type: 'error',
+          title: 'La actividad no fue eliminada',
+          text: 'Ocurrió un error inesperado, por favor intente de nuevo'
+      });
+  });
+
+};
+

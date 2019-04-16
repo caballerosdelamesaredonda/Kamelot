@@ -80,3 +80,27 @@ module.exports.listar_actividades_usuario = (req, res) => {
 
     )
 };
+
+module.exports.eliminar_actividad = function (req, res) {
+    model_actividad.findByIdAndRemove(req.body._id,
+        function (error) {
+            if (error) {
+                res.json(
+                    {
+                        success: false,
+                        msg: `No se pudo eliminar la actividad, ocurrió el siguiente error ${error}`
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: true,
+                        msg: `Se elimino la actividad de forma correcta`
+                    }
+                )
+            }
+        }
+
+
+    );
+};

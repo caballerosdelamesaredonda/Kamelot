@@ -25,4 +25,12 @@ router.route('/listar_actividad_usuario')
     )
 
 
+router.route('/eliminar_actividad')
+    .post(
+        function (req, res) {
+            actividad_api.eliminar_actividad(req, res);
+        }
+    )
+
+
 module.exports = router;
