@@ -24,15 +24,22 @@ let mostrar_datos = (pUsuarioLoggeado) => {
     let opciones_provincia = document.querySelectorAll('#slt_provincias option')
     for(let i =0; i< opciones_provincia.length; i++){
         if(opciones_provincia[i].textContent== usario_loggeado.provincia){
-        console.log(opciones_provincia[i]);
-       
-            // opciones_provincia[i].selected =true;
-        //llenar_cantones();
+            opciones_provincia[i].selected = true;
+            llenar_cantones();
+        }
+    }
+
+    let opciones_canton = document.querySelectorAll('#slt_cantones option')
+
+    for(let i =0; i< opciones_canton.length; i++){
+        if(opciones_canton[i].textContent== usario_loggeado.canton){
+            opciones_canton[i].selected = true;
+            llenar_distritos();
         }
     }
 
 
-    document.getElementById('slt_provincias').textContent = usario_loggeado.provincia;
+   // document.getElementById('slt_provincias').textContent = usario_loggeado.provincia;
     //document.getElementById('slt_canton').textContent = usario_loggeado.canton;
     //document.getElementById('slt_distrito').textContent = usario_loggeado.distrito;
     document.getElementById('txt_direccion').value = usario_loggeado.direccion;

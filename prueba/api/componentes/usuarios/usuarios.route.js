@@ -10,6 +10,14 @@ router.route('/registrar_ce')
         api_usuarios.registrar_ce(req, res);
     }
 );
+
+//end point modificar ce
+router.route('/modificar_ce')
+.post(
+    function(req, res){
+        api_usuarios.modificar_ce(req, res);
+    }
+);
 //end point lista ce
 
 router.route('/listar_centroe')
