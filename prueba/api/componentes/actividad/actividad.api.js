@@ -6,7 +6,7 @@ module.exports.registrar = (req, res) =>{
     let actividad_nueva = new model_actividad(
         {
             userid: req.body.userid,
-            titulo : req.body.actividad,
+            titulo : req.body.titulo,
             actividad : req.body.actividad,
             foto : req.body.foto,
             estado : 'Activo'

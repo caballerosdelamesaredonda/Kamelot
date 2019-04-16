@@ -29,6 +29,13 @@ let validar = () => {
         input_actividad.classList.remove('error_input')
     };
 
+    if (input_imagen.value == '') {
+        input_imagen.classList.add('error_input')
+        error = true;
+    } else {
+        input_imagen.classList.remove('error_input')
+    };
+
     return error;
 
 };
