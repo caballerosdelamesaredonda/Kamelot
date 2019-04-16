@@ -124,3 +124,62 @@ let eliminar_actividad = (pId) => {
 
 };
 
+let buscaractividad_actividadid = (actividad_id) => {
+
+  let actividad = [];
+
+  let request = $.ajax({
+      url: "http://localhost:4000/api/buscar_actividad/" + actividad_id,
+      method: "GET",
+      data: {
+      },
+      dataType: "json",
+      contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+      async: false
+  });
+
+  request.done(function (res) {
+      actividad = res.actividads;
+  });
+
+  request.fail(function (jqXHR, textStatus) {
+
+  });
+  return actividad;
+
+};
+
+let actualizar_actividad = (pId, pTitulo, pDescripcion, pFoto) => {
+
+  let request = $.ajax({
+      url: "http://localhost:4000/api/actualizar_actividad",
+      method: "POST",
+      data: {
+          _id: pId,
+          titulo: pTitulo,
+          actividad: pDescripcion,
+          foto: pFoto
+      },
+      dataType: "json",
+      contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+  });
+
+  request.done(function (msg) {
+      swal.fire({
+          type: 'success',
+          title: 'La actividad fue modificada',
+          text: `Gracias por modificar la noticia. Titulo: ${pTitulo}`
+      }).then(function () {
+          window.location = "/public/listar_actividad.html";
+      });
+  });
+
+  request.fail(function (jqXHR, textStatus) {
+      swal.fire({
+          type: 'error',
+          title: 'La actividad no fue modificada',
+          text: 'Ocurrió un error inesperado, por favor intente de nuevo'
+      });
+  });
+
+};

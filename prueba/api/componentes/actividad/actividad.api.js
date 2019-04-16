@@ -104,3 +104,51 @@ module.exports.eliminar_actividad = function (req, res) {
 
     );
 };
+
+module.exports.buscaractividad_actividadid = (req, res) => {
+    model_actividad.find({ _id: req.body.actividad_id }).then(
+        function (actividads) {
+            if (actividads) {
+                res.json(
+                    {
+                        success: true,
+                        actividads: actividads
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: false,
+                        actividads: actividads
+                    }
+                )
+            }
+        }
+
+    )
+};
+
+module.exports.actualizar_actividad = function (req, res) {
+    model_actividad.findByIdAndUpdate(req.body._id, { $set: req.body },
+        
+        function (error) {
+            if (error) {
+                res.json(
+                    {
+                        success: false,
+                        msg: `No se pudo actualizar la actividad, ocurrió el siguiente error ${error}`
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: true,
+                        msg: `Se actualizo la actividad de forma correcta`
+                    }
+                )
+            }
+        }
+
+
+    );
+};

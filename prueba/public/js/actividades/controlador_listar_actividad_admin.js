@@ -27,6 +27,11 @@ let mostrar_lista_actividades = () =>{
 mostrar_lista_actividades();
 
 
+$('.btn_editar_actividad').click(function () {
+    var id_value = $(this).attr('id');
+    console.log('Editar' + id_value);
+    window.location = `/public/modificar_actividad.html?id=${id_value}`;
+});
 
 
 $('.btn_borrar_actividad').click(function () {
