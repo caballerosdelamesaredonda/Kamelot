@@ -1,6 +1,6 @@
 'use strict';
 
-const btn_actualizar = document.querySelector('#btn_actualizar');
+const btn_actualizar = document.querySelector('#btn_registrar');
 const input_titulo = document.querySelector('#txt_titulo');
 const input_descripcion = document.querySelector('#txt_descripcion');
 const input_fecha = document.querySelector('#txt_fecha');
