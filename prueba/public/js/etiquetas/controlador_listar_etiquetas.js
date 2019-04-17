@@ -13,9 +13,9 @@ let mostrar_datos = () =>{
     for(let i =0; i < etiquetas.length; i++){
         let fila = tabla.insertRow(); //Linea crea el tr de la table
         fila.insertCell().innerHTML = etiquetas[i]['nombre'];
-        fila.insertCell().innerHTML ='<button type="button" id="btn_asociar">Asociar</button>';
-        fila.insertCell().innerHTML ='<button type="button" id="btn_modificar">Modificar</button>';
-        fila.insertCell().innerHTML ='<button type="button" id="btn_eliminar">Eliminar</button>';
+        fila.insertCell().innerHTML ='<button class="btn_editar_noticia" style="border: none; background-color: inherit;"><img src="/public/images/edit.png" style="width: 20px; height:20px;"></button>' + ' ' + '<button class="btn_borrar_noticia" style="border: none; background-color: inherit;"><img src="/public/images/garbage.png" style="width: 20px; height:20px;"></button>';
+        //fila.querySelector('button.btn_editar_noticia').setAttribute('id', noticias[i]['_id']);
+        //fila.querySelector('button.btn_borrar_noticia').setAttribute('id', noticias[i]['_id']);
 
     };
 

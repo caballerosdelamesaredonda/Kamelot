@@ -13,6 +13,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/tabla_centros/listar_centros.css">
+    
 
     <title>Registrar etiqueta</title>
 </head>
@@ -38,21 +40,32 @@
     <main>
 
         <h1>Lista etiquetas</h1>
-        <table width="800" id="tbl_etiquetas" align="center">
-            <thead class="head_backg">
-                <tr>
-                    <th class="padding border-right">Nombre</th>
-                    <th class="padding border-right">Asociar</th>
-                    <th class="padding border-right">Modificar</th>
-                    <th class="padding">Eliminar</th>
+        <div id='filter_space'>
+                <lable class="black mr-1">Buscar:</lable>
+                <input type="text" value="" name="" id="txtFiltro" class="input">
+            </div>
+    
+            <section>
+                <div class="tbl-header">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <thead>
+                            <tr>
+                                <th class="padding border-right">Nombre</th>
+                                <th class="padding border-right">Acciones</th>
 
-                </tr>
-            </thead>
-
-            <tbody>
-
-            </tbody>
-        </table>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="tbl-content">
+                    <table cellpadding="0" cellspacing="0" border="0" id='tbl_etiquetas'>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+    
 
 
     </main>
