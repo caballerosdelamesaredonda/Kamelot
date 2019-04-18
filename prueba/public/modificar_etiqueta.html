@@ -13,10 +13,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/tabla_centros/listar_centros.css">
-    
 
-    <title>Lista de etiquetas</title>
+    <title>Registrar etiqueta</title>
 </head>
 
 <body>
@@ -37,36 +35,28 @@
         </nav>
     </header>
 
-    <main>
+            <main class="mt-3" style="height: 400px;">
 
-        <h1>Lista de etiquetas</h1>
-    
-            <section>
-                <div class="tbl-header">
-                    <table cellpadding="0" cellspacing="0" border="0">
-                        <thead>
-                            <tr>
-                                <th class="padding border-right">Nombre</th>
-                                <th class="padding border-right">Modificar</th>
-                                <th class="padding border-right">Eliminar</th>
-
-
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-                <div class="tbl-content">
-                    <table cellpadding="0" cellspacing="0" border="0" id='tbl_etiquetas'>
-                        <tbody>
-    
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-    
+                    <div class="form_backgorund">
+                        <h1 class="h1_notica color_text p-t1">Modificar etiqueta</h1>
+                        <section>
+                            <!-- Formulario de registro de citas -->
+                            <form id="frm_noticias" class="form-control">
+            
+                                <label for="txt_nombre" class="label_name">Nombre:</label>
+                                <input class="form-control" type="text" id="txt_nombre">
+                    
+                                <div class="registro">
+                                        <button type="button" id="btn_registrar">Enviar</button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+            
+                </main>
+        
 
 
-    </main>
 
     <footer class="main_footer">
         <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
@@ -85,7 +75,10 @@
     crossorigin="anonymous"></script>
 <script src="js/transacciones/servicio_transaccion.js"></script>
 <script src="/public/js/etiquetas/servicio_etiquetas.js"></script>
-<script src="/public/js/etiquetas/controlador_listar_etiquetas.js"></script>
+<script src="/public/js/etiquetas/modificar_etiqueta.js"></script>
+
+
+
 
 
 

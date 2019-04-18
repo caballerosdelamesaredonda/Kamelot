@@ -52,3 +52,71 @@ module.exports.listar_etiquetas = (req ,res) =>{
 
     )
 };
+
+module.exports.buscar_etiqueta = (req, res)=>{
+    model_etiqueta.findOne({_id : req.body._id}).then(
+        function(etiqueta){
+            if(etiqueta){
+                res.json({
+                    success:true,
+                    etiqueta: etiqueta
+                });
+            }else{
+                res.json({
+                    success:false,
+                    msj: 'No se encontró la etiqueta'
+                });
+            }
+
+        }
+    )
+}
+
+module.exports.actualizar_etiqueta = function (req, res) {
+    model_etiqueta.findByIdAndUpdate(req.body._id, { $set: req.body },
+        
+        function (error) {
+            if (error) {
+                res.json(
+                    {
+                        success: false,
+                        msg: `No se pudo actualizar la etiqueta, ocurrió el siguiente error ${error}`
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: true,
+                        msg: `Se actualizo la etiqueta de forma correcta`
+                    }
+                )
+            }
+        }
+
+
+    );
+};
+
+module.exports.eliminar_etiqueta = function (req, res) {
+    model_etiqueta.findByIdAndRemove(req.body._id,
+        function (error) {
+            if (error) {
+                res.json(
+                    {
+                        success: false,
+                        msg: `No se pudo eliminar la etiqueta, ocurrió el siguiente error ${error}`
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: true,
+                        msg: `Se elimino la etiqueta de forma correcta`
+                    }
+                )
+            }
+        }
+
+
+    );
+};

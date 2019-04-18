@@ -73,3 +73,6 @@ tr:nth-child(even) {
 .label_name{
     margin-bottom: 10px;
 }
+#btn_editar_noticia{
+    margin-left: 40px;
+}
