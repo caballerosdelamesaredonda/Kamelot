@@ -13,8 +13,8 @@ let mostrar_datos = () =>{
     for(let i =0; i < etiquetas.length; i++){
         let fila = tabla.insertRow(); //Linea crea el tr de la table
         fila.insertCell().innerHTML = etiquetas[i]['nombre'];
-        fila.insertCell().innerHTML ='<button class="btn_editar_noticia" style="border: none; background-color: inherit;"><img src="/public/images/edit.png" style="width: 30px; height:30px; margin-left: 550%;"></button>';
-        fila.insertCell().innerHTML ='<button class="btn_borrar_noticia" style="border: none; background-color: inherit;"><img src="/public/images/garbage.png" style="width: 30px; height:30px; margin-left: 550%;"></button>';
+        fila.insertCell().innerHTML ='<button class="btn_editar_noticia" style="border: none; background-color: inherit; margin-left: 200px"><img src="/public/images/edit.png" style="width: 30px; height:30px;"></button>';
+        fila.insertCell().innerHTML ='<button class="btn_borrar_noticia" style="border: none; background-color: inherit; margin-left: 70px"><img src="/public/images/garbage.png" style="width: 30px; height:30px; margin-left: 100px"></button>';
         fila.querySelector('button.btn_editar_noticia').setAttribute('id', etiquetas[i]['_id']);
         fila.querySelector('button.btn_borrar_noticia').setAttribute('id', etiquetas[i]['_id']);
 
@@ -45,13 +45,11 @@ $('.btn_borrar_noticia').click(function () {
         confirmButtonText: 'Si, eliminar etiqueta!'
     }).then((result) => {
         if (result.value) {
-            Swal.fire(
-                'Eliminado!',
-                'La noticia fue eliminada.',
-                'success'
-            )
             eliminar_etiqueta(id_value);
-            window.location = "/public/lista_etiquetas.html";
+            then(function() {
+                window.location = "/public/lista_etiquetas.html";
+          
+              });
         }
     })
 

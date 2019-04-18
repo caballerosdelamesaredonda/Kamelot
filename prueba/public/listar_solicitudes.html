@@ -8,8 +8,10 @@
     <title>Solicitudes pendientes</title>
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/general.css" type="text/css">
-    <link rel="stylesheet" href="./css/solicitudes.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/etiquetas.css">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/tabla_centros/listar_centros.css">
 
 
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -33,23 +35,33 @@
                 </nav>
         </header>
     <main class="main">
-			<h1 class="h1">Lista de solicitudes pendientes</h1>
-        <table id="tbl_solicitudes" align="center">
-            <thead class="head_backg">
-                <tr>
-                    <th class="padding border-right">Nombre</th>
-                    <th class="padding border-right">Correo electrónico</th>
-                    <th class="padding border-right">Telefono</th>
-                    <th class="padding border-right">Fecha de registro</th>
-                    <th class="padding border-right">Documento</th>
-                    <th class="padding border-right">Aprobar</th>
-                    <th class="padding">Rechazar</th>
+        <h1>Lista de solicitudes pendientes</h1>
+    
+        <section>
+            <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <thead>
+                        <tr>
+                            <th class="padding border-right">Nombre</th>
+                            <th class="padding border-right">Correo electrónico</th>
+                            <th class="padding border-right">Teléfono</th>
+                            <th class="padding border-right">Fecha de registro</th>
+                            <th class="padding border-right">Documento</th>
+                            <th class="padding border-right">Aprobar</th>
+                            <th class="padding">Rechazar</th>
 
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0" id='tbl_etiquetas'>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
 
     <footer class="main_footer">

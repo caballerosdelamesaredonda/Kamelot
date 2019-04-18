@@ -28,3 +28,66 @@ let listar_solicitudes = () => {
     return lista_solicitudes;
    
   };
+
+  let eliminar_solicitud = (pId) => {
+    let request = $.ajax({
+        url: "http://localhost:4000/api/borrar_usuario",
+        method: "POST",
+        data: {
+            _id: pId
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+    });
+  
+    request.done(function (msg) {
+        swal.fire({
+            type: 'success',
+            title: 'Solicitud eliminada',
+            text: `La solicitud fue eliminada correctamente`
+        }).then(function () {
+            window.location = "/public/listar_solicitudes.html";
+        });
+    });
+  
+    request.fail(function (jqXHR, textStatus) {
+        swal.fire({
+            type: 'error',
+            title: 'La solicitud no fue eliminada',
+            text: 'Ocurrió un error inesperado, por favor intente de nuevo'
+        });
+    });
+  
+  };
+
+  let habilitar = (pId) =>{
+
+    let request = $.ajax({
+        url: "http://localhost:4000/api/habilitar_usuario",
+        method: 'POST',
+        async: false,
+        data: {
+            _id : pId
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    });
+    request.done(function (msg) {
+      swal.fire({
+          type: 'success',
+          title: 'Solicitud aprobada',
+          text: `La solicitud fue aprobada correctamente`
+      }).then(function () {
+          window.location = "/public/listar_solicitudes.html";
+      });
+  });
+
+  request.fail(function (jqXHR, textStatus) {
+      swal.fire({
+          type: 'error',
+          title: 'La solicitud no fue aprobada',
+          text: 'Ocurrió un error inesperado, por favor intente de nuevo'
+      });
+  });
+
+};
