@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/tabla_centros/listar_centros.css">
 
-
+    <link rel="stylesheet" href="/public/css/popr.css">
+    <link rel="stylesheet" href="/public/css/menu_nav/dropdown.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
 
@@ -22,18 +23,67 @@
                 <nav>
                     <img class="img_logo" src="./images/Logo.png" width="61" height="80" alt="Logo Costa Rica Educa">
                     <div class="float-right middle2">
-                        <div class="float-right mr-2 mt-4">
-                            <a href="perfil_admin.html" class="registrar_cuenta ml-1">Ver perfil</a>
-                            <a href="registrar_etiqueta.html" class="registrar_cuenta ml-1">Registrar etiqueta</a>
-                            <a href="listar_usuarios.html" class="cerrar_sesion ml-1">Listar usuarios</a>
-                            <a href="lista_etiquetas.html" class="registrar_cuenta ml-1">Listar etiqueta</a>
-
-                            <a href="index.html" class="cerrar_sesion ml-1" onclick="localStorage.clear();">Cerrar Sesión</a>
-
+                        <!--<lable class="white mr-1">Buscar</lable>
+                                        <input type="text" value="" name="" id="txtFiltro" class="input">-->
+                        <div class="float-right mr-2">
+        
+                            <div id="menu_right_icons">
+                                <div class="popr" data-id="2"><img src="./images/settings_2.png" id=""></div>
+                                <div class="avatar_cont"><img src="" id="avatar_img"></div>
+                            </div>
+        
                         </div>
+        
+                        <div id="avatar_container" style="margin-right: 100px;">
+        
+                            <div class="popr-box" data-box-id="2">
+                                <a href="perfil_admin.html">
+                                    <div class="popr-item" id="">Ver Perfil</div>
+                                </a>
+        
+                                <a href="/public/index.html" onclick="localStorage.clear();">
+                                    <div class="popr-item">Cerrar Sesion</div>
+                                </a>
+                            </div>
+                        </div>
+        
                     </div>
                 </nav>
-        </header>
+                <div style="clear:both; margin-bottom: 20px;"></div>
+                <div class="fondonav">
+                    <nav>
+                        <ul>
+        
+                            <div class="dropdown">
+                                <button class="dropbtn">Preguntas frecuentes</button>
+                                <div class="dropdown-content">
+                                    <a class="color_text" href="registro_pregunta.html">Registrar pregunta frecuente</a>
+                                    <a class="color_text" href="listar_pregunta.html">Listar pregunta frecuente</a>
+                                </div>
+                            </div>
+        
+                            <div class="dropdown">
+                                <button class="dropbtn">Etiquetas</button>
+                                <div class="dropdown-content">
+                                    <a class="color_text" href="registrar_etiqueta.html">Registrar etiqueta</a>
+                                    <a class="color_text" href="lista_etiquetas.html">Lista de etiquetas</a>
+                                </div>
+                            </div>
+        
+                            <div class="dropdown">
+                                <button class="dropbtn">Usuarios y solicitudes</button>
+                                <div class="dropdown-content">
+                                    <a class="color_text" href="listar_solicitudes.html">Lista de solicitudes</a>
+                                    <a class="color_text" href="listar_usuarios.html">Lista de usuarios</a>
+                                </div>
+                            </div>
+                        </ul>
+                    </nav>
+        
+        
+        
+                </div>
+            </header>
     <main class="main">
         <h1>Lista de solicitudes pendientes</h1>
     
@@ -78,6 +128,9 @@
     <script src="js/transacciones/servicio_transaccion.js"></script>
     <script src="js/servicio_solicitudes.js"></script>
     <script src="js/controlador_solicitudes.js"></script>
+    <script src="/public/js/popmenu/popr.js"></script>
+
+
 </body>
 
 </html>

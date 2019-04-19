@@ -6,6 +6,7 @@ console.log(userid);
 let usario_loggeado = [];
 
 let mostrar_datos = (pUsuarioLoggeado) => {
+    document.getElementById('avatar_img').src = usario_loggeado.foto;
     document.getElementById('prueba').src = usario_loggeado.foto;
     document.querySelector('#nombre').innerHTML = usario_loggeado.nombre;
     document.querySelector('#apellido').innerHTML = usario_loggeado.papellido;
