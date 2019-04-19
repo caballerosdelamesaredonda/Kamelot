@@ -29,14 +29,15 @@ h1{
 }
 
 #tbl_etiquetas {
-    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
 }
 
 tbody tr td {
 	border-bottom: #00ced4 solid 2px;
-	padding: 20px;
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
 }
 	
 tbody tr:hover {
