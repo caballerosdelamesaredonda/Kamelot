@@ -188,11 +188,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/js/padres_de_familia/servicio_padrefamilia.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1399">
-                  <caret line="85" column="39" selection-start-line="85" selection-start-column="39" selection-end-line="85" selection-end-column="39" />
+                <state relative-caret-position="244">
+                  <caret line="55" column="139" selection-start-line="55" selection-start-column="139" selection-end-line="55" selection-end-column="139" />
                   <folding>
                     <element signature="e#2080#2701#0" />
                     <element signature="e#2748#3369#0" />
@@ -233,11 +233,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/modificar_pf.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="136" column="93" lean-forward="true" selection-start-line="136" selection-start-column="93" selection-end-line="136" selection-end-column="93" />
+                <state relative-caret-position="409">
+                  <caret line="33" column="64" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="64" />
                 </state>
               </provider>
             </entry>
@@ -493,12 +493,12 @@
       <workItem from="1554765257454" duration="2424000" />
       <workItem from="1554771059831" duration="14021000" />
       <workItem from="1555129964636" duration="5420000" />
-      <workItem from="1555754067081" duration="6158000" />
+      <workItem from="1555754067081" duration="6441000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79745000" />
+    <option name="totallyTimeSpent" value="80028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
@@ -794,13 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modificar_pf.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="136" column="93" lean-forward="true" selection-start-line="136" selection-start-column="93" selection-end-line="136" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/perfil_padre_familia.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9524" />
@@ -1017,12 +1010,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/padres_de_familia/servicio_padrefamilia.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1399">
-          <caret line="85" column="39" selection-start-line="85" selection-start-column="39" selection-end-line="85" selection-end-column="39" />
+        <state relative-caret-position="244">
+          <caret line="55" column="139" selection-start-line="55" selection-start-column="139" selection-end-line="55" selection-end-column="139" />
           <folding>
             <element signature="e#2080#2701#0" />
             <element signature="e#2748#3369#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modificar_pf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="33" column="64" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="64" />
         </state>
       </provider>
     </entry>
