@@ -167,7 +167,7 @@ let obtener_datos = () => {
         let snombre = input_snombre.value;
         let papellido = input_papellido.value;
         let sapellido = input_sapellido.value;
-        let tipo_id = input_tipo_id.value;
+        let tipo_id = input_tipo_id.options[slt_tipo_id.selectedIndex].value;
         let id = input_id.value;
         let telefono = input_telefono.value;
         let provincias = input_provincias.options[slt_provincias.selectedIndex].textContent;
