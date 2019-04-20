@@ -33,7 +33,6 @@ let mostrar_datos = () =>{
     input_snombre.value = pf['segundo_nombre'];
     input_papellido.value = pf['papellido'];
     input_sapellido.value = pf['sapellido'];
-    //input_tipo_id.value = pf[''];
     input_id.value = pf['identificacion'];
     input_telefono.value = pf['telefono'];
     input_provincias.value = pf[''];
@@ -42,6 +41,16 @@ let mostrar_datos = () =>{
     input_direccion.value = pf['direccion'];
     input_cant_hijos.value = pf['cantidad_hijos'];
     input_foto.value = pf['foto'];
+
+    let opciones_tipo_id = document.querySelector('#slt_tipo_id option');
+
+    for(let i = 0; i < opciones_tipo_id.length; i++){
+        if(opciones_tipo_id[i].textContent === pf['tipo_id']){
+            opciones_provincias[i].selected = true;
+        }
+    }
+
+
 
     let opciones_provincias = document.querySelectorAll('#slt_provincias option');
 
@@ -168,7 +177,7 @@ let obtener_datos = () => {
         let foto = input_foto.src;
         let cant_hijos= input_cant_hijos.value;
 
-        registrar_pf(correo, nombre,snombre, papellido, sapellido, id, telefono, provincias, cantones, distritos, direccion, cant_hijos, foto);
+        modificar_pf(correo, nombre,snombre, papellido, sapellido, id, telefono, provincias, cantones, distritos, direccion, cant_hijos, foto, tipo_id, _id);
 
     }else{
         swal.fire({

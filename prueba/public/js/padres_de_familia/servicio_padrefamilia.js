@@ -53,7 +53,7 @@ let registrar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
 };
 
 
-let modificar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellido, pIdentificacion, pTelefono, pProvincia, pCanton, pDistrito, pDireccion, pCantHijos, pFoto, pTipoId) => {
+let modificar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellido, pIdentificacion, pTelefono, pProvincia, pCanton, pDistrito, pDireccion, pCantHijos, pFoto, pTipoId, _id) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/modificar_pf",
         method: "POST",
@@ -71,7 +71,8 @@ let modificar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
             distrito: pDistrito,
             direccion: pDireccion,
             foto: pFoto,
-            tipo_id: pTipoId
+            tipo_id: pTipoId,
+            _id: _id
         },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8'

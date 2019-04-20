@@ -19,73 +19,73 @@ const boton_registrar = document.querySelector('#btn_registrar');
 
 let validar = () => {
     let error = false;
-    if (input_correo.value == ''){
+    if (input_correo.value === ''){
         error = true;
         input_correo.style.border='1px solid red';
     }else{
         input_correo.style.border = '1px solid black';
     }
-    if (input_nombre.value == ''){
+    if (input_nombre.value === ''){
         error = true;
         input_nombre.style.border='1px solid red';
     }else{
         input_nombre.style.border = '1px solid black';
     }
-    if (input_papellido.value == ''){
+    if (input_papellido.value === ''){
         error = true;
         input_papellido.style.border='1px solid red';
     }else{
         input_papellido.style.border = '1px solid black';
     }
-    if (input_sapellido.value == ''){
+    if (input_sapellido.value === ''){
         error = true;
         input_sapellido.style.border='1px solid red';
     }else{
         input_sapellido.style.border = '1px solid black';
     }
-    if (input_tipo_id.value == ''){
+    if (input_tipo_id.value === ''){
         error = true;
         input_tipo_id.style.border='1px solid red';
     }else{
         input_tipo_id.style.border = '1px solid black';
     }
-    if (input_id.value == ''){
+    if (input_id.value === ''){
         error = true;
         input_id.style.border='1px solid red';
     }else{
         input_id.style.border = '1px solid black';
     }
-    if (input_telefono.value == ''){
+    if (input_telefono.value === ''){
         error = true;
         input_telefono.style.border='1px solid red';
     }else{
         input_telefono.style.border = '1px solid black';
     }
-    if (input_provincias.value == ''){
+    if (input_provincias.value === ''){
         error = true;
         input_provincias.style.border='1px solid red';
     }else{
         input_provincias.style.border = '1px solid black';
     }
-    if (input_cantones.value == ''){
+    if (input_cantones.value === ''){
         error = true;
         input_cantones.style.border='1px solid red';
     }else{
         input_cantones.style.border = '1px solid black';
     }
-    if (input_distritos.value == ''){
+    if (input_distritos.value === ''){
         error = true;
         input_distritos.style.border='1px solid red';
     }else{
         input_distritos.style.border = '1px solid black';
     }
-    if (input_direccion.value == ''){
+    if (input_direccion.value === ''){
         error = true;
         input_direccion.style.border='1px solid red';
     }else{
         input_direccion.style.border = '1px solid black';
     }
-    if (input_cant_hijos.value == ''){
+    if (input_cant_hijos.value === ''){
         error = true;
         input_cant_hijos.style.border='1px solid red';
     }else{
@@ -112,7 +112,7 @@ let obtener_datos = () => {
         let foto = input_foto.src;
         let cant_hijos= input_cant_hijos.value;
 
-        registrar_pf(correo, nombre,snombre, papellido, sapellido, id, telefono, provincias, cantones, distritos, direccion, cant_hijos, foto);
+        registrar_pf(correo, nombre,snombre, papellido, sapellido, id, telefono, provincias, cantones, distritos, direccion, cant_hijos, foto, tipo_id);
 
     }else{
         swal.fire({
