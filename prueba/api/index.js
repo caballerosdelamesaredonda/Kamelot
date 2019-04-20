@@ -82,7 +82,7 @@ const evaluacion_ce = require('./componentes/rating/rating.route');
 
 const utiles = require('./componentes/reg_utiles/utiles.route');
 
-const pregunta = require('./componentes/pregunta/pregunta.route');
+const pregunta = require('./componentes/preguntas/preguntas.route');
 
 const transacciones = require('./componentes/transacciones/transacciones.route');
 
