@@ -8,7 +8,7 @@
     <meta charset="utf-8"> <!-- para permitir el uso de chars especiales -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/perfil_ce.css">
+    <link rel="stylesheet" href="./css/pregunta.css" type="text/css">
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
@@ -79,18 +79,15 @@
                             </div>
                         </ul>
                     </nav>
-        
-        
-        
                 </div>
             </header>
 
-    <table class="tabla_info">
+    <table class="tabla_info" id="#tbl_preguntas">
 
-        <thead>
+        <thead class="head_backg">
             <tr>
-                <th>Pregunta</th>
-                <th>Respuesta</th>
+                <th class="padding border-right">Pregunta</th>
+                <th class="padding">Respuesta</th>
             </tr>
         </thead>
         <tbody>
@@ -108,8 +105,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <script src="js/noticias/controlador_listar_pregunta.js"></script>
     <script src="js/pregunta/servicio_pregunta.js"></script>
-    <script src="js/noticias/controlador_listar_noticias.js"></script>
     <script src="/public/js/popmenu/popr.js"></script>
 
 </body>
