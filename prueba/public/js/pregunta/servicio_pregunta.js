@@ -1,15 +1,15 @@
 'use strict';
 
+
 let registrar_pregunta = (ppregunta, prespuesta) => {
   let request = $.ajax({
     url: "http://localhost:4000/api/registrar_pregunta",
     method: "POST",
     data: {
       pregunta: ppregunta,
-      respuesta : prespuesta
+      respuesta: prespuesta
     },
     dataType: "json",
-    async: false,
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
   });
 

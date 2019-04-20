@@ -5,6 +5,7 @@ let schema_pregunta = new mongoose.Schema(
     {
         pregunta : {type : String, required : true},
         respuesta : {type : String, required : true}
+
     }
 );
 

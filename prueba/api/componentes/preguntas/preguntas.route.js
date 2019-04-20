@@ -1,7 +1,7 @@
 'use strict';
 const express = require('express');
 const router =  express.Router();
-const pregunta_api = require('./pregunta.api');
+const pregunta_api = require('./preguntas.api');
 
 router.route('/registrar_pregunta')
     .post(

@@ -1,5 +1,5 @@
 'use strict';
-const model_pregunta = require('./pregunta.model');
+const model_pregunta = require('./preguntas.model');
 
 
 module.exports.registrar = (req, res) =>{
@@ -46,7 +46,7 @@ module.exports.listar_todos = (req ,res) =>{
                 res.json(
                     {
                         success: false,
-                        apregunta: 'No se encontraron preguntas'
+                        pregunta: 'No se encontraron preguntas'
                     }
                 )
             }

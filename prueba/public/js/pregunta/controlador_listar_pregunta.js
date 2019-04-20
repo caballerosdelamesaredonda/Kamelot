@@ -1,19 +1,19 @@
 'use strict';
 
-const tabla = document.querySelector('#tbl_preguntas tbody');
+const tabla = document.querySelector('#tbl_pregunta tbody');
 
-let mostrar_datos = () =>{
+let mostrar_preguntas = () => {
     let pregunta = listar_pregunta();
+
     for(let i = 0; i < pregunta.length; i++){
 
-        let fila = tabla.insertRow();// Crea el tr de la tabla
+        let fila = tabla.insertRow();
 
-        fila.insertCell().innerHTML = pregunta[i]['pregunta'];
-        fila.insertCell().innerHTML = respuesta[i]['respuesta'];
-       
-    }; 
+        fila.insertCell().innerHTML = pregunta[i] ['pregunta'];
+        fila.insertCell().innerHTML = pregunta[i] ['respuesta'];
+
+    };
 
 };
 
-
-mostrar_datos();
+mostrar_preguntas();
