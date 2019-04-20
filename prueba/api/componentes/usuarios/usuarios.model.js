@@ -17,7 +17,7 @@ let schema_usuarios = new mongoose.Schema(
         canton : {type : String, required : false},
         distrito: {type : String, required : false},
         direccion: {type : String, required : false},
-
+        tipo_id: {type : String, required: false},
 
         //Exclusivo centro educativo//
         alias : {type : String, required : false},

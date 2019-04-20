@@ -8,32 +8,32 @@ let userid = localStorage.getItem('usuario_en_sesion');
 
 tabla.innerHTML = '';
 
-if(userid==null){
-    window.location.href='index.html';
+if (userid == null) {
+    window.location.href = 'index.html';
 }
 
-let mostrar_datos = () =>{
+let mostrar_datos = () => {
     tabla.innerHTML = '';
 
     let usuarios = listar_usuarios();
 
     let busqueda = '';
-    if (input_busqueda.value !== null){
+    if (input_busqueda && input_busqueda.value.trim() !== '') {
         busqueda = input_busqueda.value;
     }
 
-    let resultadoEstado =[];
-    let resultado =[];
+    let resultadoEstado = [];
+    let resultado = [];
 
     let activo = document.querySelector('input[name="activo"]:checked');
 
-    if (activo.value === 'activo'){
+    if (activo.value === 'activo') {
         resultadoEstado = usuarios.filter(usuario => (
                 activo.value !== '' ? usuario.estado === 'activo' : usuario
             )
         );
         tabla.innerHTML = '';
-    }else{
+    } else {
         resultadoEstado = usuarios.filter(usuario => (
                 activo.value !== '' ? usuario.estado === 'inactivo' : usuario
             )
@@ -42,8 +42,8 @@ let mostrar_datos = () =>{
     }
 
     resultado = resultadoEstado.filter(usuario => (
-        busqueda.length > 0 ? usuario.nombre.toLowerCase().trim().includes(
-            busqueda.toLowerCase().trim()
+            busqueda.length > 0 ? usuario.nombre.toLowerCase().trim().includes(
+                busqueda.toLowerCase().trim()
             ) : usuario
         )
     );
@@ -55,7 +55,7 @@ let mostrar_datos = () =>{
 
 
 
-    for(let i = 0; i < resultado.length; i++){
+    for (let i = 0; i < resultado.length; i++) {
 
         let fila = tabla.insertRow();// Crea el tr de la tabla
 
@@ -72,10 +72,10 @@ let mostrar_datos = () =>{
         opciones.classList.add('column5');
 
         celda_nombre.innerHTML = resultado[i]['nombre'];
-        
+
         if (resultado[i]['tipo_usuario'] === 'PF') {
-            celda_nombre.innerHTML = resultado[i]['nombre'] +' '+resultado[i]['papellido'];
-        }else {
+            celda_nombre.innerHTML = resultado[i]['nombre'] + ' ' + resultado[i]['papellido'];
+        } else {
             celda_nombre.innerHTML = resultado[i]['nombre'];
         }
 
@@ -97,15 +97,13 @@ let mostrar_datos = () =>{
 
 
         estado.innerHTML = resultado[i]['estado'];
-        
-        if (resultado[i]['estado'] === 'activo'){
+
+        if (resultado[i]['estado'] === 'activo') {
 
             let boton_deshabilitar = document.createElement('button');
             boton_deshabilitar.dataset.id_usuario = resultado[i]['_id'];
-            boton_deshabilitar.addEventListener('click', function(){
+            boton_deshabilitar.addEventListener('click', function () {
                 deshabilitar(this.dataset.id_usuario);
-                tabla.innerHTML = '';
-                usuarios = listar_usuarios();
                 mostrar_datos();
             });
             boton_deshabilitar.classList.add('deshabilitar');
@@ -113,10 +111,8 @@ let mostrar_datos = () =>{
         } else {
             let boton_habilitar = document.createElement('button');
             boton_habilitar.dataset.id_usuario = resultado[i]['_id'];
-            boton_habilitar.addEventListener('click', function(){
+            boton_habilitar.addEventListener('click', function () {
                 habilitar(this.dataset.id_usuario);
-                tabla.innerHTML = '';
-                usuarios = listar_usuarios();
                 mostrar_datos();
             });
             boton_habilitar.classList.add('habilitar');
@@ -125,14 +121,10 @@ let mostrar_datos = () =>{
 
         let boton_borrar = document.createElement('button');
         boton_borrar.dataset.id_usuario = resultado[i]['_id'];
-
-        boton_borrar.onclick = function(){
+        boton_borrar.addEventListener('click', function () {
             borrar(this.dataset.id_usuario);
-            tabla.innerHTML = '';
-            usuarios = listar_usuarios();
             mostrar_datos();
-
-        };
+        });
         boton_borrar.classList.add('borrar');
         opciones.appendChild(boton_borrar);
 
@@ -141,4 +133,7 @@ let mostrar_datos = () =>{
 };
 
 mostrar_datos();
-input_busqueda.addEventListener('keyup', mostrar_datos);
+
+if (input_busqueda) {
+    input_busqueda.addEventListener('keyup', mostrar_datos);
+}

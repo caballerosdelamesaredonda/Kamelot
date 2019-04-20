@@ -62,13 +62,21 @@ router.route('/buscar_usuario')
     );
 
 
-//end point registro ce
+//end point registro pf
 router.route('/registrar_pf')
 .post(
     function(req, res){
         api_usuarios.registrar_pf(req, res);
     }
 );
+
+//end point modificar pf
+router.route('/modificar_pf')
+    .post(
+        function(req, res){
+            api_usuarios.modificar_pf(req, res);
+        }
+    );
 
 
 //end point lista primaria

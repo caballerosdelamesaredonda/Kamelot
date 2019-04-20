@@ -410,7 +410,8 @@ module.exports.registrar_pf = (req, res) =>{
             distrito: req.body.distrito,
             direccion: req.body.direccion,
             tipo_usuario : req.body.tipo_usuario,
-            estado : req.body.estado
+            estado : req.body.estado,
+            tipo_id : req.body.tipo_id
         }
     );
     
@@ -980,4 +981,16 @@ module.exports.modificar_ce = (req, res) =>{
             }
         }
         );
+};
+
+module.exports.modificar_pf = (req, res) =>{
+    model_usuarios.findByIdAndUpdate(req.body._id, { $set: req.body },
+        function(error){
+            if(error){
+                res.json({success: false ,msg: 'No se pudo modificar el padre de familia'});
+            }else{
+                res.json({success: true ,msg: 'El padre de familia se modificó con éxito'});
+            }
+        }
+    );
 };
