@@ -32,7 +32,7 @@ let registrar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
     request.done(function (msg) {
         swal.fire({
             type: 'success',
-            title: 'El centro educativo ha sido registrado.',
+            title: 'El padre de familia ha sido registrado.',
             text: 'Se le estará comunicando la decisión por correo. Recibirá un correo con su clave temporal.',
         }).then(function() {
             window.location = "index.html";
@@ -83,7 +83,7 @@ let modificar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
     request.done(function (msg) {
         swal.fire({
             type: 'success',
-            title: 'El centro educativo ha sido registrado.',
+            title: 'El padre de familia ha sido registrado.',
             text: 'Se le estará comunicando la decisión por correo. Recibirá un correo con su clave temporal.',
         }).then(function() {
             window.location = "index.html";
