@@ -35,9 +35,6 @@ let mostrar_datos = () =>{
     input_sapellido.value = pf['sapellido'];
     input_id.value = pf['identificacion'];
     input_telefono.value = pf['telefono'];
-    input_provincias.value = pf[''];
-    input_cantones.value = pf[''];
-    input_distritos.value = pf[''];
     input_direccion.value = pf['direccion'];
     input_cant_hijos.value = pf['cantidad_hijos'];
     input_foto.value = pf['foto'];
@@ -45,7 +42,7 @@ let mostrar_datos = () =>{
     let opciones_tipo_id = document.querySelector('#slt_tipo_id option');
 
     for(let i = 0; i < opciones_tipo_id.length; i++){
-        if(opciones_tipo_id[i].textContent === pf['tipo_id']){
+        if(opciones_tipo_id[i].innerText === pf['tipo_id']){
             opciones_provincias[i].selected = true;
         }
     }
@@ -55,7 +52,7 @@ let mostrar_datos = () =>{
     let opciones_provincias = document.querySelectorAll('#slt_provincias option');
 
     for(let i = 0; i < opciones_provincias.length; i++){
-        if(opciones_provincias[i].textContent === pf['provincia']){
+        if(opciones_provincias[i].innerText === pf['provincia']){
             opciones_provincias[i].selected = true;
             llenar_cantones();
         }
@@ -63,7 +60,7 @@ let mostrar_datos = () =>{
     let opciones_cantones = document.querySelectorAll('#slt_cantones option');
 
     for(let i = 0; i < opciones_cantones.length; i++){
-        if(opciones_cantones[i].textContent === pf['canton']){
+        if(opciones_cantones[i].innerText === pf['canton']){
             opciones_cantones[i].selected = true;
 
         }
@@ -72,7 +69,7 @@ let mostrar_datos = () =>{
     let opciones_distritos = document.querySelectorAll('#slt_distritos option');
 
     for(let i = 0; i < opciones_distritos.length; i++){
-        if(opciones_distritos[i].textContent === pf['distrito']){
+        if(opciones_distritos[i].innerText === pf['distrito']){
             opciones_distritos[i].selected = true;
 
         }
@@ -189,5 +186,5 @@ let obtener_datos = () => {
 };
 
 
-
+mostrar_datos();
 boton_registrar.addEventListener('click', obtener_datos);

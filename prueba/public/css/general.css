@@ -260,6 +260,19 @@ b{
     padding: 20px 10px;
 }*/
 
+#modificar {
+	background-image: url(https://img.icons8.com/ios/20/000000/edit.png);
+	cursor: pointer;
+	border: none;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-color: white;
+	display: inline-block;
+	box-shadow: none;
+	height: 21px;
+	width: 21px;
+}
+
 
 
 
