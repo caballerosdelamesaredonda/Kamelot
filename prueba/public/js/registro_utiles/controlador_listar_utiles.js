@@ -29,7 +29,7 @@ let mostrar_datos = () => {
             boton_editar.textContent = 'Editar';
             boton_editar.href = `actualizar_utiles.html?id_util=${utiles[i]['_id']}`;
 
-
+/*
             if(utiles[i]['estado'] == 'activo'){    
                 //creacion boton de desactivar
             let boton_desactivar = document.createElement('a');
@@ -59,7 +59,7 @@ let mostrar_datos = () => {
             }
 
             
-
+*/
 
             //creacion boton de eliminar
             let boton_eliminar = document.createElement('a');
