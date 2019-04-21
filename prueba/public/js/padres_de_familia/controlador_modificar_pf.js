@@ -42,8 +42,8 @@ let mostrar_datos = () =>{
     let opciones_tipo_id = document.querySelector('#slt_tipo_id option');
 
     for(let i = 0; i < opciones_tipo_id.length; i++){
-        if(opciones_tipo_id[i].innerText === pf['tipo_id']){
-            opciones_provincias[i].selected = true;
+        if(opciones_tipo_id[i].value === pf['tipo_id']){
+            opciones_tipo_id[i].selected = true;
         }
     }
 
@@ -71,7 +71,6 @@ let mostrar_datos = () =>{
     for(let i = 0; i < opciones_distritos.length; i++){
         if(opciones_distritos[i].innerText === pf['distrito']){
             opciones_distritos[i].selected = true;
-
         }
     }
 };
