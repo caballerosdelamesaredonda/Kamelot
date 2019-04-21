@@ -37,9 +37,9 @@ let mostrar_datos = () =>{
     input_telefono.value = pf['telefono'];
     input_direccion.value = pf['direccion'];
     input_cant_hijos.value = pf['cantidad_hijos'];
-    input_foto.value = pf['foto'];
+    input_foto.src = pf['foto'];
 
-    let opciones_tipo_id = document.querySelector('#slt_tipo_id option');
+    let opciones_tipo_id = document.querySelectorAll('#slt_tipo_id option');
 
     for(let i = 0; i < opciones_tipo_id.length; i++){
         if(opciones_tipo_id[i].value === pf['tipo_id']){
@@ -62,15 +62,19 @@ let mostrar_datos = () =>{
     for(let i = 0; i < opciones_cantones.length; i++){
         if(opciones_cantones[i].innerText === pf['canton']){
             opciones_cantones[i].selected = true;
-
+            llenar_distritos();
         }
     }
 
     let opciones_distritos = document.querySelectorAll('#slt_distritos option');
 
     for(let i = 0; i < opciones_distritos.length; i++){
+        console.log(`indice: ${i}, texto opcion: ${opciones_distritos[i].innerText}, `);
         if(opciones_distritos[i].innerText === pf['distrito']){
+
             opciones_distritos[i].selected = true;
+            console.log(`indice: ${i}, opcion seleccionada: ${opciones_distritos[i].value}, `);
+
         }
     }
 };

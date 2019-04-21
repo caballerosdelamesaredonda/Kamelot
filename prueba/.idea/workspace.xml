@@ -28,11 +28,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/padres_de_familia/controlador_modificar_pf.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="68" column="70" selection-start-line="68" selection-start-column="70" selection-end-line="68" selection-end-column="70" />
+            <state relative-caret-position="483">
+              <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
               <folding>
                 <element signature="e#2872#5139#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/padrefamilia/perfil_padre_familia.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-10143">
+              <caret line="57" column="53" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -58,8 +67,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/modificar_pf.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="142" column="53" selection-start-line="142" selection-start-column="53" selection-end-line="142" selection-end-column="53" />
+            <state relative-caret-position="318">
+              <caret line="142" column="53" lean-forward="true" selection-start-line="142" selection-start-column="53" selection-end-line="142" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/padres_de_familia/controlador_avatar_pf.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -263,12 +281,12 @@
       <workItem from="1554771059831" duration="14021000" />
       <workItem from="1555129964636" duration="5420000" />
       <workItem from="1555754067081" duration="6743000" />
-      <workItem from="1555825775448" duration="6949000" />
+      <workItem from="1555825775448" duration="8238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87279000" />
+    <option name="totallyTimeSpent" value="88568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
@@ -572,16 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/padrefamilia/perfil_padre_familia.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22980">
-          <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/padres_de_familia/controlador_avatar_pf.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/general.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -611,6 +619,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/padres_de_familia/servicio_padrefamilia.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="88" column="31" lean-forward="true" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/usuarios/controlador_listar_usuarios.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -618,17 +633,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modificar_pf.html">
+    <entry file="file://$PROJECT_DIR$/public/js/padres_de_familia/controlador_avatar_pf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="142" column="53" selection-start-line="142" selection-start-column="53" selection-end-line="142" selection-end-column="53" />
+        <state>
+          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/padres_de_familia/servicio_padrefamilia.js">
+    <entry file="file://$PROJECT_DIR$/public/modificar_pf.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="88" column="31" lean-forward="true" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="38" />
+        <state relative-caret-position="318">
+          <caret line="142" column="53" lean-forward="true" selection-start-line="142" selection-start-column="53" selection-end-line="142" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/padrefamilia/perfil_padre_familia.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10143">
+          <caret line="57" column="53" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -641,8 +663,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/padres_de_familia/controlador_modificar_pf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="68" column="70" selection-start-line="68" selection-start-column="70" selection-end-line="68" selection-end-column="70" />
+        <state relative-caret-position="483">
+          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
           <folding>
             <element signature="e#2872#5139#0" />
           </folding>
