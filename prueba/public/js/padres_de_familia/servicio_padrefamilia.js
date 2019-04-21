@@ -83,23 +83,23 @@ let modificar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
     request.done(function (msg) {
         swal.fire({
             type: 'success',
-            title: 'El padre de familia ha sido registrado.',
+            title: 'El padre de familia ha modificado.',
             text: 'Se le estará comunicando la decisión por correo. Recibirá un correo con su clave temporal.',
         }).then(function() {
-            window.location = "index.html";
+            window.location = "/public/padrefamilia/perfil_padre_familia.html";
             let usuario = obtener_usuario_por_id(localStorage.usuario_en_sesion);
-            registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "Registrar padre de familia", "Exitoso");
+            registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "modificar padre de familia", "Exitoso");
         });
     });
 
     request.fail(function (jqXHR, textStatus) {
         swal({
-            title: 'El padre de familia no pudo registrado',
+            title: 'El padre de familia no pudo ser modificado',
             text: 'Ocurrió un error inesperado, por favor intente de nuevo',
             icon: 'error',
         });
         let usuario = obtener_usuario_por_id(localStorage.usuario_en_sesion);
-        registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "Registrar padre de familia", "Fallida");
+        registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "modificar padre de familia", "Fallida");
     });
 };
 
