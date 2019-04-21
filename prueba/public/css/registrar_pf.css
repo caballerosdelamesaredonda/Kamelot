@@ -97,7 +97,7 @@ label{
     text-align: center;
 
 }
-input, textarea{
+input, textarea, option, select{
     padding: 6px 12px;
     font-size: 18px;
     display: block;
@@ -307,8 +307,9 @@ td:hover {
     height: 45px;
     padding: 6px 12px;
     margin-bottom: 15px;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.42857143;
+
 }
 
 .col-iz {

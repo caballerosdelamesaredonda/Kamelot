@@ -25,14 +25,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/padres_de_familia/controlador_modificar_pf.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+            <state relative-caret-position="450">
+              <caret line="63" column="49" lean-forward="true" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
               <folding>
                 <element signature="e#2872#5139#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/css/registrar_pf.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="309" column="17" selection-start-line="309" selection-start-column="17" selection-end-line="309" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -102,11 +111,11 @@
       <find>36</find>
       <find>36%</find>
       <find>hover</find>
-      <find>input</find>
       <find>nombre</find>
       <find>profile-card__name</find>
       <find>correo</find>
       <find>distrito</find>
+      <find>input</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,7 +133,6 @@
         <option value="$PROJECT_DIR$/public/test_menu.html" />
         <option value="$PROJECT_DIR$/public/js/sesion/permisos.js" />
         <option value="$PROJECT_DIR$/api/index.js" />
-        <option value="$PROJECT_DIR$/public/css/registrar_pf.css" />
         <option value="$PROJECT_DIR$/public/css/listar_usuarios.css" />
         <option value="$PROJECT_DIR$/public/js/usuarios/controlador_listar_usuarios.js" />
         <option value="$PROJECT_DIR$/public/registro_actividad.html" />
@@ -162,6 +170,7 @@
         <option value="$PROJECT_DIR$/public/js/padres_de_familia/servicio_padrefamilia.js" />
         <option value="$PROJECT_DIR$/public/modificar_pf.html" />
         <option value="$PROJECT_DIR$/public/js/padres_de_familia/controlador_modificar_pf.js" />
+        <option value="$PROJECT_DIR$/public/css/registrar_pf.css" />
       </list>
     </option>
   </component>
@@ -198,14 +207,7 @@
               <item name="prueba" type="b2602c69:ProjectViewProjectNode" />
               <item name="prueba" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="prueba" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prueba" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="padres_de_familia" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="prueba" type="b2602c69:ProjectViewProjectNode" />
@@ -281,12 +283,12 @@
       <workItem from="1554771059831" duration="14021000" />
       <workItem from="1555129964636" duration="5420000" />
       <workItem from="1555754067081" duration="6743000" />
-      <workItem from="1555825775448" duration="8238000" />
+      <workItem from="1555825775448" duration="9484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88568000" />
+    <option name="totallyTimeSpent" value="89814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
@@ -373,13 +375,6 @@
             <element signature="n#style#0;n#html#0;n#!!top" />
             <element signature="e#459#543#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/registrar_pf.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -663,11 +658,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/padres_de_familia/controlador_modificar_pf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+        <state relative-caret-position="450">
+          <caret line="63" column="49" lean-forward="true" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
           <folding>
             <element signature="e#2872#5139#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/registrar_pf.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="309" column="17" selection-start-line="309" selection-start-column="17" selection-end-line="309" selection-end-column="17" />
         </state>
       </provider>
     </entry>
