@@ -125,7 +125,7 @@ router.route('/borrar_usuario')
     );
 
 
-    router.route('/listar_activos')
+router.route('/listar_activos')
     .get(
         function(req, res){
             api_usuarios.listar_activos(req, res);

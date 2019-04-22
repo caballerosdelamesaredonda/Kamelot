@@ -2,12 +2,9 @@
 
 const tabla = document.querySelector('#tbl_etiquetas tbody');
 
-if(user_admin==null){
-    window.location.href='index.html';
-}
 
 let mostrar_datos = () =>{
-    let usuarios = listar_solicitudes();
+    let usuarios = listar_activos();
     for(let i =0; i < usuarios.length; i++){
         let fila = tabla.insertRow(); //Linea crea el tr de la table
         fila.insertCell().innerHTML = usuarios[i]['nombre'];
@@ -15,12 +12,15 @@ let mostrar_datos = () =>{
         fila.insertCell().innerHTML = usuarios[i]['telefono'];
         fila.insertCell().innerHTML = usuarios[i]['fecha_registro'];
         if(usuarios[i]['evaluacion_mep'] == null){
-            fila.insertCell().innerHTML ='<a href="evaluacion_mep.html">Registrar</a>';
+            fila.insertCell().innerHTML ='<a href="#" class ="rating">Registrar</a>';
+            fila.querySelector('a.rating').setAttribute('id', usuarios[i]['_id']);
+
         }
         else{
             fila.insertCell().innerHTML = usuarios[i]['evaluacion_mep'];
 
         }
+
 
        /* 
         fila.insertCell().innerHTML = `<a href="${usuarios[i]['adjuntar_documentos']}" download><img src="https://img.icons8.com/ios/38/000000/download.png" style="width: 35px; height:40px; margin-left: 70px" ></a>`;
@@ -39,33 +39,14 @@ let mostrar_datos = () =>{
 
 mostrar_datos();
 
-/*
-$('.btn_borrar_noticia').click(function () {
+
+$('a.rating').click(function () {
     var id_value = $(this).attr('id');
-    //console.log('Borar' + id_value);
-
-    Swal.fire({
-        title: 'Desea eliminar la solicitud?',
-        text: "Esta accion no se puede revertir!",
-        type: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        cancelButtonText: 'Cancelar',
-        confirmButtonText: 'Si, eliminar solicitud!'
-    }).then((result) => {
-        if (result.value) {
-            eliminar_solicitud(id_value);
-            then(function() {
-                window.location = "/public/listar_solicitudes.html";
-          
-              });
-        }
-    })
-
+    console.log('Editar' + id_value);
+    window.location = `/public/evaluacion_mep.html?id=${id_value}`;
 });
 
-$('.btn_editar_noticia').click(function () {
+/*$('.btn_editar_noticia').click(function () {
     var id_value = $(this).attr('id');
     //console.log('Borar' + id_value);
 

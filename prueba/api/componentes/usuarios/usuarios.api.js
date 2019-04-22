@@ -996,7 +996,7 @@ module.exports.modificar_pf = (req, res) =>{
 };
 
 module.exports.listar_activos = (req ,res) =>{
-    model_usuarios.find({estado : 'activo'}).then(
+    model_usuarios.find({estado : 'activo', tipo_usuario : 'CE'}).then(
         function(centroe){
             if(centroe.length > 0){
                 res.json(
