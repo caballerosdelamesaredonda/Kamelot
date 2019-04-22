@@ -994,3 +994,26 @@ module.exports.modificar_pf = (req, res) =>{
         }
     );
 };
+
+module.exports.listar_activos = (req ,res) =>{
+    model_usuarios.find({estado : 'activo'}).then(
+        function(centroe){
+            if(centroe.length > 0){
+                res.json(
+                    {
+                        success: true,
+                        centroe: centroe
+                    }
+                )
+            }else{
+                res.json(
+                    {
+                        success: false,
+                        comentarios: 'No se encontraron usuarios activos'
+                    }
+                )
+            }
+        }
+
+    )
+};
