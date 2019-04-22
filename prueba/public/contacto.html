@@ -20,6 +20,45 @@
         .mt-2 {
 	        margin-top: 20px;
         }
+
+        .main {
+            width: 1300px;
+            height: 370px;
+        }
+        .principal {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .box_principal {
+            border: 1px solid #e2e2e2;
+            border-radius: 5px;
+            box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+            width: 700px;
+            height: 250px;
+        }
+        .h-1{
+	        font-size: 30px;
+	        margin-bottom: 10px;
+	        margin-top: 30px;
+	        display: block;
+            text-align: center;
+        }
+        .p {
+            padding: 20px;
+            font-size: 18px;
+        } 
+        .p-2 {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        .link {
+            color: #192a56;
+            text-decoration: underline;
+        }
+        .link:hover {
+            color: #f27232;
+            text-decoration: underline;
+        }      
     </style>
 </head>
 <body>
@@ -34,15 +73,22 @@
         </nav>
 </header>
 
+<main class="main">
+<div class="principal box_principal">
+<h1 class="h-1 color_text">Contáctenos</h1>
+<p class="p">Para mayor información sobre nuestros servicios porfavor envienos un correo a la siguiente dirección: <a class="link" href="mailto:info@costaricaeduca.com">info@CostaRicaEduca.com</a>.</p>
+<p class="p-2">Le estaremos respondiendo sus consultas en la brevedad posible.</p>
+<p class="p-2">Muchas Gracias</p>
+</div>
+</main>
 
 
-
-<footer class="main_footer">
+<footer class="main_footer pos_footer">
     <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
     <nav class="footer_nav mt-2 ml-1">
         <a href="#">Inicio</a><span class="vertical-line"> | </span>
         <a href="#">FAQ</a><span class="vertical-line"> | </span>
-        <a href="#">Contacto</a>
+        <a href="./contacto.html">Contacto</a>
     </nav>
 </footer>
 </body>
