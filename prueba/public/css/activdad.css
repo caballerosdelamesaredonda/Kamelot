@@ -148,6 +148,15 @@ tr:nth-child(even) {
     font-size: 18px;
 				
 }
+.input_pregunta {
+    display: block;
+    width: 350px;
+    height: 80px;
+    margin-bottom: 20px;
+    border: #48dbfb solid 1px;
+    font-size: 18px;
+				
+}
 .form_control {
     margin-left: 50px;
 }
