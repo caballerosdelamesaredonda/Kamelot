@@ -62,3 +62,37 @@ let listar_activos = () => {
   
   };
   
+  let agregar_ranking = (pId, pranking) => {
+    let request = $.ajax({
+      url: "http://localhost:4000/api/modificar_ce",
+      method: "POST",
+      async: false,
+      data: {
+        _id : pId,
+        evaluacion_mep: pranking
+      },
+      dataType: "json",
+      contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+    });
+  
+    request.done(function (msg) {
+      swal.fire({
+        type: 'success',
+        title: 'El rating ha sido recibido',
+        text: 'Se le estará mostrando la información actualizada',
+      }).then(function() {
+        window.location = "/public/lista_ratings.html";
+  
+      });
+    });
+  
+    request.fail(function (jqXHR, textStatus) {
+      swal.fire({
+        type: 'error',
+        title: 'El rating no ha sido modificado',
+        text: 'Ocurrió un error inesperado, por favor intente de nuevo'
+      });
+    });
+  };
+  
+  
