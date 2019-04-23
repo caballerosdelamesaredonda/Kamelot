@@ -82,7 +82,7 @@ const evaluacion_ce = require('./componentes/rating/rating.route');
 
 const utiles = require('./componentes/reg_utiles/utiles.route');
 
-//const pregunta = require('./componentes/preguntas/preguntas.route');
+const pregunta = require('./componentes/pregunta/preguntas.route');
 
 const transacciones = require('./componentes/transacciones/transacciones.route');
 
@@ -100,7 +100,7 @@ app.use('/api', noticias);
 
 app.use('/api', actividad);
 app.use('/api', etiquetas);
-//app.use('/api', pregunta);
+app.use('/api', pregunta);
 app.use('/api', evaluacion_ce);
 app.use('/api', transacciones);
 
