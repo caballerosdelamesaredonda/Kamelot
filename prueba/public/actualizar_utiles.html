@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="./css/banner_rce.css">
     <link rel="stylesheet" href="./css/registro_ce.css">
+    
+    <link rel="stylesheet" href="/public/css/menu_nav/dropdown.css">
+
     <title>Actualizar Útiles</title>
     <style>
         .middle4{
@@ -36,19 +39,43 @@
         <div class="fondonav">
             <nav>
                 <ul>
-                    <li><a class="color_text" href="registro_noticias.html">Registrar noticias</a></li>
-                    <li><a class="color_text" href="listar_noticias.html">Listar noticias</a></li>
-                    <li><a class="color_text" href="registro_actividad.html">Registro actividad</a></li>
-                    <li><a class="color_text" href="listar_actividad.html">Listar actividad</a></li>
-                    <li><a class="color_text" href="registrar_utiles.html">Registrar útiles</a></li>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Noticias</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="registro_noticias.html">Registrar noticias</a>
+                            <a class="color_text" href="listar_noticias.html">Listar noticias</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Actividades</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="registro_actividad.html">Registrar actividad</a>
+                            <a class="color_text" href="listar_actividad.html">Listar actividad</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Útiles</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="registrar_utiles.html">Registrar útiles</a>
+                            <a class="color_text" href="listar_utiles.html">Listar Útiles</a>
+                        </div>
+                    </div>
+
                     <li><a class="color_text" href="etiqueta_centroe.html">Asociar etiqueta</a></li>
-                    <li><a class="color_text" href="listar_utiles.html">Listar útiles</a></li>
+                    <li><a class="color_text" href="/public/listar_citas.html">Listar Citas</a></li>
 
                 </ul>
             </nav>
+
+
+
         </div>
     </header>
 
+    
     <main>
 
         <section id="section_utiles">

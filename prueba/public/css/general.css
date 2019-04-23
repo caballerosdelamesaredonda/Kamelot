@@ -66,6 +66,20 @@ b{
             clear: both;
 		}
 
+#btn_actualizar{
+	background-color: #f27232; 
+            padding: 10px;
+            width: 170px;
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 50px;
+            border-radius: 5px;
+            -webkit-box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
+            -moz-box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
+            box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
+            clear: both;
+}	
+
 /* Estilos header y footer */
 
 .img_logo	{

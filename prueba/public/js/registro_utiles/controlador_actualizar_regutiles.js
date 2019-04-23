@@ -30,7 +30,7 @@ let mostrar_datos = () =>{
     let opciones_ciclo = document.querySelectorAll('#slt_ciclo option');
     let opciones_nivel = document.querySelectorAll('#slt_nivel option');
     let opciones_anho = document.querySelectorAll('#slt_anho option');
-    let opciones_nombre_util = document.querySelectorAll('#slt_nombre_util option');
+    let opciones_util_nombre = document.querySelectorAll('#slt_util_nombre option');
     let opciones_cantidad = document.querySelectorAll('#slt_cantidad option');
 
     //const btn_actualizar = document.querySelector('#btn_actualizar');
@@ -59,9 +59,9 @@ let mostrar_datos = () =>{
         }
     }
 
-    for(let i = 0; i < opciones_nombre_util.length; i++){
-        if(opciones_nombre_util[i].textContent == util[0]['nombre_util']){
-            opciones_nombre_util[i].selected = true;
+    for(let i = 0; i < opciones_util_nombre.length; i++){
+        if(opciones_util_nombre[i].textContent == util[0]['util_nombre']){
+            opciones_util_nombre[i].selected = true;
         }
     }
 
@@ -79,15 +79,19 @@ if(util){
 }
 
 let obtener_datos = () =>{
+
+
     let nombre = input_nombre.value;
     let anho = input_anho.value;
     let cantidad = slt_cantidad.selectedOptions[0].textContent;
     let ciclo = slt_ciclo.selectedOptions[0].textContent;
     let nivel = slt_nivel.selectedOptions[0].textContent;
-    let nombre_util = slt_nombre_util.selectedOptions[0].textContent;
+    let nombre_util = slt_util_nombre.selectedOptions[0].textContent;
     let tipo = slt_tipo.selectedOptions[0].textContent;
 
     actualizar_util(nombre, anho, cantidad, ciclo, nivel, nombre_util, tipo, _id);
+
+     
 };
 
 btn_actualizar.addEventListener('click', obtener_datos);

@@ -66,6 +66,7 @@ let mostrar_datos = () => {
             boton_eliminar.textContent = 'eliminar';
             boton_eliminar.dataset.id_utiles = utiles[i]['_id'];
             boton_eliminar.href = '#';
+            
 
             boton_eliminar.addEventListener('click', function(){
                 eliminar(this.dataset.id_utiles);

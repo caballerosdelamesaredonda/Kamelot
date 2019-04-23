@@ -29,7 +29,7 @@ router.route('/listar_utiles')
         }
     );
 
-router.route('/buscar_utiles/:id_util')
+router.route('/buscar_util/:id_util')
     .get(
         function (req, res) {
             utiles_api.buscar_por_id(req, res);

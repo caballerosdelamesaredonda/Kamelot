@@ -110,7 +110,7 @@ let buscar_util = (id_util) => {
   let util = [];
 
   let request = $.ajax({
-    url: "http://localhost:400/api/buscar_util/"+id_util,
+    url: "http://localhost:4000/api/buscar_util/"+id_util,
     method: "GET", 
     data:{
     },
