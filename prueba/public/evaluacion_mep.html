@@ -14,6 +14,8 @@
     <link rel='stylesheet' href='/public/css/rating/style.css'>
     <link rel="stylesheet" href="/public/css/popr.css">
     <link rel="stylesheet" href="/public/css/menu_nav/dropdown.css">
+    <link rel="stylesheet" href="./css/registro_ce.css">
+
 
     <title>Rating de Centro Educativo</title>
 </head>
@@ -87,15 +89,43 @@
             </header>
 
     <section id="rating_container" class='rating-widget'>
-
+        <h1 class="h1">Registro ranking del MEP</h1>
         <div>
-            <h1 class="h1" id="h1">Deja un comentario y una evaluacion:</h1>
-            <label id="nombre">hol</label>
-            <label id="fecha"></label>
-
-
+            <img src="" id="imagen_perfil" width="130px">
+            <h1 class="h1" id="h1"></h1>
+          <label>Fecha de registro:   <label id="fecha"></label></label> 
         </div>
 
+        <div class="col-der">
+            <label class="color_text" for="transporte">¿Cuántos idiomas ofrece?</label>
+            <select name="Idiomas" id="idiomas">
+                <option value="">--Seleccione una opción--</option>
+                <option value="0">Uno</option>
+                <option value="1">Dos</option>
+                <option value="2">Tres o más</option>
+            </select>
+
+            <label class="color_text" for="cert">¿Ofrece algún tipo de cerfiticación?</label>
+            <select name="cert" id="cert">
+                <option value="">--Seleccione una opción--</option>
+                <option value="0">No</option>
+                <option value="1">Sí</option>
+            </select>
+        </div>
+        <div class="col-izq">
+            <label class="color_text" for="transporte">¿Ofrece transporte?</label>
+            <select name="transporte" id="transporte">
+                <option value="">--Seleccione una opción--</option>
+                <option value="0">No</option>
+                <option value="1">Sí</option>
+            </select>
+            <label class="color_text" for="transporte">¿Ofrece transporte?</label>
+            <select name="transporte" id="transporte">
+                <option value="">--Seleccione una opción--</option>
+                <option value="0">No</option>
+                <option value="1">Sí</option>
+            </select>
+        </div>
         <!-- Rating Stars Box -->
         <div class='rating-stars text-center'>
             <ul id='stars'>
@@ -147,10 +177,8 @@
     <script src="/public/js/rating/laxvek.js"></script>
     <script src="/public/js/rating/index.js"></script>
     <script src="/public/js/rating/servicio_rating.js"></script>
-    <script src="/public/js/rating/controlador_registrar_rating.js"></script>
     <script src="/public/js/popmenu/popr.js"></script>
     <script src="/public/js/servicio_rating_mep.js"></script>
-
     <script src="/public/js/agregar_rating.js"></script>
 
 
