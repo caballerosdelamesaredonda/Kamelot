@@ -66,10 +66,10 @@ module.exports.consultar_utiles = (req, res) => {
 };
 
 module.exports.buscar_por_id = function (req, res) {
-    modelo_utiles.find({ _id: req.body.id_util }).then(
+    model_utiles.find({ _id: req.body.id_util }).then(
         function (util) {
             if (util) {
-                registrar_utiles.json({ success: true, util: util });
+                res.json({ success: true, util: util });
             } else {
                 res.json({ success: false, util: util});
             }
@@ -78,7 +78,7 @@ module.exports.buscar_por_id = function (req, res) {
 };
 
 module.exports.actualizar = function (req, res) {
-    modelo_utiles.findByIdAndUpdate(req.body.id, { $set: req.body },
+    model_utiles.findByIdAndUpdate(req.body.id, { $set: req.body },
         function (error) {
             if (error) {
                 res.json(
@@ -101,7 +101,7 @@ module.exports.actualizar = function (req, res) {
 };
 
 module.exports.desactivar = function (req, res) {
-    modelo_utiles.findByIdAndUpdate(req.body.id, { $set: { estado: 'desactivado' } },
+    model_utiles.findByIdAndUpdate(req.body.id, { $set: { estado: 'desactivado' } },
         function (error) {
             if (error) {
                 res.json(
@@ -122,7 +122,7 @@ module.exports.desactivar = function (req, res) {
 };
 
 module.exports.activar = function (req, res) {
-    modelo_utiles.findByIdAndUpdate(req.body.id, { $set: { estado: 'activado' } },
+    model_utiles.findByIdAndUpdate(req.body.id, { $set: { estado: 'activado' } },
         function (error) {
             if (error) {
                 res.json(
@@ -144,7 +144,7 @@ module.exports.activar = function (req, res) {
 };
 
 module.exports.eliminar = function(req, res){
-    modelo_utiles.findByIdAndRemove(req.body.id,
+    model_utiles.findByIdAndRemove(req.body.id,
         function(error){
             if(error){
                 res.json({success: false ,msg: 'No se pudo eliminar el util '});
