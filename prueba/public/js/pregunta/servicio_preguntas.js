@@ -136,6 +136,7 @@ let eliminar = (pid) => {
               title : 'Proceso realizado con éxito',
               text : res.msg
           });
+          
       }else{
           swal.fire({
               type : 'Error',

@@ -32,6 +32,7 @@ let mostrar_preguntas = () => {
             eliminar(this.dataset.id_pregunta);
             pregunta = listar_pregunta();
             mostrar_preguntas();
+            window.location = "/public/listar_pregunta.html";
 
         });
 
