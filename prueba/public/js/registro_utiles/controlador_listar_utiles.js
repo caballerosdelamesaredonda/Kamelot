@@ -81,7 +81,18 @@ let mostrar_datos = () => {
         }
 };
 
-
-
+if (utiles[0] == null) {
+    swal.fire({
+        type: 'error',
+        title: 'No hay útiles registrados',
+        text: 'Por favor registre uno'
+    }).then(function () {
+        window.location = "/public/registrar_utiles.html";
+    });
+} else {
 mostrar_datos();
+    
+}
+
+
 
