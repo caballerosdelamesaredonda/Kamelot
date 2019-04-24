@@ -2,10 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Registro Actividad</title>
+<title>ACtualizar Actividad</title>
 <link rel="stylesheet" href="./css/reset.css" type="text/css">
 <link rel="stylesheet" href="./css/general.css" type="text/css">
-<link rel="stylesheet" href="./css/pregunta.css" type="text/css">	
+<link rel="stylesheet" href="./css/perfil_ce.css" type="text/css">
+<link rel="stylesheet" href="./css/activdad.css" type="text/css">	
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
 <body>
@@ -18,7 +19,7 @@
 				<div class="float-right mr-2">
 
 					<div id="menu_right_icons">
-						<div class="popr" data-id="2"><img src="./images/settings_2.png" id=""></div>
+						<div class="popr" data-id="2"><a class="config" id="">Configuración</a></div>
 						<div class="avatar_cont"><img src="" id="avatar_img"></div>
 					</div>
 
@@ -27,11 +28,11 @@
 				<div id="avatar_container" style="margin-right: 100px;">
 
 					<div class="popr-box" data-box-id="2">
-						<a href="perfil_admin.html">
+						<a href="./perfil_admin.html">
 							<div class="popr-item" id="">Ver Perfil</div>
 						</a>
 
-						<a href="/public/index.html" onclick="localStorage.clear();">
+						<a href="./index.html" onclick="localStorage.clear();">
 							<div class="popr-item">Cerrar Sesion</div>
 						</a>
 					</div>
@@ -98,8 +99,8 @@
 	
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/servicio_preguntas.js"></script>
-	<script src="js/controlador_actualizar_preguntas.js"></script>
+    <script src="./js/pregunta/servicio_preguntas.js"></script>
+	<script src="./js/pregunta/controlador_actualizar_preguntas.js"></script>
 	
 </body>
 </html>
