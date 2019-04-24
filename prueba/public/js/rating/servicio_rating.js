@@ -1,6 +1,6 @@
 'use strict';
 
-let registrar_rating = (pUserId,pCentroId, pComentario,pRating) => {
+let registrar_actividad = (pUserId,pCentroId, pComentario,pRating) => {
   let request = $.ajax({
     url: "http://localhost:4000/api/registrar_rating",
     method: "POST",
@@ -18,9 +18,9 @@ let registrar_rating = (pUserId,pCentroId, pComentario,pRating) => {
     swal.fire({
       type: 'success',
       title: 'El rating fue enviado',
-      text: 'En unos segundos se mostrará en el perfil del centro'
+      text: 'En unos segundos se mostrará en tu perfil'
     }).then(function() {
-      window.location.href = 'lista_ratings_centro.html';
+      //window.location = "perfil_centroedu.html";
     });
   });
 
@@ -32,38 +32,3 @@ let registrar_rating = (pUserId,pCentroId, pComentario,pRating) => {
     });
   });
 };
-
-let consultar_ratings = (pId) => {
-
-  let consultar_rating = [];
-
-  let request = $.ajax({
-      url: "http://localhost:4000/api/listar_ratings_usuario",
-      method: 'POST',
-      async: false,
-      data: {
-        centroid: pId
-      },
-      dataType: "json",
-      contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-  });
-
-  request.done(function (response) {
-
-      if (response.success) {
-          consultar_rating = response.ratings;
-      } else {
-          consultar_rating = response.ratings;
-          swal.fire({
-              type: 'error',
-              title: 'Error',
-              text: response.msj
-          });
-      }
-
-  });
-
-  return consultar_rating;
-
-};
-

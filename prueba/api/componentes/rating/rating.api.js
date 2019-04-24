@@ -33,6 +33,7 @@ module.exports.registrar = (req, res) =>{
     );
 };
 
+
 module.exports.listar_todos = (req ,res) =>{
     model_rating.find().then(
         function(actividad){
@@ -56,21 +57,21 @@ module.exports.listar_todos = (req ,res) =>{
     )
 };
 
-module.exports.listar_ratings_usuario = (req, res) => {
-    model_rating.find({centroid: req.body.centroid}).then(
-        function (ratings) {
-            if (ratings) {
+module.exports.listar_actividades_usuario = (req, res) => {
+    model_rating.find({userid: req.body.userid}).then(
+        function (actividads) {
+            if (actividads) {
                 res.json(
                     {
                         success: true,
-                        ratings: ratings
+                        actividads: actividads
                     }
                 )
             } else{
                 res.json(
                     {
                         success: false,
-                        ratings: `Error, no se encontraron ratings: ${ratings}`
+                        actividads: `Error, no se encontraron actividads: ${actividads}`
                     }
                 )
             }
