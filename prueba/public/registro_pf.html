@@ -29,103 +29,98 @@
     <main>
 
 
-        <section class="col-iz">
-            <div>
-                <label class="color_text"for="txt_nombre">Nombre</label>
-                <input type="text" id="txt_nombre" placeholder="Escriba el nombre de usuario">
-            </div>
-            <div>
-                <label class="color_text" for="txt_snombre">Segundo nombre</label>
-                <input type="text" id="txt_snombre" placeholder="Escriba el segundo nombre del usuario">
-            </div>
-            <div>
-                <label class="color_text" for="txt_papellido">Primer apellido</label>
-                <input type="text" id="txt_papellido" placeholder="Escriba el primer apellido del usuario">
-            </div>
-            <div>
-                <label class="color_text" for="txt_sapellido">Segundo apellido</label>
-                <input type="text" id="txt_sapellido" placeholder="Escriba el segundo apellido del usuario">
-            </div>
+        <section id="section">
 
-            <div>
-                <label class="color_text" for="slt_tipo_id">Tipo de identificación</label>
-                <select class="form-select" id="slt_tipo_id">
-                    <option value="">--Seleccione una opción--</option>
-                    <option value="Nacional">Nacional</option>
-                    <option value="DIMEX">DIMEX</option>
-                    <option value="Pasaporte">Pasaporte</option>
-                </select>
-            </div>
-            <div>
-                <label class="color_text" for="txt_id">Identificación</label>
-                <input type="number" min="0" id="txt_id" placeholder="Escriba la identificación">
-            </div>
+            <h1 class="d1 color_text title_center mb-1">Registro padre de familia</h1>
 
-            <div>
-                <label class="color_text" for="txt_edad">Edad</label>
-                <input type="date" min="0" id="txt_edad" placeholder="Escriba la identificación">
-            </div>
+            <div class="title_center">
 
-            <div>
-                <label class="color_text" for="txt_correo">Correo electrónico</label>
-                <input type="text" id="txt_correo" placeholder="Escriba el correo del usuario">
-            </div>
-            <div>
-                <label class="color_text" for="txt_telefono">Teléfono</label>
-                <input type="number" min="0" id="txt_telefono" placeholder="Escriba el número de teléfono">
-            </div>
+                <figure class="image_holder">
+                    <img src="/public/images/photo_placeholder.jpg" alt="seleccionar imagen" id="image_preview">
 
+                </figure>
 
-            <div>
-                <label class="color_text" for="slt_provincias">Provincia</label>
-                <select class="form-select" id="slt_provincias">
-                    <option value="">--Provincia--</option>
+                <button type="button" id="btnSeleccionarImagen" class="boton_imagen">Subir imagen</button>
+            </div>
+            <form id="frm_registro_pf" style="margin-top:20px;">
+                <div class="wrapper">
+                    <section class="col-iz">
+                        <div>
+                            <label class="color_text"for="txt_nombre">Nombre</label>
+                            <input type="text" id="txt_nombre" placeholder="Escriba el nombre de usuario">
+                        </div>
+                        <div>
+                            <label class="color_text" for="txt_papellido">Primer apellido</label>
+                            <input type="text" id="txt_papellido" placeholder="Escriba el primer apellido del usuario">
+                        </div>
 
-                </select>
-            </div>
-            <div>
-                <label  class="color_text" for="slt_cantones">Cantón</label>
-                <select class="form-select" id="slt_cantones">
-                    <option value="">--Cantón--</option>
+                        <div>
+                            <label class="color_text" for="slt_tipo_id">Tipo de identificación</label>
+                            <select class="form-select" id="slt_tipo_id">
+                                <option value="">--Seleccione una opción--</option>
+                                <option value="Nacional">Nacional</option>
+                                <option value="DIMEX">DIMEX</option>
+                                <option value="Pasaporte">Pasaporte</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="color_text" for="txt_correo">Correo electrónico</label>
+                            <input type="text" id="txt_correo" placeholder="Escriba el correo del usuario">
+                        </div>
+                        <div>
+                            <label class="color_text" for="num_cant_hijos">Cantidad de hijos</label>
+                            <input type="number" min="0" id="num_cant_hijos" placeholder="Escriba la cantidad de hijos">
+                        </div>
+                        <div>
+                            <label  class="color_text" for="slt_cantones">Cantón</label>
+                            <select class="form-select" id="slt_cantones">
+                                <option value="">--Cantón--</option>
 
-                </select>
-            </div>
-            <div>
-                <label class="color_text" for="slt_distritos">Distrito</label>
-                <select class="form-select" id="slt_distritos">
-                    <option value="">--Distrito--</option>
-                </select>
-            </div>
-            <div>
-                <label class="color_text" for="txt_direccion">Dirección exacta</label>
-                <textarea type="text" id="txt_direccion" placeholder="Escriba la dirección exacta" rows="3" style="height: 108px;"></textarea>
-            </div>
-            <div>
-                <div id="div_hijos">
-                    <label class="color_text" for="num_edad_hijo">Edad del hijo/a</label>
-                    <input type="number" min="0" id="num_edad_hijo" placeholder="Escriba la edad del hijo/a">
-                    <button type="button" id="btn_agregar_hijos"></button>
-                </div>
-                <div style="border: #48dbfb solid 1px;border-radius: 5px;height: 200px;width: 345px;position: relative;">
-                    <div class="contenedor_head">
-                        <table style="width: 340px; border-bottom: #48dbfb solid 1px;">
-                            <thead class="head_backg" style="background-color: transparent;color: #192a56;">
-                            <tr>
-                                <th class="column1">hijo #</th>
-                                <th class="column2">edad</th>
-                                <th class="column3"></th>
-                            </tr>
-                            </thead>
-                        </table>
-                    </div>
-                    <div class="contenedor_body" style="height: 135px;">
-                        <table id="tbl_hijos">
-                            <tbody></tbody>
-                        </table>
-                    </div>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="color_text" for="txt_direccion">Dirección exacta</label>
+                            <textarea type="text" id="txt_direccion" placeholder="Escriba la dirección exacta" rows="3"></textarea>
+                        </div>
+                    </section>
+                    <section class="col-der">
+                        <div>
+                            <label class="color_text" for="txt_snombre">Segundo nombre</label>
+                            <input type="text" id="txt_snombre" placeholder="Escriba el segundo nombre del usuario">
+                        </div>
+                        <div>
+                            <label class="color_text" for="txt_sapellido">Segundo apellido</label>
+                            <input type="text" id="txt_sapellido" placeholder="Escriba el segundo apellido del usuario">
+                        </div>
+                        <div>
+                            <label class="color_text" for="txt_id">Identificación</label>
+                            <input type="number" min="0" id="txt_id" placeholder="Escriba la identificación">
+                        </div>
+                        <div>
+                            <label class="color_text" for="txt_telefono">Teléfono</label>
+                            <input type="number" min="0" id="txt_telefono" placeholder="Escriba el número de teléfono">
+                        </div>
+                        <div>
+                            <label class="color_text" for="slt_provincias">Provincia</label>
+                            <select class="form-select" id="slt_provincias">
+                                <option value="">--Provincia--</option>
+
+                            </select>
+                        </div>
+                        <div>
+                            <label class="color_text" for="slt_distritos">Distrito</label>
+                            <select class="form-select" id="slt_distritos">
+                                <option value="">--Distrito--</option>
+                            </select>
+                        </div>
+
+                    </section>
                 </div>
 
-            </div>
+                <div class="btn_enviar center">
+                    <button type="button" id="btn_registrar">Enviar</button>
+                </div>
+            </form>
         </section>
 
     </main>
@@ -139,7 +134,6 @@
         </nav>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="https://unpkg.com/moment"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="js/transacciones/servicio_transaccion.js"></script>

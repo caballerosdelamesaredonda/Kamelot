@@ -53,7 +53,7 @@ let registrar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
 };
 
 
-let modificar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellido, pIdentificacion, pTelefono, pProvincia, pCanton, pDistrito, pDireccion, pFoto, pTipoId, _id, pFechaNac, pEdadHijos) => {
+let modificar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellido, pIdentificacion, pTelefono, pProvincia, pCanton, pDistrito, pDireccion, pCantHijos, pFoto, pTipoId, _id) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/modificar_pf",
         method: "POST",
@@ -63,6 +63,7 @@ let modificar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
             papellido : pApellido,
             sapellido : pSegundoApellido,
             identificacion : pIdentificacion,
+            cantidad_hijos : pCantHijos,
             correo_electronico : pCorreo,
             telefono : pTelefono,
             provincia : pProvincia,
@@ -71,9 +72,7 @@ let modificar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
             direccion: pDireccion,
             foto: pFoto,
             tipo_id: pTipoId,
-            _id: _id,
-            fecha_nacimiento: pFechaNac,
-            edades_hijos: pEdadHijos
+            _id: _id
         },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -81,29 +80,15 @@ let modificar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
 
     let estado = 'Fallido';
 
-    request.done(function (res) {
-        if(res.success === true){
-            console.log(res.msg);
-            swal.fire({
-                type: 'success',
-                title: 'El padre de familia ha modificado.'
-            }).then(function() {
-                window.location = "/public/padrefamilia/perfil_padre_familia.html";
-                let usuario = obtener_usuario_por_id(localStorage.usuario_en_sesion);
-                registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "modificar padre de familia", "Exitoso");
-            });
-        }else{
-            swal.fire({
-                icon: 'error',
-                title: 'El padre de familia no se pudo modificar.',
-                text: res.msg
-            }).then(function() {
-                window.location = "/public/padrefamilia/perfil_padre_familia.html";
-                let usuario = obtener_usuario_por_id(localStorage.usuario_en_sesion);
-                registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "modificar padre de familia", "Fallida");
-            });
-        }
-
+    request.done(function (msg) {
+        swal.fire({
+            type: 'success',
+            title: 'El padre de familia ha modificado.'
+        }).then(function() {
+            window.location = "/public/padrefamilia/perfil_padre_familia.html";
+            let usuario = obtener_usuario_por_id(localStorage.usuario_en_sesion);
+            registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "modificar padre de familia", "Exitoso");
+        });
     });
 
     request.fail(function (jqXHR, textStatus) {

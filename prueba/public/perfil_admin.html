@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="css/prueba_perfil.css">
     <link rel="stylesheet" href="/public/css/popr.css">
     <link rel="stylesheet" href="/public/css/menu_nav/dropdown.css">
+
+
+
+  
 </head>
 
 <body> 
@@ -24,7 +28,7 @@
                 <div class="float-right mr-2">
 
                     <div id="menu_right_icons">
-                        <div class="popr" data-id="2"><a class="config" id="">Configuración</a></div>
+                        <div class="popr" data-id="2"><img src="./images/settings_2.png" id=""></div>
                         <div class="avatar_cont"><img src="" id="avatar_img"></div>
                     </div>
 
@@ -46,10 +50,42 @@
             </div>
         </nav>
         <div style="clear:both; margin-bottom: 20px;"></div>
-        
+        <div class="fondonav">
+            <nav>
+                <ul>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Preguntas frecuentes</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="registro_pregunta.html">Registrar pregunta frecuente</a>
+                            <a class="color_text" href="listar_pregunta.html">Listar pregunta frecuente</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Etiquetas</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="registrar_etiqueta.html">Registrar etiqueta</a>
+                            <a class="color_text" href="lista_etiquetas.html">Lista de etiquetas</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Usuarios y solicitudes</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="listar_solicitudes.html">Lista de solicitudes</a>
+                            <a class="color_text" href="listar_usuarios.html">Lista de usuarios</a>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+
+
+
+        </div>
     </header>
 
-        <div class="wrapper" style="margin-top:150px;">
+        <div class="wrapper" style="margin-top:80px;">
   
                 <div class="profile-card js-profile-card">
                   <div class="profile-card__img">
@@ -86,11 +122,7 @@
                         <div class="profile-card-inf__txt">Teléfono</div>
                       </div>
               
-                      <div class="profile-card-inf__item">
-                        <div class="profile-card-inf__title"><label id="hijos"></label></div>
-                        <div class="profile-card-inf__txt">Hijos</div>
-                      </div>
-              
+
         
                     </div>
               
@@ -139,10 +171,7 @@
               
                     </div>-->
               
-                    <div class="profile-card-ctr">
-                      <button class="profile-card__button button--blue js-message-btn"><a href="/public/padrefamilia/listar_centroe.html">Centros educativos</a></button>
-                      <button class="profile-card__button button--orange"><a href="/public/padrefamilia/listar_citas_pf.html">Citas pendientes</a> </button>
-                    </div>
+
                   </div>
               
                   <div class="profile-card-message js-message">

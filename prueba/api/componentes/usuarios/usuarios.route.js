@@ -132,16 +132,6 @@ router.route('/listar_activos')
     }
 );
 
-router.route('/clave_temporal').post(function (req, res) {
-    api_usuarios.clave_temporal(req, res);
-});
-
-router.route('/cambiar_clave').post(function (req, res) {
-    api_usuarios.cambiar_clave(req, res);
-});
-
-
-
 
 
 

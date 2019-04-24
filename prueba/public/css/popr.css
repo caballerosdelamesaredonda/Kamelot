@@ -30,6 +30,12 @@ http://www.tipue.com/popr
 	border-radius: 50%;  
 }
 
+.popr a
+{
+     color: #333;
+     text-decoration: none;
+     border: 0;    
+}
 .popr-box
 {
      display: none;

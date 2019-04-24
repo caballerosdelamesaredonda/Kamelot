@@ -103,18 +103,16 @@ let obtener_datos = () => {
         let papellido = input_papellido.value;
         let sapellido = input_sapellido.value;
         let tipo_id = input_tipo_id.options[slt_tipo_id.selectedIndex].value;
-        let identificacion = input_id.value;
+        let id = input_id.value;
         let telefono = input_telefono.value;
         let provincias = input_provincias.options[slt_provincias.selectedIndex].textContent;
         let cantones = input_cantones.options[slt_cantones.selectedIndex].textContent;
         let distritos = input_distritos.options[slt_distritos.selectedIndex].textContent;
         let direccion= input_direccion.value;
         let foto = input_foto.src;
-        let edad_hijos= arreglo_hijos;
-        let fecha_nac=input_fecha_nac.value;
+        let cant_hijos= input_cant_hijos.value;
 
-
-        modificar_pf(correo, nombre,snombre, papellido, sapellido, identificacion, telefono, provincias, cantones, distritos, direccion, edad_hijos, foto, tipo_id, id, fecha_nac);
+        registrar_pf(correo, nombre,snombre, papellido, sapellido, id, telefono, provincias, cantones, distritos, direccion, cant_hijos, foto, tipo_id);
 
     }else{
         swal.fire({

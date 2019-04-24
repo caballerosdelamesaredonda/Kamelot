@@ -8,14 +8,14 @@ const boton_actualizar = document.querySelector('#btn_actualizar');
 let get_param = (param) => {
     let url_string =  window.location.href;
     let url = new URL(url_string);
-    let id = url.searchParams.get(param);//Toma el parámetro id_pregunta del url y retorna el valor
+    let id = url.searchParams.get(param);//Toma el parámetro id_inmueble del url y retorna el valor
     return id;
 };
 
 
 let _id = get_param('id_pregunta');
 
-let pregunta = buscar_pregunta(_id); //se levantan los datos de esa pregunta bajo demanda usando su id
+let pregunta = buscar_pregunta(_id); //se levantan los datos de ese inmueble bajo demanda usando su id
 
 let mostrar_datos = () =>{
     input_pregunta.value = pregunta[0]['pregunta'];
@@ -25,7 +25,7 @@ let mostrar_datos = () =>{
 
 if(pregunta){
     mostrar_datos();
-};
+}
 
 let obtener_datos = () =>{
     let pregunta = input_pregunta.value;
