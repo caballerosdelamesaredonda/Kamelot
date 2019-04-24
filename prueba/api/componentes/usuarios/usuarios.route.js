@@ -136,6 +136,10 @@ router.route('/cambiar_clave').get(function (req, res) {
     api_usuarios.cambiar_clave(req, res);
 });
 
+router.route('/validar_correo').post(function (req, res) {
+    api_usuarios.cambiar_clave(req, res);
+});
+
 
 
 

@@ -107,5 +107,38 @@ let cambiar_clave = (pId, pClave) =>{
     return  usuario;
 };
 
+let validar_correo = (pCorreo) =>{
+    let res = '';
+    let request = $.ajax({
+        url: "http://localhost:4000/api/validar_correo",
+        method: 'POST',
+        async: false,
+        data: {
+            correo: pCorreo
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    });
+
+    request.done(function (response) {
+
+        if (response.success){
+            res = response;
+
+        }else{
+            res = response;
+            swal({
+                type: 'error',
+                title: 'Error',
+                text: response.msg
+            });
+        }
+
+    });
+
+    return res;
+};
+
+
 
 
