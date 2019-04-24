@@ -77,6 +77,11 @@
                         </div>
 
                         <div>
+                            <label class="color_text" for="txt_fecha_nacimiento">Fecha de nacimiento</label>
+                            <input type="date" min="0" id="txt_fecha_nacimiento">
+                        </div>
+
+                        <div>
                             <label class="color_text" for="txt_correo">Correo electrónico</label>
                             <input type="text" id="txt_correo" placeholder="Escriba el correo del usuario">
                         </div>
@@ -112,11 +117,11 @@
                         </div>
                         <div>
                             <div id="div_hijos">
-                                <label class="color_text" for="num_cant_hijos">edad del hijo</label>
-                                <input type="number" min="0" id="num_cant_hijos" placeholder="Escriba la cantidad de hijos">
+                                <label class="color_text" for="num_edad_hijo">Edad del hijo/a</label>
+                                <input type="number" min="0" id="num_edad_hijo" placeholder="Escriba la edad del hijo/a">
                                 <button type="button" id="btn_agregar_hijos"></button>
                             </div>
-                            <div style="border: #48dbfb solid 1px; border-radius: 5px; height: 200px;">
+                            <div style="border: #48dbfb solid 1px;border-radius: 5px;height: 200px;width: 345px;position: relative;">
                                 <div class="contenedor_head">
                                     <table style="width: 340px; border-bottom: #48dbfb solid 1px;">
                                         <thead class="head_backg" style="background-color: transparent;color: #192a56;">
@@ -128,7 +133,7 @@
                                         </thead>
                                     </table>
                                 </div>
-                                <div class="contenedor_body">
+                                <div class="contenedor_body" style="height: 135px;">
                                     <table id="tbl_hijos">
                                         <tbody></tbody>
                                     </table>
@@ -157,6 +162,7 @@
         </nav>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://unpkg.com/moment"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="js/transacciones/servicio_transaccion.js"></script>

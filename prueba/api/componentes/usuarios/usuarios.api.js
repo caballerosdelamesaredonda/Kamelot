@@ -19,12 +19,12 @@ module.exports.registrar_ce = (req, res) =>{
         nombre : req.body.nombre,
         alias : req.body.alias,
         cedula_juridica : req.body.cedula_juridica,
-        clave : generador_clave.generate({
-            length: 8,
-            numbers: true,
-            uppercase: true,
-            strict: true
-        }),
+        clave: generador_clave.generate({
+                    length: 8,
+                    numbers: true,
+                    uppercase: true,
+                    strict: true}),
+        temporal: 'si',
         tipo_centro : req.body.tipo_centro,
         nivel_centro : req.body.nivel_centro,
         foto : req.body.foto,
@@ -402,8 +402,8 @@ module.exports.registrar_pf = (req, res) =>{
                 length: 8,
                 numbers: true,
                 uppercase: true,
-                strict: true
-            }),
+                strict: true}),
+            temporal: 'si',
             telefono : req.body.telefono,
             provincia : req.body.provincia,
             canton : req.body.canton,
@@ -411,7 +411,8 @@ module.exports.registrar_pf = (req, res) =>{
             direccion: req.body.direccion,
             tipo_usuario : req.body.tipo_usuario,
             estado : req.body.estado,
-            tipo_id : req.body.tipo_id
+            tipo_id : req.body.tipo_id,
+            fecha_nacimiento: req.body.fecha_nacimiento
         }
     );
     
@@ -851,7 +852,8 @@ module.exports.validar_sesion = (req, res)=>{
                 }else{
                     res.json({
                         success: false,
-                        msj: 'contraseña incorrecta'
+                        msj: 'contraseña incorrecta',
+                        test: `tu clave que enviaste es: ${req.body.clave}, la clave en el sistema es: ${usuario.clave}`
                     })
                 }
             }else{
@@ -1015,5 +1017,18 @@ module.exports.listar_activos = (req ,res) =>{
             }
         }
 
+    )
+};
+
+
+module.exports.cambiar_clave = (req ,res) =>{
+    model_usuarios.findByIdAndUpdate(req.body._id, {$set: {estado: 'activo'}},
+        function(error){
+            if(error){
+                res.json({success: false ,msg: 'No se pudo habilitar el usuario '});
+            }else{
+                res.json({success: true ,msg: 'El usuario se activó con éxito'});
+            }
+        }
     )
 };

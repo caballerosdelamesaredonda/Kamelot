@@ -9,9 +9,12 @@ let schema_usuarios = new mongoose.Schema(
         papellido : {type : String, required : false},
         sapellido : {type : String, required : false},
         identificacion : {type : String, required : false},
-        cantidad_hijos : {type : String, required : false},
+        edades_hijos :[{
+                edad_hijo:{type: Number, required: false}
+        }],
         correo_electronico : {type : String, required : false},
-        clave: {type : String, required: false},
+        clave: {type: String, required: false},
+        temporal: {type: String, required: false},
         telefono : {type : String, required : false},
         provincia : {type : String, required : false},
         canton : {type : String, required : false},
@@ -45,7 +48,8 @@ let schema_usuarios = new mongoose.Schema(
         //Todos los usuarios
         tipo_usuario : {type : String, required : false},
         estado : {type : String, required : false},
-        fecha_registro : {type : String, required : false}
+        fecha_registro : {type : String, required : false},
+        fecha_nacimiento: {type: Date, required: false}
     }
 );
 

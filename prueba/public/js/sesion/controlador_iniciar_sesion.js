@@ -39,7 +39,14 @@ let obtenerDatos = () =>{
 				let validacion_credenciales = validar_credenciales(correo, contrasenna);
 
 				if(validacion_credenciales.success){
-						iniciar_sesion(validacion_credenciales.usuario);
+						let temporal = validacion_credenciales.usuario.clave.temporal;
+						if (temporal === 'si'){
+							localStorage.usuario_en_sesion = validacion_credenciales.usuario['_id'];
+							window.location.href=`cambiar_contrasenna.html?id=${validacion_credenciales.usuario['_id']}`;
+						}else{
+							iniciar_sesion(validacion_credenciales.usuario);
+						}
+
 				}
 
 		}else{
