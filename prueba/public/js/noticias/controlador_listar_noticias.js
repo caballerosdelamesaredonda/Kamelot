@@ -37,21 +37,7 @@ let mostrar_datos = () => {
 
 };
 
-
-if (noticias[0] == null) {
-    swal.fire({
-        type: 'error',
-        title: 'No hay noticias registradas',
-        text: 'Por favor registre una'
-    }).then(function () {
-        window.location = "/public/registro_noticias.html";
-    });
-
-} else {
 mostrar_datos();
-    
-}
-
 
 
 $('.btn_editar_noticia').click(function () {

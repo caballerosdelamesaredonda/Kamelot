@@ -34,21 +34,7 @@ let mostrar_lista_citas = () => {
     }
 };
 
-if (citas[0] ==null) {
-    swal.fire({
-        type: 'error',
-        title: 'No hay citas registradas',
-        text: 'Verifique luego'
-    }).then(function () {
-        window.location = "/public/perfil_centroedu.html";
-    });
-} else {
-
 mostrar_lista_citas();
-
-    
-}
-
 
 $('.btn_editar_cita').click(function () {
     var id_value = $(this).attr('id');
