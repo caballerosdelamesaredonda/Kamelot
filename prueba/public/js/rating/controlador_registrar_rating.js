@@ -47,9 +47,7 @@ let mostrarDatos = () => {
             text: `Por favor revise los campos resaltados`
         })
     }
-
-
-
+    
 }
 
 boton_registrar.addEventListener('click', mostrarDatos);
