@@ -12,7 +12,15 @@ let mostrar_datos = (pUsuarioLoggeado) => {
     document.querySelector('#apellido').innerHTML = usario_loggeado.papellido;
     document.querySelector('#id').innerHTML = usario_loggeado.identificacion;
     document.querySelector('#correo').innerHTML = usario_loggeado.correo_electronico;
+
+    document.querySelector('#distrito').innerHTML = usario_loggeado.distrito + ',';
+    document.querySelector('#canton').innerHTML = usario_loggeado.canton+ ',';
+    document.querySelector('#provincia').innerHTML = usario_loggeado.provincia;
+    document.querySelector('#phone').innerHTML = usario_loggeado.telefono;
+
+
 };
+
 
 if (userid != null) {
     usario_loggeado = obtener_usuario_por_id(userid);

@@ -6,9 +6,10 @@ let user_local_actividad = localStorage.getItem('usuario_en_sesion');
 if(user_local_actividad==null){
     window.location.href='index.html';
 }
+let actividad = consultar_actividad_usuario(user_local_actividad);
+
 
 let mostrar_lista_actividades = () =>{
-    let actividad = consultar_actividad_usuario(user_local_actividad);
     console.log(actividad);
     for(let i = 0; i < actividad.length; i++){
 
@@ -24,7 +25,20 @@ let mostrar_lista_actividades = () =>{
 
 };
 
+if (actividad[0] == null) {
+    swal.fire({
+        type: 'error',
+        title: 'No hay actividades registradass',
+        text: 'Por favor registre una'
+    }).then(function () {
+        window.location = "/public/registro_actividad.html";
+    });
+
+} else {
 mostrar_lista_actividades();
+    
+}
+
 
 
 $('.btn_editar_actividad').click(function () {
