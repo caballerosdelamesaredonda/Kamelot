@@ -110,7 +110,7 @@ let cambiar_clave = (pId, pClave) =>{
 let validar_correo = (pCorreo) =>{
     let res = '';
     let request = $.ajax({
-        url: "http://localhost:4000/api/validar_correo",
+        url: "http://localhost:4000/api/clave_temporal",
         method: 'POST',
         async: false,
         data: {

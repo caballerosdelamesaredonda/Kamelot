@@ -1021,22 +1021,19 @@ module.exports.listar_activos = (req ,res) =>{
 };
 
 
-module.exports.cambiar_clave = (req ,res) =>{
-    model_usuarios.findOne({correo_electronico:req.body.correo},
-        function(error){
+module.exports.clave_temporal = (req ,res) =>{
+    model_usuarios.findOneAndUpdate({correo_electronico:req.body.correo}, {$set:
+            {
+                clave: generador_clave.generate({
+                    length: 8,
+                    numbers: true,
+                    uppercase: true,
+                    strict: true}),
+                temporal: 'si'
+            }},{new: true}, (error, user) => {
             if(error){
-                res.json({success: false ,msg: 'No se encontró el correo'});
+                res.json({success: false ,msg: 'No se encontró el correo', test: error});
             }else{
-                model_usuarios.findOne({correo_electronico:req.body.correo}, {$set:
-                        {
-                            clave: generador_clave.generate({
-                                length: 8,
-                                numbers: true,
-                                uppercase: true,
-                                strict: true}),
-                            temporal: 'si'
-                        }});
-                let usuario = model_usuarios.findOne({correo_eletronico:req.body.correo});
                 let mailOptions = {
                     from: 'loscaballerosdelamesaredonnda@gmail.com',
                     to: req.body.correo,
@@ -1275,7 +1272,7 @@ module.exports.cambiar_clave = (req ,res) =>{
                                                             <li style="margin:0 0 10px 30px;" class="list-item-first">Ingrese a nuestro sitio <a href="http://localhost:3000/public/index.html">web</a></li>
                                                             <li style="margin:0 0 10px 30px;">Haga click en iniciar sesión.</li>
                                                             <li style="margin: 0 0 0 30px;" class="list-item-last">Ingrese su contraseña temporal.</li>    
-                                                            <li style="margin:0 0 10px 30px; font-weight: bold; font-family: Nunito;">Clave temporal ${usuario.clave}.</li>
+                                                            <li style="margin:0 0 10px 30px; font-weight: bold; font-family: Nunito;">Clave temporal ${user.clave}</li>
 
                                                         </ul>
                                                     </td>
@@ -1343,8 +1340,23 @@ module.exports.cambiar_clave = (req ,res) =>{
                         console.log('Email sent: ' + info.response);
                     }
                 });
-                res.json({success: true ,msg: 'El correo se envió con éxito'});
+                res.json({success: true ,msg: 'El correo se envió con éxito', test: `nueva clave es: ${user.clave}`});
+            }
+            }
+    )
+};
+
+module.exports.cambiar_clave = (req ,res) =>{
+    model_usuarios.findByIdAndUpdate(req.body._id, {$set:
+        {
+            clave: req.body.clave,
+            temporal: 'no'
+        }},{new: true}, (error, user) => {
+            if(error){
+                res.json({success: false ,msg: 'No se pudo modificar el padre de familia', test: error});
+            }else{
+                res.json({success: true ,msg: 'El padre de familia se modificó con éxito', usuario: user});
             }
         }
-    )
+    );
 };

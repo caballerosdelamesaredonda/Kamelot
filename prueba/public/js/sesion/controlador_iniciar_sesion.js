@@ -39,7 +39,7 @@ let obtenerDatos = () =>{
 				let validacion_credenciales = validar_credenciales(correo, contrasenna);
 
 				if(validacion_credenciales.success){
-						let temporal = validacion_credenciales.usuario.clave.temporal;
+						let temporal = validacion_credenciales.usuario.temporal;
 						if (temporal === 'si'){
 							localStorage.usuario_en_sesion = validacion_credenciales.usuario['_id'];
 							window.location.href=`cambiar_clave.html?id=${validacion_credenciales.usuario['_id']}`;
