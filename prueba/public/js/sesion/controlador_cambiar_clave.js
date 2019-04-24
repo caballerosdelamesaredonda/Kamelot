@@ -2,7 +2,7 @@
 
 const input_clave_nueva = document.querySelector('#txt_nueva_clave');
 const input_confirmacion = document.querySelector('#txt_confirmacion');
-const boton_guardar = document.querySelector('#btn_ingresar');
+const boton_guardar = document.querySelector('#btn_guardar');
 
 let get_param = (param) => {
     let url_string =  window.location.href;
@@ -16,12 +16,6 @@ let usuario = obtener_usuario_por_id(id);
 let validar_blancos = () =>{
     let error = false;
 
-    if(input_codigo.value === ''){
-        input_codigo.style.border='1px solid red';
-        error = true;
-    } else {
-        input_codigo.style.border = '#48dbfb solid 1px;';
-    }
 
     if(input_clave_nueva.value === ''){
         input_clave_nueva.style.border='1px solid red';
@@ -37,7 +31,7 @@ let validar_blancos = () =>{
         input_confirmacion.style.border = '#48dbfb solid 1px;';
     }
 
-    return { error:error, msg: '&#8268 Campos vacíos'};
+    return { error:error, msg: '* Campos vacíos'};
 };
 
 let validar_exp = () =>{
@@ -51,7 +45,7 @@ let validar_exp = () =>{
         input_clave_nueva.style.border = '#48dbfb solid 1px;';
     }
 
-    return { error:error, msg: '&#8268 La clave tiene que tener mínimo 8 caracteres, que incluyen una mínimo una mayúscula, una minúscula, un carácter especial y un número.'  }
+    return { error:error, msg: '* La clave tiene que tener mínimo 8 caracteres, que incluyen una mínimo una mayúscula, una minúscula, un carácter especial y un número.'  }
 };
 
 let validar_iguales =()=>{
@@ -66,7 +60,7 @@ let validar_iguales =()=>{
         input_confirmacion.style.border='1px solid red';
     }
 
-    return { error: error,  msg: `&#8268 Las claves no son iguales.`}
+    return { error: error,  msg: `* Las claves no son iguales.`}
 };
 
 
@@ -75,27 +69,24 @@ let obtenerDatos = () =>{
     let resultados_val_exp = validar_exp();
     let resultados_val_igual = validar_iguales();
 
-    if (resultados_val_blancos.error === false && resultados_val_exp.error === false){
+    let arreglo = [resultados_val_blancos, resultados_val_exp, resultados_val_igual];
+    let msg = 'Tienes los siguientes problemas:';
+    let error = false;
+
+    for (let i=0;  i > arreglo.length; i++) {
+        msg = '\n'+arreglo[i].msg;
+        if (arreglo[i].error === true){
+            error = true;
+        }
+    }
+
+    if (error){
         swal({
             type: 'warning',
             title: 'Campos inválidos',
             text: `Tienes los siguientes problemas: \n
                    ${resultados_val_blancos.msg} \n
                    ${resultados_val_exp.msg}`
-        });
-    }else if (resultados_val_exp.error === false) {
-        swal({
-            type: 'warning',
-            title: 'Campos inválidos',
-            text: `Tienes los siguientes problemas: \n
-                   ${resultados_val_exp.msg}`
-        });
-    }else if (resultados_val_igual.error === false) {
-        swal({
-            type: 'warning',
-            title: 'Campos inválidos',
-            text: `Tienes los siguientes problemas: \n
-                   ${resultados_val_igual.msg}`
         });
     }else{
         cambiar_clave(id, input_clave_nueva.value);
@@ -104,9 +95,9 @@ let obtenerDatos = () =>{
             title: 'Se ha cambió la clave con exito',
             timer: 3000,
             showConfirmButton: false
-        }, function() {
-            iniciar_sesion(id);
-        });
+        }.then( function(){
+            iniciar_sesion(usuario);
+        }));
     }
 
 };
