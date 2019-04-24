@@ -26,7 +26,7 @@ let mostrar_datos = () => {
 
             //creacion del boton de editar
             let boton_editar = document.createElement('a');
-            boton_editar.textContent = 'Editar';
+            boton_editar.textContent = 'Editar ';
             boton_editar.href = `actualizar_utiles.html?id_util=${utiles[i]['_id']}`;
 
 /*
@@ -63,7 +63,7 @@ let mostrar_datos = () => {
 
             //creacion boton de eliminar
             let boton_eliminar = document.createElement('a');
-            boton_eliminar.textContent = 'eliminar';
+            boton_eliminar.textContent = ' Eliminar';
             boton_eliminar.dataset.id_utiles = utiles[i]['_id'];
             boton_eliminar.href = '#';
             
@@ -81,7 +81,18 @@ let mostrar_datos = () => {
         }
 };
 
-
-
+if (utiles[0] == null) {
+    swal.fire({
+        type: 'error',
+        title: 'No hay útiles registrados',
+        text: 'Por favor registre uno'
+    }).then(function () {
+        window.location = "/public/registrar_utiles.html";
+    });
+} else {
 mostrar_datos();
+    
+}
+
+
 
