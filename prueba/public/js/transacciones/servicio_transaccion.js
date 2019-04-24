@@ -20,12 +20,12 @@ let registrar_transaccion = (pUsuario, pTipoUsuario, pTransaccion, pEstatus) => 
 
     peticion.done(function(response){
         respuesta = response;
-        console.log(response.msj);
+        //console.log(response.msj);
     });
 
     peticion.fail(function(response){
         respuesta = response;
-        console.log(response.msj);
+        //console.log(response.msj);
     });
 
     return respuesta;

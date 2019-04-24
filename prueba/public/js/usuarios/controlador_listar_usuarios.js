@@ -48,8 +48,8 @@ let mostrar_datos = () => {
         )
     );
 
-    console.log('Se encontró un: ' + typeof resultado + ':');
-    console.log(resultado);
+    //console.log('Se encontró un: ' + typeof resultado + ':');
+    //console.log(resultado);
 
 
 
