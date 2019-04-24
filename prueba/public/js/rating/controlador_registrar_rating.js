@@ -39,7 +39,7 @@ let mostrarDatos = () => {
         let centroid = userCentroId;
         let comentario = input_comentario.value;
         let rating = parseInt($('#stars li.selected').last().data('value'), 10);
-        registrar_rating(userid, centroid, comentario, rating);
+        registrar_actividad(userid, centroid, comentario, rating);
     } else {
         Swal.fire({
             type: 'warning',
@@ -47,7 +47,9 @@ let mostrarDatos = () => {
             text: `Por favor revise los campos resaltados`
         })
     }
-    
+
+
+
 }
 
 boton_registrar.addEventListener('click', mostrarDatos);
