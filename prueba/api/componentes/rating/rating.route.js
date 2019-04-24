@@ -17,10 +17,10 @@ router.route('/listar_rating')
         }
     )
 
-router.route('/listar_actividad_usuario')
+router.route('/listar_ratings_usuario')
     .post(
         function (req, res) {
-            rating_api.listar_actividades_usuario(req, res);
+            rating_api.listar_ratings_usuario(req, res);
         }
     )
 
