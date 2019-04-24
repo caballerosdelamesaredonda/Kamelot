@@ -71,6 +71,23 @@ tr:nth-child(even) {
     padding-right: 25px;
     margin-top: 30px;
 }
+
+form#frm_noticias {
+    padding: 0px;
+}
+
+form#frm_noticias input.form-control{
+    text-align: center;
+    padding: 0px;
+    width: 300px
+}
+
+div.registro{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .label_name{
     margin-bottom: 10px;
 }
