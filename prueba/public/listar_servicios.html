@@ -1,43 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <title>
-        Registrar Notica
-    </title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/public/css/reset.css">
-    <link rel="stylesheet" href="/public/css/general.css">
-    <link rel="stylesheet" href="/public/css/perfil_ce.css">
-    <link rel="stylesheet" href="/public/css/popr.css">
-    <link rel="stylesheet" href="/public/css/menu_nav/dropdown.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Lista servicios</title>
+        <link rel="stylesheet" href="/public/css/reset.css">
+        <link rel="stylesheet" href="/public/css/general.css">
+        <link rel="stylesheet" href="/public/css/perfil_ce.css">
+        <link rel="stylesheet" href="/public/css/popr.css">
+        <link rel="stylesheet" href="/public/css/menu_nav/dropdown.css">
+    
+        <link rel="stylesheet" href="/public/css/etiquetas.css" type="text/css">
+    
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/tabla_centros/listar_centros.css">
+    
+        <link rel="stylesheet" href="/public/css/popr.css">
+        <link rel="stylesheet" href="/public/css/menu_nav/dropdown.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
-
-<style type="text/css">
-    .form_backgorund {
-        width: 640px;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.75);
-    }
-
-    .h1_notica {
-        font-size: 30px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .p-t1 {
-        padding-top: 30px;
-    }
-
-    .text_size {
-        font-size: 18px;
-    }
-</style>
 
 <body>
 
@@ -127,50 +111,57 @@
                 </div>
             </header>
 
-    <main class="mt-3" style="height: 570px;">
+    
+        <main class="main">
+                <h1>Lista de servicios</h1>
+        
+                <section>
+                    <div class="tbl-header">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <thead class="head_backg">
+                                <tr>
+                                    <th class="padding border-right">Título</th>
+                                    <th class="padding border-right">Descripción</th>
+                                    <th class="padding border-right">Modificar</th>
+                                    <th class="padding border-right">Eliminar</th>
 
-        <div class="form_backgorund">
-            <h1 class="h1_notica color_text p-t1">Registrar Noticia</h1>
-            <section>
-                <!-- Formulario de registro de citas -->
-                <form id="frm_noticias" class="form-control">
-
-                    <label class="lable color_text" for="txt_titulo">Título:</label>
-                    <input class="input_form text_size" type="text" id="txt_titulo">
-
-                    <label class="lable color_text" for="txt_descripcion">Descripción:</label>
-                    <textarea class="input_form descripcion text_size" id="txt_descripcion"></textarea>
-
-                    <label class="lable color_text" for="txt_fecha">Fecha:</label>
-                    <input class="input_form text_size" type="date" id="txt_fecha">
-
-                    <button class="mt-2" type="button" id="btn_registrar">Registrar noticia</button>
-                </form>
-            </section>
-        </div>
-
-    </main>
-
-    <footer class="main_footer">
-        <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
-        <nav class="footer_nav mt-2 ml-1">
-            <a href="./index.html">Inicio</a><span class="vertical-line"> | </span>
-            <a href="#">FAQ</a><span class="vertical-line"> | </span>
-            <a href="./contacto.html">Contacto</a>
-        </nav>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/public/js/transacciones/servicio_transaccion.js"></script>
-    <script src="/public/js/noticias/servicio_noticias.js"></script>
-    <script src="/public/js/noticias/controlador_registrar_noticias.js"></script>
-    <script src="/public/js/centro_educativo/servicio_ce.js"></script>
-    <script src="/public/js/centro_educativo/controlador_avatar_ce.js"></script>
-    <script src="/public/js/popmenu/popr.js"></script>
-
-
+        
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="tbl-content">
+                        <table cellpadding="0" cellspacing="0" border="0" id='tbl_etiquetas'>
+                            <tbody>
+        
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        
+            <footer class="main_footer">
+                <p class="white margin-left margin-top">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
+                <nav class="footer_nav margin-left margin-top">
+                    <a href="./index.html">Inicio</a><span class="vertical-line"> | </span>
+                    <a href="#">FAQ</a><span class="vertical-line"> | </span>
+                    <a href="./contacto.html">Contacto</a>
+                </nav>
+            </footer>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="js/transacciones/servicio_transaccion.js"></script>
+<script src="/public/js/popmenu/popr.js"></script>
+<script src="/public/js/centro_educativo/servicio_ce.js"></script>
+<script src="/public/js/centro_educativo/controlador_avatar_ce.js"></script>>
+<script src="/public/js/servicio_servicios.js"></script>>
+<script src="/public/js/controlador_listar_servicios.js"></script>>
+
+
+
 
 
 </html>
