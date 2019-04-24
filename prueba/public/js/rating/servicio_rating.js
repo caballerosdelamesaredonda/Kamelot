@@ -18,9 +18,9 @@ let registrar_rating = (pUserId,pCentroId, pComentario,pRating) => {
     swal.fire({
       type: 'success',
       title: 'El rating fue enviado',
-      text: 'En unos segundos se mostrará en tu perfil'
+      text: 'En unos segundos se mostrará en el perfil del centro'
     }).then(function() {
-      //window.location = "perfil_centroedu.html";
+      window.location.href = 'lista_ratings_centro.html';
     });
   });
 
