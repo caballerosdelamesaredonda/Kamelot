@@ -132,6 +132,10 @@ router.route('/listar_activos')
     }
 );
 
+router.route('/cambiar_clave').get(function (req, res) {
+    api_usuarios.cambiar_clave(req, res);
+});
+
 
 
 

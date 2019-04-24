@@ -73,4 +73,38 @@ let obtener_usuario_por_id = (pId) =>{
     return  usuario;
 };
 
+let cambiar_clave = (pId, pClave) =>{
+    let usuario=[];
+    let request = $.ajax({
+        url: "http://localhost:4000/api/cambiar_clave",
+        method: 'POST',
+        async: false,
+        data: {
+            _id : pId,
+            clave: pClave
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    });
+
+    request.done(function (response) {
+
+        if (response.success){
+            usuario = response.usuario;
+
+        }else{
+            usuario = response;
+            swal({
+                type: 'error',
+                title: 'Error',
+                text: response.msj
+            });
+        }
+
+    });
+
+    return  usuario;
+};
+
+
 

@@ -1022,12 +1022,12 @@ module.exports.listar_activos = (req ,res) =>{
 
 
 module.exports.cambiar_clave = (req ,res) =>{
-    model_usuarios.findByIdAndUpdate(req.body._id, {$set: {estado: 'activo'}},
+    model_usuarios.findByIdAndUpdate(req.body._id, {$set: {clave: req.body.clave}},
         function(error){
             if(error){
-                res.json({success: false ,msg: 'No se pudo habilitar el usuario '});
+                res.json({success: false ,msg: 'No se pudo cambiar la clave'});
             }else{
-                res.json({success: true ,msg: 'El usuario se activó con éxito'});
+                res.json({success: true ,msg: 'La clave se cambio con exito'});
             }
         }
     )
