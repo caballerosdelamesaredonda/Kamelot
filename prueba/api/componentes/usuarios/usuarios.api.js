@@ -1022,7 +1022,7 @@ module.exports.listar_activos = (req ,res) =>{
 
 
 module.exports.cambiar_clave = (req ,res) =>{
-    model_usuarios.findByIdAndUpdate(req.body._id, {$set: {clave: req.body.clave}},
+    model_usuarios.findByIdAndUpdate(req.body._id, {$set: {clave: req.body}},
         function(error){
             if(error){
                 res.json({success: false ,msg: 'No se pudo cambiar la clave'});

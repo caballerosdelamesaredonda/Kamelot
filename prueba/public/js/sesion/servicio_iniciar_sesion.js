@@ -81,7 +81,8 @@ let cambiar_clave = (pId, pClave) =>{
         async: false,
         data: {
             _id : pId,
-            clave: pClave
+            clave: pClave,
+            temporal: 'no'
         },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
