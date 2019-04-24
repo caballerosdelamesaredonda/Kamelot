@@ -14,6 +14,12 @@ let input_distritos= document.querySelector('#slt_distritos');
 let input_direccion= document.querySelector('#txt_direccion');
 let input_cant_hijos= document.querySelector('#num_cant_hijos');
 let input_foto= document.querySelector('#image_preview');
+let tabla_mostrar_hijos = document.querySelector('#tbl_hijos tbody');
+let arreglo_hijos =[
+    {edad: 16},
+    {edad: 10},
+    {edad: 12},
+    ];
 
 const boton_registrar = document.querySelector('#btn_registrar');
 
@@ -25,6 +31,36 @@ let get_param = (param) => {
 
 let id = get_param('id');
 let pf = obtener_usuario_por_id_avatar(id);
+
+let cargar_hijos = (parreglo_hijos) =>{
+    if (parreglo_hijos.length > 0){
+        for (let i=0; i<parreglo_hijos.length; i++){
+            let fila = tabla_mostrar_hijos.insertRow();
+
+            let c_numero = fila.insertCell();
+            let c_edad = fila.insertCell();
+            let c_opt = fila.insertCell();
+
+            c_numero.classList.add('column1');
+            c_edad.classList.add('column2');
+            c_opt.classList.add('column3');
+
+            c_numero.innerHTML = i+1;
+            c_edad.innerHTML =  parreglo_hijos[i]['edad'];
+
+            let boton_remover = document.createElement('button');
+            boton_remover.dataset.index = i.toString();
+            boton_remover.classList.add('btn_remover');
+            
+            boton_remover.addEventListener('click', function () {
+                arreglo_hijos.splice(this.dataset.index,1);
+                cargar_hijos();
+            });
+
+            c_opt.appendChild(boton_remover);
+        }
+    }
+};
 
 let mostrar_datos = () =>{
 
@@ -38,6 +74,8 @@ let mostrar_datos = () =>{
     input_direccion.value = pf['direccion'];
     input_cant_hijos.value = pf['cantidad_hijos'];
     input_foto.src = pf['foto'];
+
+    cargar_hijos(arreglo_hijos);
 
     let opciones_tipo_id = document.querySelectorAll('#slt_tipo_id option');
 
@@ -176,6 +214,7 @@ let obtener_datos = () => {
         let direccion= input_direccion.value;
         let foto = input_foto.src;
         let cant_hijos= input_cant_hijos.value;
+
 
         modificar_pf(correo, nombre,snombre, papellido, sapellido, identificacion, telefono, provincias, cantones, distritos, direccion, cant_hijos, foto, tipo_id, id);
 

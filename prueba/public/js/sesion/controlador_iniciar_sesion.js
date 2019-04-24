@@ -42,6 +42,12 @@ let obtenerDatos = () =>{
 						iniciar_sesion(validacion_credenciales.usuario);
 				}
 
+		}else{
+			swal({
+				type: 'warning',
+				title: 'Campos vacíos',
+				text: 'Por favor revise los campos resaltados'
+			});
 		}
 };
 

@@ -10,7 +10,7 @@ body{
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    height: 1000px;
+    height: 1500px;
 }
 
 #section_utiles{
@@ -123,7 +123,7 @@ main{
 
 .btn_enviar{
     position: absolute;
-    top: 510px;
+    top: 550px;
     margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
@@ -303,22 +303,53 @@ td:hover {
 
 .form-select {
     display: block;
-    width: 340px;
+    width: 345px;
     height: 45px;
     padding: 6px 12px;
     margin-bottom: 15px;
     font-size: 18px;
     line-height: 1.42857143;
 
+
 }
 
 .col-iz {
     float: left;
     width: 400px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 50px;
 }
 
-.col-der{
-    float: left;
+.col-iz div{
+    height: 62px;
+}
+
+#btn_agregar_hijos{
+    position: absolute;
+    background-image: url(https://img.icons8.com/ios/38/000000/plus-math.png);
+    WIDTH: 40px;
+    height: 40px;
+    top: 20px;
+    bottom: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    right: 0px;
+    left: 270px;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+#btn_agregar_hijos:active{
+    box-shadow: 0 5px 0 #E2E2E2;
+    bottom:-4px;
+}
+
+#div_hijos{
+    position: relative;
 }
 .subir {
     margin-top: 40px;
@@ -353,3 +384,22 @@ td:hover {
 	margin-bottom: auto;
 }
 
+th, td {
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.column1, .column2, .column3{
+    text-align: center;
+}
+.column1{
+
+}
+
+.column2{
+
+}
+
+.column3{
+
+}
