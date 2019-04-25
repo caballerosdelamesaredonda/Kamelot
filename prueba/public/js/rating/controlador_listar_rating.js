@@ -43,7 +43,12 @@ let mostrar_promedio_ratings = () =>{
         total_rating = total_rating + ratings[i]['rating'];
     };
 
-    promedio_rating = total_rating / (ratings.length);
+    if(ratings.length == 0){
+        promedio_rating = 'No hay evaluaciones registradas';
+    }else{
+        promedio_rating = total_rating / (ratings.length);
+    }
+    
     //console.log(promedio_rating);
     document.querySelector('p#p_promedio').innerHTML = promedio_rating;
 };

@@ -16,8 +16,11 @@ let registrar_pregunta = (ppregunta, prespuesta) => {
   request.done(function (msg) {
     swal.fire({
       type: 'success',
-      title: 'La pregunta fue enviada',
-      text: 'En breve estaremos resolviendo su pregunta'
+      title: 'La pregunta fue registrada correctamente', 
+      text: '',
+      onClose: () => {
+        window.location.href = 'registro_pregunta.html';
+      }
     });
   });
 
@@ -126,33 +129,8 @@ let eliminar = (pid) => {
           id : pid,
       },
       dataType : "json",
-      contentType : 'application/x-www-form-urlencoded; charset=UTF-8' 
-  });
-
-  request.done(function(res){
-      if(res.success){
-          swal.fire({
-              type : 'success',
-              title : 'Proceso realizado con éxito',
-              text : res.msg
-          });
-      }else{
-          swal.fire({
-              type : 'Error',
-              title : 'Proceso realizado sin éxito',
-              text : res.msg
-          });
-      }
+      contentType : 'application/x-www-form-urlencoded; charset=UTF-8',
       
-
   });
-
-  request.fail(function(res){
-      swal.fire({
-          type : 'error',
-          title : 'Proceso no realizado',
-          text : res.msg
-      });
-
-  });
+    window.location.href = 'listar_pregunta.html';
 };
