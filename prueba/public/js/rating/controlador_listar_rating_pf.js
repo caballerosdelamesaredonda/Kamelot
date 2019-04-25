@@ -8,8 +8,10 @@ if(id_padrefamilia_evaluacion==null){
     window.location.href='index.html';
 }
 
+let ratings = consultar_ratings_pf(id_padrefamilia_evaluacion);
+
+
 let mostrar_listar_ratings = () =>{
-    let ratings = consultar_ratings_pf(id_padrefamilia_evaluacion);
     console.log(ratings);
     for(let i = 0; i < ratings.length; i++){
 
@@ -31,4 +33,17 @@ let mostrar_listar_ratings = () =>{
 
 };
 
+if (ratings[0] == null) {
+    swal.fire({
+        type: 'error',
+        title: 'No hay evaluaciones registradas',
+        text: 'Por favor registre una'
+    }).then(function () {
+        window.location = "/public/padrefamilia/perfil_padre_familia.html";
+    });
+} else {
+ 
 mostrar_listar_ratings();
+    
+}
+
