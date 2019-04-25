@@ -126,3 +126,51 @@ module.exports.eliminar_evaluacion = function (req, res) {
 
     );
 };
+
+module.exports.buscarrating_ratingid = (req, res) => {
+    model_rating.find({ _id: req.body.rating_id }).then(
+        function (ratings) {
+            if (ratings) {
+                res.json(
+                    {
+                        success: true,
+                        ratings: ratings
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: false,
+                        ratings: ratings
+                    }
+                )
+            }
+        }
+
+    )
+};
+
+module.exports.actualizar_rating = function (req, res) {
+    model_rating.findByIdAndUpdate(req.body._id, { $set: req.body },
+        
+        function (error) {
+            if (error) {
+                res.json(
+                    {
+                        success: false,
+                        msg: `No se pudo actualizar la evaluacion, ocurrió el siguiente error ${error}`
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: true,
+                        msg: `Se actualizo la evaluacion de forma correcta`
+                    }
+                )
+            }
+        }
+
+
+    );
+};

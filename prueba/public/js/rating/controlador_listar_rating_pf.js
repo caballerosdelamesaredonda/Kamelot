@@ -36,6 +36,12 @@ let mostrar_listar_ratings = () =>{
 mostrar_listar_ratings();
 
 
+$('.btn_editar_noticia').click(function () {
+    var id_value = $(this).attr('id');
+    console.log('Editar' + id_value);
+    window.location = `/public/centroeducativo/modificar_evaluacion.html?id=${id_value}`;
+});
+
 $('.btn_borrar_noticia').click(function () {
     var id_value = $(this).attr('id');
     //console.log('Borar' + id_value);
