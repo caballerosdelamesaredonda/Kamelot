@@ -8,8 +8,10 @@ if(id_centro_evaluacion==null){
     window.location.href='index.html';
 }
 
+let ratings = consultar_ratings(id_centro_evaluacion);
+
+
 let mostrar_listar_ratings = () =>{
-    let ratings = consultar_ratings(id_centro_evaluacion);
     //console.log(ratings);
     for(let i = 0; i < ratings.length; i++){
 
@@ -30,7 +32,6 @@ let mostrar_listar_ratings = () =>{
 
 };
 
-mostrar_listar_ratings();
 
 
 let mostrar_promedio_ratings = () =>{
@@ -47,4 +48,18 @@ let mostrar_promedio_ratings = () =>{
     document.querySelector('p#p_promedio').innerHTML = promedio_rating;
 };
 
+if (ratings[0] == null) {
+    swal.fire({
+        type: 'error',
+        title: 'No hay evaluaciones registradas',
+        text: 'Intente luego'
+    }).then(function () {
+        window.location = "/public/padrefamilia/tablero_centroeducativo.html";
+    });
+    
+} else {
+mostrar_listar_ratings();
 mostrar_promedio_ratings();
+
+    
+}
