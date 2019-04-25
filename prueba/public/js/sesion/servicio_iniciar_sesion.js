@@ -140,5 +140,34 @@ let validar_correo = (pCorreo) =>{
 };
 
 
+let set_temporal = (id) =>{
+    let res = '';
+    let request = $.ajax({
+        url: "http://localhost:4000/api/set_temporal",
+        method: 'POST',
+        async: false,
+        data: {
+            _id: id
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    });
+
+    request.done(function (response) {
+
+        if (response.success){
+            res = response;
+
+        }else{
+            res = response;
+            console.log(response.msg);
+        }
+
+    });
+
+    return res;
+};
+
+
 
 

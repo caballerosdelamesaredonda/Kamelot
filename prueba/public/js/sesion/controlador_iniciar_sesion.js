@@ -40,6 +40,9 @@ let obtenerDatos = () =>{
 
 				if(validacion_credenciales.success){
 						let temporal = validacion_credenciales.usuario.temporal;
+						if (temporal === null){
+							set_temporal(validacion_credenciales.usuario['_id]']);
+						}
 						if (temporal === 'si'){
 							localStorage.usuario_en_sesion = validacion_credenciales.usuario['_id'];
 							window.location.href=`cambiar_clave.html?id=${validacion_credenciales.usuario['_id']}`;
