@@ -1361,15 +1361,14 @@ module.exports.cambiar_clave = (req ,res) =>{
     );
 };
 
-module.exports.set_temporal= (req ,res) =>{
-    model_usuarios.findByIdAndUpdate(req.body._id, {$set:
-                {
-                    temporal: 'si'
-                }},{new: true}, (error, user) => {
+
+module.exports.set_temporal = (req, res) =>{
+    model_usuarios.findByIdAndUpdate(req.body._id, { $set: {temporal: 'si'} },
+        function(error){
             if(error){
-                res.json({success: false ,msg: 'temp set si', test: error});
+                res.json({success: false ,msg: 'ya tiene temporal'});
             }else{
-                res.json({success: true ,msg: 'temp set no', usuario: user});
+                res.json({success: true ,msg: 'no tiene temporal'});
             }
         }
     );

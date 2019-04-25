@@ -157,7 +157,7 @@ let set_temporal = (id) =>{
 
         if (response.success){
             res = response;
-
+            console.log(response.msg);
         }else{
             res = response;
             console.log(response.msg);
