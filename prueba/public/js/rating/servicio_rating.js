@@ -8,7 +8,8 @@ let registrar_rating = (pUserId,pCentroId, pComentario,pRating) => {
       userid: pUserId,
       centroid: pCentroId,
       comentario: pComentario,
-      rating: pRating
+      rating: pRating,
+      fecha: Date().toLocaleString()
     },
     dataType: "json",
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -43,6 +44,40 @@ let consultar_ratings = (pId) => {
       async: false,
       data: {
         centroid: pId
+      },
+      dataType: "json",
+      contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+  });
+
+  request.done(function (response) {
+
+      if (response.success) {
+          consultar_rating = response.ratings;
+      } else {
+          consultar_rating = response.ratings;
+          swal.fire({
+              type: 'error',
+              title: 'Error',
+              text: response.msj
+          });
+      }
+
+  });
+
+  return consultar_rating;
+
+};
+
+let consultar_ratings_pf = (pId) => {
+
+  let consultar_rating = [];
+
+  let request = $.ajax({
+      url: "http://localhost:4000/api/listar_ratings_usuario_pf",
+      method: 'POST',
+      async: false,
+      data: {
+        userid: pId
       },
       dataType: "json",
       contentType: 'application/x-www-form-urlencoded; charset=UTF-8',

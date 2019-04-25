@@ -6,7 +6,6 @@ const input_descripcion = document.querySelector('#txt_descripcion');
 const input_fecha = document.querySelector('#txt_fecha');
 const boton_registrar = document.querySelector('#btn_registrar');
 
-
 let validar = () => {
     let error = false;
 

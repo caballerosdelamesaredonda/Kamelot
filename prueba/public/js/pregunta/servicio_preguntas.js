@@ -18,6 +18,8 @@ let registrar_pregunta = (ppregunta, prespuesta) => {
       type: 'success',
       title: 'La pregunta fue enviada',
       text: 'En breve estaremos resolviendo su pregunta'
+    }).then(function() {
+      window.location = "listar_pregunta.html";
     });
   });
 

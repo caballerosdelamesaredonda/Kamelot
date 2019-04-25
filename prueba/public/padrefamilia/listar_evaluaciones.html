@@ -55,17 +55,16 @@
         </nav>
     </header>
 
-    <h1 style="text-align:center;">Citas regitradas</h1>
+    <h1 style="text-align:center;">Evaluaciones registradas</h1>
 
-    <table class="tabla_info">
+    <table id="tbl_ratings" class="tabla_info">
         <thead>
             <tr>
-                <th>Nombre Padre</th>
                 <th>Nombre Centro</th>
-                <th>Razon Cita</th>
+                <th>Comentario</th>
+                <th>Rating</th>
                 <th>Fecha</th>
-                <th>Hora</th>
-                <th>Modificar</th>
+                <th>Opciones</th>
             </tr>
         </thead>
         <tbody>
@@ -86,10 +85,12 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="/public/js/padres_de_familia/servicio_padrefamilia.js"></script>
     <script src="/public/js/padres_de_familia/controlador_avatar_pf.js"></script>
-    <script src="/public/js/citas/servicio_citas.js"></script>
-    <script src="/public/js/centro_educativo/servicio_ce.js"></script>
-    <script src="/public/js/citas/controlador_listar_citaspf.js"></script>
+
     <script src="/public/js/popmenu/popr.js"></script>
+
+    <script src="/public/js/rating/servicio_rating.js"></script>
+    <script src="/public/js/rating/controlador_listar_rating_pf.js"></script>
+
 
 </body>
 
