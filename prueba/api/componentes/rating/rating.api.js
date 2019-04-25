@@ -9,6 +9,7 @@ module.exports.registrar = (req, res) =>{
             centroid : req.body.centroid,
             comentario : req.body.comentario,
             rating : req.body.rating,
+            fecha: req.body.fecha
         }
     );
     rating_nuevo.save(
@@ -58,6 +59,29 @@ module.exports.listar_todos = (req ,res) =>{
 
 module.exports.listar_ratings_usuario = (req, res) => {
     model_rating.find({centroid: req.body.centroid}).then(
+        function (ratings) {
+            if (ratings) {
+                res.json(
+                    {
+                        success: true,
+                        ratings: ratings
+                    }
+                )
+            } else{
+                res.json(
+                    {
+                        success: false,
+                        ratings: `Error, no se encontraron ratings: ${ratings}`
+                    }
+                )
+            }
+        }
+
+    )
+};
+
+module.exports.listar_ratings_usuario_pf = (req, res) => {
+    model_rating.find({userid: req.body.userid}).then(
         function (ratings) {
             if (ratings) {
                 res.json(

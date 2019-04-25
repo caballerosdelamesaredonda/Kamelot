@@ -24,5 +24,13 @@ router.route('/listar_ratings_usuario')
         }
     )
 
+router.route('/listar_ratings_usuario_pf')
+    .post(
+        function (req, res) {
+            rating_api.listar_ratings_usuario_pf(req, res);
+        }
+    )
+
+
 
 module.exports = router;
