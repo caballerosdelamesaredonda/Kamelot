@@ -18,12 +18,14 @@ let mostrar_preguntas = () => {
         // Creación del botón de editar
         let boton_editar = document.createElement('a');
         boton_editar.textContent = 'Editar';
+        boton_editar.classList.add('eliminar');
         boton_editar.href = `actualizar_pregunta.html?id_pregunta=${pregunta[i]['_id']}`;
 
 
         //Creación del botón de eliminar
         let boton_eliminar = document.createElement('a');
         boton_eliminar.textContent = 'Eliminar';
+        boton_eliminar.classList.add('eliminar');
         boton_eliminar.dataset.id_pregunta = pregunta[i]['_id'];
         boton_eliminar.href = '#';
         
