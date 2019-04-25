@@ -73,4 +73,101 @@ let obtener_usuario_por_id = (pId) =>{
     return  usuario;
 };
 
+let cambiar_clave = (pId, pClave) =>{
+    let usuario=[];
+    let request = $.ajax({
+        url: "http://localhost:4000/api/cambiar_clave",
+        method: 'POST',
+        async: false,
+        data: {
+            _id : pId,
+            clave: pClave,
+            temporal: 'no'
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    });
+
+    request.done(function (response) {
+
+        if (response.success){
+            usuario = response.usuario;
+
+        }else{
+            usuario = response;
+            swal({
+                type: 'error',
+                title: 'Error',
+                text: response.msj
+            });
+        }
+
+    });
+
+    return  usuario;
+};
+
+let validar_correo = (pCorreo) =>{
+    let res = '';
+    let request = $.ajax({
+        url: "http://localhost:4000/api/clave_temporal",
+        method: 'POST',
+        async: false,
+        data: {
+            correo: pCorreo
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    });
+
+    request.done(function (response) {
+
+        if (response.success){
+            res = response;
+
+        }else{
+            res = response;
+            swal({
+                type: 'error',
+                title: 'Error',
+                text: response.msg
+            });
+        }
+
+    });
+
+    return res;
+};
+
+
+let set_temporal = (id) =>{
+    let res = '';
+    let request = $.ajax({
+        url: "http://localhost:4000/api/set_temporal",
+        method: 'POST',
+        async: false,
+        data: {
+            _id: id
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    });
+
+    request.done(function (response) {
+
+        if (response.success){
+            res = response;
+
+        }else{
+            res = response;
+            console.log(response.msg);
+        }
+
+    });
+
+    return res;
+};
+
+
+
 

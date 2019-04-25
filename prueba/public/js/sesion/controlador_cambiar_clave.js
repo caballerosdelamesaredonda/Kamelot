@@ -80,7 +80,7 @@ let obtenerDatos = () =>{
         }
     }
 
-    if (error){
+    if (error === true){
         swal({
             type: 'warning',
             title: 'Campos inválidos',
@@ -95,9 +95,7 @@ let obtenerDatos = () =>{
             title: 'Se ha cambió la clave con exito',
             timer: 3000,
             showConfirmButton: false
-        }.then( function(){
-            iniciar_sesion(usuario);
-        }));
+        }).then(function(){iniciar_sesion(usuario)});
     }
 
 };
@@ -118,7 +116,7 @@ let iniciar_sesion =(pUsuario)=> {
         case "PF":
             window.location.href='/public/padrefamilia/perfil_padre_familia.html';
             break;
-    };
+    }
 
 };
 
