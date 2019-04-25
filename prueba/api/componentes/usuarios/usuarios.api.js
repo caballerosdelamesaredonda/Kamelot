@@ -1360,3 +1360,17 @@ module.exports.cambiar_clave = (req ,res) =>{
         }
     );
 };
+
+module.exports.set_temporal= (req ,res) =>{
+    model_usuarios.findByIdAndUpdate(req.body._id, {$set:
+                {
+                    temporal: 'si'
+                }},{new: true}, (error, user) => {
+            if(error){
+                res.json({success: false ,msg: 'temp set si', test: error});
+            }else{
+                res.json({success: true ,msg: 'temp set no', usuario: user});
+            }
+        }
+    );
+};

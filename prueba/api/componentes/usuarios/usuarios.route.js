@@ -140,7 +140,9 @@ router.route('/cambiar_clave').post(function (req, res) {
     api_usuarios.cambiar_clave(req, res);
 });
 
-
+router.route('/set_temporal').post(function (req, res) {
+    api_usuarios.set_temporal(req, res);
+});
 
 
 
