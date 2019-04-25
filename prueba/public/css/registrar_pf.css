@@ -317,7 +317,7 @@ td:hover {
     float: left;
     width: 400px;
     display: grid;
-    grid-template-columns: auto auto;
+   /* grid-template-columns: auto auto;*/
     grid-column-gap: 50px;
 }
 
