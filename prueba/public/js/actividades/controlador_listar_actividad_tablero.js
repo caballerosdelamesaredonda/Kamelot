@@ -26,6 +26,13 @@ let mostrar_lista_actividades = () =>{
 
 };
 
-mostrar_lista_actividades();
-
+if (actividad[0] == null) {
+    document.getElementById("actividades_cards").innerHTML = "";
+        
+    } else {
+        
+        mostrar_lista_actividades();
+    
+    
+    }
 

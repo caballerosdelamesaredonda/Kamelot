@@ -6,9 +6,9 @@ let id_centro_actividad = localStorage.getItem('centro_id');
 if(id_centro_actividad==null){
     window.location.href='index.html';
 }
+let actividad = consultar_actividad_usuario(id_centro_actividad);
 
 let mostrar_lista_actividades = () =>{
-    let actividad = consultar_actividad_usuario(id_centro_actividad);
     console.log(actividad);
     for(let i = 0; i < actividad.length; i++){
 
@@ -21,6 +21,10 @@ let mostrar_lista_actividades = () =>{
 
 };
 
+
 mostrar_lista_actividades();
+    
+
+
 
 

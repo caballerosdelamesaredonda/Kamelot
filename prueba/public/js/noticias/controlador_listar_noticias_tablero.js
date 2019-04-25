@@ -4,6 +4,7 @@ let userlocal_noticias = localStorage.getItem('centro_id');
 //console.log(userlocal_noticias);
 let noticias = consultar_noticias(userlocal_noticias);
 
+
 if(userlocal_noticias==null){
     window.location.href='index.html';
 }
@@ -32,8 +33,15 @@ let mostrar_noticias_tablero = () => {
 
 };
 
+if (noticias[0] == null) {
+document.getElementById("news_cards").innerHTML = "";
+    
+} else {
+    
 mostrar_noticias_tablero();
 
+
+}
 
 
 
