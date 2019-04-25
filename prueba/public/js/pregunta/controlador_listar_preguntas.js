@@ -17,13 +17,13 @@ let mostrar_preguntas = () => {
 
         // Creación del botón de editar
         let boton_editar = document.createElement('a');
-        boton_editar.textContent = ' Editar ';
+        boton_editar.textContent = 'Editar';
         boton_editar.href = `actualizar_pregunta.html?id_pregunta=${pregunta[i]['_id']}`;
 
 
         //Creación del botón de eliminar
         let boton_eliminar = document.createElement('a');
-        boton_eliminar.textContent = ' Eliminar ';
+        boton_eliminar.textContent = 'Eliminar';
         boton_eliminar.dataset.id_pregunta = pregunta[i]['_id'];
         boton_eliminar.href = '#';
         
@@ -32,7 +32,6 @@ let mostrar_preguntas = () => {
             eliminar(this.dataset.id_pregunta);
             pregunta = listar_pregunta();
             mostrar_preguntas();
-            window.location = "/public/listar_pregunta.html";
 
         });
 

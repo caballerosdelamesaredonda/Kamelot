@@ -18,8 +18,6 @@ let registrar_pregunta = (ppregunta, prespuesta) => {
       type: 'success',
       title: 'La pregunta fue enviada',
       text: 'En breve estaremos resolviendo su pregunta'
-    }).then(function() {
-      window.location = "listar_pregunta.html";
     });
   });
 
@@ -138,7 +136,6 @@ let eliminar = (pid) => {
               title : 'Proceso realizado con éxito',
               text : res.msg
           });
-          
       }else{
           swal.fire({
               type : 'Error',
