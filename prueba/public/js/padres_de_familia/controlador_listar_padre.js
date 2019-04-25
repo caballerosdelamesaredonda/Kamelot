@@ -10,9 +10,6 @@ let mostrar_datos = (pUsuarioLoggeado) => {
     document.getElementById('prueba').src = usario_loggeado.foto;
     document.querySelector('#nombre').innerHTML = usario_loggeado.nombre;
    // document.getElementById('txt_segundo_nombre').value = usario_loggeado.segundo_nombre;
-    document.querySelector('#modificar').onclick = function () {
-        window.location = `../modificar_pf.html?id=${pUsuarioLoggeado['_id']}`;
-    }
     document.querySelector('#apellido').innerHTML = usario_loggeado.papellido;
     document.querySelector('#distrito').innerHTML = usario_loggeado.distrito + ',';
     document.querySelector('#canton').innerHTML = usario_loggeado.canton+ ',';

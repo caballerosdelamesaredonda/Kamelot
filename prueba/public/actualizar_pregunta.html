@@ -2,11 +2,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Registro Actividad</title>
-<link rel="stylesheet" href="./css/reset.css" type="text/css">
-<link rel="stylesheet" href="./css/general.css" type="text/css">
-<link rel="stylesheet" href="./css/pregunta.css" type="text/css">	
-<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+<title>Actualizar Actividad</title>
+<link rel="stylesheet" href="/public/css/reset.css" type="text/css">
+	<link rel="stylesheet" href="/public/css/general.css" type="text/css">
+	<link rel="stylesheet" href="/public/css/activdad.css" type="text/css">
+	<link rel="stylesheet" href="/public/css/popr.css">
+	<link rel="stylesheet" href="/public/css/menu_nav/dropdown.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<style>
+		.campito{
+			width: 350px;
+		}
+	</style>
 </head>
 <body>
 	<header class="main_header">
@@ -80,7 +87,7 @@
 					<lable for="txt_pregunta" class="lable color_text">Pregunta Frecuente</lable>
 					<input class="input_titulo_acti" type="text" id="txt_pregunta">
 					<lable for="txt_respuesta" class="lable color_text">Respuesta</lable> 
-					<textarea id="txt_respuesta" class="input_actividad"></textarea>
+					<textarea id="txt_respuesta" class="input_actividad campito"></textarea>
 					<button type="button" id="btn_actualizar">Actualizar</button>
 			</form>
 			</div>
@@ -97,9 +104,17 @@
 	</footer>
 	
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="./js/pregunta/servicio_preguntas.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
+
+	<script src="/public/js/admin/servicio_admin.js"></script>
+
+	<script src="js/transacciones/servicio_transaccion.js"></script>
+	<script src="./js/pregunta/servicio_preguntas.js"></script>
 	<script src="./js/pregunta/controlador_actualizar_preguntas.js"></script>
+
+	<script src="/public/js/admin/controlador_avatar_admin.js"></script>
+	<script src="/public/js/popmenu/popr.js"></script>
 	
 </body>
 </html>

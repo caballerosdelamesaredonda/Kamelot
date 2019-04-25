@@ -83,7 +83,9 @@ let modificar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
     request.done(function (msg) {
         swal.fire({
             type: 'success',
-            title: 'El padre de familia ha modificado.'
+            title: 'El padre de familia ha modificado.',
+            text: 'La información se actualizará en su perfil.'
+
         }).then(function() {
             window.location = "/public/padrefamilia/perfil_padre_familia.html";
             let usuario = obtener_usuario_por_id(localStorage.usuario_en_sesion);

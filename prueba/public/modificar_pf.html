@@ -8,23 +8,51 @@
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/registrar_pf.css">
     <link rel="stylesheet" href="./css/banner_rce.css">
+    <link rel="stylesheet" href="/public/css/popr.css">   
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
 
 <body>
 
-    <header class="main_header">
-            <nav>
-                    <img class="img_logo" src="./images/Logo.png" width="61" height="80" alt="Logo Costa Rica Educa">
-                    <div class="float-right middle2">
-                        <div class="float-right mr-2">
-                            <a href="index.html" class="iniciar_sesion2 ml-1 width1">Inicio</a>
-                            <a href="registro_centroe.html" class="registrar_cuenta ml-1">Registro centro educativo</a>
-                            <a href="iniciar_sesion.html" class="registrar_cuenta ml-1">Iniciar Sesión</a>
-                        </div>
+        <header class="main_header_perfil">
+                <nav>
+                  <img class="img_logo" src="/public/images/logo.png" width="61" height="80" alt="Logo Costa Rica Educa">
+                  <div class="float-right middle2">
+                    <!--<lable class="white mr-1">Buscar</lable>
+                                    <input type="text" value="" name="" id="txtFiltro" class="input">-->
+                    <div class="float-right mr-2">
+            
+                            <div id="menu_right_icons">
+                                    <div class="popr" data-id="2"><span class="config">Ajustes</span></div>
+                                    <div class="avatar_cont"><img src="" id="avatar_img"></div>
+                                  </div>
                     </div>
+            
+                    <div id="avatar_container" style="margin-right: 100px;">
+            
+                      <div class="popr-box" data-box-id="2">
+                        <a href="/public/padrefamilia/perfil_padre_familia.html">
+                          <div class="popr-item" id="">Ver perfil</div>
+                        </a>
+            
+                        <a href="/public/padrefamilia/listar_evaluaciones.html">
+                          <div class="popr-item" id="">Ver evaluaciones</div>
+                        </a>
+            
+                        <a href="/public/modificar_pf.html">
+                          <div class="popr-item" id="">Ajustes</div>
+                        </a>
+            
+                        <a href="/public/index.html" onclick="localStorage.clear();">
+                          <div class="popr-item">Cerrar Sesion</div>
+                        </a>
+                      </div>
+                    </div>
+            
+                  </div>
                 </nav>
-    </header>
+              </header>
+            
 
     <main>
 
@@ -107,35 +135,14 @@
                             </select>
                         </div>
                         <div>
+                                <label class="color_text" for="cantidad_hijos">Cantidad de hijos</label>
+                                <input type="number" min="0" id="cantidad_hijos" placeholder="Escriba el número de hijos">
+                            </div>
+                        <div>
                             <label class="color_text" for="txt_direccion">Dirección exacta</label>
                             <textarea type="text" id="txt_direccion" placeholder="Escriba la dirección exacta" rows="3" style="height: 108px;"></textarea>
                         </div>
-                        <div>
-                            <div id="div_hijos">
-                                <label class="color_text" for="num_cant_hijos">edad del hijo</label>
-                                <input type="number" min="0" id="num_cant_hijos" placeholder="Escriba la cantidad de hijos">
-                                <button type="button" id="btn_agregar_hijos"></button>
-                            </div>
-                            <div style="border: #48dbfb solid 1px; border-radius: 5px; height: 200px;">
-                                <div class="contenedor_head">
-                                    <table style="width: 340px; border-bottom: #48dbfb solid 1px;">
-                                        <thead class="head_backg" style="background-color: transparent;color: #192a56;">
-                                        <tr>
-                                            <th class="column1">hijo #</th>
-                                            <th class="column2">edad</th>
-                                            <th class="column3"></th>
-                                        </tr>
-                                        </thead>
-                                    </table>
-                                </div>
-                                <div class="contenedor_body">
-                                    <table id="tbl_hijos">
-                                        <tbody></tbody>
-                                    </table>
-                                </div>
-                            </div>
 
-                        </div>
                     </section>
 
                 </div>
@@ -170,6 +177,7 @@
     <script src="js/ubicacion/controlador_ubicacion.js"></script>
     <script src="js/servicio_imagen.js"></script>
     <script src="js/padres_de_familia/controlador_modificar_pf.js"></script>
+    <script src="/public/js/popmenu/popr.js"></script>
 
 </body>
 
