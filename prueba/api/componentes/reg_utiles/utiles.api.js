@@ -78,7 +78,7 @@ module.exports.buscar_por_id = function (req, res) {
 };
 
 module.exports.actualizar = function (req, res) {
-    model_utiles.findByIdAndUpdate(req.body.id, { $set: req.body },
+    model_utiles.findByIdAndUpdate(req.body._id, { $set: req.body },
         function (error) {
             if (error) {
                 res.json(

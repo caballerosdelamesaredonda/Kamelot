@@ -130,11 +130,13 @@ let buscar_util = (id_util) => {
 
 };
 
+
 let actualizar_util = (pidCentro, pNombre, pTipo, pCiclo, pNivel, pAnho, pUtiles, pCantidad, pid) =>{
   let request = $.ajax({
     url: "http://localhost:4000/api/actualizar_util",
     method: "POST",
     data: {
+      _id: pid,
       idcentro: pidCentro,
       nombre: pNombre,
       tipo: pTipo,
@@ -142,8 +144,7 @@ let actualizar_util = (pidCentro, pNombre, pTipo, pCiclo, pNivel, pAnho, pUtiles
       nivel: pNivel,
       anho: pAnho,
       util: pUtiles,
-      cantidad: pCantidad,
-      id: pid
+      cantidad: pCantidad
     },
     dataType: "json",
     async: false,
@@ -153,7 +154,7 @@ let actualizar_util = (pidCentro, pNombre, pTipo, pCiclo, pNivel, pAnho, pUtiles
   request.done(function (msg) {
     swal.fire({
       type: 'success',
-      title: 'El útil fue agregado',
+      title: 'El útil fue actualizado',
       text: ''
     }).then(function() {
       window.location = "listar_utiles.html";
