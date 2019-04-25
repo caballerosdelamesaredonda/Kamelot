@@ -102,3 +102,27 @@ module.exports.listar_ratings_usuario_pf = (req, res) => {
 
     )
 };
+
+module.exports.eliminar_evaluacion = function (req, res) {
+    model_rating.findByIdAndRemove(req.body._id,
+        function (error) {
+            if (error) {
+                res.json(
+                    {
+                        success: false,
+                        msg: `No se pudo eliminar la evaluacion, ocurrió el siguiente error ${error}`
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: true,
+                        msg: `Se elimino la evaluacion de forma correcta`
+                    }
+                )
+            }
+        }
+
+
+    );
+};

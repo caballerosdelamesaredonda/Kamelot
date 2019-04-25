@@ -31,6 +31,13 @@ router.route('/listar_ratings_usuario_pf')
         }
     )
 
+router.route('/eliminar_evaluacion')
+    .post(
+        function (req, res) {
+            rating_api.eliminar_evaluacion(req, res);
+        }
+    )
+
 
 
 module.exports = router;

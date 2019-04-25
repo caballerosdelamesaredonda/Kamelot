@@ -10,7 +10,7 @@ if(id_centro_evaluacion==null){
 
 let mostrar_listar_ratings = () =>{
     let ratings = consultar_ratings(id_centro_evaluacion);
-    console.log(ratings);
+    //console.log(ratings);
     for(let i = 0; i < ratings.length; i++){
 
         let fila = tabla.insertRow();// Crea el tr de la tabla
@@ -31,3 +31,20 @@ let mostrar_listar_ratings = () =>{
 };
 
 mostrar_listar_ratings();
+
+
+let mostrar_promedio_ratings = () =>{
+    
+    let ratings = consultar_ratings(id_centro_evaluacion);
+    let total_rating = 0;
+    let promedio_rating = 0;
+    for(let i = 0; i < ratings.length; i++){
+        total_rating = total_rating + ratings[i]['rating'];
+    };
+
+    promedio_rating = total_rating / (ratings.length);
+    //console.log(promedio_rating);
+    document.querySelector('p#p_promedio').innerHTML = promedio_rating;
+};
+
+mostrar_promedio_ratings();
