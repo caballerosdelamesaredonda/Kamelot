@@ -2,8 +2,11 @@
 
 let userid = localStorage.getItem('usuario_en_sesion');
 console.log(userid);
-
 let usario_loggeado = [];
+
+usario_loggeado = obtener_usuario_por_id_centro(userid);
+
+
 
 //Funcion para colocar la imagen de avatar en el div con el id de avatar_img
 let mostrar_avatar = (pUsuarioLoggeado) =>{
@@ -44,20 +47,56 @@ let mostrar_datos = (pUsuarioLoggeado) => {
     //document.getElementById('slt_distrito').textContent = usario_loggeado.distrito;
     document.getElementById('txt_direccion').value = usario_loggeado.direccion;
 
-
-
-
+    if (usario_loggeado.instagram ==null) {
+    document.getElementById('instagram').value = "";
+        
+    } else {
     document.getElementById('instagram').value = usario_loggeado.instagram;
+        
+    }
+
+    if (usario_loggeado.twitter ==null) {
+    document.getElementById('twitter').value = "";
+        
+    } else {
     document.getElementById('twitter').value = usario_loggeado.twitter;
+        
+    }
+
+    if (usario_loggeado.youtube ==null) {
+    document.getElementById('youtube').value = "";
+        
+    } else {
     document.getElementById('youtube').value = usario_loggeado.youtube;
+        
+    }
+
+    if (usario_loggeado.facebook ==null) {
+    document.getElementById('facebook').value = "";
+        
+    } else {
     document.getElementById('facebook').value = usario_loggeado.facebook;
+        
+    }
+
 
 
     document.getElementById('txt_fechafund').value = usario_loggeado.fecha_fundacion;
     document.getElementById('txt_refhistorica').value = usario_loggeado.referencia_historia;
     document.getElementById('txt_telefono').value = usario_loggeado.telefono;
     document.getElementById('txt_fax').value = usario_loggeado.fax;
+
+    if (usario_loggeado.sitio_web == null) {
+    document.getElementById('txt_sitioweb').value = "";
+        
+    } else {
     document.getElementById('txt_sitioweb').value = usario_loggeado.sitio_web;
+        
+    }
+    
+    
+    
+    
     document.getElementById('txt_correo').value = usario_loggeado.correo_electronico;
     document.getElementById('txt_nombrecontacto').value = usario_loggeado.contacto_nombre;
     document.getElementById('txt_papellido').value = usario_loggeado.papellido;
@@ -71,7 +110,6 @@ let mostrar_datos = (pUsuarioLoggeado) => {
 };
 
 if (userid != null) {
-    usario_loggeado = obtener_usuario_por_id_centro(userid);
     mostrar_avatar(usario_loggeado);
     mostrar_datos(usario_loggeado);
 }else{
