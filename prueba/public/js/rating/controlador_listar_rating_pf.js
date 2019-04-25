@@ -25,8 +25,8 @@ let mostrar_listar_ratings = () =>{
         fila.insertCell().innerHTML = ratings[i]['comentario'];
         fila.insertCell().innerHTML = ratings[i]['rating'];
         fila.insertCell().innerHTML = dateformated;
-        fila.insertCell().innerHTML = 'Editar / Eliminar';
-
+        fila.insertCell().innerHTML = '<a class="btn_editar_noticia" style="border: none; background-color: inherit;"><img src="/public/images/edit.png" style="width: 20px; height:20px;"></a>' + ' ' + '<a class="btn_borrar_noticia" style="border: none; background-color: inherit;"><img src="/public/images/garbage.png" style="width: 20px; height:20px;"></a>';
+        
     }; 
 
 };
