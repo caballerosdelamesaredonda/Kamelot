@@ -32,7 +32,7 @@ if (userid != null) {
         title: 'Error',
         text: 'El usuario no ha iniciado sesion'
     });
-    window.location.href='index.html';
+    
 }
 
 

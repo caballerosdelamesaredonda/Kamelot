@@ -25,16 +25,6 @@ a, a:hover {
   fill: currentColor;
 }
 
-.wrapper {
-  width: 100%;
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
-  padding: 50px 20px;
-  padding-top: 50px;
-  display: flex;
-  display: flex;
-}
 @media screen and (max-width: 768px) {
   .wrapper {
     height: auto;
