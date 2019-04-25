@@ -102,3 +102,34 @@ let consultar_ratings_pf = (pId) => {
 
 };
 
+let eliminar_evaluacion = (pId) => {
+  let request = $.ajax({
+      url: "http://localhost:4000/api/eliminar_evaluacion",
+      method: "POST",
+      data: {
+          _id: pId
+      },
+      dataType: "json",
+      contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+  });
+
+  request.done(function (msg) {
+      swal.fire({
+          type: 'success',
+          title: 'Evaluacion eliminada',
+          text: `Gracias, la evaluacion fue eliminada correctamente`
+      }).then(function () {
+          window.location = "/public/padrefamilia/listar_citas_pf.html";
+      });
+  });
+
+  request.fail(function (jqXHR, textStatus) {
+      swal.fire({
+          type: 'error',
+          title: 'La evaluacion no fue eliminada',
+          text: 'Ocurrió un error inesperado, por favor intente de nuevo'
+      });
+  });
+
+};
+

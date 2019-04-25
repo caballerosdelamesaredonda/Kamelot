@@ -25,10 +25,41 @@ let mostrar_listar_ratings = () =>{
         fila.insertCell().innerHTML = ratings[i]['comentario'];
         fila.insertCell().innerHTML = ratings[i]['rating'];
         fila.insertCell().innerHTML = dateformated;
-        fila.insertCell().innerHTML = '<a class="btn_editar_noticia" style="border: none; background-color: inherit;"><img src="/public/images/edit.png" style="width: 20px; height:20px;"></a>' + ' ' + '<a class="btn_borrar_noticia" style="border: none; background-color: inherit;"><img src="/public/images/garbage.png" style="width: 20px; height:20px;"></a>';
+        fila.insertCell().innerHTML = '<button class="btn_editar_noticia" style="border: none; background-color: inherit;"><img src="/public/images/edit.png" style="width: 20px; height:20px;"></button>' + ' ' + '<button class="btn_borrar_noticia" style="border: none; background-color: inherit;"><img src="/public/images/garbage.png" style="width: 20px; height:20px;"></button>';
+        fila.querySelector('button.btn_editar_noticia').setAttribute('id', ratings[i]['_id']);
+        fila.querySelector('button.btn_borrar_noticia').setAttribute('id', ratings[i]['_id']);
         
     }; 
 
 };
 
 mostrar_listar_ratings();
+
+
+$('.btn_borrar_noticia').click(function () {
+    var id_value = $(this).attr('id');
+    //console.log('Borar' + id_value);
+
+    Swal.fire({
+        title: 'Desea eliminar la evaluacion?',
+        text: "Este accion no se puede revertir!",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Si, eliminar elavuacion!'
+    }).then((result) => {
+        if (result.value) {
+            Swal.fire(
+                'Eliminado!',
+                'La evaluacion fue eliminada.',
+                'success'
+            )
+            eliminar_evaluacion(id_value);
+            window.location = "/public/padrefamilia/listar_evaluaciones.html";
+        }
+    })
+
+});
+
