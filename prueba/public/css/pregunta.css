@@ -222,3 +222,12 @@ ul li a:hover {
 	color: #2f3640;
 	text-align: center;
 }
+
+th {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background-color: #f27232;
+    vertical-align: middle;
+}
