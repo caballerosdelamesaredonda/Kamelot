@@ -26,7 +26,6 @@ let mostar_datos_rating = () => {
  //   input_nombre.value = rating.nombre;
    // input_fecha.value = rating.fecha_registro;
     document.querySelector('#h1').innerHTML = rating.nombre;
-    document.querySelector('#fecha').innerHTML = rating.fecha_registro;
     console.log(rating.foto);
     document.getElementById('imagen_perfil').src = rating.foto;
     //document.querySelector('#stars').value = rating.evaluacion_mep;
