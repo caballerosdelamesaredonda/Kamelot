@@ -82,9 +82,9 @@ let registrar_centroe = (pnombre, palias, pcedula_juridica, ptipo_centro, pnivel
       title: 'El centro educativo ha sido registrado.',
       text: 'Se le estará comunicando la decisión por correo. Recibirá un correo con su clave temporal.',
     }).then(function() {
+      window.location = "index.html";
       let usuario = obtener_usuario_por_id_centro(localStorage.usuario_en_sesion);
       registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "Registro centro educativo", "Exitoso");
-      window.location = "index.html";
 
     });
   });
