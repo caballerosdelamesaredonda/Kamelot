@@ -45,4 +45,4 @@ let mostrar_datos1 = () => {
 
 
 mostrar_datos();
-//mostrar_datos1();
+mostrar_datos1();

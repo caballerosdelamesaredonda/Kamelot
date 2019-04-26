@@ -888,7 +888,7 @@ module.exports.buscar_usuario = (req, res)=>{
 }
 
 module.exports.listar_primaria = (req ,res) =>{
-    model_usuarios.find({nivel_centro : 'Primaria'}).then(
+    model_usuarios.find({nivel_centro : 'Primaria', estado: 'activo'}).then(
         function(centroe){
             if(centroe.length > 0){
                 res.json(
@@ -911,7 +911,7 @@ module.exports.listar_primaria = (req ,res) =>{
 };
 
 module.exports.listar_secundaria = (req ,res) =>{
-    model_usuarios.find({nivel_centro : 'Secundaria'}).then(
+    model_usuarios.find({nivel_centro : 'Secundaria', estado: 'activo'}).then(
         function(centroe){
             if(centroe.length > 0){
                 res.json(
