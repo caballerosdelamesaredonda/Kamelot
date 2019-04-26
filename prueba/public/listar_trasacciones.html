@@ -8,8 +8,9 @@
     <title>Listar transacciones</title>
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/general.css" type="text/css">
+    <link rel="stylesheet" href="./css/perfil_ce.css">
+    <link rel="stylesheet" href="css/prueba_perfil.css">
     <link rel="stylesheet" href="./css/listar_transacciones.css" type="text/css">
-    <link rel="stylesheet" href="./css/grupo_boton_radio.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/popr.css">
     <link rel="stylesheet" href="/public/css/menu_nav/dropdown.css">
@@ -74,6 +75,9 @@
                     <div class="dropdown-content">
                         <a class="color_text" href="listar_solicitudes.html">Lista de solicitudes</a>
                         <a class="color_text" href="listar_usuarios.html">Lista de usuarios</a>
+
+                        <a class="color_text" href="listar_trasacciones.html">Lista de transacciones</a>
+
                     </div>
                 </div>
             </ul>
@@ -83,6 +87,7 @@
 
     </div>
 </header>
+
 <main class="main">
     <h1 class="d1 color_text title_center mb-1">Lista de transacciones</h1>
     <section id="seccion_tablas">
@@ -115,7 +120,7 @@
     <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
     <nav class="footer_nav mt-2 ml-1">
         <a href="./index.html">Inicio</a><span class="vertical-line"> | </span>
-            <a href="#">FAQ</a><span class="vertical-line"> | </span>
+            <a href="./faq.html">FAQ</a><span class="vertical-line"> | </span>
             <a href="./contacto.html">Contacto</a>
     </nav>
 </footer>
@@ -123,7 +128,16 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="js/transacciones/servicio_transaccion.js"></script>
+
+<script src="js/sesion/servicio_iniciar_sesion.js"></script>
+
+<script src="/public/js/admin/servicio_admin.js"></script>
+
+<script src="/public/js/sesion/controlador_avatar.js"></script>
+
+
 <script src="js/transacciones/controlador_listar_transacciones.js"></script>
+<script src="/public/js/sesion/controlador_avatar.js"></script>
 <script src="/public/js/popmenu/popr.js"></script>
 </body>
 

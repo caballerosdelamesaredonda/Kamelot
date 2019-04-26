@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css'>
     <link rel="stylesheet" href="/public/css/reset.css">
+	<link rel="stylesheet" href="/public/css/menu_nav/dropdown.css">
     <link rel="stylesheet" href="/public/css/general.css">
     <link rel="stylesheet" href="/public/css/perfil_ce.css">
     <link rel='stylesheet' href='/public/css/rating/laxvek.css'>
@@ -58,22 +59,42 @@
 
             </div>
         </nav>
-        <div style="clear:both; margin-bottom: 20px;"></div>
-        <div class="fondonav">
-            <nav>
-                <ul>
-                    <li><a class="color_text" href="/public/padrefamilia/listar_centroe.html">Listar centros educativos</a></li>
-                    <li><a class="color_text" href="/public/padrefamilia/tablero_centroeducativo.html">Perfil centro
-                            educativo</a></li>
-                    <li><a class="color_text" href="/public/centroeducativo/citas.html">Registrar citas con el centro</a></li>
-                    <li><a class="color_text" href="/public/centroeducativo/lista_ratings_centro.html">Ver evaluaciones
-                            de centro</a></li>
-                    <li><a class="color_text" href="/public/centroeducativo/rating_centro.html">Dejar evaluacion de
-                            centro</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+		<div style="clear:both; margin-bottom: 20px;"></div>
+		<div class="fondonav">
+			<nav>
+				<ul>
+
+					<div class="dropdown">
+						<button class="dropbtn">Centros educativos</button>
+						<div class="dropdown-content">
+							<a class="color_text" href="/public/padrefamilia/listar_centroe.html">Listar centros</a>
+							<a class="color_text" href="/public/padrefamilia/tablero_centroeducativo.html">Perfil del centro</a>
+						</div>
+					</div>
+
+					<div class="dropdown">
+						<button class="dropbtn">Citas y servicios</button>
+						<div class="dropdown-content">
+							<a class="color_text" href="/public/centroeducativo/citas.html">Registrar cita</a>
+							<a class="color_text" href="/public/listar_tablero_servicios.html">Lista de servicios</a>
+						</div>
+					</div>
+
+					<div class="dropdown">
+						<button class="dropbtn">Evaluaciones</button>
+						<div class="dropdown-content">
+							<a class="color_text" href="/public/centroeducativo/rating_centro.html">Dejar evaluación</a>
+							<a class="color_text" href="/public/centroeducativo/lista_ratings_centro.html">Ver evaluaciones del centro</a>
+						</div>
+					</div>
+
+				</ul>
+			</nav>
+
+
+
+		</div>
+	</header>
 
     <section id="rating_container" class='rating-widget'>
 
@@ -119,8 +140,8 @@
     <footer class="main_footer">
         <p class="white ml-1">&copy; 2019 Kamelot. Todos los derechos reservados.</p>
         <nav class="footer_nav mt-2 ml-1">
-            <a href="#">Inicio</a><span class="vertical-line"> | </span>
-            <a href="#">FAQ</a><span class="vertical-line"> | </span>
+            <a href="/public/index.html">Inicio</a><span class="vertical-line"> | </span>
+            <a href="/public/faq.html">FAQ</a><span class="vertical-line"> | </span>
             <a href="#">Contacto</a>
         </nav>
     </footer>

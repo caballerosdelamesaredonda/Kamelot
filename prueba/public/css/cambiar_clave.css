@@ -129,15 +129,10 @@ main{
     margin-bottom: 60px;
 }
 
-.btn_enviar{
-    float: left;
-    position: absolute;
-    left: 29%;
-    top: 500px;
+.btn_enviar.center{
     margin-left: auto;
     margin-right: auto;
     width: 780px;
-
 }
 
 #btnSeleccionarDoc:visited{
@@ -145,7 +140,8 @@ main{
 }
 #btn_guardar {
     display: block;
-    margin-left: 37%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button{
