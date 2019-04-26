@@ -1,5 +1,38 @@
 'use strict';
 
+// Validar informacion de campos de formulario
+
+let obtener_usuario_por_id_centro = (pId) =>{
+  let usuario=[];
+  let request = $.ajax({
+      url: "http://localhost:4000/api/buscar_usuario",
+      method: 'POST',
+      async: false,
+      data: {
+          _id : pId
+      },
+      dataType: "json",
+      contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+  });
+
+  request.done(function (response) {
+
+    if (response.success){
+      usuario = response.usuario;
+  }else{
+          usuario = response;
+          swal({
+              type: 'error',
+              title: 'Error',
+              text: response.msj
+          });
+  }
+
+  });
+
+  return  usuario;
+};
+
 let registrar_centroe = (pnombre, palias, pcedula_juridica, ptipo_centro, pnivel_centro, pfoto, pnombre_comercial, pprovincia, pcanton, pdistrito, pdireccion, pfecha_fundacion, preferencia_historia, padjuntar_documentos, ptelefono, pfax, psitio_web, pfacebook, pinstagram,pyoutube, ptwitter, pcorreo_electronico, pcontacto_nombre, ppapellido, psapellido, pidentificacion, pdepartamento, ptelefono_contacto, pextension_contacto, pcorreo_electronico_contacto, pestado, ptipo_usuario, pfecha_registro) => {
   let request = $.ajax({
     url: "http://localhost:4000/api/registrar_ce",
@@ -49,7 +82,7 @@ let registrar_centroe = (pnombre, palias, pcedula_juridica, ptipo_centro, pnivel
       title: 'El centro educativo ha sido registrado.',
       text: 'Se le estará comunicando la decisión por correo. Recibirá un correo con su clave temporal.',
     }).then(function() {
-      let usuario = obtener_usuario_por_id(localStorage.usuario_en_sesion);
+      let usuario = obtener_usuario_por_id_centro(localStorage.usuario_en_sesion);
       registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "Registro centro educativo", "Exitoso");
       window.location = "index.html";
 
@@ -62,7 +95,7 @@ let registrar_centroe = (pnombre, palias, pcedula_juridica, ptipo_centro, pnivel
       title: 'El centro educativo no ha sido registrado',
       text: 'Ocurrió un error inesperado, por favor intente de nuevo'
     });
-    let usuario = obtener_usuario_por_id(localStorage.usuario_en_sesion);
+    let usuario = obtener_usuario_por_id_centro(localStorage.usuario_en_sesion);
     registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "Registro centro educativo", "Fallida");
   });
 };
@@ -92,39 +125,6 @@ let listar_centroe = () => {
   });
   return listar_centroe;
  
-};
-
-// Validar informacion de campos de formulario
-
-let obtener_usuario_por_id_centro = (pId) =>{
-  let usuario=[];
-  let request = $.ajax({
-      url: "http://localhost:4000/api/buscar_usuario",
-      method: 'POST',
-      async: false,
-      data: {
-          _id : pId
-      },
-      dataType: "json",
-      contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-  });
-
-  request.done(function (response) {
-
-    if (response.success){
-      usuario = response.usuario;
-  }else{
-          usuario = response;
-          swal({
-              type: 'error',
-              title: 'Error',
-              text: response.msj
-          });
-  }
-
-  });
-
-  return  usuario;
 };
 
 let listar_primaria = () => {
@@ -228,7 +228,7 @@ let modificar_centroe = (pnombre, palias, pcedula_juridica, ptipo_centro, pnivel
       title: 'El centro educativo ha sido modificado.',
       text: 'Se le estará mostrando la información actualizada',
     }).then(function() {
-      let usuario = obtener_usuario_por_id(localStorage.usuario_en_sesion);
+      let usuario = obtener_usuario_por_id_centro(localStorage.usuario_en_sesion);
       registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "Modificar centro educativo", "Exitoso");
       window.location = "/public/perfil_centroedu.html";
 
@@ -241,7 +241,7 @@ let modificar_centroe = (pnombre, palias, pcedula_juridica, ptipo_centro, pnivel
       title: 'El centro educativo no ha sido modificado',
       text: 'Ocurrió un error inesperado, por favor intente de nuevo'
     });
-    let usuario = obtener_usuario_por_id(localStorage.usuario_en_sesion);
+    let usuario = obtener_usuario_por_id_centro(localStorage.usuario_en_sesion);
     registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "Modificar centro educativo", "Fallida");
   });
 };
