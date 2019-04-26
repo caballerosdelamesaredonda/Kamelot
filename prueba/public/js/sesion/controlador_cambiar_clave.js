@@ -10,8 +10,18 @@ let get_param = (param) => {
     return url.searchParams.get(param);
 };
 
+let userioLoggeado = localStorage.getItem('usuario_en_sesion');
 let id = get_param('id');
-let usuario = obtener_usuario_por_id(id);
+let usuario;
+
+if (id === null){
+    usuario = obtener_usuario_por_id(userioLoggeado);
+} else{
+    usuario = obtener_usuario_por_id(id);
+}
+
+
+
 
 let validar_blancos = () =>{
     let error = false;
@@ -89,7 +99,12 @@ let obtenerDatos = () =>{
                    ${resultados_val_exp.msg}`
         });
     }else{
-        cambiar_clave(id, input_clave_nueva.value);
+        if (id === null) {
+            cambiar_clave(userioLoggeado, input_clave_nueva.value);
+        }else{
+            cambiar_clave(id, input_clave_nueva.value);
+        }
+
         swal({
             type: 'success',
             title: 'Se ha cambió la clave con exito',
