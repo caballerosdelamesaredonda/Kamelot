@@ -87,7 +87,6 @@ th, td{
     top: 60px;
     border: 1px #E2E2E2 solid;
     border: 1px solid rgba(255,255,255,0.3);
-    box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
 }
 
 .contenedor_body td {
