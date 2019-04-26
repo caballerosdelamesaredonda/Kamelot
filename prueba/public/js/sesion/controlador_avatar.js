@@ -1,16 +1,19 @@
 'use strict';
 
-let userPadreFamilia = localStorage.getItem('usuario_en_sesion');
+let idUsuario = localStorage.getItem('usuario_en_sesion');
 //console.log(userPadreFamilia);
 
-let usuario_padrefamilia = [];
+let usuario = [];
 
 //Funcion para colocar la imagen de avatar en el div con el id de avatar_img
 let mostrar_avatar = (pUsuarioLoggeado) => {
 
     if (pUsuarioLoggeado != null) {
-        usuario_padrefamilia = obtener_usuario_por_id_avatar(pUsuarioLoggeado);
-        $("#avatar_img").attr("src", usuario_padrefamilia.foto);
+        usuario= obtener_usuario_por_id(pUsuarioLoggeado);
+
+        obtener_usuario_por_id
+
+        $("#avatar_img").attr("src", usuario.foto);
     } else {
         swal({
             type: 'error',
@@ -22,6 +25,6 @@ let mostrar_avatar = (pUsuarioLoggeado) => {
 };
 
 
-mostrar_avatar(userPadreFamilia);
+mostrar_avatar(idUsuario);
 
 

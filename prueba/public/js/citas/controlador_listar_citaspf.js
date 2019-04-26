@@ -39,7 +39,7 @@ mostrar_lista_citas();
 $('.btn_editar_cita').click(function () {
     var id_value = $(this).attr('id');
     console.log('Editar' + id_value);
-    window.location = `/public/centroeducativo/modificar_citas.html?id=${id_value}`;
+    window.location = `/public/centroeducativo/modificar_citas_pf.html?id=${id_value}`;
 });
 
 $('.btn_borrar_cita').click(function () {

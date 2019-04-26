@@ -20,6 +20,8 @@ let mostrar_avatar = (pUsuarioLoggeado) => {
         });
         window.location.href = 'index.html';
     }
-}
+};
+
+
 
 mostrar_avatar(userAdminLoggeado);
