@@ -6,11 +6,12 @@
         Aplicacion MEP
     </title>
     <meta charset="utf-8"> <!-- para permitir el uso de chars especiales -->
-    
+
     <link rel="stylesheet" href="/public/css/reset.css">
     <link rel="stylesheet" href="/public/css/general.css">
     <link rel="stylesheet" href="/public/css/perfil_ce.css">
     <link rel="stylesheet" href="/public/css/citas.css">
+    <link rel="stylesheet" href="/public/css/menu_nav/dropdown.css">
     <link rel="stylesheet" href="/public/css/popr.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
@@ -20,42 +21,43 @@
 
 <body>
 
-   
+
     <header class="main_header">
         <nav>
             <img class="img_logo" src="/public/images/Logo.png" width="61" height="80" alt="Logo Costa Rica Educa">
             <div class="float-right middle2">
                 <!--<lable class="white mr-1">Buscar</lable>
-                                                        <input type="text" value="" name="" id="txtFiltro" class="input">-->
+                                                                <label type="text" value="" name="" id="txtFiltro" class="label">-->
                 <div class="float-right mr-2 mt-4">
 
                     <div id="menu_right_icons">
-                        <div class="popr" data-id="2"><img src="/public/images/settings_2.png" id=""></div>
+                        <div class="popr" data-id="2"><span class="config">Ajustes</span></div>
                         <div class="avatar_cont"><img src="" id="avatar_img"></div>
                     </div>
 
                 </div>
 
                 <div id="avatar_container" style="margin-right: 100px;">
-
                     <div class="popr-box" data-box-id="2">
                         <a href="/public/padrefamilia/perfil_padre_familia.html">
                             <div class="popr-item" id="">Ver perfil</div>
+                        </a>
+
+                        <a href="/public/modificar_pf.html">
+                            <div class="popr-item" id="">Editar perfil</div>
                         </a>
 
                         <a href="/public/padrefamilia/listar_evaluaciones.html">
                             <div class="popr-item" id="">Ver evaluaciones</div>
                         </a>
 
-                        <a href="#">
-                            <div class="popr-item" id="">Ajustes</div>
+                        <a href="/public/cambiar_clave_i.html">
+                            <div class="popr-item" id="">Cambiar clave</div>
                         </a>
-
                         <a href="/public/index.html" onclick="localStorage.clear();">
                             <div class="popr-item">Cerrar Sesion</div>
                         </a>
                     </div>
-
                 </div>
 
             </div>
@@ -64,16 +66,38 @@
         <div class="fondonav">
             <nav>
                 <ul>
-                    <li><a class="color_text" href="/public/padrefamilia/listar_centroe.html">Listar centros educativos</a></li>
-                    <li><a class="color_text" href="/public/padrefamilia/tablero_centroeducativo.html">Perfil centro
-                            educativo</a></li>
-                    <li><a class="color_text" href="/public/centroeducativo/citas.html">Registrar citas con el centro</a></li>
-                    <li><a class="color_text" href="/public/centroeducativo/lista_ratings_centro.html">Ver evaluaciones
-                            de centro</a></li>
-                    <li><a class="color_text" href="/public/centroeducativo/rating_centro.html">Dejar evaluacion de
-                            centro</a></li>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Centros educativos</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="/public/padrefamilia/listar_centroe.html">Listar centros</a>
+                            <a class="color_text" href="/public/padrefamilia/tablero_centroeducativo.html">Perfil del
+                                centro</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Citas y servicios</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="/public/centroeducativo/citas.html">Registrar cita</a>
+                            <a class="color_text" href="/public/listar_tablero_servicios.html">Lista de servicios</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Evaluaciones</button>
+                        <div class="dropdown-content">
+                            <a class="color_text" href="/public/centroeducativo/rating_centro.html">Dejar evaluación</a>
+                            <a class="color_text" href="/public/centroeducativo/lista_ratings_centro.html">Ver
+                                evaluaciones del centro</a>
+                        </div>
+                    </div>
+
                 </ul>
             </nav>
+
+
+
         </div>
     </header>
 
@@ -88,7 +112,7 @@
 
                 <!-- Formulario de registro de citas -->
                 <h1 class="h1">Modificar cita con el centro:</h1>
-        
+
 
                 <div>
                     <label for="razon_cita">Razon de cita:</label>
