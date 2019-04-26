@@ -60,22 +60,42 @@
 
             </div>
         </nav>
-        <div style="clear:both; margin-bottom: 20px;"></div>
-        <div class="fondonav">
-            <nav>
-                <ul>
-                    <li><a class="color_text" href="/public/padrefamilia/listar_centroe.html">Listar centros educativos</a></li>
-                    <li><a class="color_text" href="/public/padrefamilia/tablero_centroeducativo.html">Perfil centro
-                            educativo</a></li>
-                    <li><a class="color_text" href="/public/centroeducativo/citas.html">Registrar citas con el centro</a></li>
-                    <li><a class="color_text" href="/public/centroeducativo/lista_ratings_centro.html">Ver evaluaciones
-                            de centro</a></li>
-                    <li><a class="color_text" href="/public/centroeducativo/rating_centro.html">Dejar evaluacion de
-                            centro</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+		<div style="clear:both; margin-bottom: 20px;"></div>
+		<div class="fondonav">
+			<nav>
+				<ul>
+
+					<div class="dropdown">
+						<button class="dropbtn">Centros educativos</button>
+						<div class="dropdown-content">
+							<a class="color_text" href="/public/padrefamilia/listar_centroe.html">Listar centros</a>
+							<a class="color_text" href="/public/padrefamilia/tablero_centroeducativo.html">Perfil del centro</a>
+						</div>
+					</div>
+
+					<div class="dropdown">
+						<button class="dropbtn">Citas y servicios</button>
+						<div class="dropdown-content">
+							<a class="color_text" href="/public/centroeducativo/citas.html">Registrar cita</a>
+							<a class="color_text" href="/public/listar_tablero_servicios.html">Lista de servicios</a>
+						</div>
+					</div>
+
+					<div class="dropdown">
+						<button class="dropbtn">Evaluaciones</button>
+						<div class="dropdown-content">
+							<a class="color_text" href="/public/centroeducativo/rating_centro.html">Dejar evaluación</a>
+							<a class="color_text" href="/public/centroeducativo/lista_ratings_centro.html">Ver evaluaciones del centro</a>
+						</div>
+					</div>
+
+				</ul>
+			</nav>
+
+
+
+		</div>
+	</header>
 
     <h1 class="h1">Promedio evaluaciones de centro:</h1>
     <p id="p_promedio" style="text-align: center;"></p>
