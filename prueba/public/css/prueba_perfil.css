@@ -266,18 +266,18 @@ a, a:hover {
   margin-right: 0;
 }
 .profile-card__button.button--blue {
-  background: linear-gradient(45deg, #1da1f2, #0e71c8);
-  box-shadow: 0px 4px 30px rgba(19, 127, 212, 0.4);
+  background: #f27232;
+  box-shadow: 0px 4px 30px #f27232;
 }
 .profile-card__button.button--blue:hover {
-  box-shadow: 0px 7px 30px rgba(19, 127, 212, 0.75);
+  box-shadow: 0px 7px 30px #f27232;
 }
 .profile-card__button.button--orange {
-  background: linear-gradient(45deg, #d5135a, #f05924);
-  box-shadow: 0px 4px 30px rgba(223, 45, 70, 0.35);
+  background: #f27232;
+  box-shadow: 0px 4px 30px #f27232;
 }
 .profile-card__button.button--orange:hover {
-  box-shadow: 0px 7px 30px rgba(223, 45, 70, 0.75);
+  box-shadow: 0px 7px 30px #f27232;
 }
 .profile-card__button.button--gray {
   box-shadow: none;
@@ -358,4 +358,8 @@ a, a:hover {
   background: rgba(22, 33, 72, 0.35);
   border-radius: 12px;
   transition: all .3s;
+}
+
+.a{
+  color: #ffffff;
 }
