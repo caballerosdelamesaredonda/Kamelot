@@ -87,9 +87,9 @@ let modificar_pf = (pCorreo, pNombre, pSegundoNombre, pApellido, pSegundoApellid
             text: 'La información se actualizará en su perfil.'
 
         }).then(function() {
-            window.location = "/public/padrefamilia/perfil_padre_familia.html";
             let usuario = obtener_usuario_por_id(localStorage.usuario_en_sesion);
             registrar_transaccion(usuario.correo_electronico, usuario.tipo_usuario, "modificar padre de familia", "Exitoso");
+            window.location = "/public/padrefamilia/perfil_padre_familia.html";
         });
     });
 
