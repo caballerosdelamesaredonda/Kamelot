@@ -403,3 +403,10 @@ th, td {
 .column3{
 
 }
+
+.grid1 {
+    float: left;
+    width: 400px;
+    display: grid;
+    grid-column-gap: 50px;
+}
