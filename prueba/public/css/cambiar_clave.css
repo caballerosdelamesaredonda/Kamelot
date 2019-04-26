@@ -67,11 +67,13 @@ body{
 form section div{
     margin-bottom: 15px;
 }
-p{
-    text-align: center ;
+
+
+.text{
     font-size: 18px;
     color: #192a56;
     white-space: nowrap;
+    text-align: center ;
 }
 
 label{
