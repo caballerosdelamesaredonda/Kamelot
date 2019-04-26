@@ -6,6 +6,7 @@
         Aplicacion MEP
     </title>
     <meta charset="utf-8"> <!-- para permitir el uso de chars especiales -->
+    
     <link rel="stylesheet" href="/public/css/reset.css">
     <link rel="stylesheet" href="/public/css/general.css">
     <link rel="stylesheet" href="/public/css/perfil_ce.css">
@@ -19,12 +20,13 @@
 
 <body>
 
+   
     <header class="main_header">
         <nav>
             <img class="img_logo" src="/public/images/Logo.png" width="61" height="80" alt="Logo Costa Rica Educa">
-            <div class="float-right middle">
+            <div class="float-right middle2">
                 <!--<lable class="white mr-1">Buscar</lable>
-                        <input type="text" value="" name="" id="txtFiltro" class="input">-->
+                                                        <input type="text" value="" name="" id="txtFiltro" class="input">-->
                 <div class="float-right mr-2 mt-4">
 
                     <div id="menu_right_icons">
@@ -38,7 +40,11 @@
 
                     <div class="popr-box" data-box-id="2">
                         <a href="/public/padrefamilia/perfil_padre_familia.html">
-                            <div class="popr-item" id="">Ver Perfil</div>
+                            <div class="popr-item" id="">Ver perfil</div>
+                        </a>
+
+                        <a href="/public/padrefamilia/listar_evaluaciones.html">
+                            <div class="popr-item" id="">Ver evaluaciones</div>
                         </a>
 
                         <a href="#">
@@ -49,6 +55,7 @@
                             <div class="popr-item">Cerrar Sesion</div>
                         </a>
                     </div>
+
                 </div>
 
             </div>
@@ -58,24 +65,30 @@
             <nav>
                 <ul>
                     <li><a class="color_text" href="/public/padrefamilia/listar_centroe.html">Listar centros educativos</a></li>
-                    <li><a class="color_text" href="/public/padrefamilia/tablero_centroeducativo.html">Perfil centro educativo</a></li>
+                    <li><a class="color_text" href="/public/padrefamilia/tablero_centroeducativo.html">Perfil centro
+                            educativo</a></li>
                     <li><a class="color_text" href="/public/centroeducativo/citas.html">Registrar citas con el centro</a></li>
-                    <li><a class="color_text" href="/public/centroeducativo/rating_centro.html">Dejar evaluacion de centro</a></li>
+                    <li><a class="color_text" href="/public/centroeducativo/lista_ratings_centro.html">Ver evaluaciones
+                            de centro</a></li>
+                    <li><a class="color_text" href="/public/centroeducativo/rating_centro.html">Dejar evaluacion de
+                            centro</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
 
+
     <!-- Seccion de citas. -->
 
     <section id='citas'>
 
-        <h1 class="h1">Modificar cita con el centro:</h1>
         <div class="centrado">
             <form id="frm_citas">
 
                 <!-- Formulario de registro de citas -->
+                <h1 class="h1">Modificar cita con el centro:</h1>
+        
 
                 <div>
                     <label for="razon_cita">Razon de cita:</label>
