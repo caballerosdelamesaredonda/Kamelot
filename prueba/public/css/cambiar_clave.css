@@ -10,7 +10,7 @@ body{
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    height: 500px;
+    height: 400px;
 }
 
 #section_utiles{
@@ -128,9 +128,10 @@ main{
 }
 
 .btn_enviar{
+    float: left;
     position: absolute;
-    left: 500px;
-    top: 600px;
+    left: 29%;
+    top: 500px;
     margin-left: auto;
     margin-right: auto;
     width: 780px;
