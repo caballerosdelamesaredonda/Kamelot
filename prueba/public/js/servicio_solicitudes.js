@@ -60,14 +60,16 @@ let listar_solicitudes = () => {
   
   };
 
-  let habilitar = (pId) =>{
+  let habilitar = (pId, pCorreo, pClave) =>{
 
     let request = $.ajax({
-        url: "http://localhost:4000/api/habilitar_usuario",
+        url: "http://localhost:4000/api/activar_ce",
         method: 'POST',
         async: false,
         data: {
-            _id : pId
+            _id : pId,
+            correo_electronico: pCorreo,
+            clave : pClave
         },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',

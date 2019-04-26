@@ -144,6 +144,10 @@ router.route('/set_temporal').post(function (req, res) {
     api_usuarios.set_temporal(req, res);
 });
 
+router.route('/activar_ce').post(function (req, res) {
+    api_usuarios.activar_ce(req, res);
+});
+
 
 
 
