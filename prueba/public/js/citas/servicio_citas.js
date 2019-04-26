@@ -149,6 +149,42 @@ let actualizar_cita = (pId,puserId, puserCentro,pRazon, pFecha, pHora) =>{
 
 };
 
+let actualizar_cita_ce = (pId,puserId, puserCentro,pRazon, pFecha, pHora) =>{
+    let request = $.ajax({
+        url: "http://localhost:4000/api/actualizar_cita",
+        method: "POST",
+        data: {
+            _id: pId,
+            userid: puserId,
+            centroid: puserCentro,
+            razon: pRazon,
+            fecha: pFecha,
+            hora: pHora
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+    });
+
+    request.done(function (msg) {
+        swal.fire({
+            type: 'success',
+            title: 'La cita fue registrada',
+            text: `Gracias por registrar una cita con el centro. Fecha: ${pFecha} Hora: ${pHora}`
+        }).then(function() {
+            window.location = "/public/listar_citas.html";
+        });
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+        swal.fire({
+            type: 'error',
+            title: 'La cita no fue registrada',
+            text: 'Ocurrió un error inesperado, por favor intente de nuevo'
+        });
+    }); 
+
+};
+
 let eliminar_cita = (pId) =>{
     let request = $.ajax({
         url: "http://localhost:4000/api/eliminar_cita",

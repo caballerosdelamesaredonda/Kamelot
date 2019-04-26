@@ -53,7 +53,7 @@ mostrar_lista_citas();
 $('.btn_editar_cita').click(function () {
     var id_value = $(this).attr('id');
     console.log('Editar' + id_value);
-    window.location = `/public/centroeducativo/modificar_citas.html?id=${id_value}`;
+    window.location = `/public/centroeducativo/modificar_citas_ce.html?id=${id_value}`;
 });
 
 $('.btn_borrar_cita').click(function () {
@@ -77,7 +77,7 @@ $('.btn_borrar_cita').click(function () {
                 'success'
             )
             eliminar_cita(id_value);
-            window.location = "/public/padrefamilia/listar_citas_pf.html";
+            window.location = "/public/listar_citas.html";
         }
     })
 
