@@ -88,8 +88,9 @@ let obtener_datos = () =>{
     let nivel = slt_nivel.selectedOptions[0].textContent;
     let nombre_util = slt_util_nombre.selectedOptions[0].textContent;
     let tipo = slt_tipo.selectedOptions[0].textContent;
+    
 
-    actualizar_util(userid, nombre, anho, cantidad, ciclo, nivel, nombre_util, tipo, _id);
+    actualizar_util(userid, nombre,tipo,ciclo,nivel,anho, nombre_util, cantidad, _id);
 
      
 };
