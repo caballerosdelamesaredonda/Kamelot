@@ -226,9 +226,8 @@ a, a:hover {
   margin: 15px 35px;
   padding: 15px 40px;
   min-width: 201px;
-  border-radius: 50px;
+  border-radius: 10px;
   min-height: 55px;
-  color: #fff;
   cursor: pointer;
   backface-visibility: hidden;
   transition: all .3s;
@@ -266,18 +265,20 @@ a, a:hover {
   margin-right: 0;
 }
 .profile-card__button.button--blue {
-  background: linear-gradient(45deg, #1da1f2, #0e71c8);
-  box-shadow: 0px 4px 30px rgba(19, 127, 212, 0.4);
+  background: #192a56;
+  box-shadow: 0px 4px 30px #192a56;
 }
 .profile-card__button.button--blue:hover {
-  box-shadow: 0px 7px 30px rgba(19, 127, 212, 0.75);
+  box-shadow: 0px 7px 30px #f27232;
+  background: #f27232;
 }
 .profile-card__button.button--orange {
-  background: linear-gradient(45deg, #d5135a, #f05924);
-  box-shadow: 0px 4px 30px rgba(223, 45, 70, 0.35);
+  background: #192a56;
+  box-shadow: 0px 4px 30px #192a56;
 }
 .profile-card__button.button--orange:hover {
-  box-shadow: 0px 7px 30px rgba(223, 45, 70, 0.75);
+  box-shadow: 0px 7px 30px #f27232;
+  background: #f27232;
 }
 .profile-card__button.button--gray {
   box-shadow: none;
@@ -359,29 +360,6 @@ a, a:hover {
   border-radius: 12px;
   transition: all .3s;
 }
-
-.btn_actualizar{
-  background-color: #f27232;
-  padding: 10px;
-  width: 170px;
-  font-size: 18px;
-  color: #fff;
-  margin-bottom: 50px;
-  border-radius: 5px;
-  -webkit-box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
-  -moz-box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
-  box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
-}	
-
-.btn_actualiza{
-  background-color: #f27232;
-  padding: 10px;
-  width: 170px;
-  font-size: 18px;
-  color: #fff;
-  margin-bottom: 50px;
-  border-radius: 5px;
-  -webkit-box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
-  -moz-box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
-  box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.75);
-}	
+.a{
+  color: #ffffff;
+}
