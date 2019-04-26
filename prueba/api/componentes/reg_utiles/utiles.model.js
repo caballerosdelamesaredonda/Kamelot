@@ -11,7 +11,7 @@ let schema_utiles = new mongoose.Schema(
         anho : {type : String, required : true},
         util : {type : String, required : true},
         cantidad : {type : String, required : true},
-        estado : {type : String, required : true}
+        estado : {type : String, required : false}
     }
 );
 
