@@ -80,7 +80,7 @@ let registrar_centroe = (pnombre, palias, pcedula_juridica, ptipo_centro, pnivel
     swal.fire({
       type: 'success',
       title: 'El centro educativo ha sido registrado.',
-      text: 'Se le estará comunicando la decisión por correo. Recibirá un correo con su clave temporal.',
+      text: 'Se le estará comunicando la decisión por correo.',
     }).then(function() {
       window.location = "index.html";
       let usuario = obtener_usuario_por_id_centro(localStorage.usuario_en_sesion);
