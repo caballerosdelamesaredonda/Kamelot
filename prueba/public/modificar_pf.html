@@ -8,54 +8,55 @@
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/registrar_pf.css">
     <link rel="stylesheet" href="./css/banner_rce.css">
-    <link rel="stylesheet" href="/public/css/popr.css">   
+    <link rel="stylesheet" href="/public/css/popr.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
 
 <body>
 
-        <header class="main_header_perfil">
-                <nav>
-                  <img class="img_logo" src="/public/images/logo.png" width="61" height="80" alt="Logo Costa Rica Educa">
-                  <div class="float-right middle2">
-                    <!--<lable class="white mr-1">Buscar</lable>
-                                    <input type="text" value="" name="" id="txtFiltro" class="input">-->
-                    <div class="float-right mr-2">
-            
-                            <div id="menu_right_icons">
-                                    <div class="popr" data-id="2"><span class="config">Ajustes</span></div>
-                                    <div class="avatar_cont"><img src="" id="avatar_img"></div>
-                                  </div>
+    <header class="main_header_perfil">
+        <nav>
+            <img class="img_logo" src="/public/images/logo.png" width="61" height="80" alt="Logo Costa Rica Educa">
+            <div class="float-right middle2">
+                <!--<lable class="white mr-1">Buscar</lable>
+                                            <input type="text" value="" name="" id="txtFiltro" class="input">-->
+                <div class="float-right mr-2">
+
+                    <div id="menu_right_icons">
+                        <div class="popr" data-id="2"><span class="config">Ajustes</span></div>
+                        <div class="avatar_cont"><img src="" id="avatar_img"></div>
                     </div>
-            
-                    <div id="avatar_container" style="margin-right: 100px;">
-            
-                      <div class="popr-box" data-box-id="2">
+
+                </div>
+
+                <div id="avatar_container" style="margin-right: 100px;">
+                    <div class="popr-box" data-box-id="2">
                         <a href="/public/padrefamilia/perfil_padre_familia.html">
-                          <div class="popr-item" id="">Ver perfil</div>
+                            <div class="popr-item" id="">Ver perfil</div>
                         </a>
-            
-                        <a href="/public/padrefamilia/listar_evaluaciones.html">
-                          <div class="popr-item" id="">Ver evaluaciones</div>
-                        </a>
-            
+
                         <a href="/public/modificar_pf.html">
-                          <div class="popr-item" id="">Ajustes</div>
+                            <div class="popr-item" id="">Editar perfil</div>
                         </a>
-            
+
+                        <a href="/public/padrefamilia/listar_evaluaciones.html">
+                            <div class="popr-item" id="">Ver evaluaciones</div>
+                        </a>
+
+                        <a href="/public/cambiar_clave_i.html">
+                            <div class="popr-item" id="">Cambiar clave</div>
+                        </a>
                         <a href="/public/index.html" onclick="localStorage.clear();">
-                          <div class="popr-item">Cerrar Sesion</div>
+                            <div class="popr-item">Cerrar Sesion</div>
                         </a>
-                      </div>
                     </div>
-            
-                  </div>
-                </nav>
-              </header>
-            
+                </div>
+
+            </div>
+        </nav>
+    </header>
 
     <main>
-
 
         <section id="section">
 
@@ -74,7 +75,7 @@
                 <div class="wrapper">
                     <section class="col-iz">
                         <div>
-                            <label class="color_text"for="txt_nombre">Nombre</label>
+                            <label class="color_text" for="txt_nombre">Nombre</label>
                             <input type="text" id="txt_nombre" placeholder="Escriba el nombre de usuario">
                         </div>
                         <div>
@@ -122,7 +123,7 @@
                             </select>
                         </div>
                         <div>
-                            <label  class="color_text" for="slt_cantones">Cantón</label>
+                            <label class="color_text" for="slt_cantones">Cantón</label>
                             <select class="form-select" id="slt_cantones">
                                 <option value="">--Cantón--</option>
 
@@ -135,12 +136,13 @@
                             </select>
                         </div>
                         <div>
-                                <label class="color_text" for="cantidad_hijos">Cantidad de hijos</label>
-                                <input type="number" min="0" id="cantidad_hijos" placeholder="Escriba el número de hijos">
-                            </div>
+                            <label class="color_text" for="cantidad_hijos">Cantidad de hijos</label>
+                            <input type="number" min="0" id="cantidad_hijos" placeholder="Escriba el número de hijos">
+                        </div>
                         <div>
                             <label class="color_text" for="txt_direccion">Dirección exacta</label>
-                            <textarea type="text" id="txt_direccion" placeholder="Escriba la dirección exacta" rows="3" style="height: 108px;"></textarea>
+                            <textarea type="text" id="txt_direccion" placeholder="Escriba la dirección exacta" rows="3"
+                                style="height: 108px;"></textarea>
                         </div>
 
                     </section>

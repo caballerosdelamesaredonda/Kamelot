@@ -83,7 +83,7 @@ let obtenerDatos = () =>{
     let msg = 'Tienes los siguientes problemas:';
     let error = false;
 
-    for (let i=0;  i > arreglo.length; i++) {
+    for (let i=0;  i < arreglo.length; i++) {
         msg = '\n'+arreglo[i].msg;
         if (arreglo[i].error === true){
             error = true;
