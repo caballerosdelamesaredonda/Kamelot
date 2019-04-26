@@ -50,7 +50,7 @@ let mostrar_promedio_ratings = () =>{
     }
     
     //console.log(promedio_rating);
-    document.querySelector('p#p_promedio').innerHTML = promedio_rating;
+    document.querySelector('p#p_promedio').innerHTML = promedio_rating.toFixed(2);
 };
 
 if (ratings[0] == null) {
